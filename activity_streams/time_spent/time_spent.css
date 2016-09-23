@@ -1,0 +1,148 @@
+body {
+  background-color: #5050d2;
+  font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;
+  margin-top:10px;
+}
+
+#timeSpent .datetimepicker span.hour {
+  font-size: 15px;
+}
+
+#timeSpent div.dropdown {
+  display: inline-block;
+}
+
+#timeSpent div.dropdown a.dropdown-toggle {
+  color: white;
+  text-decoration: none;
+}
+
+#timeSpent div.dropdown a.dropdown-toggle .date {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#timeSpent .datetimepicker table tr td.active, #timeSpent .datetimepicker table tr td span.active {
+  background-color: #5050d2;
+  background-image: none;
+}
+
+#timeSpent #untilNowLabel {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  width: 100px;
+  margin: auto;
+  padding: 5px;
+}
+
+#timeSpent #untilNowLabel:hover {
+  background-color: #eee;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#timeSpent {
+  margin: 0px;
+  padding: 0px;
+  min-height: 400px;
+}
+
+#timeSpent *[ng-click] {
+  cursor: pointer;
+}
+
+#timeSpent form {
+  color: white;
+}
+
+#timeSpent form input[type=text] {
+  width: 30px;
+  padding-left: 10px;
+}
+
+#timeSpent table.timeSpent {
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  width: 100%;
+  color: white;
+}
+
+#timeSpent table.timeSpent tr:nth-child(odd) td {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+#timeSpent table.timeSpent th {
+  text-align: center;
+  padding: 5px;
+}
+
+#timeSpent table.timeSpent td {
+  position: relative;
+  text-align: center;
+  padding: 3px;
+}
+
+#timeSpent table.timeSpent td.userName {
+  text-align: left;
+}
+
+#timeSpent table.timeSpent td.userName:first-letter {
+    text-transform: uppercase;
+}
+
+#timeSpent form {
+  padding: 0px 10px;
+  line-height: 1.5;
+}
+
+#timeSpent .error {
+  border: 1px solid red;
+  padding: 3px;
+  background-color: #ffcccc;
+  color: red;
+  margin: 5px 0px;
+  display: inline-block;
+}
+
+#timeSpent form input[type=datetime-local] {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#timeSpent form label[for=noEndTime] {
+  padding: 4px 4px 4px 0px;
+  margin: 5px 0px;
+  display: inline-block;
+}
+
+#timeSpent form input[type=submit] {
+  border-width: 1px;
+  border-style: solid;
+  height: 24px;
+  font-size: 15px;
+  float: right;
+  background-color: #5050d2;
+  color: white;
+  border-color: white;
+}
+
+#timeSpent form input[type=submit]:hover {
+  background-color: #6262FF;
+  color: white;
+  border: 1px solid transparent;
+}
+#timeSpent form input[type=submit]:active {
+  background-color: #6262FF;
+  color: white;
+  border: 1px solid white;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}

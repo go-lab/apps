@@ -1,0 +1,37 @@
+<Module>
+	 <ModulePrefs title="HYPATIA"
+	 	title_url="http://195.134.89.89/Hypatia_Vaadin-1.0/"
+	 	author="Stelios Vourakis"
+	 	author_email="s.vourakis+hypatia@gmail.com"
+	 	description="The HYPATIA project enables high schools students together with their teachers to study the fundamental particles of matter and their interactions, through examining the graphic visualization/display of the products of particle collisions. These products are events detected by the ATLAS experiment at the world's most powerful particle accelerator, the LHC in the European Particle Research Centre, CERN in Geneva."
+	 	height="800"
+	 	screenshot="hypatia.png"
+	 	thumbnail="hypatia_thumb.png">
+	 	<Require feature="opensocial-0.9" />
+	 </ModulePrefs>
+	 <Content type="html">
+	 <![CDATA[
+	 <script type="text/javascript">
+	 	function $(string)
+		{
+			return document.getElementById(string); 
+		}
+
+		//load frame
+		function loadFrame()
+		{
+			var srcString = "http://195.134.89.89/Hypatia_Vaadin-1.0/";
+			var width = "100%";
+			var height = "800";
+			$('container').innerHTML = '<iframe frameborder="0" width="'+width+'" height="'+height+'" src="'+srcString+'"></iframe>';
+			gadgets.window.adjustHeight(); //so app resizes itself based on content
+		}
+		
+		gadgets.util.registerOnLoadHandler(loadFrame);
+		</script>
+		
+		<div id="container">
+		</div>
+	 ]]>
+	 </Content>
+ </Module>
