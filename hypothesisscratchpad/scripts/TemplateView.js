@@ -1,0 +1,2 @@
+(function(){window.ut.tools.hypothesis.HypothesisApp.directive("template",function(){return{restrict:"A",template:'<div\n  class="ut_tools_hypothesis_template"\n  ng-model="template"\n  draggable helper="clone"\n  objectType="ut_tools_hypothesis_template"\n  objectId="{{template}}"\n  >{{template}}\n</div>',link:function(t,e,o){return"conditional"===o.type?e.find("div").addClass("ut_tools_hypothesis_conditional"):e.find("div").addClass("ut_tools_hypothesis_variable")}}})}).call(this);
+//# sourceMappingURL=TemplateView.js.map
