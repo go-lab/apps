@@ -1,0 +1,39 @@
+<div golabCloak resizeAtInit>
+
+    <div class="container-fluid" id="ut_tools_questioning_root" ng-controller="QuestionsController">
+
+        <golabContainer containerTitle="i_ut_tools_questioning_templates">
+            <table width="100%">
+                <tr class="toolAreaContainer">
+                    <td class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                        <div template ng-repeat="template in configurationModel.conditionals.getValues() track by $index" type="conditional"></div>
+                        <div template ng-repeat="template in configurationModel.variables.getValues() track by $index" type="variable"></div>
+                    </td>
+                </tr>
+            </table>
+        </golabContainer>
+
+        <golabContainer id="ut_tools_questioning_container" containerTitle="i_ut_tools_questioning_questions" modelName="questionsModel">
+            <ul id="ut_tools_questioning_questions">
+                <li question ng-repeat="question in questionsModel.getResourceContentWithHashkeys()"></li>
+            </ul>
+        </golabContainer>
+
+        <toolbar>
+            <loadSave modelName="questionsModel" showType="false" showAuthor="false" imexport="false"></loadSave>
+            <li class="toolBarSpace"></li>
+            <resourceEditorControls></resourceEditorControls>
+            <li class="toolBarSpace"></li>
+            <editConfiguration>
+                <questionsConfigurationOptions></questionsConfigurationOptions>
+            </editConfiguration>
+            <help></help>
+            <li class="ut_tools_questioning_toolplus" questioningtoolbar></li>
+        </toolbar>
+
+        <dialogBox id="ut_tools_questioning_save_dialog" title="i_ut_tools_questioning_save_title" width="450" resizable="false">
+            <askQuestion></askQuestion>
+        </dialogBox>
+
+    </div>
+</div>
