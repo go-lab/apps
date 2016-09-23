@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Mathematics plotter demo</title>
+
+    <link rel="stylesheet" type="text/css" href="../../commons/css/golabStart.css"/>
+    <script type="text/javascript" src="../../commons/js/errorHandler.js"></script>
+    <script type="text/javascript" src="../../commons/js/jsChecker.js"></script>
+    <script type="text/javascript" src="../../libs/js/headJS/head.js"></script>
+    <script type="text/javascript" src="../../commons/js/resourceLoader.js"></script>
+    <script type="text/javascript" src="../../commons/js/commonsModules.js"></script>
+
+   <script src="http://code.highcharts.com/adapters/standalone-framework.js"></script>
+   <script src="http://code.highcharts.com/highcharts.js"></script>
+   <script src="http://code.highcharts.com/highcharts-more.js"></script>
+
+    <script type="text/javascript" src="js/module.js"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+              inlineMath: [['$', '$'], ['\\(','\\)']],
+              processEscapes: true
+          }});
+    </script>
+    <script type="text/javascript" async
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">
+    </script>
+  </head>
+
+  <body ng-controller="plotter_controller">
+    <div class="pleaseWaitIcon" ng-cloak=""></div>
+    <div ng-cloak="">
+      <golabContainer containerTitle="{{'plotter'|g4i18n}}">
+        <table>
+          <tr>
+            <td style="vertical-align: top">
+              Enter a mathematical expression over the variable 'x' in the input
+              boxes.  The resulting function will then be plotted in the graph.
+              <table>
+                <tr style="font-size: 120%">
+                  <th class="padding">Color</th>
+                  <th class="padding">Formula</th>
+                  <th class="padding">Math</th>
+<!--
+                  <th class="padding">String</th>
+                  <th class="padding">LaTeX</th>
+                  <th class="padding">Info</th>
+-->
+                </tr>
+                <tr ng-repeat="expr in expressions">
+                  <td style="background-color: {{expr.color}}">&nbsp;&nbsp;</td>
+                  <td><input type="text" ng-model="expr.expression"
+                             ng-keyup="keyup_expression($event, expr)"/></td>
+                  <td><span mathjax-bind="expr.latex"></span></td>
+<!--
+                  <td class="padding">{{expr.string}}</td>
+                  <td class="padding">{{expr.latex}}</td>
+                  <td class="padding">{{expr.error}}</td>
+-->
+                </tr>
+              </table>
+            </td>
+            <td style="vertical-align: top">
+              <p><b>Notation.</b> You can use the standard
+              mathematical notation, + - * /, and ^ for exponentation.  Functions
+              are written as <i>sin(x)</i> (cos, tan, log, sqrt).  Greek
+              letters are written in full: theta, Omega (for a capital omega).  Use
+              brackets to change the precedence of operators: x + 5 * 6 is
+              different from (x + 5) * 6.</p>
+              <p><b>Special syntax.</b>.  For roots other than 2 use:
+              sqrt[3](x).  For logarithms other than the natural logarithm
+              use: log[2](x).  For fractions use 1 // 2.  For variables with
+              subscripts use: rho:fluid.
+            </td>
+          </tr>
+        </table>
+
+        <div id="plot" style="height: 600px"></div>
+      </golabContainer>
+    </div>
+  </body>
+
+
+  <script type="text/javascript">
+    var timo = window.ut.libs.timo;
+    var conf = {};
+    timo.startTimo(conf);
+  </script>
+</html>

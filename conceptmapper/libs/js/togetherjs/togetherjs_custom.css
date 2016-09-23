@@ -1,0 +1,539 @@
+@charset "utf-8";
+/*
+
+the original golab colors
+
+*/
+/*
+@primaryColor: #00BACC;
+@primaryColorLight: #92D6E3;
+@primaryColorText: #00B7CD;
+
+@secondaryColor: #FAA519;
+@secondaryColorLight: #FDBE63;
+@secondaryColorText: #FAA519;
+
+@tertiaryColor: #939597;
+@tertiaryColorLight: #f5f5f5;
+@tertiaryColorText: #3f3f3f;
+*/
+.golabTitleFont {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.75px;
+  font-kerning: none;
+  -webkit-font-variant-ligatures: no-common-ligatures;
+  font-feature-settings: "liga" 0;
+}
+/*
+
+the new graasp golab colors
+
+*/
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.textSelectable {
+  -moz-user-select: -moz-text;
+  -khtml-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  -o-user-select: text;
+  user-select: text;
+}
+/* this works on iOS, not on android */
+.preventLongPress {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body,
+td,
+th,
+select,
+input,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  white-space: normal;
+  line-height: normal;
+  color: #3c3c3c;
+}
+.gadgetBodyScrollBars {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.horizontalScrollBarReservation {
+  width: 100%;
+  height: 20px;
+}
+h1 {
+  font-weight: normal;
+}
+.workAreaContainer {
+  background: #ebebeb;
+  border: none;
+  border-radius: 3px;
+}
+.toolAreaContainer {
+  background: #ebebeb;
+  border: none;
+  border-radius: 3px;
+}
+.toolArea {
+  padding: 5px;
+}
+.areaLabel {
+  width: 100%;
+  background: #4444ad;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  height: 25px;
+}
+.activeButton {
+  color: #4444ad;
+  background-size: contain;
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: initial;
+  box-sizing: initial;
+  cursor: pointer;
+}
+.activeButton:hover {
+  color: #0d0592;
+  background-size: contain;
+}
+.activeButton:active {
+  font-weight: bolder;
+  background-size: contain;
+}
+.secondaryTextButton {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.pressedButton,
+.pressedButton:active,
+.pressedButton:hover {
+  background: #74f257;
+  background-size: contain;
+}
+.disabledButton,
+.disabledButton:hover,
+.disabledButton:active {
+  color: #939597;
+  font-weight: normal;
+  cursor: default;
+}
+.fontAweSomeStacked {
+  position: relative;
+}
+.fontAweSomeStacked .fontAweSomeStack {
+  position: absolute;
+  text-align: center;
+}
+.fontAweSomeStacked .fontAweSomeUnderStar {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.fontAweSomeStacked .fontAweSomeStackedStar {
+  left: 22px;
+  top: 6px;
+  font-size: 13px;
+}
+.fontAweSomeStacked .fontAweSomeStackedStar:before {
+  background: rgba(255, 255, 255, 0.4);
+}
+.fontAweSomeButton {
+  padding: 4px;
+  margin: 2px;
+  margin-bottom: 5px;
+  font-size: 23px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.fontAweSomeButtonSmall {
+  padding: 2px;
+  margin: 2px;
+  margin-bottom: 2px;
+  font-size: 13px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.fontAweSomeButtonLarge {
+  padding: 6px;
+  margin: 2px;
+  margin-bottom: 5px;
+  font-size: 29px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.fontAweSomeButtonInHelp {
+  font-size: 19px;
+  width: 1.4em;
+  text-align: center;
+}
+.textButton {
+  position: relative;
+  top: -0.15em;
+  margin-left: 2px;
+  margin-right: 8px;
+  font-size: 18px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  display: inline-block;
+}
+.textButton:active {
+  font-weight: 100;
+}
+.notActiveTextButton {
+  cursor: default;
+}
+.textButtonPlainSize {
+  font-size: 15px;
+}
+.fontAweSomeStacked2 {
+  position: relative;
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  margin-left: 5.5px;
+  margin-bottom: 0px;
+}
+.fontAweSomeStacked2 .fontAweSomeStack {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.recordingButton .innerButton {
+  font-size: 6px;
+  color: red;
+}
+.recordingButton .pressedButton {
+  font-size: 12px;
+}
+.disabledButton .innerButton {
+  color: #939597;
+}
+.golabDroppable {
+  border: 2px dotted #1bb71f !important;
+}
+.dropObjectOutSideDropArea {
+  opacity: 0.35;
+}
+.toolbar {
+  background: #ebebeb;
+  border-top: 5px solid #ffffff;
+}
+.toolbar,
+.toolbarPart {
+  list-style-type: none;
+  padding-left: 0px;
+  padding-top: 6px;
+  padding-right: 0px;
+  padding-bottom: 1px;
+  margin: 0px;
+  position: relative;
+  vertical-align: middle;
+}
+.toolbar li,
+.toolbarPart li {
+  display: inline;
+  color: #4444ad;
+  font-size: 20px;
+}
+.toolbar li:hover,
+.toolbarPart li:hover {
+  color: #0d0592;
+}
+.toolbar li:active,
+.toolbarPart li:active {
+  font-weight: bolder;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.toolbar li.status:hover,
+.toolbarPart li.status:hover {
+  color: #4444ad;
+}
+.toolbar li.status:active,
+.toolbarPart li.status:active {
+  font-weight: normal;
+}
+.verticalToolbar {
+  border-top: none;
+  display: table;
+  padding-left: 6px;
+  padding-top: 0px;
+  padding-right: 6px;
+  padding-bottom: 1px;
+}
+.verticalToolbar li {
+  display: list-item;
+}
+table.verticalToolbarTable {
+  border-spacing: 0px;
+  padding: 0px;
+  width: 100%;
+}
+table.verticalToolbarTable td {
+  vertical-align: top;
+  background: #ebebeb;
+  padding: 0px;
+}
+table.verticalToolbarTable td.verticalToolbarCell {
+  background: #ebebeb;
+  border-right: 5px solid #ffffff;
+  width: 1%;
+  min-width: 3em;
+}
+ul.toolbarPart {
+  display: inline;
+  padding-left: 0px;
+}
+.toolBarBeginSpace {
+  margin: 0.4em;
+}
+.toolBarSpace {
+  margin: 1em;
+}
+.evenColumnBackground {
+  background-color: #fcfcff;
+}
+.oddColumnBackground {
+  background-color: #f3f3ff;
+}
+.deselectedBorder {
+  border: 5px solid #ffffff;
+}
+.selectedBorder {
+  border: 5px solid #74f257;
+}
+.selectableListItem {
+  margin-bottom: 5px;
+}
+.lastSelectableListItem {
+  margin-bottom: 0px;
+}
+/* Component containers
+----------------------------------*/
+.ui-widget {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+/*.ui-widget .ui-widget {*/
+/*font-size: 1.1em;*/
+/*}*/
+/*.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {*/
+/*font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;*/
+/*font-size: 1em;*/
+/*}*/
+.ui-widget-content {
+  border: 1px solid #abaeff;
+  /*background: #eeeeee url(images/ui-bg_highlight-soft_100_eeeeee_1x100.png) 50% top repeat-x;*/
+  background: #ffffff;
+  color: #646464;
+}
+/*.ui-widget-content a {*/
+/*color: #333333;*/
+/*}*/
+.ui-widget-header {
+  border: 1px solid #abaeff;
+  /*background: #f6a828 url(images/ui-bg_gloss-wave_35_f6a828_500x100.png) 50% 50% repeat-x;*/
+  background: #abaeff;
+  color: #ffffff;
+  font-weight: bold;
+}
+.ui-widget-header a {
+  color: #ffffff;
+}
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  border: 1px solid #abaeff;
+  /*background: #f6f6f6 url(images/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x;*/
+  background: #abaeff;
+  color: #ffffff;
+  font-weight: bold;
+  /*color: #fff;*/
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+  border: 1px solid #4444ad;
+  /*background: #fdf5ce url(images/ui-bg_glass_100_fdf5ce_1x400.png) 50% 50% repeat-x;*/
+  background: #4444ad;
+  font-weight: bold;
+  color: #ffffff;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+  border: 1px solid #abaeff;
+  /*background: #ffffff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;*/
+  background: #1bb71f;
+  font-weight: bold;
+  color: #ffffff;
+}
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+.ui-widget :active {
+  outline: none;
+}
+.ui-slider-handle {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.ui-tabs-nav {
+  background: #ebebeb;
+  color: #ffffff;
+}
+ul.ui-tabs-nav li.ui-tabs-active {
+  background: #4444ad;
+  color: #ffffff;
+}
+.ui-tabs .ui-tabs-nav li a {
+  float: left;
+  padding: .25em 1em;
+  text-decoration: none;
+}
+.ui-tabs .ui-state-active a {
+  float: left;
+  padding: .25em 1em;
+  text-decoration: none;
+  background: #4444ad;
+}
+.ui-helper-reset {
+  line-height: 1;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+.ui-dialog {
+  padding: 0em;
+  border: 1px solid #4444ad;
+}
+.ui-dialog .row {
+  width: 102%;
+}
+.ui-dialog-titlebar {
+  background: #4444ad;
+}
+.ui-dialog-title {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.75px;
+  font-kerning: none;
+  -webkit-font-variant-ligatures: no-common-ligatures;
+  font-feature-settings: "liga" 0;
+}
+.ui-dialog .ui-dialog-content {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+/* Corner radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+  border-top-left-radius: 0px;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+  border-top-right-radius: 0px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+  border-bottom-left-radius: 0px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+  border-bottom-right-radius: 0px;
+}
+.ui-button,
+.ui-dialog-titlebar-close {
+  background: #4444ad;
+}
+.ui-dialog-titlebar-close {
+  visibility: hidden;
+}
+.togetherjs-dock-right {
+  background: #4444ad !important;
+}
+#togetherjs-statistics-dock {
+  background: #4444ad;
+  border: 2px solid red;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  width: 100px;
+  height: 100px;
+}
+(node:28544) DeprecationWarning: util.print is deprecated. Use console.log instead.

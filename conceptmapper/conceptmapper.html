@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Go-Lab - Concept Mapper</title>
+</head>
+
+<body>
+
+<link rel="stylesheet" type="text/css" href="commons/css/golabStart_no-angular.css"/>
+
+<div class="pleaseWaitIcon" golabCloak></div>
+
+<ng-include src="resourceLoader.getIncludeUrl('/conceptmapperContent.html')"></ng-include>
+
+<script type="text/javascript" src="commons/js/jsChecker.js"></script>
+<script type="text/javascript" src="commons/js/errorHandler.js"></script>
+<script data-configuration-definition type="text/javascript" charset="utf-8" src="configurations/configuration_definition.js"></script>
+<script data-configuration type="text/javascript" charset="utf-8" src="configurations/configuration_default.js"></script>
+<script type="text/javascript" src="libs/js/headJS/head.min.js"></script>
+<script type="text/javascript" src="commons/js/resourceLoader.js"></script>
+<script type="text/javascript" src="commons/js/commonsModules.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/conceptMapperApp1.0.js"></script>
+<script type="text/javascript">
+    "use strict";
+    window.ut.tools.conceptmapper.start();
+</script>
+</body>
+</html>
