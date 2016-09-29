@@ -1,0 +1,15 @@
+<messagebundle mails="manske@collide.info">
+    <msg name="close_alert">Close alert</msg>
+    <msg name="refresh">Refresh</msg>
+    <msg name="error_occured">An error occured.</msg>
+    <msg name="load_error">An error occured while loading the action statistics.</msg>
+    <msg name="display_error">An error occured while displaying the action statistics.</msg>
+    <msg name="actions">Actions</msg>
+    <msg name="usage_relative_to_max">Usage relative to maximum</msg>
+    <msg name="average">Average</msg>
+    <msg name="show_graasp_users">Show Graasp users</msg>
+    <msg name="phase_changes">Phase changes</msg>
+    <msg name="grouped">Grouped</msg>
+    <msg name="stacked">Stacked</msg>
+    <msg name="no_angela">The Tracking for this ILS has been disabled. Learning Analytics Apps require tracking because they rely on students' traces. To enable tracking, add AngeLA to the ILS as a member. This cannot be done ex-post and data won't be recovered.</msg>
+</messagebundle>

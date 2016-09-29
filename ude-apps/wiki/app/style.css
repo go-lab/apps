@@ -1,0 +1,181 @@
+/* Graasp/Shindig default styles override
+ * --------------------------------------------------------------------------- */
+body, td, div, span, p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* header
+ * --------------------------------------------------------------------------- */
+h1 {
+  background: #5050d2;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 9px 0;
+  font-size: 1.0em;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* content
+ * --------------------------------------------------------------------------- */
+body {
+  background: #fbfbfb;
+}
+
+body > .container {
+  margin-left: 0;
+}
+
+#page {
+  border: 1px solid #bbb;
+  box-shadow: 2px 2px 1px 2px #eee;
+  background: #fff;
+  z-index: 0;
+  padding: 15px;
+  min-height: 500px;
+}
+
+#content > div > h1 {
+  padding-left: 10px;
+}
+
+#page h1:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* reset header styles */
+#page h1 {
+  background: inherit;
+  color: inherit;
+  text-align: left;
+}
+
+#page h1, #page h2, #page h3, #page h4 {
+  font-weight: normal;
+}
+
+/* setting font-sizes one level lower */
+#page h1 { font-size: 30px; }
+#page h2 { font-size: 24px; }
+#page h3 { font-size: 18px; }
+#page h4 { font-size: 14px; }
+
+.sidebar {
+  color: #444;
+  z-index: 10;
+  margin-top: 80px;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    margin-top: 0;
+  }
+}
+
+.sidebar h2 {
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+  font-size: 1em;
+}
+.sidebar h2:first-child {
+  margin-top: 10px;
+}
+
+.sidebar > ul {
+  margin: 0;
+  list-style: none outside none;
+  padding: 5px 10px 5px 0;
+}
+
+.sidebar > ul:last-child {
+  border-bottom-width: 0;
+}
+
+
+/* All pages
+ * ----------------------------------------------------------------------------*/
+
+.all_pages ul {
+  padding-left: 13px;
+}
+
+.all_pages li {
+  padding-bottom: 3px;
+}
+
+
+/* View page
+ * ----------------------------------------------------------------------------*/
+
+
+/* Edit
+ * ----------------------------------------------------------------------------*/
+
+textarea {
+  min-height: 300px;
+  width: 100%;
+  max-width: 1000px;
+  font-family: monospace;
+}
+
+#toolbar {
+  list-style: none;
+  padding: 0;
+}
+
+#toolbar > li {
+  display: inline-block;
+}
+
+#toolbar .pages_display .empty {
+  padding: 3px 10px;
+}
+
+span.fake_link {
+  text-decoration: underline;
+  color: #2a6496;
+}
+
+
+/* Revisions
+ * ----------------------------------------------------------------------------*/
+
+#page.revisions {
+  overflow: auto;
+}
+
+
+/* Configure
+ * ----------------------------------------------------------------------------*/
+
+#page.configure h3:first-of-type {
+  margin-top: 0;
+}
+
+/* Resource recommendations
+ * ----------------------------------------------------------------------------*/
+
+#page.resource_recomms ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 30px;
+}
+
+#page.resource_recomms .thumbnail {
+  padding: 0;
+}
+
+#page.resource_recomms .thumbnail .caption {
+  border-bottom: 1px solid #ddd;
+  padding: 13px;
+}
+
+#page.resource_recomms a.thumbnail:hover {
+  text-decoration: none;
+}
+
+#page.resource_recomms .img-loading {
+  padding: 13px;
+}

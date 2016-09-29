@@ -1,0 +1,519 @@
+//colors
+$white: #fff;
+$color_lynch: #67809f;
+$color_indigo: #5050d2;
+$black: #000;
+$black_80: rgba(0, 0, 0, 0.8);
+$color_black_haze: #f5f7f8;
+$black_40: rgba(0, 0, 0, 0.4);
+$color_milano_red: #ca1b00;
+$color_lightning_yellow: #f7ca18;
+$color_chateau_green: #2bb366;
+$color_pewter: #95a5a6;
+$mercury: #e5e5e5;
+$color_iron: #d6d6d6;
+
+//fonts
+$font_0: 'sans-serif';
+$font_1: 'Arial';
+$font_2: 'Avant Garde';
+$font_3: 'serif';
+
+//@extend-elements
+//original selectors
+//.axis path, .axis line
+%extend_1 {
+  fill: none;
+  stroke: $black;
+  shape-rendering: crispEdges;
+}
+
+//original selectors
+//.sidebar-toggler, .analytics-toggler
+%extend_2 {
+  font-size: 12px;
+  border: 0;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+}
+
+
+.visualisation {
+  background: $white;
+}
+ul {
+  padding: 0;
+  :last-child {
+    border-bottom: 0;
+  }
+  li {
+    list-style: none;
+    cursor: pointer;
+    padding: 3px 10px;
+    margin: 0;
+    position: relative;
+    border-bottom: 1px dotted $color_iron;
+    &.phase {
+      &.no-apps {
+        color: $color_pewter;
+        cursor: default;
+        &:hover {
+          background: none;
+        }
+      }
+      &.selected {
+        background: $mercury;
+        font-weight: bold;
+      }
+    }
+    &:hover {
+      background: $mercury;
+    }
+    .studentName {
+      margin-left: 10px;
+    }
+    .notify {
+      position: absolute;
+      left: 0;
+      top: 6px;
+      padding: 0 3px;
+    }
+    label {
+      margin-left: 15px;
+      input {
+        margin-right: 5px;
+      }
+    }
+    &.app.selected {
+      background: $mercury;
+      font-weight: bold;
+    }
+  }
+  &.analytics-info li {
+    padding: 3px 0;
+    cursor: default;
+    &:hover {
+      background: none;
+    }
+  }
+}
+.bar {
+  fill: $color_lynch;
+  &:hover {
+    fill: $color_indigo;
+  }
+}
+.axis {
+  font: 10px $font_0;
+  path {
+    @extend %extend_1;
+  }
+  line {
+    @extend %extend_1;
+  }
+  text {
+    font-family: $font_1;
+    font-size: 13px;
+  }
+}
+.tick {
+  stroke-dasharray: 1, 2;
+}
+.d3-tip {
+  line-height: 1;
+  padding: 12px;
+  background: rgba(80,80,210, 1.0);
+  color: $white;
+  border-radius: 2px;
+  z-index: 99;
+  &:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: $black_80;
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+  }
+  &.n:after {
+    margin: -1px 0 0;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+  }
+}
+#evolution {
+  background-color: $color_black_haze;
+  width: 0;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: 0 0 6px $black_40;
+  transition-property: width;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+  &.is-visible {
+    width: 100%;
+  }
+  .inner {
+    margin: 10px;
+  }
+  .panel-title {
+    font-size: 14px;
+  }
+  .info {
+    font-style: italic;
+    font-size: 11px;
+    position: relative;
+    padding-top: 12px;
+    bottom: 0;
+    cursor: default;
+    hyphens: auto;
+    .notify {
+      top: 0;
+      padding: 0;
+      position: relative;
+    }
+  }
+  .header .close-sidebar {
+    color: $black_40;
+    &:hover {
+      color: $black;
+      cursor: pointer;
+    }
+  }
+}
+.screenshot {
+  height: 350px;
+  background: $white;
+}
+.red {
+  fill: $color_milano_red;
+  color: $color_milano_red;
+}
+.yellow {
+  fill: $color_lightning_yellow;
+  color: $color_lightning_yellow;
+}
+.green {
+  fill: $color_chateau_green;
+  color: $color_chateau_green;
+}
+.grey {
+  fill: $color_pewter;
+  color: $color_pewter;
+}
+.default {
+  fill: $color_pewter;
+  color: $color_pewter;
+}
+.inactive {
+  fill: $color_black_haze;
+  color: $color_black_haze;
+}
+.phase-detail {
+  text-align: center;
+  line-height: 45px;
+  font-size: 12px;
+  display: inline-block;
+  border: 1px $color_black_haze solid;
+  &.interaction-less {
+    background: $mercury;
+    color: $black;
+  }
+  &.interaction-required {
+    background: $color_milano_red;
+    color: $white;
+  }
+  &.no-interaction-required {
+    background: $color_chateau_green;
+    color: $white;
+  }
+}
+#wrapper-app {
+  position: relative;
+  overflow: hidden;
+  border: solid 1px $color_black_haze;
+  #legende {
+    height: 0;
+    font-size: 12px;
+    display: inline-block;
+    position: absolute;
+    transition-property: height;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+  }
+  &.teacher-view #legende {
+    height: 0;
+    transition-property: height;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    p {
+      margin: 0;
+      font-size: 11px;
+    }
+  }
+  &.student-view #legende {
+    height: 25px;
+    padding: 5px;
+    bottom: 0;
+    transition-property: height;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+  }
+}
+.sidebar-toggler {
+  @extend %extend_2;
+  &.show-menu {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    transition-property: right;
+    &:hover {
+      right: 15px;
+    }
+  }
+  &.hide-menu:hover {
+    margin-left: 10px;
+    transition-property: margin-left;
+  }
+}
+.analytics-toggler {
+  @extend %extend_2;
+  &.show-menu {
+    position: absolute;
+    right: 5px;
+    top: 35px;
+    transition-property: right;
+    &:hover {
+      right: 15px;
+    }
+  }
+  &.hide-menu:hover {
+    margin-left: 10px;
+    transition-property: margin-left;
+  }
+}
+#sidebar {
+  background-color: $color_black_haze;
+  width: 0;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: 0 0 6px $black_40;
+  transition-property: width;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+  &.is-visible {
+    width: 270px;
+  }
+  .inner {
+    margin: 10px;
+  }
+  .panel-title {
+    font-size: 14px;
+  }
+  .info {
+    font-style: italic;
+    font-size: 11px;
+    position: relative;
+    padding-top: 12px;
+    bottom: 0;
+    cursor: default;
+    hyphens: auto;
+    &:hover {
+      background-color: $white;
+    }
+    .notify {
+      top: 0;
+      padding: 0;
+      position: relative;
+    }
+  }
+  .header .close-sidebar {
+    color: $black_40;
+    &:hover {
+      color: $black;
+      cursor: pointer;
+    }
+  }
+}
+.fa-chevron-right {
+  margin: 0 5px;
+}
+.fa-chevron-left {
+  margin: 0 5px;
+}
+.fa-users {
+  margin-right: 5px;
+}
+.notify {
+  &.fancy {
+    color: $color_chateau_green;
+  }
+  &.flashy {
+    color: $color_milano_red;
+  }
+}
+.col-xs-2 {
+  min-height: 25px;
+  border-left: solid 1px $mercury;
+}
+.view-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.modal-backdrop {
+  z-index: 0;
+  background: $white;
+}
+@media(min-width: 768px) {
+  .modal-dialog {
+    width: 800px;
+    margin: 30px auto;
+  }
+}
+.modal-header {
+  border: 0;
+  padding-bottom: 0;
+  .modal-title {
+    text-align: center;
+    font-family: $font_2, $font_3;
+    font-size: 28px;
+  }
+  .anzahl {
+    position: absolute;
+    top: 25px;
+    span {
+      font-size: 12px;
+    }
+  }
+}
+.paragraph {
+  padding: 7px 0;
+}
+.used_concepts {
+  font-size: 16px;
+  text-align: center;
+}
+.info {
+  &.paragraph {
+    font-size: 16px;
+    text-align: center;
+  }
+  &.nothing-to-display {
+    text-align: center;
+    line-height: 45px;
+  }
+}
+.user_name {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.phase-legende {
+  font-size: 10px;
+  text-align: center;
+}
+.teacher-modal-content {
+  .inner {
+    border-top: 1px dashed $color_iron;
+  }
+  .student.info.paragraph {
+    border-top: 1px dashed $color_iron;
+  }
+}
+.student-modal-content {
+  .inner {
+    border-top: 1px dashed $color_iron;
+  }
+  .student.info.paragraph {
+    border-top: 1px dashed $color_iron;
+  }
+}
+.description {
+  padding: 0 10px;
+}
+.input-group {
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid $color_black_haze;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+label {
+  ont-weight: 400;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.tag_cloud_screenshot {
+  display: none;
+}
+#current_tagCloud {
+  display: none;
+}
+.col-md-12.no-padding {
+  padding: 0;
+  margin: 10px 0;
+}
+#tag_cloud text {
+  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.85;
+  }
+}
+.phasen .row.phases {
+  margin: 5px 0;
+}
+.reflection.paragraph i {
+  padding-right: 5px;
+}
+.questions li {
+  cursor: default;
+  &:hover {
+    background: none;
+  }
+  &.reload-questions {
+    color: $color_milano_red;
+    text-align: center;
+    margin: 25px 0;
+    cursor: pointer;
+  }
+}
+.student.selected {
+  background: $mercury;
+  font-weight: bold;
+}
+.teacher-modal ul.student-list {
+  overflow: hidden;
+  li {
+    width: 33.3%;
+    border-bottom: 0;
+    line-height: 1.5em;
+    font-size: 13px;
+    float: left;
+    display: inline;
+    cursor: default;
+    &:hover {
+      background: none;
+    }
+    &.selected:hover {
+      background: $mercury;
+    }
+  }
+}
+input.timeOffset {
+  width: 50px;
+}

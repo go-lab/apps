@@ -1,0 +1,150 @@
+/*context menu*/
+@media (max-width: 1024px ) {
+    #networkinfo, #search, #timenavigation, #layoutoptions {
+        visibility: hidden;
+        width: 0;
+    }
+
+    #measures {
+        float: right;
+        width: 212px;
+        height: 80px;
+    }
+
+    #menu {
+        width: 220px;
+        float: right;
+    }
+
+    #content {
+        margin-top: 0 !important;
+    }
+
+    #toolbar {
+        height: 720px !important;
+    }
+}
+
+#wrapper {
+    width: -webkit-calc(100% - 200px);
+    width: -moz-calc(100% - 200px);
+    width: calc(100% - 200px);
+    width: 100%;
+    min-height: 480px;
+    height: 800px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a {
+    float: left;
+    line-height: 40px;
+    width: 20%;
+    height: 40px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-family: Arial;
+    font-size: 12pt;
+    font-weight: bold;
+
+    border-top: 1px solid #9cbed2;
+    border-right: 1px solid #607987;
+    border-left: 1px solid #94b5c8;
+    background: #5050D2 repeat-x;
+    box-shadow: 5px 5px 5px #888888;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+ul li a:hover {
+    color: #5050D2;
+    border-top: 1px solid #72a0ba;
+    border-right: 1px solid #2a4a5f;
+    border-left: 1px solid #8cb3c9;
+    background: #EBEBEB repeat-x !important;
+}
+
+/*end of context menu*/
+
+/*content*/
+#content {
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px 5px 5px 5px;
+    width: -moz-calc(100% - 250px) !important;
+    width: -webkit-calc(100% - 250px) !important;
+    width: calc(100% - 250px) !important;
+    height: 800px;
+    border-top: 5px solid #607987;
+    border-right: 5px solid #607987;
+    border-left: 5px solid #607987;
+    border-bottom: 5px solid #607987;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #888888;
+    overflow: hidden;
+}
+
+/*toolbar*/
+#toolbar {
+    float: right;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 1px;
+    padding: 5px 5px 0px 5px;
+
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 12pt;
+    color: #ffffff;
+
+    border-top: 1px solid #9cbed2;
+    border-right: 1px solid #607987;
+    border-left: 1px solid #94b5c8;
+    border-right: 1px solid #edefed;
+    border-radius: 5px;
+    line-height: 35px;
+    background: #5050D2 repeat-x;
+    height: 815px;
+    width: 200px;
+
+    box-shadow: 5px 5px 5px #888888;
+}
+
+#toolbar select, input {
+    width: 150px;
+}
+
+#backward, #forward, #networktime {
+    width: 50px;
+}
+
+#results {
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 2px;
+    width: 100%;
+    height: 495px;
+    overflow: auto;
+    border-style: groove;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/*canvas with and height*/
+#canvas {
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Wiki Tests</title>
+        <link rel="stylesheet" href="../libs/mocha/mocha.css" />
+        <style>
+            .fixture {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mocha"></div>
+
+        <!-- GoLab integration -->
+        <script src="../../../commons/js/utils.js"></script>
+        <script src="../../../commons/js/MetadataHandler.js"></script>
+        <script src="../../../commons/js/StorageHandler.js"></script>
+        <script src="../../../commons/js/ActionLogger.js"></script>
+
+        <script src="../node_modules/babel-core/browser-polyfill.js"></script>
+        <script src="../libs/no_bower/bluebird-v0.11.5-1.js"></script>
+        <script src="../libs/jquery/dist/jquery.js"></script>
+        <script src="../libs/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="../libs/underscore/underscore.js"></script>
+        <script src="../libs/mocha/mocha.js"></script>
+        <script src="../libs/chai/chai.js"></script>
+        <script src="../libs/chai-as-promised/lib/chai-as-promised.js"></script>
+        <script src="/testem.js"></script>
+        <script src="../libs/no_bower/sinon-1.10.3.js"></script>
+        <script src="../libs/fixtures/fixtures.js"></script>
+        <script src="../libs/handlebars/handlebars.js"></script>
+        <script src="../libs/reqwest/reqwest.js"></script>
+        <script src="../libs/marked/lib/marked.js"></script>
+        <script src="../libs/node-uuid/uuid.js"></script>
+        <script src="../libs/system.js/dist/system-register-only.js"></script>
+
+
+        <script>
+            mocha.setup('tdd');
+            fixtures.containerId = 'fixtures';
+            fixtures.path = 'fixtures/';
+        </script>
+
+
+        <!-- Source files -->
+        <script src="../build/test/helper.js"></script>
+        <script src="../build/app/util.js"></script>
+        <script src="../build/app/loading_indicator.js"></script>
+        <script src="../build/app/url_helper.js"></script>
+        <script src="../build/app/router.js"></script>
+        <script src="../build/app/templating.js"></script>
+        <script src="../build/app/named_type_error.js"></script>
+        <script src="../build/app/page_data_error.js"></script>
+        <script src="../build/app/in_memory_page_data.js"></script>
+        <script src="../build/app/go_lab_page_data.js"></script>
+        <script src="../build/app/go_lab_wiki_action_logger.js"></script>
+        <script src="../build/app/edit_page.js"></script>
+
+        <!-- Test files -->
+        <script src="../build/test/url_helper_test.js"></script>
+        <script src="../build/test/loading_indicator_test.js"></script>
+        <script src="../build/test/router_test.js"></script>
+        <script src="../build/test/templating_test.js"></script>
+        <script src="../build/test/page_data_test.js"></script>
+        <script src="../build/test/edit_page_test.js"></script>
+        <script src="../build/test/go_lab_wiki_action_logger_test.js"></script>
+
+
+        <script>
+            var tests = [
+                'loading_indicator',
+                'url_helper',
+                'router',
+                'templating',
+                'page_data',
+                'edit_page',
+                'go_lab_wiki_action_logger',
+            ];
+
+            Promise.all(importTests(tests)).then(function() {
+                mocha.checkLeaks();
+                mocha.run();
+            });
+
+            function importTests(tests, cb) {
+                return tests.map(function(test) {
+                    return System.import('test/' + test + '_test');
+                });
+            }
+        </script>
+    </body>
+</html>

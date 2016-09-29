@@ -1,0 +1,24 @@
+<messagebundle mails="manske@collide.info">
+    <msg name="error_occured">An error occured</msg>
+    <msg name="close_alert">Close alert</msg>
+    <msg name="show_statusbar">Show statusbar</msg>
+    <msg name="hide_statusbar">Hide statusbar</msg>
+    <msg name="view_controls">View controls</msg>
+    <msg name="timelines">Timelines</msg>
+    <msg name="phases">Phases</msg>
+    <msg name="apps">Apps</msg>
+    <msg name="show_app_activities">Show app activities</msg>
+    <msg name="minimize_this_timeline">Minimize this timline</msg>
+    <msg name="minimize_timelines">Hide all timelines</msg>
+    <msg name="maximize_timelines">Show all timelines</msg>
+    <msg name="info">Info</msg>
+    <msg name="connection_closed">The connection to the data source was closed, preventing new data to come in. You can reload the page to try to reconnect.</msg>
+    <msg name="timescale_status">Showing activities from {0} until {1}.</msg>
+    <msg name="phase">Phase</msg>
+    <msg name="start">Start</msg>
+    <msg name="end">End</msg>
+    <msg name="duration">Duration</msg>
+    <msg name="app">App</msg>
+    <msg name="time">Time</msg>
+    <msg name="show_data_from">Showing data from day</msg>
+</messagebundle>

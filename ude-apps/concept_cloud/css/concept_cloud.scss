@@ -1,0 +1,442 @@
+// colors & variables
+
+$red: #ca1b00;
+$yellow: #F7CA18;
+$green: #2bb366;
+
+$light_grey: #f5f7f8;
+$grey: #e5e5e5;
+$dark_grey: #d6d6d6;
+$default_grey: #95A5A6;
+
+$dark: rgba(0, 0, 0, 1);
+$dark_transparent: rgba(0, 0, 0, .4);
+
+// transitions
+@mixin transition($time, $ease) {
+  -moz-transition-duration: $time;
+  -webkit-transition-duration: $time;
+  transition-duration: $time;
+
+  -moz-transition-timing-function: $ease;
+  -webkit-transition-timing-function: $ease;
+  transition-timing-function: $ease;
+}
+
+@mixin transition-property($property) {
+  -moz-transition-property: $property;
+  -webkit-transition-property: $property;
+  transition-property: $property;
+}
+
+// tag colors
+.red {
+  fill: $red;
+  color: $red;
+}
+
+.yellow {
+  fill: $yellow;
+  color: $yellow;
+}
+
+.green {
+  fill: $green;
+  color: $green;
+}
+
+.grey {
+  fill: $default_grey;
+  color: $default_grey;
+}
+
+.default {
+  fill: $default_grey;
+  color: $default_grey;
+}
+
+.inactive {
+  fill: $light_grey;
+  color: $light_grey;
+}
+
+// phase colors in modal
+
+.phase-detail {
+  text-align: center;
+  line-height: 45px;
+  font-size: 12px;
+
+  &.interaction-less {
+    background: $grey;
+    color: #000;
+  }
+
+  &.interaction-required {
+    background: $red;
+    color: #fff;
+  }
+
+  &.no-interaction-required {
+    background: $green;
+    color: #fff;
+  }
+}
+
+#wrapper-app {
+  position: relative;
+  overflow: hidden;
+  border: solid 1px $light_grey;
+
+  #legende {
+    height: 0;
+    font-size: 12px;
+    display: inline-block;
+    position: absolute;
+    @include transition-property(height);
+    @include transition(.1s, linear);
+  }
+
+  &.teacher-view {
+    #legende {
+      height: 0;
+      @include transition-property(height);
+      @include transition(.1s, linear);
+
+      p {
+        margin: 0;
+        font-size: 11px;
+      }
+    }
+  }
+
+  &.student-view {
+    #legende {
+      height: 25px;
+      padding: 5px;
+      bottom: 0;
+      @include transition-property(height);
+      @include transition(.1s, linear);
+    }
+  }
+
+}
+
+#tag_cloud {
+  text {
+    cursor: pointer;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.85;
+    }
+  }
+}
+
+.sidebar-toggler {
+  font-size: 12px;
+  border: 0;
+  @include transition(.1s, ease-in);
+
+  &.show-menu {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    @include transition-property(right);
+
+    &:hover {
+      right: 15px;
+    }
+  }
+
+  &.hide-menu {
+
+    &:hover {
+      margin-left: 10px;
+      @include transition-property(margin-left);
+    }
+  }
+}
+
+#sidebar {
+  background-color: $light_grey;
+  width: 0;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: 0 0 6px $dark_transparent;
+  @include transition-property(width);
+  @include transition(.1s, ease-in);
+
+  &.is-visible {
+    width: 270px;
+  }
+
+  .inner {
+    margin: 10px;
+  }
+
+  .panel-title {
+    font-size: 14px;
+  }
+
+  .info {
+    font-style: italic;
+    font-size: 11px;
+    position: relative;
+    padding-top: 12px;
+    bottom: 0;
+    cursor: default;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    .notify {
+      top: 0;
+      padding: 0;
+      position: relative;
+    }
+  }
+
+  .header {
+
+    .close-sidebar {
+      color: $dark_transparent;
+
+      &:hover {
+        color: $dark;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.fa-chevron-right, .fa-chevron-left {
+  margin: 0 5px;
+}
+
+.fa-users {
+  margin-right: 5px;
+}
+
+.notify {
+
+  &.fancy {
+    color: $green;
+  }
+
+  &.flashy {
+    color: $red;
+  }
+}
+
+.phasen {
+  .row.phases {
+    margin: 5px 0;
+  }
+}
+
+.col-xs-2 {
+  min-height: 25px;
+  border-left: solid 1px $grey;
+}
+
+.view-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+ul {
+  padding: 0;
+
+  :last-child {
+    border-bottom: 0;
+  }
+
+  li {
+    list-style: none;
+    cursor: pointer;
+    padding: 3px 10px;
+    margin: 0;
+    position: relative;
+    border-bottom: 1px dotted $dark_grey;
+
+    &.phase {
+      &.no-apps {
+        color: $default_grey;
+        cursor: default;
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+
+    &:hover {
+      background: $grey;
+    }
+
+    .studentName {
+      margin-left: 10px;
+    }
+
+    &.phase {
+      &.selected {
+        background: $grey;
+        font-weight: bold;
+      }
+    }
+
+    &.app {
+      &.selected {
+        background: $grey;
+        font-weight: bold;
+      }
+    }
+
+    .notify {
+      position: absolute;
+      left: 0;
+      top: 6px;
+      padding: 0 3px;
+    }
+
+    label {
+      margin-left: 15px;
+
+      input {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+
+.modal-backdrop {
+  z-index: 0;
+  background: #fff;
+}
+
+@media (min-width: 768px){
+  .modal-dialog {
+    width: 800px;
+    margin: 30px auto;
+  }
+}
+
+.modal-header {
+  border: 0;
+  padding-bottom: 0;
+
+  .modal-title {
+    text-align: center;
+    font-family: 'Avant Garde', serif;
+    font-size: 28px;
+  }
+
+  .anzahl {
+    position: absolute;
+    top: 25px;
+
+    span {
+      font-size: 12px;
+    }
+  }
+}
+
+.paragraph {
+  padding: 7px 0;
+}
+
+.reflection.paragraph {
+  i {
+    padding-right: 5px;
+  }
+}
+
+.used_concepts, .info.paragraph {
+  font-size: 16px;
+  text-align: center;
+}
+
+.user_name {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.questions {
+  li {
+    cursor: default;
+
+    &:hover {
+      background: none;
+    }
+
+    &.reload-questions {
+      color: $red;
+      text-align: center;
+      margin: 25px 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.student {
+  &.selected {
+    background: $grey;
+    font-weight: bold;
+  }
+}
+
+.phase-detail {
+  display: inline-block;
+  border: 1px $light_grey solid;
+}
+
+.phase-legende {
+  font-size: 10px;
+  text-align: center;
+}
+
+.teacher-modal-content, .student-modal-content {
+  .inner, .student.info.paragraph {
+    border-top: 1px dashed $dark_grey;
+  }
+}
+
+.teacher-modal {
+  ul {
+    &.student-list {
+      overflow: hidden;
+
+      li {
+        width: 33.3%;
+        border-bottom: 0;
+        line-height: 1.5em;
+        font-size: 13px;
+        float: left;
+        display: inline;
+        cursor: default;
+
+        &:hover {
+          background: none;
+        }
+
+        &.selected {
+          &:hover {
+            background: $grey;
+          }
+        }
+      }
+    }
+  }
+}

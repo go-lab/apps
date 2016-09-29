@@ -1,0 +1,335 @@
+/* header
+* --------------------------------------------------------------------------- */
+.page-header-app {
+    background: #5050d2;
+    color: #ffffff;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+}
+
+h1 {
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    padding: 0;
+    height: 36px;
+    vertical-align: middle;
+}
+
+/* toolbar
+ * --------------------------------------------------------------------------- */
+.toolbar_wrapper {
+    background: #f5f5f5;
+}
+
+#toolbar ul {
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+}
+
+#toolbar ul li {
+    display: inline-block;
+    padding-right: 30px;
+}
+
+#toolbar li a {
+    color: #777;
+    display: block;
+    font-size: 1.5em;
+    padding: 0 5px;
+}
+
+#toolbar li a:hover {
+    color: #428bca;
+    text-decoration: none;
+    -o-text-decoration: none;
+    -moz-text-decoration: none;
+    -ms-text-decoration: none;
+    -webkit-text-decoration: none;
+}
+
+#toolbar li a:focus, #toolbar li a:active {
+    position: relative;
+    color: #428bca;
+    text-decoration: none;
+    -o-text-decoration: none;
+    -moz-text-decoration: none;
+    -ms-text-decoration: none;
+    -webkit-text-decoration: none;
+}
+
+.On {
+    display: inline-block;
+    width: 100%;
+}
+
+.Off {
+    display: none;
+}
+
+/* loading indicator
+ * --------------------------------------------------------------------------- */
+.cover {
+    position: absolute;
+    min-height: 200px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+/* error display
+ * --------------------------------------------------------------------------- */
+#error {
+    display: none;
+}
+
+/* main application
+ * --------------------------------------------------------------------------- */
+
+.MapSvgMain {
+    width: 100%;
+}
+
+#notifications {
+    width: 250px;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    display: none;
+}
+
+.gnode {
+    fill: #1F3A93;
+}
+
+.textNode {
+    fill: #2c3e50;
+}
+
+.glink {
+    fill: #2c3e50;
+    stroke: #22313F;
+    stroke-width: 2;
+    opacity: 0.8;
+}
+
+.glinkC {
+    fill: #2c3e50;
+    stroke: #22313F;
+    stroke-width: 2;
+    opacity: 0.8;
+}
+
+.glinkText {
+    fill: #2c3e50;
+    stroke: #22313F;
+    stroke-width: 2;
+}
+
+.gText {
+    fill: #d35400;
+    font-weight: 700;
+    opacity: 1;
+    stroke-width: 0;
+}
+
+/* evolution
+ * --------------------------------------------------------------------------- */
+
+#legend {
+    text-align: center;
+}
+
+#evolutionOff {
+    text-align: center;
+}
+
+#evoMap {
+    padding-top: 2%;
+}
+
+#consoleEvolution {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#coEvo > .col-sm-4 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Pop-Up
+ * --------------------------------------------------------------------------- */
+.tooltip {
+    display: none;
+    left: 0;
+    top: 82px;
+    opacity: 0.9;
+}
+
+.tooltip.active {
+    display: inline-block;
+    padding: 5px;
+    font: 12px sans-serif;
+    background: #F5F5F5;
+    color: #000;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.activeToolbar {
+    display: inline-block;
+    padding: 2em 2em 2em 2em;
+    font: 12px sans-serif;
+    background: #22313F;
+    color: #2ECC71;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.gnode {
+    cursor: pointer;
+}
+
+.TitlePopUp {
+    text-align: left;
+    min-width: 120px;
+}
+
+#tablePopup {
+    color: #5050d2;
+    font-size: 12px;
+}
+
+.pop-up-title {
+    text-align: right;
+}
+
+/* Sidebar */
+.sidebar-toggler {
+    font-size: 12px;
+    border: 0;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+}
+
+.close-sidebar {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.close-sidebar:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+#sidebar {
+    background-color: #f5f7f8;
+    width: 0;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    transition-property: width;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+}
+
+#sidebar.is-visible {
+    width: 350px;
+}
+
+#sidebar .inner {
+    margin: 10px;
+}
+
+#sidebar .panel-title {
+    font-size: 14px;
+}
+
+#sidebar .info {
+    font-style: italic;
+    font-size: 11px;
+    position: relative;
+    padding-top: 12px;
+    bottom: 0;
+    cursor: default;
+    hyphens: auto;
+}
+
+#sidebar .info:hover {
+    background-color: #fff;
+}
+
+#sidebar .info .notify {
+    top: 0;
+    padding: 0;
+    position: relative;
+}
+
+#sidebar .header .close-sidebar {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#sidebar .header .close-sidebar:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+.sidebar-toggler.show-menu {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    transition-property: right;
+}
+
+.sidebar-toggler.show-menu:hover {
+    right: 15px;
+}
+
+.sidebar-toggler.hide-menu:hover {
+    margin-left: 10px;
+    transition-property: margin-left;
+}
+
+#wrapper-app {
+    position: relative;
+    overflow: hidden;
+    border: solid 1px #f5f7f8;
+}
+
+.link {
+    stroke: #000;
+}
+
+.tooltip {
+
+}
+
+#sidebar .panel-title {
+    font-size: 14px;
+    text-align: center;
+}
+
+#sidebar .panel-title a {
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+    width: 100%;
+}
+
+#sidebar .panel-title a:hover,
+#sidebar .panel-title a:active {
+    text-decoration: none;
+}
+
+

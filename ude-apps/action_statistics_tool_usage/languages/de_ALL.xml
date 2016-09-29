@@ -1,0 +1,15 @@
+<messagebundle mails="manske@collide.info">
+  <msg name="close_alert">Hinweis schließen</msg>
+  <msg name="refresh">Aktualisieren</msg>
+  <msg name="error_occured">Ein Fehler ist aufgetreten.</msg>
+  <msg name="load_error">Beim Laden der Aktionsstatistiken ist ein Fehler aufgetreten.</msg>
+  <msg name="display_error">Beim Darstellen der Aktionsstatistiken ist ein Fehler aufgetreten.</msg>
+  <msg name="actions">Aktionen</msg>
+  <msg name="usage_relative_to_max">Nutzung relativ zum Maximum</msg>
+  <msg name="average">Durchschnitt</msg>
+  <msg name="show_graasp_users">Zeige Graasp Nutzer</msg>
+  <msg name="phase_changes">Phasenwechsel</msg>
+  <msg name="grouped">Gruppiert</msg>
+  <msg name="stacked">Gestapelt</msg>
+  <msg name="no_angela">Das Tracking wurde für diesen ILS deaktiviert. Learning Analytics Apps benötigen Tracking, weil die Analysen auf den Spuren von Lernenden beruhen. Um Tracking zu ermöglichen, muss AngeLA als ein Benutzer dem ILS hinzugefügt werden. Dies sorgt im Nachhinein allerdings nicht dafür, dass Daten rekonstruiert werden - die sind nun verloren.</msg>
+</messagebundle>

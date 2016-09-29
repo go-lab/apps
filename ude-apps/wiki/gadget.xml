@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+    <ModulePrefs
+        title="Wiki"
+        author_email="dan@modiho.com"
+        author="Daniel Rose"
+        height="600"
+        width="800"
+        >
+        <Require feature="osapi" />
+        <Require feature="opensocial-2.5"/>
+        <Require feature="content-rewrite">
+            <Param name="exclude-url">*</Param>
+        </Require>
+        <Locale messages="languages/en_ALL.xml" />
+        <Locale lang="en" messages="languages/en_ALL.xml" />
+        <Locale lang="de" messages="languages/de_ALL.xml" />
+    </ModulePrefs>
+
+    <Content type="html" view="default">
+        <![CDATA[
+        <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Wiki</title>
+        <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="libs/no_bower/jsdifflib/diffview.modified.css" type="text/css">
+        <link rel="stylesheet" href="build/app/style.css" type="text/css">
+    </head>
+    <body>
+        <h1>Wiki</h1>
+
+        <div class="container">
+            <div id="content"></div>
+        </div>
+
+        <script data-template="pages" type="text/x-handlebars-template">
+            {{> sidebar}}
+
+            <div class="col-md-7 col-sm-9">
+                <h2>{{t 'all pages'}}</h2>
+
+                <div id="page" class="all_pages">
+                    <ul>
+                    {{#each pages}}
+                        <li>
+                            <a href="#view?pageId={{id}}">
+                                "{{title}}" <em>by {{author}}</em>
+                                {{#if isIndex}}
+                                    <i>({{t 'starting page'}})</i>
+                                {{/if}}
+                            </a>
+                        </li>
+                    {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </script>
+
+        <script data-template="view" type="text/x-handlebars-template">
+            {{> sidebar}}
+
+            <div class="col-md-7 col-sm-9">
+                <h2>{{page.title}}</h2>
+
+                <div id="page">
+                    {{{pageContent}}}
+                </div>
+            </div>
+        </script>
+
+        <script data-template="edit" type="text/x-handlebars-template">
+            {{> sidebar}}
+
+            <div class="modal fade" id="formatting_modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">{{t 'formatting help'}}</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>{{t 'formatting intro'}}</p>
+                    <ul>
+                        <li>{{t 'formatting paragraphs'}}</li>
+                        <li><strong>**{{t 'bold'}}**</strong></li>
+                        <li><em>*{{t 'italic'}}*</em></li>
+                        <li>
+                            <span class="fake_link">{{t 'link'}}</span>:
+                            [{{t 'link'}}](http://www.example.com "{{t 'link title'}}")
+                        </li>
+                        <li># {{t 'heading level' 1}}</li>
+                        <li>## {{t 'heading level' 2}}</li>
+                        <li>### {{t 'heading level' 3}}</li>
+                        <li>#### {{t 'heading level' 4}}</li>
+                        <li>
+                            <a href="http://daringfireball.net/projects/markdown/syntax">
+                                {{t 'more formatting'}}
+                            </a>
+                        </li>
+                    </ul>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div class="col-md-10 col-sm-9">
+                <h2>{{t 'edit' page.title}}</h2>
+
+                <div id="page">
+                    <form action="#" method="post" id="edit_page">
+                    {{#if page.new}}
+                        <div class="form-group">
+                            <label for="title">{{t 'page title'}}</label>
+                            <input class="form-control" type="text" name="title" id="title">
+                        </div>
+                    {{/if}}
+
+                        <div class="form-group">
+                            <label for="content">{{t 'content'}}</label>
+
+                            <ul id="toolbar">
+
+                                <li>
+                                    <button class="btn btn-default btn-xs"
+                                            data-toggle="modal"
+                                            data-target="#formatting_modal">
+                                            {{t 'formatting help'}}
+                                    </button>
+                                </li>
+
+                                <li class="btn-group insert_wiki_link">
+                                  <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    {{t 'toolbar wiki link'}} <span class="caret"></span>
+                                  </button>
+
+                                    <ul class="dropdown-menu pages_display" role="menu">
+                                    {{#if pages}}
+                                        {{#each pages}}
+                                        <li><a href="#" data-id="{{id}}">{{title}}</a></li>
+                                        {{/each}}
+                                    {{else}}
+                                        <li class="empty">{{t 'toolbar no pages'}}</li>
+                                    {{/if}}
+                                    </ul>
+                            </ul>
+
+                            <textarea id="content" name="content" class="form-control">{{page.currentRevision.content}}</textarea>
+                        </div>
+
+                        <div class="form-group text-right">
+                            <a href="#" type="cancel" class="btn text-danger">{{t 'abort changes'}}</a>
+                            <button
+                                type="submit"
+                                disabled
+                                class="btn btn-primary">
+                                {{t 'save'}}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </script>
+
+        <script data-template="history" type="text/x-handlebars-template">
+            {{> sidebar}}
+
+            <div class="col-md-10 col-sm-9">
+                <h2>{{t 'revisions heading' page.title}}</h2>
+                <div id="page">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>{{t 'date'}}</th>
+                                <th>{{t 'author'}}</th>
+                                <th>{{t 'changes'}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each page.revisions}}
+                                <tr>
+                                    <td>{{timestamp}}</td>
+                                    <td>{{author}}</td>
+                                    <td><a class="btn btn-default btn-xs"
+                                           href="#compare?pageId={{../page.id}}&revision={{id}}"
+                                         >+/-</a><td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </script>
+
+        <script data-template="compare" type="text/x-handlebars-template">
+            {{> sidebar}}
+
+            <div class="col-md-10 col-sm-9">
+                <h2>{{t 'hist heading' page.title}}</h2>
+
+                <div id="page" class="revisions">
+                    <div id="revision-comparison">{{{diff}}}</div>
+                </div>
+            </div>
+        </script>
+
+        <script data-template="resource_recomms_page" type="text/x-handlebars-template">
+            {{> sidebar}}
+
+            <div class="col-md-10 col-sm-9">
+                <h2>{{t 'recomms heading' page.title}}</h2>
+
+                <div id="page" class="resource_recomms">
+                    <div class="explanation well well-sm">
+                        {{t 'recomms explanation'}}
+                    </div>
+
+                    <div class="results">{{t 'recomms loading'}}</div>
+                </div>
+            </div>
+        </script>
+
+        <script data-template="resource_recomms_listing" type="text/x-handlebars-template">
+            {{#if error}}
+                <em class="text-warning">{{t 'recomms error'}}</em>
+            {{else}}
+                {{#if resources}}
+                    <ul>
+                        {{#each resources}}
+                            <li>
+                                <a href="{{url}}" class="thumbnail">
+                                    <div class="caption">
+                                        <h2>{{title}}</h2>
+                                        {{url}}
+                                    </div>
+                                    <div class="img-loading text-default">{{t 'screenshot loading' }}</div>
+                                    <img class="img-responsive" src="{{screenshotUrl}}" />
+                                </a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                {{else}}
+                    <p>{{t 'no recomms'}}</p>
+                {{/if}}
+            {{/if}}
+        </script>
+
+        <script data-template="configure" type="text/x-handlebars-template">
+            {{> sidebar}}
+
+            <div class="col-md-10 col-sm-9">
+                <h2>{{t 'configure heading'}}</h2>
+
+                <div id="page" class="configure">
+                    <h3>{{t 'collaborativity'}}</h3>
+                    <div class="checkbox">
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="collaborativityOption"
+                                {{#if isCollaborative}}checked{{/if}}
+                            />
+                            {{t 'collaborativity config'}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script data-partial data-template="sidebar" type="text/x-handlebars-template">
+            <div class="col-md-2 col-sm-3 sidebar">
+                <ul>
+                {{#unless page_pages}}
+                    <li><a href="#pages">{{t 'all pages'}}</a></li>
+                {{/unless}}
+                {{#unless page_new}}
+                    <li><a href="#new">{{t 'new page'}}</a></li>
+                {{/unless}}
+                </ul>
+
+                {{#unless page_new}} {{#unless page_pages}} {{#unless page_configure}}
+                <ul>
+                {{#unless page_view}}
+                    <li><a href="#view?pageId={{page.id}}">{{t 'view page'}}</a></li>
+                {{/unless}}
+                {{#unless page_edit}}
+                    <li><a href="#edit?pageId={{page.id}}">{{t 'edit page'}}</a></li>
+                {{/unless}}
+                {{#unless page_history}}
+                    <li><a href="#history?pageId={{page.id}}">{{t 'view hist'}}</a></li>
+                {{/unless}}
+                {{#unless page_resource_recomms}}
+                    <li><a href="#resource_recommendations?pageId={{page.id}}">
+                        {{t 'view recomms'}}
+                    </a></li>
+                {{/unless}}
+                </ul>
+
+                <ul>
+                    <li>{{t 'last change'}}:</li>
+                    <li>
+                        <i class="glyphicon glyphicon-time"></i>
+                        {{page.currentRevision.timestamp}}
+                    </li>
+                    <li><i class="glyphicon glyphicon-user"></i> {{page.currentRevision.author}}</li>
+                </ul>
+                {{/unless}} {{/unless}} {{/unless}}
+
+                <ul>
+                    {{#if inGraasp}}
+                    <li><a href="#configure">{{t 'configure'}}</a></li>
+                    {{/if}}
+                    {{#if exportingEnabled}}
+                    <li><a href="{{exportUrl}}type=rtf">Export as RTF</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </script>
+
+        <script src="libs/jquery/dist/jquery.js"></script>
+        <script src="libs/underscore/underscore.js"></script>
+
+        <!-- GoLab integration -->
+        <script src="../../libs/js/socket.io-1.2.1.min.js"></script>
+        <script src="../../libs/js/jquery.cookie.js"></script>
+        <script src="../../commons/js/utils.js"></script>
+        <script src="../../libs/js/underscore.js"></script>
+        <script src="http://shindig2.epfl.ch/ils/main/ils_graaspeu.js"></script>
+        <script src="../../commons/js/MetadataHandler.js"></script>
+        <script src="../../commons/js/StorageHandler.js"></script>
+        <script src="../../commons/js/CachingStorageHandler.js"></script>
+        <script src="../../commons/js/ActionLogger.js"></script>
+        <script src="../../commons/js/notificationClient.js"></script>
+        <script src="../../commons/js/languageHandlers.js"></script>
+        <script src="../../commons/js/createEnvironmentHandlers.js"></script>
+
+        <script src="node_modules/babel-core/browser-polyfill.js"></script>
+        <script src="libs/bluebird/js/browser/bluebird.js"></script>
+        <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="libs/reqwest/reqwest.min.js"></script>
+        <script src="libs/handlebars/handlebars.js"></script>
+        <script src="libs/no_bower/jsdifflib/difflib.js"></script>
+        <script src="libs/no_bower/jsdifflib/diffview.js"></script>
+        <script src="libs/marked/lib/marked.js"></script>
+        <script src="libs/node-uuid/uuid.js"></script>
+        <script src="libs/moment/min/moment-with-locales.js"></script>
+        <script src="libs/system.js/dist/system-register-only.js"></script>
+
+
+        <script src="configuration/definition.js" data-configuration-definition></script>
+        <script src="configuration/default.js" data-configuration></script>
+
+        <script src="build/app/util.js"></script>
+        <script src="build/app/url_helper.js"></script>
+        <script src="build/app/go_lab_localized_strings.js"></script>
+        <script src="build/app/go_lab_config_handler.js"></script>
+        <script src="build/app/loading_indicator.js"></script>
+        <script src="build/app/revision_comparison.js"></script>
+        <script src="build/app/router.js"></script>
+        <script src="build/app/templating.js"></script>
+        <script src="build/app/named_type_error.js"></script>
+        <script src="build/app/page_data_error.js"></script>
+        <script src="build/app/in_memory_page_data.js"></script>
+        <script src="build/app/go_lab_page_data.js"></script>
+        <script src="build/app/go_lab_wiki_action_logger.js"></script>
+        <script src="build/app/edit_page.js"></script>
+        <script src="build/app/golab_configuration.js"></script>
+        <script src="build/app/application.js"></script>
+        <script>
+            Promise.all([
+                System.import('app/golab_configuration'),
+                System.import('app/application')
+            ]).spread(function(config, App) {
+                Promise.cast(config.default()).then(function(config) {
+                    App.default(config);
+                }).catch(function(err) {
+                    console.error(err);
+                });
+            });
+        </script>
+    </body>
+</html>
+
+        ]]>
+    </Content>
+</Module>

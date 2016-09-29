@@ -1,0 +1,75 @@
+<messagebundle mails="manske@collide.info">
+
+    <msg name="configure">Konfiguriere</msg>
+    <msg name="configuration">Konfigurierung</msg>
+    <msg name="config_reset_confirmation">This will reset the configuration to it's default. Changes you made yourself will be lost.</msg>
+    <msg name="default_post_title">Default post title</msg>
+    <msg name="reset_to_default">Zurücksetzen</msg>
+    <msg name="reflection_label">Reflektionsfragen anzeigen</msg>
+    <msg name="timeOffset_label">TimeOffset (Minuten)</msg>
+    <msg name="timeOffset_description">Beschreibung für TimeOffset</msg>
+    <msg name="reflection_description">Beschreibung für Reflexionsfragen</msg>
+    <msg name="save">Speichern</msg>
+
+    <msg name="refresh">Neu laden</msg>
+    <msg name="last_update_at">Letzte Aktualisierung: {0}</msg>
+    <msg name="info_nothing_to_display">Keine Daten zur Darstellung vorhanden. Damit die Concept Cloud funktioniert, muss mindestens eine der folgenden Objekte vorhanden sein: eine Concept Map, eine Hypothese, oder ein Wiki-Text.</msg>
+
+    <msg name="configure">Konfigurieren</msg>
+    <msg name="config_show_questions">Reflexionsfragen für Schüler</msg>
+    <msg name="no_concept_used">Du hast dich mit dem Konzept in keiner der möglichen Phasen auseinandergesetzt:</msg>
+    <msg name="no_concept_used_advice">Schaue dir am besten alle Phasen noch einmal an.</msg>
+    <msg name="concept_used_not_consistently">Nicht schlecht! Das bedeutet, dass du dich mit dem folgenden Konzept nicht
+        in allen Phasen auseinandergesetzt hast:
+    </msg>
+    <msg name="concept_used_not_consistently_advice">Schaue dir nun die einzelnen Phasen noch einmal an und achte auf
+        Phasen, in welchen du das Konzept nicht verwendet hast.
+    </msg>
+    <msg name="concept_used_consistently">Gut gemacht! Das bedeutet, dass du dich mit dem folgenden Konzept in allen
+        möglichen Phasen auseinandergesetzt hast:
+    </msg>
+    <msg name="concept_used_consistently_advice">Schaue dir nun die einzelnen Phasen noch einmal an.</msg>
+    <msg name="students_used_concept">Diese Schüler haben das Konzept verwendet:</msg>
+    <msg name="students_used_concept_in_no_phase">hat das Konzept in
+        <strong>keiner</strong>
+        Phase verwendet:
+    </msg>
+    <msg name="students_used_concept_in_phases">hat das Konzept in diesen Phasen verwendet:</msg>
+
+    <msg name="error_download_csv">Fehler beim Download der CSV Datei.</msg>
+    <msg name="err_could_not_load_questions">Fragen konnten nicht geladen werden. Erneut versuchen!</msg>
+    <msg name="err_could_not_load_vault_data">Auf die Vault konnte nicht zugegriffen werden. Bitte versuchen Sie es später erneut - sollte der Fehler weiterhin auftauchen, wenden Sie sich bitte an den Support.</msg>
+    <msg name="err_could_not_load_cache">Auf den Cache konnte nicht zugegriffen werden. Bitte versuchen Sie es später erneut - sollte der Fehler weiterhin auftauchen, wenden Sie sich bitte an den Support.</msg>
+    <msg name="err_could_not_update_resource">Die Resource konnte nicht aktualisert werden. Bitte versuchen Sie es später erneut - sollte der Fehler weiterhin auftauchen, wenden Sie sich bitte an den Support.</msg>
+    <msg name="err_could_not_create_resource">Die Resource konnte nicht erzeugt werden. Bitte versuchen Sie es später erneut - sollte der Fehler weiterhin auftauchen, wenden Sie sich bitte an den Support.</msg>
+    <msg name="err_could_not_read_resource">Die Resource konnte nicht gelesen werden. Bitte versuchen Sie es später erneut -  sollte der Fehler weiterhin auftreten, wenden Sie sich bitte an den Support.</msg>
+    <msg name="err_could_not_access_ils_structure">Auf die ILS Daten konnte nicht zugegriffen werden. Bitte versuchen Sie es später erneut - sollte der Fehler weiterhin auftauchen, wenden Sie sich bitte an den Support.</msg>
+    <msg name="err_could_not_load_config">Die Konfigurationsdatei konnte nicht geladen werden. Bitte versuchen Sie es später erneut - sollte der Fehler weiterhin auftauchen, wenden Sie sich bitte an den Support.</msg>
+    <msg name="err_could_not_get_questions">Reflexionsdaten konnten nicht vom Server geladen werden - sollte der Fehler weiterhin auftauchen, wenden Sie sich bitte an den Support..</msg>
+
+    <msg name="legend_concept_not_used">Konzept nicht verwendet</msg>
+    <msg name="legend_concept_used">Konzept angewendet</msg>
+    <msg name="legend_concept_use_not_possible">Anwendung in Phase nicht möglich</msg>
+    <msg name="legend_concept_used_partially">Teilweise verwendet</msg>
+    <msg name="legend_concept_not_used_yet">Konzept noch nicht verwendet</msg>
+    <msg name="legend_concept_used_everywhere">Überall verwendet</msg>
+
+    <msg name="legend_evolution_x_axis">Version der ConceptCloud</msg>
+    <msg name="legend_evolution_y_axis">Anzahl der Konzepte</msg>
+
+    <msg name="legend_evolution_generated">Generiert:</msg>
+    <msg name="legend_evolution_cloud-size">Anzahl der Konzepte: </msg>
+
+    <msg name="legend_evolution_flashy">Positiv auffallende Schüler:</msg>
+    <msg name="legend_evolution_fancy">Negativ auffallende Schüler:</msg>
+
+    <msg name="counter_span">x verwendet</msg>
+
+    <msg name="filter_title_phase">Nach Phase filtern</msg>
+    <msg name="filter_title_app">Nach App filtern</msg>
+    <msg name="filter_title_student">Nach Schüler filtern</msg>
+
+    <msg name="info_fancy">Schüler weichen negativ von der durchschnittlichen Schülerleistung ab.</msg>
+    <msg name="info_flashy">Schüler weichen positiv von der durchschnittlichen Schülerleistung ab.</msg>
+
+</messagebundle>

@@ -1,0 +1,144 @@
+{
+  "metadata":
+  {
+    "time": "undefined",
+    "title": "global concept aggregation",
+    "description": "Aggregated concepts used by all students",
+    "directed": "undefined",
+    "datalinks": [ "0.json" ],
+    "dimensions": [],
+    "edgeproperties": [],
+    "measures": [ [] ],
+    "type": "undefined",
+    "nodeproperties": []
+  },
+
+  "data":
+  [
+    {
+      "name": "Stern",
+      "frequency": 20
+
+    } ,
+    {
+      "name": "Himmel",
+      "frequency": 18
+
+    },
+    {
+      "name": "Schwerkraft",
+      "frequency": 15
+
+    },
+    {
+      "name": "Gas",
+      "frequency": 8
+
+    },
+    {
+      "name": "Plasma",
+      "frequency": 9
+
+    },
+    {
+      "name": "Himmelskörper",
+      "frequency": 14
+
+    },
+    {
+      "name": "Sternhaufen",
+      "frequency": 13
+
+    },
+    {
+      "name": "Planetensystem",
+      "frequency": 18
+
+    },
+    {
+      "name": "Planet",
+      "frequency": 20
+
+    },
+    {
+      "name": "Sonne",
+      "frequency": 8
+
+    },
+    {
+      "name": "Fixstern",
+      "frequency": 3
+
+    },
+    {
+      "name": "Komet",
+      "frequency": 15
+
+    },
+    {
+      "name": "Navigation",
+      "frequency": 2
+
+    },
+    {
+      "name": "Spektroskopie",
+      "frequency": 3
+
+    },
+    {
+      "name": "Sternbilder",
+      "frequency": 11
+
+    },
+    {
+      "name": "Galaxis",
+      "frequency": 4
+
+    },
+    {
+      "name": "Lichtpunkte",
+      "frequency": 10
+
+    },
+    {
+      "name": "Gravitation",
+      "frequency": 6
+
+    },
+    {
+      "name": "Astronomie",
+      "frequency": 2
+
+    },
+    {
+      "name": "Wasserstoff",
+      "frequency": 7
+
+    },
+    {
+      "name": "Gaswolke",
+      "frequency": 4
+
+    },
+    {
+      "name": "Sternwind",
+      "frequency": 2
+
+    },
+    {
+      "name": "Planetarischer Nebel",
+      "frequency": 9
+
+    },
+    {
+      "name": "Doppelstern",
+      "frequency": 4
+
+    },
+    {
+      "name": "Galaxie",
+      "frequency": 16
+
+    }
+  ]
+}

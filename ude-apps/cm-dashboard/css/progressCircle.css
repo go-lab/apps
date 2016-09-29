@@ -1,0 +1,64 @@
+#progressCircle{
+    position: absolute;
+    margin:15% 48%;
+    z-index:1000;
+    display:none;
+}
+
+.LoadText{
+    position: absolute;
+    margin:20.5% 49.5%;
+    z-index:1001;
+    display:none;
+}
+#progressCircleText{
+    text-align: center;
+    color: #1f3a92;
+    position: fixed;
+}
+
+#loadProgressCircle {
+    margin: 60px auto;
+    font-size: 10px;
+    position: fixed;
+    text-indent: -9999em;
+    border-top: 1.1em solid #d2daf5;
+    border-right: 1.1em solid  #d2daf5;
+    border-bottom: 1.1em solid  #d2daf5;
+    border-left: 1.1em solid  #1f3a92;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load 1.1s infinite linear;
+    animation: load 1.1s infinite linear;
+}
+
+#loadProgressCircle,#loadProgressCircle:after {
+    border-radius: 50%;
+    width: 12em;
+    height: 12em;
+}
+
+@-webkit-keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

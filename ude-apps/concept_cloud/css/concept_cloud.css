@@ -1,0 +1,335 @@
+.red {
+  fill: #ca1b00;
+  color: #ca1b00; }
+
+.yellow {
+  fill: #F7CA18;
+  color: #F7CA18; }
+
+.green {
+  fill: #2bb366;
+  color: #2bb366; }
+
+.grey {
+  fill: #95A5A6;
+  color: #95A5A6; }
+
+.default {
+  fill: #95A5A6;
+  color: #95A5A6; }
+
+.inactive {
+  fill: #f5f7f8;
+  color: #f5f7f8; }
+
+.phase-detail {
+  text-align: center;
+  line-height: 45px;
+  font-size: 12px; }
+  .phase-detail.interaction-less {
+    background: #e5e5e5;
+    color: #000; }
+  .phase-detail.interaction-required {
+    background: #ca1b00;
+    color: #fff; }
+  .phase-detail.no-interaction-required {
+    background: #2bb366;
+    color: #fff; }
+
+#wrapper-app {
+  position: relative;
+  overflow: hidden;
+  border: solid 1px #f5f7f8; }
+  #wrapper-app #legende {
+    height: 0;
+    font-size: 12px;
+    display: inline-block;
+    position: absolute;
+    -moz-transition-property: height;
+    -webkit-transition-property: height;
+    transition-property: height;
+    -moz-transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -moz-transition-timing-function: linear;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear; }
+  #wrapper-app.teacher-view #legende {
+    height: 0;
+    -moz-transition-property: height;
+    -webkit-transition-property: height;
+    transition-property: height;
+    -moz-transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -moz-transition-timing-function: linear;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear; }
+    #wrapper-app.teacher-view #legende p {
+      margin: 0;
+      font-size: 11px; }
+  #wrapper-app.student-view #legende {
+    height: 25px;
+    padding: 5px;
+    bottom: 0;
+    -moz-transition-property: height;
+    -webkit-transition-property: height;
+    transition-property: height;
+    -moz-transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -moz-transition-timing-function: linear;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear; }
+
+#tag_cloud text {
+  cursor: pointer; }
+  #tag_cloud text:hover {
+    cursor: pointer;
+    opacity: 0.85; }
+
+.sidebar-toggler, .analytics-toggler {
+  font-size: 12px;
+  border: 0;
+  -moz-transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in; }
+  .sidebar-toggler.show-menu{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    -moz-transition-property: right;
+    -webkit-transition-property: right;
+    transition-property: right; }
+  .analytics-toggler.show-menu {
+    position: absolute;
+    right: 5px;
+    top: 35px;
+    -moz-transition-property: right;
+    -webkit-transition-property: right;
+    transition-property: right;}
+    .sidebar-toggler.show-menu:hover,
+    .analytics-toggler.show-menu:hover {
+      right: 15px; }
+  .sidebar-toggler.hide-menu:hover,
+  .analytics-toggler.hide-menu:hover{
+    margin-left: 10px;
+    -moz-transition-property: margin-left;
+    -webkit-transition-property: margin-left;
+    transition-property: margin-left; }
+
+#sidebar {
+  background-color: #f5f7f8;
+  width: 0;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  -moz-transition-property: width;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -moz-transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in; }
+  #sidebar.is-visible {
+    width: 270px; }
+  #sidebar .inner {
+    margin: 10px; }
+  #sidebar .panel-title {
+    font-size: 14px; }
+  #sidebar .info {
+    font-style: italic;
+    font-size: 11px;
+    position: relative;
+    padding-top: 12px;
+    bottom: 0;
+    cursor: default;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+    #sidebar .info:hover {
+      background-color: #fff; }
+    #sidebar .info .notify {
+      top: 0;
+      padding: 0;
+      position: relative; }
+  #sidebar .header .close-sidebar {
+    color: rgba(0, 0, 0, 0.4); }
+    #sidebar .header .close-sidebar:hover {
+      color: black;
+      cursor: pointer; }
+
+.fa-chevron-right, .fa-chevron-left {
+  margin: 0 5px; }
+
+.fa-users {
+  margin-right: 5px; }
+
+.notify.fancy {
+  color: #2bb366; }
+.notify.flashy {
+  color: #ca1b00; }
+
+.phasen .row.phases {
+  margin: 5px 0; }
+
+.col-xs-2 {
+  min-height: 25px;
+  border-left: solid 1px #e5e5e5; }
+
+.view-status {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+ul {
+  padding: 0; }
+  ul :last-child {
+    border-bottom: 0; }
+  ul li {
+    list-style: none;
+    cursor: pointer;
+    padding: 3px 10px;
+    margin: 0;
+    position: relative;
+    border-bottom: 1px dotted #d6d6d6; }
+    ul li.phase.no-apps {
+      color: #95A5A6;
+      cursor: default; }
+      ul li.phase.no-apps:hover {
+        background: none; }
+    ul li:hover {
+      background: #e5e5e5; }
+    ul li .studentName {
+      margin-left: 10px; }
+    ul li.phase.selected {
+      background: #e5e5e5;
+      font-weight: bold; }
+    ul li.app.selected {
+      background: #e5e5e5;
+      font-weight: bold; }
+    ul li .notify {
+      position: absolute;
+      left: 0;
+      top: 6px;
+      padding: 0 3px; }
+    ul li label {
+      margin-left: 15px; }
+      ul li label input {
+        margin-right: 5px; }
+
+.modal-backdrop {
+  z-index: 0;
+  background: #fff; }
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 800px;
+    margin: 30px auto; } }
+.modal-header {
+  border: 0;
+  padding-bottom: 0; }
+  .modal-header .modal-title {
+    text-align: center;
+    font-family: 'Avant Garde', serif;
+    font-size: 28px; }
+  .modal-header .anzahl {
+    position: absolute;
+    top: 25px; }
+    .modal-header .anzahl span {
+      font-size: 12px; }
+
+.paragraph {
+  padding: 7px 0; }
+
+.reflection.paragraph i {
+  padding-right: 5px; }
+
+.used_concepts, .info.paragraph {
+  font-size: 16px;
+  text-align: center; }
+
+.user_name {
+  font-weight: bold;
+  text-transform: capitalize; }
+
+.questions li {
+  cursor: default; }
+  .questions li:hover {
+    background: none; }
+  .questions li.reload-questions {
+    color: #ca1b00;
+    text-align: center;
+    margin: 25px 0;
+    cursor: pointer; }
+
+.student.selected {
+  background: #e5e5e5;
+  font-weight: bold; }
+
+.phase-detail {
+  display: inline-block;
+  border: 1px #f5f7f8 solid; }
+
+.phase-legende {
+  font-size: 10px;
+  text-align: center; }
+
+.teacher-modal-content .inner, .teacher-modal-content .student.info.paragraph, .student-modal-content .inner, .student-modal-content .student.info.paragraph {
+  border-top: 1px dashed #d6d6d6; }
+
+.teacher-modal ul.student-list {
+  overflow: hidden; }
+  .teacher-modal ul.student-list li {
+    width: 33.3%;
+    border-bottom: 0;
+    line-height: 1.5em;
+    font-size: 13px;
+    float: left;
+    display: inline;
+    cursor: default; }
+    .teacher-modal ul.student-list li:hover {
+      background: none; }
+    .teacher-modal ul.student-list li.selected:hover {
+      background: #e5e5e5; }
+
+.description {
+  padding: 0 10px;
+}
+.input-group {
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #f5f7f8;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+label {
+  ont-weight: 400;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+input.timeOffset {
+  width:50px;
+}
+
+.info.nothing-to-display {
+  text-align: center;
+  line-height: 45px;
+}
+
+.tag_cloud_screenshot,
+#current_tagCloud {
+  display: none;
+}

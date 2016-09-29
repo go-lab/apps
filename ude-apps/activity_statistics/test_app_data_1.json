@@ -1,0 +1,78 @@
+{
+  "header": [
+    {
+      "dataType": "string",
+      "title": "Targetname"
+    },
+    {
+      "dataType": "zonedDateTime",
+      "title": "Timestamp"
+    }
+  ],
+  "rows": [
+    [
+      "Orientation",
+      "2014-12-15T16:36:51.027Z"
+    ],
+    [
+      "observationTool",
+      "2014-12-15T16:37:04.195Z"
+    ],
+    [
+      "questioning scratchpad",
+      "2014-12-15T16:37:04.318Z"
+    ],
+    [
+      "hypothesis scratchpad",
+      "2014-12-15T16:37:04.624Z"
+    ],
+    [
+      "edt",
+      "2014-12-15T16:37:05.433Z"
+    ],
+    [
+      "hypothesis scratchpad",
+      "2014-12-15T16:37:07.46Z"
+    ],
+    [
+      "Orientation",
+      "2014-12-15T16:38:12.978Z"
+    ],
+    [
+      "observationTool",
+      "2014-12-15T16:38:24.581Z"
+    ],
+    [
+      "Orientation",
+      "2014-12-15T16:38:47.151Z"
+    ],
+    [
+      "questioning scratchpad",
+      "2014-12-15T16:39:05.613Z"
+    ],
+    [
+      "observationTool",
+      "2014-12-15T16:39:08.903Z"
+    ],
+    [
+      "edt",
+      "2014-12-15T16:39:09.898Z"
+    ],
+    [
+      "hypothesis scratchpad",
+      "2014-12-15T16:39:14.377Z"
+    ],
+    [
+      "dataViewer",
+      "2014-12-15T16:39:16.113Z"
+    ],
+    [
+      "conclusionTool",
+      "2014-12-15T16:39:19.704Z"
+    ]
+  ],
+  "ilsId": "5485a7050ac61b1339a4da09",
+  "sessionControllerResultType": "initTable",
+  "multiResultKey": "4234324@5485a7050ac61b1339a4da09",
+  "username": "4234324"
+}

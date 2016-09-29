@@ -1,0 +1,24 @@
+<messagebundle mails="manske@collide.info">
+  <msg name="error_occured">Ein Fehler ist aufgetreten</msg>
+  <msg name="close_alert">Hinweis schließen</msg>
+  <msg name="show_statusbar">Statusanzeige anzeigen</msg>
+  <msg name="hide_statusbar">Statusanzeige verbergen</msg>
+  <msg name="view_controls">Ansicht</msg>
+  <msg name="timelines">Zeitleisten</msg>
+  <msg name="phases">Phasen</msg>
+  <msg name="apps">Apps</msg>
+  <msg name="show_app_activities">Zeige App-Aktivitiäten</msg>
+  <msg name="minimize_this_timeline">Diese Zeitleiste minimieren</msg>
+  <msg name="minimize_timelines">Alle Zeitleisten verbergen</msg>
+  <msg name="maximize_timelines">Alle Zeitleisten zeigen</msg>
+  <msg name="info">Info</msg>
+  <msg name="connection_closed">The data source has been disconnected, preventing new data to come in. You can reload the page to try to reconnect.</msg>
+  <msg name="timescale_status">Zeige Aktivitäten von {0} bis {1}.</msg>
+  <msg name="phase">Phase</msg>
+  <msg name="start">Beginn</msg>
+  <msg name="end">Ende</msg>
+  <msg name="duration">Dauer</msg>
+  <msg name="app">App</msg>
+  <msg name="time">Uhrzeit</msg>
+  <msg name="show_data_from">Zeige Daten vom</msg>
+</messagebundle>

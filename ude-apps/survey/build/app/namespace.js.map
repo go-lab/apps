@@ -1,0 +1,1 @@
+{"version":3,"sources":["namespace.js"],"names":[],"mappings":";;AAAA,IAAI,KAAK,GAAG,KAAK,IAAI,EAAE,CAAC;AACxB,KAAK,CAAC,KAAK,GAAG,KAAK,CAAC,KAAK,IAAI,EAAE,CAAC;AAChC,KAAK,CAAC,KAAK,CAAC,cAAc,GAAG,EAAE,CAAC","file":"namespace.js","sourcesContent":["var golab = golab || {};\ngolab.tools = golab.tools || {};\ngolab.tools.ReflectionPoll = {};\n"],"sourceRoot":"/source/"}

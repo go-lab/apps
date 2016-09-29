@@ -1,0 +1,45 @@
+<messagebundle>
+  <msg name="all pages">Alle Seiten</msg>
+  <msg name="starting page">Startseite</msg>
+  <msg name="edit">{0} bearbeiten</msg>
+  <msg name="page title">Titel der Seite</msg>
+  <msg name="content">Inhalt</msg>
+  <msg name="toolbar wiki link">Link zu Wiki-Seite einfügen</msg>
+  <msg name="toolbar no pages">Bisher keine Seiten vorhanden.</msg>
+  <msg name="abort changes">Änderungen verwerfen</msg>
+  <msg name="save">Speichern</msg>
+  <msg name="revisions heading">Revisionen von „{0}“</msg>
+  <msg name="hist heading">Vergleich von zwei Revisionen von „{0}“</msg>
+  <msg name="new page">Neue Seite</msg>
+  <msg name="view page">Seite ansehen</msg>
+  <msg name="edit page">Seite bearbeiten</msg>
+  <msg name="view hist">Revisionen ansehen</msg>
+  <msg name="last change">Letzte Änderung</msg>
+  <msg name="formatting help">Formatierungshilfe</msg>
+  <msg name="formatting intro">Text kann mithilfe der Markdown-Syntax formatiert werden.</msg>
+  <msg name="bold">Fett</msg>
+  <msg name="italic">Kursiv</msg>
+  <msg name="link">Link</msg>
+  <msg name='link title'>Titel des Links (optional)</msg>
+  <msg name="heading level">Überschrift {0}. Ebene</msg>
+  <msg name="more formatting">More markdown syntax</msg>
+  <msg name="formatting paragraphs">Absätze werden durch eine freie Zeile getrennt.</msg>
+  <msg name="current revision">Aktuelle Revision vom {0}</msg>
+  <msg name="other revision">Revision vom {0}</msg>
+  <msg name="view recomms">Verwandte Ressourcen ansehen</msg>
+  <msg name="recomms heading">Ressourcenvorschläge für „{0}“</msg>
+  <msg name="recomms explanation">Hier werden ihnen Web-Ressourcen präsentiert, die verwandt sind mit Konzepten in ihrem Text, und ihnen bei weiterer Recherche helfen könnten.</msg>
+  <msg name="recomms loading">Ressourcenvorschläge werden gesammelt. Könnte ein Weilchen dauern.</msg>
+  <msg name="recomms error">Während die Ressourcenvorschläge geladen wurden, ist ein Fehler aufgetreten</msg>
+  <msg name="no recomms">Momentan gibt es keine Ressourcen die vorgeschlagen werden können. Versuch es noch einmal wenn die Seite mehr Inhalt hat.</msg>
+  <msg name="screenshot loading">Lädt screenshot</msg>
+  <msg name="date">Datum</msg>
+  <msg name="author">Autor</msg>
+  <msg name="changes">Änderungen</msg>
+
+  <msg name="configure">Konfigurieren</msg>
+  <msg name="configure heading">Wiki konfigurieren</msg>
+  <msg name="collaborativity">Kollaborativität</msg>
+  <msg name="collaborativity config">Setze diese Option damit ein Nutzer auch die Seiten anderer Nutzer (inklusive ihrer eigenen) sehen können</msg>
+  <msg name="export as word">Als Word-Datei exportieren</msg>
+</messagebundle>

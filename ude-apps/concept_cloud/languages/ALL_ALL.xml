@@ -1,0 +1,72 @@
+<messagebundle mails="manske@collide.info">
+
+    <msg name="configure">Configure</msg>
+    <msg name="configuration">Configuration</msg>
+    <msg name="config_reset_confirmation">This will reset the configuration to it's default. Changes you made yourself will be lost.</msg>
+    <msg name="default_post_title">Default post title</msg>
+    <msg name="reset_to_default">Reset to default</msg>
+    <msg name="reflection_label">Show reflection questions</msg>
+    <msg name="timeOffset_label">TimeOffset (minutes)</msg>
+    <msg name="timeOffset_description">Description for TimeOffset</msg>
+    <msg name="reflection_description">Description for Reflection</msg>
+    <msg name="save">Save</msg>
+
+    <msg name="refresh">Refresh</msg>
+    <msg name="last_update_at">Last update: {0}</msg>
+    <msg name="info_nothing_to_display">Sorry, there is no data for visualisation available. You need at least one of the following to make the Concpet Cloud work properly: a concept map, a hypothesis, or a wiki text.</msg>
+    <msg name="config_show_questions">Reflection questions for students</msg>
+    <msg name="no_concept_used">You have not used the following concept in any inquiry phase: </msg>
+    <msg name="no_concept_used_advice">Please, visit the phases again and check.</msg>
+    <msg name="concept_used_not_consistently">Not bad! That means that you have used the following concept, but not in
+        every inquiry phase:
+    </msg>
+    <msg name="concept_used_not_consistently_advice">Revisit the phases and check whether you could use the concept
+        anywhere else.
+    </msg>
+    <msg name="concept_used_consistently">Well done! That means that you have used the following concept across all
+        inquiry phases:
+    </msg>
+    <msg name="concept_used_consistently_advice">Revisit the phases to check again.</msg>
+    <msg name="students_used_concept">These students have used the concept: </msg>
+    <msg name="students_used_concept_in_no_phase">has used the concept in
+        <strong>none</strong>
+        of the phases:
+    </msg>
+    <msg name="students_used_concept_in_phases">has used the concept in these phases: </msg>
+
+    <msg name="error_download_csv">Error Downloading CSV File.</msg>
+    <msg name="err_could_not_load_questions">Could not load questions. Please try again!</msg>
+    <msg name="err_could_not_load_vault_data">The vault could not be accessed. Please try again later - if the error persists, please contact the support.</msg>
+    <msg name="err_could_not_load_cache">The cache could not be accessed. Please try again later - if the error persists, please contact the support.</msg>
+    <msg name="err_could_not_update_resource">The resource could not be updated. Please try again later - if the error persists, please contact the support</msg>
+    <msg name="err_could_not_create_resource">The resource could not be created. Please try again later - if the error persists, please contact the support</msg>
+    <msg name="err_could_not_read_resource">Could not read resource. Please try again later - if the error persists, please contact the support</msg>
+    <msg name="err_could_not_access_ils_structure">ILS data could not be accessed. Please try again later - if the error persists, please contact the support.</msg>
+    <msg name="err_could_not_load_config">The configuration file could not be accessed. Please try again later - if the error persists, please contact the support.</msg>
+    <msg name="err_could_not_get_questions">Reflection questions could not be loaded - if the error persists, please contact the support.</msg>
+
+    <msg name="legend_concept_not_used">Concept not used</msg>
+    <msg name="legend_concept_used">Concept used</msg>
+    <msg name="legend_concept_use_not_possible">Usage not possible in phase</msg>
+    <msg name="legend_concept_used_partially">Used partially</msg>
+    <msg name="legend_concept_not_used_yet">Concept not used yet</msg>
+    <msg name="legend_concept_used_everywhere">Used everywhere</msg>
+
+    <msg name="legend_evolution_x_axis">Version of ConceptCloud</msg>
+    <msg name="legend_evolution_y_axis">Quantity of different Concepts</msg>
+
+    <msg name="legend_evolution_generated">Generated: </msg>
+    <msg name="legend_evolution_cloud-size">Quantity of Concepts: </msg>
+    <msg name="legend_evolution_flashy">Noticeable students (negative): </msg>
+    <msg name="legend_evolution_fancy">Noticeable students (positive): </msg>
+
+    <msg name="counter_span">x used</msg>
+
+    <msg name="filter_title_phase">Filter by Phase</msg>
+    <msg name="filter_title_app">Filter by App</msg>
+    <msg name="filter_title_student">Filter by Student</msg>
+
+    <msg name="info_fancy">Student differs negative from the average student performance.</msg>
+    <msg name="info_flashy">Student differs positive from the average student performance.</msg>
+
+</messagebundle>

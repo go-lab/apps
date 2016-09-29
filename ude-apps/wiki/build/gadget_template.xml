@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+    <ModulePrefs
+        title="Wiki"
+        author_email="dan@modiho.com"
+        author="Daniel Rose"
+        height="600"
+        width="800"
+        >
+        <Require feature="osapi" />
+        <Require feature="opensocial-2.5"/>
+        <Require feature="content-rewrite">
+            <Param name="exclude-url">*</Param>
+        </Require>
+        <Locale messages="languages/en_ALL.xml" />
+        <Locale lang="en" messages="languages/en_ALL.xml" />
+        <Locale lang="de" messages="languages/de_ALL.xml" />
+    </ModulePrefs>
+
+    <Content type="html" view="default">
+        <![CDATA[
+        <!-- @echo content -->
+        ]]>
+    </Content>
+</Module>

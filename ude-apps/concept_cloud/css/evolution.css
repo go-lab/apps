@@ -1,0 +1,133 @@
+.col-md-12.no-padding {
+    padding: 0;
+    margin: 10px 0;
+}
+
+.visualisation {
+    background: #fff;
+}
+
+ul.analytics-info {
+
+}
+
+ul.analytics-info li {
+    padding: 3px 0;
+    cursor: default;
+}
+
+ul.analytics-info li:hover {
+    background: none;
+}
+
+.bar {
+    fill: #67809F;
+}
+
+.bar:hover {
+    fill: #5050D2;
+}
+
+.axis {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+
+.axis text
+{
+    font-family: 'Arial';
+    font-size: 13px;
+}
+.tick
+{
+    stroke-dasharray: 1, 2;
+}
+
+.d3-tip {
+    line-height: 1;
+    padding: 12px;
+    background: rgba(80,80,210, 1.0);
+    color: #fff;
+    border-radius: 2px;
+    z-index: 99;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+}
+
+#evolution {
+    background-color: #f5f7f8;
+    width: 0;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    -moz-transition-property: width;
+    -webkit-transition-property: width;
+    transition-property: width;
+    -moz-transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in; }
+#evolution.is-visible {
+    width: 100%; }
+#evolution .inner {
+    margin: 10px; }
+#evolution .panel-title {
+    font-size: 14px; }
+#evolution .info {
+    font-style: italic;
+    font-size: 11px;
+    position: relative;
+    padding-top: 12px;
+    bottom: 0;
+    cursor: default;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+#evolution .info .notify {
+    top: 0;
+    padding: 0;
+    position: relative; }
+#evolution .header .close-sidebar {
+    color: rgba(0, 0, 0, 0.4); }
+#evolution .header .close-sidebar:hover {
+    color: black;
+    cursor: pointer; }
+
+.screenshot {
+    height:350px;
+    background: #fff;
+}

@@ -1,0 +1,45 @@
+<messagebundle>
+  <msg name="all pages">All pages</msg>
+  <msg name="starting page">Starting page</msg>
+  <msg name="edit">Edit {0}</msg>
+  <msg name="page title">Page title</msg>
+  <msg name="content">Content</msg>
+  <msg name="toolbar wiki link">Add link to wiki page</msg>
+  <msg name="toolbar no pages">There are no pages yet.</msg>
+  <msg name="abort changes">Abort changes</msg>
+  <msg name="save">Save</msg>
+  <msg name="revisions heading">Revisions of "{0}"</msg>
+  <msg name="hist heading">Comparing two revisions of "{0}"</msg>
+  <msg name="new page">New page</msg>
+  <msg name="view page">View page</msg>
+  <msg name="edit page">Edit this page</msg>
+  <msg name="view hist">View revisions</msg>
+  <msg name="last change">Last change</msg>
+  <msg name="formatting help">Formatting help</msg>
+  <msg name="formatting intro">Text can be formatted using Markdown syntax.</msg>
+  <msg name="bold">Bold</msg>
+  <msg name="italic">Italic</msg>
+  <msg name="link">Link</msg>
+  <msg name="link title">Link title (optional)</msg>
+  <msg name="heading level">Heading level {0}</msg>
+  <msg name="more formatting">More markdown syntax</msg>
+  <msg name="formatting paragraphs">Paragraphs are seperated by one blank line.</msg>
+  <msg name="current revision">Current revision from {0}</msg>
+  <msg name="other revision">Revision from {0}</msg>
+  <msg name="view recomms">View related resources</msg>
+  <msg name="recomms heading">Resource recommmendations for "{0}"</msg>
+  <msg name="recomms explanation">Here, you will be presented with web resources related to the concepts formulated in your text, which you can use for further research.</msg>
+  <msg name="recomms loading">Collecting resource recommendations. Possibly needs some time.</msg>
+  <msg name="recomms error">An error occured while fetching the recommendations from the server. Please try again later.</msg>
+  <msg name="no recomms">There are no resources that can be recommended at this point. Try again when you added more content to the page.</msg>
+  <msg name="screenshot loading">Loading screenshot</msg>
+  <msg name="date">Date</msg>
+  <msg name="author">Author</msg>
+  <msg name="changes">Changes</msg>
+
+  <msg name="configure">Configure</msg>
+  <msg name="configure heading">Wiki configuration</msg>
+  <msg name="collaborativity">Collaborativity</msg>
+  <msg name="collaborativity config">Check this options to allow users to see pages of other users (including yours)</msg>
+  <msg name="export as word">Export as Word file</msg>
+</messagebundle>

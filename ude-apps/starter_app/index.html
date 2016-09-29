@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Go Lab Starter App</title>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="app/style.css" type="text/css">
+    </head>
+    <body>
+        <h1>GoLab Starter App</h1>
+
+        <div class="toolbar_wrapper">
+            <div class="container">
+                <div id="toolbar" role="toolbar"></div>
+            </div>
+        </div>
+
+        <div class="container" id="main">
+            <div class="row" id="error">
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="alert"
+                            aria-label="Close alert">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <span class="message"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" id="post"></div>
+            </div>
+
+            <div id="notifications" class="panel panel-info">
+                <div class="panel-body"></div>
+            </div>
+
+            <div class="cover" id="loading_indicator"></div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="posts_list"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="posts_list_label"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="posts_list_label">Posts</h4>
+                    </div>
+                    <div class="modal-body"></div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="config"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="config_label"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <form action="#">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close">
+                                <span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="config_label">Configuration</h4>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/js/alert.js"></script>
+        <script src="bower_components/bootstrap/js/modal.js"></script>
+        <script src="bower_components/moment/min/moment.min.js"></script>
+
+        <script type="text/javascript" src="../../libs/js/headJS/head.min.js"></script>
+
+        <!-- Go-Lab integration -->
+        <script src="../../libs/js/socket.io-1.2.1.js"></script>
+        <script src="../../libs/js/jquery.cookie.js"></script>
+        <script src="../../commons/js/utils.js"></script>
+        <script src="../../libs/js/underscore.js"></script>
+        <script src="http://shindig2.epfl.ch/ils/main/ils_graaspeu.js"></script>
+        <script src="../../commons/js/MetadataHandler.js"></script>
+        <script src="../../commons/js/CachingStorageHandler.js"></script>
+        <script src="../../commons/js/StorageHandler.js"></script>
+        <script src="../../commons/js/ActionLogger.js"></script>
+        <script src="../../commons/js/notificationClient.js"></script>
+        <script src="../../commons/js/languageHandlers.js"></script>
+        <script src="../../commons/js/createEnvironmentHandlers.js"></script>
+
+        <script src="app/configuration_definition.js" data-configuration-definition></script>
+        <script src="app/configuration_default.js" data-configuration></script>
+
+        <script src="app/namespace.js"></script>
+        <script src="app/util.js"></script>
+        <script src="app/pubsub.js"></script>
+        <script src="app/config_handler.js"></script>
+        <script src="app/post_storage.js"></script>
+        <script src="app/toolbar.js"></script>
+        <script src="app/post_editor.js"></script>
+        <script src="app/posts_list.js"></script>
+        <script src="app/config_dialog.js"></script>
+        <script src="app/notification_display.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/run.js"></script>
+    </body>
+</html>

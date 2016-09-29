@@ -1,0 +1,32 @@
+<messagebundle>
+    <msg name="posts">Posts</msg>
+    <msg name="close_alert">Close alert</msg>
+    <msg name="refresh">Refresh</msg>
+    <msg name="unnamed_post">Unnamed post</msg>
+    <msg name="content">Content</msg>
+    <msg name="save_post">Save post</msg>
+    <msg name="remove_post">Remove post</msg>
+    <msg name="cancel">Cancel</msg>
+    <msg name="edit">Edit</msg>
+    <msg name="save_error">An error occured while saving the post.</msg>
+    <msg name="load_error">An error occured while loading the post.</msg>
+    <msg name="load_posts_error">An error occured while loading all posts.</msg>
+    <msg name="display_error">An error occured while trying to display the post.</msg>
+    <msg name="remove_error">An error occured while trying to remove the post.</msg>
+    <msg name="error_occured">An error occured.</msg>
+    <msg name="add_new_post">Add new post</msg>
+    <msg name="clear_posts">Remove all posts</msg>
+    <msg name="new">New</msg>
+    <msg name="save">Save</msg>
+    <msg name="open">Open</msg>
+    <msg name="duplicate">Duplicate</msg>
+    <msg name="remove">Remove</msg>
+    <msg name="post_title">Post title</msg>
+    <msg name="last_change">Last change</msg>
+    <msg name="action">Action</msg>
+    <msg name="open_post">Open post</msg>
+    <msg name="unsaved_changes_prompt">There are unsaved changes to the post that will be discarded.</msg>
+    <msg name="copy_of_post">Copy of {0}</msg>
+    <msg name="post_removal_confirmation">Do you really want to remove the post "{0}"?.</msg>
+    <msg name="full_date_moment_format">DD/MM/YYYY hh:mm a</msg>
+</messagebundle>

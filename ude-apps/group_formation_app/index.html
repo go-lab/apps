@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Group Formation App</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="app/style.css" type="text/css">
+</head>
+<body>
+<div id="appTitle"><h1>Group Formation App</h1></div>
+
+<div class="toolbar_wrapper">
+    <div class="container">
+        <div id="toolbar" role="toolbar"></div>
+    </div>
+</div>
+
+<div class="container" id="main">
+
+    <div class="row" id="error">
+        <div class="col-md-12">
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button
+                        type="button"
+                        class="close"
+                        data-dismiss="alert"
+                        aria-label="Close alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <span class="message"></span>
+            </div>
+        </div>
+    </div>
+    <div id="notifications" class="panel panel-info">
+        <div class="panel-body"></div>
+    </div>
+    <div class="cover" id="loading_indicator"></div>
+
+    <div>
+        <ul class="nav nav-tabs" id="navBar">
+            <li role="presentation" id="navBarResult" style="display: none"><a href="#"><span id="navBarResultSpan">Result</span></a>
+            </li>
+            <li role="presentation" id="navBarCalculation"><a href="#"><span
+                    id="navBarCalculationSpan">Calculation</span></a></li>
+            <li role="presentation" id="navBarOverview" class="active"><a href="#"><span
+                    id="navBarSummarySpan">Summary</span></a></li>
+            <li role="presentation" id="navBarParticipation"><a href="#"><span id="navBarParticipationSpan">Participation</span></a>
+            </li>
+            <li role="presentation" id="navBarArtifacts"><a href="#"><span id="navBarSourcesSpan">Sources</span></a>
+            </li>
+            <li role="presentation" id="navBarStudents"><a href="#"><span id="navBarStudentsSpan">Students</span></a>
+            </li>
+            <li role="presentation" id="navBarSynonyms"><a href="#"><span id="navBarSynonymsSpan">Synonyms</span></a>
+            </li>
+        </ul>
+
+        <br>
+
+        <div id="navBarDivs">
+
+            <div id="resultDiv" class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> <span
+                            id="resultDivHeadingSpan">View Calculation Result</span>:</h3>
+                </div>
+                <div class="panel-body" id="resultDivPanelBody">
+
+                    <nav class="navbar navbar-default">
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="dropdown div-inline">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Show
+                                    Groups<span class="caret"></span>
+                                </button>
+                                <ul id="showGroupsDpUl" class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><a id="listViewLink" href="#">Listview</a></li>
+                                    <li><a id="tableViewLink" href="#">Tableview action</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown div-inline">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Concept
+                                    Clouds<span class="caret"></span>
+                                </button>
+                                <ul id="conceptCloudByGroupDpUl" class="dropdown-menu"
+                                    aria-labelledby="dropdownMenu1">
+                                </ul>
+                            </div>
+                        </form>
+                    </nav>
+
+                    <div class="panel panel-default" id="resultNavBarContentDiv">
+                        <div id="showGroupsListViewDiv" style="display:none" class="list-group">
+                        </div>
+                        <div id="showGroupsTableViewDiv" style="display:none" class="panel-body">
+                        </div>
+                        <div id="conceptCloudDiv" style="display:none" class="panel-body">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel-footer">
+
+                </div>
+            </div>
+
+            <div id="calculationDiv" class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> <span
+                            id="calculationDivHeadingSpan">Calculate Groups</span>:</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div id="groupSizeDiv" class="panel-body panelBodyTopPadding">
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div id="startCalculationDiv" class="panel-body panelBodyTopPadding">
+                            <h4>Calculation</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+
+                </div>
+            </div>
+
+            <div id="overviewDiv" class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> <span
+                            id="overviewDivHeadingSpan">View Summary</span>:</h3>
+                </div>
+                <div class="panel-body">
+
+                    <div class="panel panel-default">
+                        <div class="panel-body panelBodyTopPadding panelBodyBottomPadding">
+                            <h4 id="selectionSummaryHeading">Selection Summary</h4>
+                            <div class="col-md-8 col-xs-12">
+                                <table id="selectionSummaryTable" class="table table-hover table-borderless"></table>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div id="calculationBasisPanelBody" class="panel-body panelBodyTopPadding">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+
+                </div>
+
+            </div>
+
+            <div id="participationDiv" class="panel panel-default">
+                <div class="panel-heading"></div>
+                <div class="panel-body"></div>
+                <div class="panel-footer"></div>
+            </div>
+
+            <div id="artifactDiv" class="panel panel-default">
+                <div class="panel-heading"></div>
+                <div id="artifactPanelBody" class="panel-body"></div>
+                <div class="panel-footer"></div>
+            </div>
+
+            <div id="studentDiv" class="panel panel-default">
+                <div class="panel-heading"></div>
+                <div id="studentPanelBody" class="panel-body"></div>
+                <div class="panel-footer"></div>
+            </div>
+
+
+            <div id="synonymDiv" class="panel panel-default">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> <span
+                            id="synonymDivHeadingSpan">Edit Synonyms</span>:</h3>
+                </div>
+                <div class="panel-body">
+
+                    <nav class="navbar navbar-default">
+                        <form class="navbar-form navbar-left" role="search">
+                            <div id="synonymAddInputDiv" class="form-group">
+                                <input id="synonymAddInput" type="text" class="form-control"
+                                       placeholder="Synonym generic term">
+                            </div>
+                            <button id="synonymAddTableBtn" type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                Add synonym generic term
+                            </button>
+                            <button type="button" id="showExampleBtn" class="btn btn-default">
+                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                Show example
+                            </button>
+                            <button type="button" id="hideExampleBtn" style="display:none" class="btn btn-default">
+                                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                                Hide Example
+                            </button>
+                        </form>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <form class="navbar-form navbar-right">
+                                <button id="showConceptAggregationSynBtn" disabled type="button"
+                                        class="btn btn-default">
+                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                    Show Concept Aggregation
+                                </button>
+                            </form>
+                        </div>
+                    </nav>
+
+                    <div id="synonymTableContainer">
+
+                        <div id="sExampleTableDiv" style="display:none">
+                            <table class="table table-condensed table-hover">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        Probe
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        Muster
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Beweis
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Dokumentation
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Zeichen
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Kostprobe
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Nachweis
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <div id="synonymTemplateDiv" class="synonymTableDiv" style="display: none">
+                            <table class="table table-condensed table-hover">
+                                <thead>
+                                <tr class="genTermRow">
+                                    <th class="synonymGenTermHeader termData"></th>
+                                    <th class="editColumnHeader editColumn" style="display: none">
+                                        <button type="button" class="editGenTermBtn btn btn-default">
+                                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                        </button>
+                                        <button type="button" class="rmGenTableBtn btn btn-default">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                        </button>
+                                    </th>
+                                </tr>
+                                <tr class="rnGenTermRow" style="display: none">
+                                    <th class="synonymGenTermHeaderN termData">
+                                        <div style="margin-bottom: 0px" class="form-group">
+                                            <input type="text" class="form-control"
+                                                   placeholder="Please enter your term">
+                                        </div>
+                                    </th>
+                                    <th class="confirmEditGTermRow">
+                                        <button type="button" class="confirmRnGTermBtn btn btn-default">
+                                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        </button>
+                                        <button type="button" class="cancelRnGTermBtn btn btn-default">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                        </button>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr style="display: none" class="inputTermRowT">
+                                    <td class='termData'>
+                                        <div style='margin-bottom: 0px' class="form-group">
+                                            <input type="text" class="form-control"
+                                                   placeholder="Please enter your term">
+                                        </div>
+                                    </td>
+                                    <td class="editColumn" style="display: none">
+                                        <button type="button" class="editTermBtn btn btn-default">
+                                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                        </button>
+                                        <button type="button" class="rmTermBtn btn btn-default">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="rnTermRow" style="display: none">
+                                    <td class="termData">
+                                        <div style="margin-bottom: 0px" class="form-group">
+                                            <input type="text" class="form-control"
+                                                   placeholder="Please enter your term">
+                                        </div>
+                                    </td>
+                                    <td class="confirmEditTermRow">
+                                        <button type="button" class="confirmRnTermBtn btn btn-default">
+                                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        </button>
+                                        <button type="button" class="cancelRnTermBtn btn btn-default">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="addButtonRow">
+                                    <td>
+                                        <button type="button" class="addTermBtn btn btn-default">
+                                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                            Add
+                                        </button>
+                                        <button type="button" class="editModeBtn btn btn-default">
+                                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                            Edit
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr style="display:none" class="confirmBtnRow">
+                                    <td>
+                                        <button type="button" class="confirmTermBtn btn btn-default">
+                                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                            Confirm
+                                        </button>
+                                        <button type="button" class="cancelTermBtn btn btn-default">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            Cancel
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr style="display:none" class="editColumn stopEditBtnRow">
+                                    <td>
+                                        <button type="button" class="stopEditBtn btn btn-default">
+                                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                            Stop Edit
+                                        </button>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="panel-footer">
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<div
+        class="modal fade"
+        id="config"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="config_label"
+        aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="#">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="config_label">Configuration</h4>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div
+        class="modal fade"
+        id="participationDialog"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="config_label"
+        aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="#">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="participationDialogLabel">Participation</h4>
+                </div>
+                <div id="participationDialogBody" class="modal-body">
+
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div
+        class="modal fade"
+        id="refModelSelectionDialog"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="config_label"
+        aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <form action="#">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div
+        class="modal fade"
+        id="multiUseDialog"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="config_label"
+        aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <form action="#">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div
+        class="modal fade"
+        id="d3FullDialog"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="config_label"
+        aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="height: 100%;width: 100%; padding:0;">
+        <form action="#">
+            <div class="modal-content" style="height: 100%; border-radius: 0">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div
+        class="modal fade"
+        id="multiUseDialog2"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="config_label"
+        aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <form action="#">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+<script src="app/fdg/engine.js" charset="utf-8"></script>
+<script src="app/fdg/gframework.js" charset="utf-8"></script>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="app/jquery.tipsy.js"></script>
+<script src="bower_components/bootstrap/js/alert.js"></script>
+<script src="bower_components/bootstrap/js/modal.js"></script>
+<script src="bower_components/moment/min/moment.min.js"></script>
+<script src="bower_components/bootstrap/js/dropdown.js"></script>
+
+<script type="text/javascript" src="../../libs/js/headJS/head.min.js"></script>
+
+<!-- Go-Lab integration -->
+<script src="../../libs/js/socket.io-1.2.1.js"></script>
+<script src="../../libs/js/jquery.cookie.js"></script>
+<script src="../../commons/js/utils.js"></script>
+<script src="../../libs/js/underscore.js"></script>
+<script src="http://shindig2.epfl.ch/ils/main/ils_graaspeu.js"></script>
+<script src="../../commons/js/MetadataHandler.js"></script>
+<script src="../../commons/js/CachingStorageHandler.js"></script>
+<script src="../../commons/js/StorageHandler.js"></script>
+<script src="../../commons/js/ActionLogger.js"></script>
+<script src="../../commons/js/notificationClient.js"></script>
+<script src="../../commons/js/languageHandlers.js"></script>
+<script src="../../commons/js/createEnvironmentHandlers.js"></script>
+
+<script src="app/configuration_definition.js" data-configuration-definition></script>
+<script src="app/configuration_default.js" data-configuration></script>
+
+<script src="app/namespace.js"></script>
+<script src="app/util.js"></script>
+<script src="app/pubsub.js"></script>
+<script src="app/config_handler.js"></script>
+<script src="app/post_storage.js"></script>
+<script src="app/toolbar.js"></script>
+<script src="app/config_dialog.js"></script>
+<script src="app/notification_display.js"></script>
+<script src="app/app.js"></script>
+<script src="app/run.js"></script>
+
+<!-- App Specific -->
+<script src="app/resource_controller.js"></script>
+<script src="app/interaction_controller.js"></script>
+<script src="app/group_formation.js"></script>
+<script src="app/logging_interface.js"></script>
+</body>
+</html>

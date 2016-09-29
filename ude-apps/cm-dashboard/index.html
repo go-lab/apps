@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Concept Map Dashboard</title>
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../../libs/metrics-graphics-2.8.0/metricsgraphics.css" type="text/css">
+    <link rel="stylesheet" href="../../libs/metrics-graphics-2.8.0/mg_line_brushing.css" type="text/css">
+
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" type="css/css" href="sbc/NVD3/src/nv.d3.css"/>
+    <link rel="stylesheet" href="css/navigation.css" type="text/css">
+    <link rel="stylesheet" href="css/progressCircle.css" type="text/css">
+
+</head>
+<body>
+
+
+<h1 id="title-bar" class="page-header-app">Concept Map Dashboard</h1>
+
+<div id="toolbar-wrapper" class="toolbar_wrapper">
+    <div class="container">
+        <div id="toolbar" role="toolbar">
+        </div>
+    </div>
+</div>
+
+<div class="container" id="main">
+    <div class="row" id="error">
+        <div class="col-md-12">
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button
+                        type="button"
+                        class="close"
+                        data-dismiss="alert"
+                        aria-label="Close alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <span class="message"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" id="cm-dashboard">
+            <div id="wrapper-app">
+
+                <!-- Sidebar -->
+                <button type="button" class="btn btn-default sidebar-toggler show-menu" title="timestamp">
+                    <i class="fa fa-chevron-left"></i>Settings
+                </button>
+
+
+                <div id="sidebar">
+                    <div class="inner">
+                        <div class="header">
+                            <button type="button" class="btn btn-default sidebar-toggler hide-menu">Settings<i
+                                    class="fa fa-chevron-right"></i></button>
+                        </div>
+
+                        <hr class="divider">
+
+                        <!-- Filter Panel -->
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                            <!-- Merger -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="collapse-merging">
+                                    <h4 class="panel-title">
+                                        <a role="button" id="NodeMappingId" data-toggle="collapse" data-parent="#accordion" href="#merger"
+                                           aria-expanded="true" aria-controls="merger">
+                                            Node-Merger
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="merger" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="merging">
+                                    <div class="panel-body">
+                                        <div class="info-text">
+                                            <!-- TODO: Internationalization -->
+                                            <p>Fill the table with a double click on the Node</p>
+                                        </div>
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th>Term</th>
+                                                <th>replaced by</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="tableBody">
+                                            <!-- Merger Table Content-->
+                                            </tbody>
+                                        </table>
+                                        <a id="btnVisualize" class="btn btn-primary Off"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Collection -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="collapse-collections">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                           href="#collection" aria-expanded="false" aria-controls="collections">
+                                            Collections
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collection" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collections">
+                                    <div class="panel-body">
+                                        <div class="row">
+
+                                            <div class="input-group">
+
+                                                <div class="reset">
+                                                    <button class="reset-view msgNor-label btn btn-default">msgNor</button>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" checked="checked" id="cbxWell" autocomplete="off" />
+                                                    <label for="cbxWell" class="msgPop-label popups btn btnT btn-default active">msgPop</label>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" checked="checked" id="cbxOnlyNodes" autocomplete="off" />
+                                                    <label for="cbxOnlyNodes" class="msgNod-label edges btn btnT btn-default active">msgNod</label>
+
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" checked="checked" id="cbxContent" autocomplete="off" />
+                                                    <label for="cbxContent" class="msgQuan-label arrowheads btn btnT btn-default active">msgQuan</label>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="cbxLinkText" autocomplete="off" />
+                                                    <label for="cbxLinkText" class="msgLT-label edgelabels btn btnT btn-default">msgLT</label>
+
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="cbxScaleY" autocomplete="off" />
+                                                    <label for="cbxScaleY" class="msgScale-label scale-y btn btnT btn-default">msgScale</label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Highlight -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="collapse-highlights">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                           href="#highlight" aria-expanded="false" aria-controls="highlights">
+                                            Highlight
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="highlight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="highlights">
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th><strong>Selection</strong></th>
+                                                <th><strong>Names</strong></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="tableBodyListNamesHigh">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Filter -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="collapse-filters">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                           href="#filter" aria-expanded="false" aria-controls="filters">
+                                            Filter
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="filter" class="panel-collapse collapse" role="tabpanel" aria-labelledby="filters">
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th><strong>Filter</strong></th>
+                                                <th><strong>Names</strong></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="tableBodyListNamesFilter">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Zoom -->
+                            <div id="zoom">
+                                <div class="panel-body">
+                                    <h4 class="panel-title">Zoom</h4>
+                                    <div class="col-md-12 zoomSlider">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tooltip -->
+                <div class="tooltip">
+                    <div class="table-responsive">
+                        <table class="table" id="tablePopup">
+                            <thead>
+                            <tr>
+                                <th class="pop-up-title name">Name:</th>
+                                <th class="pop-up-content name"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="pop-up-title use">Use:</td>
+                                <td class="pop-up-content use"></td>
+                            </tr>
+                            <tr>
+                                <td class="pop-up-title occurence">Occurence:</td>
+                                <td class="pop-up-content occurence"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="MapSvgMain" id="mappingOn"></div>
+
+                <div class="evolution Off" id="evolutionOff">
+                    <div id="evoMap">
+                        <div id="legend"></div>
+                    </div>
+                    <div id="consoleEvolution">
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+    <div id="notifications" class="panel panel-info">
+        <div class="panel-body"></div>
+    </div>
+
+    <div class="cover" id="loading_indicator"></div>
+</div>
+
+
+
+    <!-- Modal-Template ------>
+    <div id="myModal" class="modal fade" role="dialog"></div>
+
+</div>
+
+<!------------------------------------------>
+
+<script src="libs/d3.js" type="text/javascript"></script>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/js/alert.js"></script>
+<script src="bower_components/bootstrap/js/bootstrap.js"></script>
+<script src="bower_components/bootstrap/js/collapse.js"></script>
+<script src="bower_components/moment/min/moment.min.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+
+<script type="text/javascript" src="../../libs/metrics-graphics-2.8.0/metricsgraphics.min.js"></script>
+<script type="text/javascript" src="../../libs/metrics-graphics-2.8.0/mg_line_brushing.js"></script>
+
+<script type="text/javascript" src="../../libs/js/headJS/head.min.js"></script>
+
+<!-- Go-Lab integration -->
+<script src="../../libs/js/socket.io-1.2.1.js"></script>
+<script src="../../libs/js/jquery.cookie.js"></script>
+<script src="../../commons/js/utils.js"></script>
+<script src="../../libs/js/underscore.js"></script>
+<script src="http://shindig2.epfl.ch/ils/main/ils_graaspeu.js"></script>
+<script src="../../commons/js/MetadataHandler.js"></script>
+<script src="../../commons/js/StorageHandler.js"></script>
+<script src="../../commons/js/ActionLogger.js"></script>
+<script src="../../commons/js/notificationClient.js"></script>
+<script src="../../commons/js/languageHandlers.js"></script>
+<script src="../../commons/js/createEnvironmentHandlers.js"></script>
+
+<script src="app/configuration_definition.js" data-configuration-definition></script>
+<script src="app/configuration_default.js" data-configuration></script>
+
+<script src="app/namespace.js"></script>
+<script src="app/util.js"></script>
+<script src="app/pubsub.js"></script>
+<script src="app/config_handler.js"></script>
+<script src="app/toolbar.js"></script>
+<script src="app/notification_display.js"></script>
+<script src="app/app.js"></script>
+<script src="app/run.js"></script>
+
+<script src="app/resource_controller.js"></script>
+<script src="app/control.js"></script>
+<script src="app/graph.js"></script>
+<script src="app/interaction.js"></script>
+<script src="app/evolution.js"></script>
+<script src="app/nodeMerge.js"></script>
+<script src="app/hashMapNodeMerge.js"></script>
+
+</body>
+</html>

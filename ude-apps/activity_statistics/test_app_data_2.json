@@ -1,0 +1,118 @@
+{
+  "header": [
+    {
+      "dataType": "string",
+      "title": "Targetname"
+    },
+    {
+      "dataType": "zonedDateTime",
+      "title": "Timestamp"
+    }
+  ],
+  "rows": [
+    [
+      "Orientation",
+      "2014-12-16T09:27:55.816Z"
+    ],
+    [
+      "Conceptualisation",
+      "2014-12-16T09:37:05.061Z"
+    ],
+    [
+      "Orientation",
+      "2014-12-16T09:37:17.698Z"
+    ],
+    [
+      "Conceptualisation",
+      "2014-12-16T09:45:09.581Z"
+    ],
+    [
+      "observationTool",
+      "2014-12-16T09:45:10.519Z"
+    ],
+    [
+      "Orientation",
+      "2014-12-16T09:45:10.991Z"
+    ],
+    [
+      "dataViewer",
+      "2014-12-16T09:45:15.052Z"
+    ],
+    [
+      "edt",
+      "2014-12-16T09:45:17.628Z"
+    ],
+    [
+      "conclusionTool",
+      "2014-12-16T09:45:27.068Z"
+    ],
+    [
+      "Conceptualisation",
+      "2014-12-16T09:46:46.184Z"
+    ],
+    [
+      "conclusionTool",
+      "2014-12-16T09:46:57.162Z"
+    ],
+    [
+      "Investigation",
+      "2014-12-16T09:52:01.018Z"
+    ],
+    [
+      "edt",
+      "2014-12-16T10:00:42.729Z"
+    ],
+    [
+      "observationTool",
+      "2014-12-16T10:09:44.081Z"
+    ],
+    [
+      "dataViewer",
+      "2014-12-16T10:17:43.444Z"
+    ],
+    [
+      "Conclusion",
+      "2014-12-16T10:17:44.985Z"
+    ],
+    [
+      "Discussion",
+      "2014-12-16T10:20:55.099Z"
+    ],
+    [
+      "Investigation",
+      "2014-12-16T10:34:58.456Z"
+    ],
+    [
+      "observationTool",
+      "2014-12-16T10:34:58.499Z"
+    ],
+    [
+      "edt",
+      "2014-12-16T10:34:58.953Z"
+    ],
+    [
+      "dataViewer",
+      "2014-12-16T10:34:58.973Z"
+    ],
+    [
+      "Orientation",
+      "2014-12-16T10:34:59.528Z"
+    ],
+    [
+      "Conceptualisation",
+      "2014-12-16T10:34:59.887Z"
+    ],
+    [
+      "conclusionTool",
+      "2014-12-16T10:35:00.284Z"
+    ],
+    [
+      "questioning scratchpad",
+      "2014-12-16T10:35:22.526Z"
+    ]
+  ],
+  "ilsId": "5485a7050ac61b1339a4da09",
+  "sessionControllerResultType": "initTable",
+  "multiResultKey": "Walvis1@5485a7050ac61b1339a4da09",
+  "username": "Walvis1"
+}

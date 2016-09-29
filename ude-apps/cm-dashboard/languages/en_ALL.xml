@@ -1,0 +1,75 @@
+<messagebundle>
+  <msg name="posts">Posts</msg>
+  <msg name="close_alert">Close alert</msg>
+  <msg name="refresh">Refresh</msg>
+  <msg name="unnamed_post">Unnamed post</msg>
+  <msg name="content">Content</msg>
+  <msg name="save_post">Save post</msg>
+  <msg name="remove_post">Remove post</msg>
+  <msg name="aggregation">Aggregation</msg>
+  <msg name="evolution">Evolution</msg>
+  <msg name="visualize">Visualisation</msg>
+  <msg name="popUps">Pop-ups</msg>
+  <msg name="normal">Reset Layout</msg>
+  <msg name="nodes">Edges</msg>
+  <msg name="quantity">Directions</msg>
+  <msg name="linkText">Edge Labels</msg>
+  <msg name="scaleY">Hierarchical Layout</msg>
+  <msg name="msgNodes">Nodes</msg>
+  <msg name="msgRelations">Relations</msg>
+  <msg name="msgDensity">E/N-Ratio</msg>
+  <msg name="msgCover">Coverage</msg>
+  <msg name="msgANTitle">Number of nodes over time</msg>
+  <msg name="msgARTitle ">Number of relations over time</msg>
+  <msg name="msgADTitle">Density of concept maps over time</msg>
+  <msg name="msgNCTitle">Node coverage over time</msg>
+  <msg name="cancel">Cancel</msg>
+  <msg name="edit">Edit</msg>
+  <msg name="save_error">An error occured while saving the post.</msg>
+  <msg name="load_error">An error occured while loading the post.</msg>
+  <msg name="load_posts_error">An error occured while loading all posts.</msg>
+  <msg name="display_error">An error occured while trying to display the post.</msg>
+  <msg name="remove_error">An error occured while trying to remove the post.</msg>
+  <msg name="error_occured">An error occured.</msg>
+  <msg name="add_new_post">Add new post</msg>
+  <msg name="clear_posts">Remove all posts</msg>
+  <msg name="new">New</msg>
+  <msg name="save">Save</msg>
+  <msg name="open">Open</msg>
+  <msg name="duplicate">Duplicate</msg>
+  <msg name="remove">Remove</msg>
+  <msg name="post_title">Post title</msg>
+  <msg name="last_change">Last change</msg>
+  <msg name="action">Action</msg>
+  <msg name="open_post">Open post</msg>
+  <msg name="unsaved_changes_prompt">
+    There are unsaved changes to the post that will be discarded.
+  </msg>
+  <msg name="copy_of_post">Copy of {0}</msg>
+  <msg name="post_removal_confirmation">Do you really want to remove the post "{0}"?.</msg>
+  <msg name="full_date_moment_format">DD/MM/YYYY hh:mm a</msg>
+  <msg name="highlight">Highlight</msg>
+  <msg name="collection">Collection</msg>
+  <msg name="filter">Filter</msg>
+  <msg name="nodeMerger">Node-Merger</msg>
+  <msg name="mergerText">fill the table with a double click on the Node</msg>
+  <msg name="msgAN">
+    This line chart contains the time based Evolution of all added and removed Nodes by the student in terms of the individual created Concept Map.
+  </msg>
+  <msg name="msgAR">
+    This line chart contains the time based Evolution of all added and removed Relations by the student in terms of the individual created Concept Map.
+  </msg>
+  <msg name="msgAD">
+    This line chart contains the time based Evolution of Concept Map Density by the individual created Concept Map by the student.
+  </msg>
+  <msg name="msgNC">
+    This line chart contains the time based Evolution of the Concept Map Node-Cover of every Students created Concept Map in terms of the collective aggregated Concept Map.
+  </msg>
+
+  <msg name = "no_artefacts">No concept maps have been found in the space. To make this app work properly, at least one concept map needs to be present in this Inquiry Learning Space.</msg>
+  <msg name="resources.type.name.configuration">configuration</msg>
+  <msg name="loadSave.title.unnamed">unnamed</msg>
+  <msg name="resources.type.name.conceptMap">concept map</msg>
+  <msg name="loadSave.title.unnamed">unnamed</msg>
+
+</messagebundle>

@@ -1,0 +1,316 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Graasp/Shindig default styles override
+ * --------------------------------------------------------------------------- */
+body, td, div, span, p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* header
+ * --------------------------------------------------------------------------- */
+h1 {
+  background: #5050d2;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 9px 0;
+  font-size: 1.0em;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* misc
+ * --------------------------------------------------------------------------- */
+
+/* this is just glyphicon-share-alt flipped */
+.glyphicon-undo {
+  transform: scaleX(-1);
+}
+.glyphicon-undo:before {
+  content: "\e095";
+}
+.glyphicon-loading {
+  background-image: url('../../assets/loading_indicator.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+}
+
+/* from http://davidwalsh.name/detect-scrollbar-width */
+#scrollbar_measure {
+  width: 100px;
+  height: 100px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px;
+}
+
+
+.btn-flat {
+  border-width: 0;
+  background-color: transparent;
+  color: #777;
+  padding: 3px;
+}
+
+.btn-flat.active {
+  border-width: 0;
+  box-shadow: none;
+  color: #333;
+}
+
+.btn-flat:focus, .btn-flat:active {
+  color: #777;
+}
+
+.btn-flat.active:focus, .btn-flat.active:active {
+  color: #333;
+}
+
+
+/* toolbar
+ * --------------------------------------------------------------------------- */
+.toolbar_wrapper {
+  background: #f5f5f5;
+}
+
+#toolbar ul {
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+}
+
+#toolbar ul li {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+#toolbar li a {
+  color: #777;
+  display: block;
+  font-size: 1.5em;
+  padding: 0 5px;
+}
+
+#toolbar li a:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+#toolbar li a:focus, #toolbar li a:active {
+  position: relative;
+  top: 1px;
+  color: #428bca;
+  text-decoration: none;
+}
+
+/* loading indicator
+ * --------------------------------------------------------------------------- */
+.cover {
+  position: absolute;
+  min-height: 200px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+#loading_indicator {
+  background-image: url('../../assets/loading_indicator.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* error display
+ * --------------------------------------------------------------------------- */
+#error {
+  display: none;
+}
+
+/* main application
+ * --------------------------------------------------------------------------- */
+
+#main {
+  padding: 0 0 15px 0;
+}
+
+.top {
+  display: flex;
+  background: #f6f6f6;
+  flex-wrap: wrap;
+  margin-bottom: -1px;
+}
+
+.top > div {
+  padding: 10px;
+  vertical-align: top;
+}
+
+.top.minimized > div {
+  display: none;
+}
+
+.top #toggle_status_visibility {
+  padding: 5px 0 0 5px;
+}
+
+.top.minimized #toggle_status_visibility {
+  display: block;
+}
+
+.top h4 {
+  padding: 0;
+  font-size: .8em;
+  text-transform: uppercase;
+  margin-top: 0;
+  color: #777;
+}
+
+.day_selection {
+  padding-top: 5px;
+}
+
+.day_selection label {
+  font-size: .8em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #777;
+}
+
+.legend {
+  padding-top: 3px;
+}
+
+.legend .cell {
+  cursor: pointer;
+}
+
+.legend .label {
+  font-weight: normal;
+  font-size: .9em;
+}
+
+.legend .active .label {
+  font-weight: bold;
+}
+
+.timeline_status {
+  width: 40%;
+  min-height: 100px;
+}
+
+.timeline_controls button {
+  display: block;
+}
+
+#timeline ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: 1px solid #aaa;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+.lane {
+  display: block;
+  clear: both;
+  overflow: hidden;
+  background: #f6f6f6;
+}
+
+.lane:nth-child(even) {
+  background: #fff;
+}
+
+.menu {
+  float: left;
+  overflow: hidden;
+  clear: both;
+  height: 100%;
+  max-width: 30%;
+  border-right: 1px solid #cecece;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu .controls {
+  padding: 5px;
+  height: 32px;
+}
+
+.lane h3 {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 70%;
+  padding: 5px;
+}
+
+.timeline {
+  float: left;
+  height: 50px;
+}
+.timeline svg {
+  height: 50px;
+}
+.timeline .highlight {
+  stroke: #000;
+}
+
+.lanes {
+  position: relative;
+}
+.lanes .marker {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.lanes .marker line {
+  stroke: hsla(0, 0%, 0%, .2);
+  stroke-width: 1;
+  pointer-events: none;
+}
+
+#timeaxis {
+  margin-top: -1px;
+}
+
+#timeslider .tooltip-inner {
+  max-width: none;
+}
+
+#timeaxis .domain {
+  fill: #aaa;
+}
+
+#timeaxis .tick line {
+  stroke: #aaa;
+}
+
+.phases rect, .marker line, #timeaxis line {
+  shape-rendering: crispEdges;
+}
+
+.apps path {
+  z-index: 0;
+  position: relative;
+}

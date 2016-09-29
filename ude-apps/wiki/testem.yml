@@ -1,0 +1,7 @@
+test_page: client/tools/wiki/test/runner.html
+src_files:
+  - client/tools/wiki/build/app/**/*.js
+  - client/tools/wiki/build/test/**/*.js
+growl: true
+launchers:
+  - Chrome Canary

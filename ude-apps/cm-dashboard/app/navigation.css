@@ -1,0 +1,761 @@
+/**
+ * Off Canvas Navigation
+ */
+.cmd-off-canvas-nav {
+    position: fixed;
+    top: 82px;
+    bottom: 0;
+    width: 350px;
+    color: #000;
+    background: #2C3E50;
+    z-index: 1001;
+    transform: translate3d(-350px, 0, 0);
+    -moz-transform: translate3d(-350px, 0, 0);
+    transition: transform 800ms ease-in-out;
+    -moz-transition: transform 800ms ease-in-out;
+}
+
+.cmd-off-canvas-nav.cmd_is_active {
+    transform: translate3d(0px, 0, 0);
+    -moz-transform: translate3d(0px, 0, 0);
+    -ms-transform: translate3d(0px, 0, 0);
+    transition: transform 800ms ease 0s;
+    -o-transition: transform 800ms ease 0s;
+    -moz-transition: transform 800ms ease 0s;
+    -web-transition: transform 800ms ease 0s;
+}
+
+.cmd-off-canvas-nav .cmd-level-1 {
+    position: absolute;
+    width: 100%;
+    left: -22px;
+}
+
+.cmd-off-canvas-nav .cmd-level-1 {
+    width: 100%;
+}
+
+.cmd-off-canvas-nav li {
+    position: relative;
+    width: 100%;
+    list-style-type: none;
+}
+
+/***********Button Hamburger****************/
+
+.cmd-menu-icon {
+    position: relative;
+    top: 0;
+    left: 350px;
+    height: 40px;
+    border: none;
+    outline: 0;
+    background: #2C3E50;
+    transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transition: transform 600ms ease-in-out;
+    -o-transition: transform 600ms ease-in-out;
+    -moz-transition: transform 600ms ease-in-out;
+    z-index: 2002;
+}
+
+.cmd-menu-icon.cmd_is_active {
+    transform: translate3d(-48px, 0, 0);
+    -ms-transform: translate3d(-52px, 0, 0);
+    -moz-transform: translate3d(-52px, 0, 0);
+    -o-transform: translate3d(-52px, 0, 0);
+    transition: transform 600ms ease-in-out;
+    -o-transition: transform 600ms ease-in-out;
+    -moz-transition: transform 600ms ease-in-out;
+    background-color: #34495E;
+}
+
+.cmd-menu-icon:hover {
+    opacity: 0.8;
+}
+
+.cmd-hamburger, .cmd-hamburger:before, .cmd-hamburger:after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 5px;
+    font-size: 0;
+    color: transparent;
+    background: white;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+}
+
+.panel, .well {
+    border-radius: 0;
+}
+
+.cmd-hamburger:before {
+    top: -10px;
+}
+
+.cmd-hamburger:after {
+    top: 5px;
+}
+
+.cmd_is_active .cmd-hamburger:before {
+    top: 0;
+    transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+
+.cmd_is_active .cmd-hamburger:after {
+    top: -5px;
+    transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+
+#demo, #demo3, #demo4 {
+    overflow: auto;
+    max-height: 270px;
+}
+
+#demo2 {
+    overflow: auto;
+    max-height: 325px;
+}
+
+#demo2 label{
+    height: 34px;
+}
+
+label {
+    cursor: pointer;
+}
+
+.trTmp {
+    display: none;
+}
+
+.panel-heading {
+    padding: 0;
+}
+
+#pText {
+    text-align: center;
+}
+
+.spanNodeMapping {
+    float: right;
+}
+
+.zoomSlider {
+    font-weight: 700;
+    color: #16547d;
+    background: #ECECEC;
+}
+
+#legendMapping {
+    margin: 0 auto;
+    max-width: 500px;
+    z-index: -1000;
+    border-radius: 0;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 3px solid #22313F;
+    text-align: center;
+}
+
+/** Input CheckBox Toggle Style **/
+
+/*radio*/
+
+.btn {
+    white-space: unset;
+}
+
+.btnT {
+    width: 70%
+}
+
+.btn-group > .btn{
+    height: 4.5%;
+}
+
+.btn-group {
+    width: 100%;
+}
+
+.form-group {
+    margin-left: 15px;
+}
+
+.btn-group {
+    margin: 0 auto;
+}
+
+.form-group input[type="radio"] {
+    display: none;
+}
+
+.form-group input[type="radio"] + .btn-group > label span {
+    width: 35px;
+}
+
+.form-group input[type="radio"] + .btn-group > label span:first-child {
+    display: none;
+}
+
+.form-group input[type="radio"] + .btn-group > label span:last-child {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.form-group input[type="radio"]:checked + .btn-group > label span:first-child {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.form-group input[type="radio"]:checked + .btn-group > label span:last-child {
+    display: none;
+}
+
+/*checkbox*/
+
+.form-group input[type="checkbox"] {
+    display: none;
+}
+
+.form-group input[type="checkbox"] + .cmd-btn-group > label span {
+    width: 35px;
+}
+
+.form-group input[type="checkbox"] + .cmd-btn-group > label span:first-child {
+    display: none;
+}
+
+.form-group input[type="checkbox"] + .cmd-btn-group > label span:last-child {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.form-group input[type="checkbox"]:checked + .cmd-btn-group > label span:first-child {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.form-group input[type="checkbox"]:checked + .cmd-btn-group > label span:last-child {
+    display: none;
+}
+
+/**!Metrics Graphics  ColorTable for 5 plus 30 Students!*/
+
+.mg-line6-color {
+    stroke: #cc06f0;
+}
+
+.mg-line6-legend-color {
+    color: #cc06f0;
+}
+
+.mg-area6-color {
+    fill: #cc06f0;
+}
+
+/*7*/
+.mg-line7-color {
+    stroke: #D91E18;
+}
+
+.mg-area7-color {
+    fill: #D91E18;
+}
+
+.mg-hover-line7-color {
+    fill: #D91E18;
+}
+
+.mg-line7-legend-color {
+    color: #D91E18;
+}
+
+/*8*/
+.mg-line8-color {
+    stroke: #96281B;
+}
+
+.mg-area8-color {
+    fill: #96281B;
+}
+
+.mg-hover-line8-color {
+    fill: #96281B;
+}
+
+.mg-line8-legend-color {
+    color: #96281B;
+}
+
+/*9*/
+.mg-line9-color {
+    stroke: #EF4836;
+}
+
+.mg-area9-color {
+    fill: #EF4836;
+}
+
+.mg-hover-line9-color {
+    fill: #EF4836;
+}
+
+.mg-line9-legend-color {
+    color: #EF4836;
+}
+
+/*10*/
+.mg-line10-color {
+    stroke: #D64541;
+}
+
+.mg-area10-color {
+    fill: #D64541;
+}
+
+.mg-hover-line10-color {
+    fill: #D64541;
+}
+
+.mg-line10-legend-color {
+    color: #D64541;
+}
+
+/*11*/
+.mg-line11-color {
+    stroke: #C0392B;
+}
+
+.mg-area11-color {
+    fill: #C0392B;
+}
+
+.mg-hover-line11-color {
+    fill: #C0392B;
+}
+
+.mg-line11-legend-color {
+    color: #C0392B;
+}
+
+/*12*/
+.mg-line12-color {
+    stroke: #CF000F;
+}
+
+.mg-area12-color {
+    fill: #CF000F;
+}
+
+.mg-hover-line12-color {
+    fill: #CF000F;
+}
+
+.mg-line12-legend-color {
+    color: #CF000F;
+}
+
+/*13*/
+.mg-line13-color {
+    stroke: #DB0A5B;
+}
+
+.mg-area13-color {
+    fill: #DB0A5B;
+}
+
+.mg-hover-line13-color {
+    fill: #DB0A5B;
+}
+
+.mg-line13-legend-color {
+    color: #DB0A5B;
+}
+
+/*14*/
+.mg-line14-color {
+    stroke: #F1A9A0;
+}
+
+.mg-area14-color {
+    fill: #F1A9A0;
+}
+
+.mg-hover-line14-color {
+    fill: #F1A9A0;
+}
+
+.mg-line14-legend-color {
+    color: #F1A9A0;
+}
+
+/*15*/
+.mg-line15-color {
+    stroke: #D2527F;
+}
+
+.mg-area15-color {
+    fill: #D2527F;
+}
+
+.mg-hover-line15-color {
+    fill: #D2527F;
+}
+
+.mg-line15-legend-color {
+    color: #D2527F;
+}
+
+/*16*/
+.mg-line16-color {
+    stroke: #DCC6E0;
+}
+
+.mg-area16-color {
+    fill: #DCC6E0;
+}
+
+.mg-hover-line16-color {
+    fill: #DCC6E0;
+}
+
+.mg-line16-legend-color {
+    color: #DCC6E0;
+}
+
+/*17*/
+.mg-line17-color {
+    stroke: #663399;
+}
+
+.mg-area17-color {
+    fill: #663399;
+}
+
+.mg-hover-line17-color {
+    fill: #663399;
+}
+
+.mg-line17-legend-color {
+    color: #663399;
+}
+
+/*18*/
+.mg-line18-color {
+    stroke: #674172;
+}
+
+.mg-area18-color {
+    fill: #674172;
+}
+
+.mg-hover-line18-color {
+    fill: #674172;
+}
+
+.mg-line18-legend-color {
+    color: #674172;
+}
+
+/*19*/
+.mg-line19-color {
+    stroke: #913D88;
+}
+
+.mg-area19-color {
+    fill: #913D88;
+}
+
+.mg-hover-line19-color {
+    fill: #913D88;
+}
+
+.mg-line19-legend-color {
+    color: #913D88;
+}
+
+/*20*/
+.mg-line20-color {
+    stroke: #9A12B3;
+}
+
+.mg-area20-color {
+    fill: #9A12B3;
+}
+
+.mg-hover-line20-color {
+    fill: #9A12B3;
+}
+
+.mg-line20-legend-color {
+    color: #9A12B3;
+}
+
+/*21*/
+.mg-line21-color {
+    stroke: #446CB3;
+}
+
+.mg-area21-color {
+    fill: #446CB3;
+}
+
+.mg-hover-line21-color {
+    fill: #446CB3;
+}
+
+.mg-line21-legend-color {
+    color: #446CB3;
+}
+
+/*22*/
+.mg-line22-color {
+    stroke: #81CFE0;
+}
+
+.mg-area22-color {
+    fill: #81CFE0;
+}
+
+.mg-hover-line22-color {
+    fill: #81CFE0;
+}
+
+.mg-line22-legend-color {
+    color: #81CFE0;
+}
+
+/*23*/
+.mg-line23-color {
+    stroke: #22A7F0;
+}
+
+.mg-area23-color {
+    fill: #22A7F0;
+}
+
+.mg-hover-line23-color {
+    fill: #22A7F0;
+}
+
+.mg-line23-legend-color {
+    color: #22A7F0;
+}
+
+/*24*/
+.mg-line24-color {
+    stroke: #3A539B;
+}
+
+.mg-area24-color {
+    fill: #3A539B;
+}
+
+.mg-hover-line24-color {
+    fill: #3A539B;
+}
+
+.mg-line24-legend-color {
+    color: #3A539B;
+}
+
+/*25*/
+.mg-line25-color {
+    stroke: #67809F;
+}
+
+.mg-area25-color {
+    fill: #67809F;
+}
+
+.mg-hover-line25-color {
+    fill: #67809F;
+}
+
+.mg-line25-legend-color {
+    color: #67809F;
+}
+
+/*26*/
+.mg-line26-color {
+    stroke: #4ECDC4;
+}
+
+.mg-area26-color {
+    fill: #4ECDC4;
+}
+
+.mg-hover-line26-color {
+    fill: #4ECDC4;
+}
+
+.mg-line26-legend-color {
+    color: #4ECDC4;
+}
+
+/*27*/
+.mg-line27-color {
+    stroke: #87D37C;
+}
+
+.mg-area27-color {
+    fill: #87D37C;
+}
+
+.mg-hover-line27-color {
+    fill: #87D37C;
+}
+
+.mg-line27-legend-color {
+    color: #87D37C;
+}
+
+/*28*/
+.mg-line28-color {
+    stroke: #26A65B;
+}
+
+.mg-area28-color {
+    fill: #26A65B;
+}
+
+.mg-hover-line28-color {
+    fill: #26A65B;
+}
+
+.mg-line28-legend-color {
+    color: #26A65B;
+}
+
+/*29*/
+.mg-line29-color {
+    stroke: #03C9A9;
+}
+
+.mg-area29-color {
+    fill: #03C9A9;
+}
+
+.mg-hover-line29-color {
+    fill: #03C9A9;
+}
+
+.mg-line29-legend-color {
+    color: #03C9A9;
+}
+
+/*30*/
+.mg-line30-color {
+    stroke: #65C6BB;
+}
+
+.mg-area30-color {
+    fill: #65C6BB;
+}
+
+.mg-hover-line30-color {
+    fill: #65C6BB;
+}
+
+.mg-line30-legend-color {
+    color: #65C6BB;
+}
+
+/*31*/
+.mg-line31-color {
+    stroke: #019875;
+}
+
+.mg-area31-color {
+    fill: #019875;
+}
+
+.mg-hover-line31-color {
+    fill: #019875;
+}
+
+.mg-line31-legend-color {
+    color: #019875;
+}
+
+/*32*/
+.mg-line32-color {
+    stroke: #F89406;
+}
+
+.mg-area32-color {
+    fill: #F89406;
+}
+
+.mg-hover-line32-color {
+    fill: #F89406;
+}
+
+.mg-line32-legend-color {
+    color: #F89406;
+}
+
+/*33*/
+.mg-line33-color {
+    stroke: #D35400;
+}
+
+.mg-area33-color {
+    fill: #D35400;
+}
+
+.mg-hover-line33-color {
+    fill: #D35400;
+}
+
+.mg-line33-legend-color {
+    color: #D35400;
+}
+
+/*34*/
+.mg-line34-color {
+    stroke: #6C7A89;
+}
+
+.mg-area34-color {
+    fill: #6C7A89;
+}
+
+.mg-hover-line34-color {
+    fill: #6C7A89;
+}
+
+.mg-line34-legend-color {
+    color: #6C7A89;
+}
+
+/*35*/
+.mg-line35-color {
+    stroke: #95A5A6;
+}
+
+.mg-area35-color {
+    fill: #95A5A6;
+}
+
+.mg-hover-line35-color {
+    fill: #95A5A6;
+}
+
+.mg-line35-legend-color {
+    color: #95A5A6;
+}

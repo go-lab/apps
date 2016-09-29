@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Go Lab ConceptCloud</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/app.css" type="text/css">
+
+    <!--<link rel="stylesheet" href="css/concept_cloud.css" type="text/css">-->
+    <!--<link rel="stylesheet" href="css/evolution.css" type="text/css">-->
+</head>
+<body>
+<h1>ConceptCloud</h1>
+
+<div class="toolbar_wrapper">
+    <div class="container">
+        <div id="toolbar" role="toolbar"></div>
+    </div>
+</div>
+
+
+<div class="container" id="main">
+    <div class="row" id="error">
+        <div class="col-md-12">
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button
+                        type="button"
+                        class="close"
+                        data-dismiss="alert"
+                        aria-label="Close alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <span class="message"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="wrapper-app">
+            <div id="tag_cloud"></div>
+            <div class="tag_cloud_screenshot">
+                <canvas id="current_tagCloud"></canvas>
+            </div>
+            <div id="evolution">
+                <div class="inner">
+                    <div class="row">
+                        <div class="header">
+                            <button type="button" class="btn btn-default analytics-toggler hide-menu">Back to
+                                ConceptCloud<i class="fa fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 no-padding">
+                            <div class="visualisation"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="info">
+                                <div class="col-xs-6">
+                                    <div class="screenshot">
+                                        <canvas id="tagCloud_snapshot"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <h3>Information</h3>
+                                    <h5>ConceptCloud <span class="number"></span></h5>
+                                    <ul class="analytics-info">
+                                        <li><strong class="generated-title">Generated: </strong><span
+                                                class="generated"></span></li>
+                                        <li><strong class="cloud-size-title">Cloud Size: </strong><span
+                                                class="cloud-size"></span></li>
+                                        <li><strong class="flashy-title">Flashy Students </strong><span
+                                                class="flashy-students"></span></li>
+                                        <li><strong class="fancy-title">Fancy Students: </strong><span
+                                                class="fancy-students"></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sidebar -->
+            <div id="sidebar">
+                <div class="inner">
+                    <div class="header">
+                        <button type="button" class="btn btn-default sidebar-toggler hide-menu">Filter<i
+                                class="fa fa-chevron-right"></i></button>
+                    </div>
+                    <hr class="divider">
+                    <!-- Filter Panel -->
+                    <div class="panel-group filter area" id="accordion" role="tablist" aria-multiselectable="false">
+                        <!-- Phase Filtering -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="phase-filtering">
+                                <h4 class="panel-title">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                    <a id="filter-title-phase" class="link collapsed" data-toggle="collapse"
+                                       data-parent="#accordion"
+                                       href="#phase-collapse" aria-expanded="false" aria-controls="phase-collapse">
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="phase-collapse" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="phase-filtering">
+                                <div class="panel-body">
+                                    <ul class="phase-list"></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- App Filtering -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="app-filtering">
+                                <h4 class="panel-title">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                    <a id="filter-title-app" class="link collapsed" data-toggle="collapse"
+                                       data-parent="#accordion"
+                                       href="#app-collapse" aria-expanded="false" aria-controls="app-collapse">
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="app-collapse" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="app-filtering">
+                                <div class="panel-body">
+                                    <ul class="app-list"></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Student Filtering -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="student-filtering">
+                                <h4 class="panel-title">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                    <a id="filter-title-student" class="link collapsed" data-toggle="collapse"
+                                       data-parent="#accordion"
+                                       href="#student-collapse" aria-expanded="false" aria-controls="student-collapse">
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="student-collapse" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="student-filtering">
+                                <div class="panel-body">
+                                    <ul class="student-list complete"></ul>
+                                    <ul class="student-legende">
+                                        <li id="info-flashy" class="info"></li>
+                                        <li id="info-fancy" class="info"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Filter Panel End -->
+            </div>
+            <!-- !Sidebar -->
+
+            <div id="legende" class="col-md-12">
+                <p>
+                    <i id="legend_concept_not_used_yet" class="fa fa-tag red"></i>
+                    <i id="legend_concept_used_partially" class="fa fa-tag yellow"></i>
+                    <i id="legend_concept_used_everywhere" class="fa fa-tag green"></i>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="notifications" class="panel panel-info">
+        <div class="panel-body"></div>
+    </div>
+
+    <div class="cover" id="loading_indicator"></div>
+</div>
+
+<!--  start configuration modal -->
+<div
+        class="modal fade"
+        id="config"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="config_label"
+        aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="#">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="config_label">Configuration</h4>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- end configuration modal -->
+
+<div id="modal">
+    <div
+            class="modal fade"
+            id="tag_information"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="posts_list_label"
+            aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title">.</h3>
+
+                    <div class="anzahl">
+                        <i class="fa fa-users"></i><span class="counter">.</span><span id="counter_span"></span>
+                    </div>
+                </div>
+                <div class="modal-body">
+
+
+                    <!-- start teacher modal -->
+                    <div class="teacher-modal-content">
+                        <div class="inner">
+                            <div class="info paragraph">
+                                <p class="used_concepts"></p></p>
+                            </div>
+
+                            <div class="teacher-modal student-list">
+                                <ul class="student-list filtered"></ul>
+                            </div>
+
+                            <div class="student info paragraph">
+                                <p><span class="user_name"></span><span class="text"></span></p>
+                            </div>
+
+                            <div class="phasen paragraph">
+                                <div class="row phases"></div>
+                                <div class="phase-legende hidden">
+                                    <p>
+                                        <i id="t_legend_concept_not_used" class="fa fa-square red"></i>
+                                        <i id="t_legend_concept_used" class="fa fa-square green"></i>
+                                        <i id="t_legend_concept_use_not_possible" class="fa fa-square grey"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end teacher modal -->
+
+                    <!-- start student modal -->
+                    <div class="student-modal-content">
+                        <div class="inner">
+                            <div class="ansprache paragraph">
+                                <h4><span class="user_name"></span>,</h4>
+
+                                <p><span class="anspracheText"></span></p>
+                            </div>
+
+                            <div class="phasen paragraph">
+                                <div class="row phases"></div>
+
+                            </div>
+
+                            <div class="reflection paragraph">
+                                <ul class="questions"></ul>
+                            </div>
+
+                            <div class="phase-legende">
+                                <p>
+                                    <i id="st_legend_concept_not_used" class="fa fa-square red"></i>
+                                    <i id="st_legend_concept_used" class="fa fa-square green"></i>
+                                    <i id="st_legend_concept_use_not_possible" class="fa fa-square grey"></i>
+                                </p>
+                            </div>
+                            <!--
+                            <div class="phasen paragraph">
+                                <div role="tabpanel">
+                                    <ul class="nav phases nav-tabs" role="tablist"></ul>
+                                    <div class="phases tab-content"></div>
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/js/alert.js"></script>
+<script src="bower_components/bootstrap/js/tab.js"></script>
+<script src="bower_components/bootstrap/js/modal.js"></script>
+<script src="bower_components/bootstrap/js/tooltip.js"></script>
+<script src="bower_components/bootstrap/js/collapse.js"></script>
+<script src="bower_components/bootstrap/js/transition.js"></script>
+<script src="bower_components/moment/min/moment.min.js"></script>
+<script src="bower_components/fabric.js/dist/fabric.min.js"></script>
+
+<!-- D3 integration -->
+<script src="bower_components/d3/d3.min.js"></script>
+<script src="bower_components/d3-tip/index.js"></script>
+<script src="bower_components/d3-cloud/build/d3.layout.cloud.js"></script>
+
+<script type="text/javascript" src="../../libs/js/headJS/head.min.js"></script>
+
+<!-- Go-Lab integration -->
+<script src="../../libs/js/socket.io-1.2.1.js"></script>
+<script src="../../libs/js/jquery.cookie.js"></script>
+<script src="../../commons/js/utils.js"></script>
+<script src="../../libs/js/underscore.js"></script>
+<script src="http://shindig2.epfl.ch/ils/main/ils_graaspeu.js"></script>
+<!--<script src="../../commons/js/ils_graaspeu.js"></script> -->
+<script src="../../commons/js/MetadataHandler.js"></script>
+<script src="../../commons/js/CachingStorageHandler.js"></script>
+<script src="../../commons/js/StorageHandler.js"></script>
+<script src="../../commons/js/ActionLogger.js"></script>
+<script src="../../commons/js/notificationClient.js"></script>
+<script src="../../commons/js/languageHandlers.js"></script>
+<script src="../../commons/js/createEnvironmentHandlers.js"></script>
+
+<script src="app/configuration_definition.js" data-configuration-definition></script>
+<script src="app/configuration_default.js" data-configuration></script>
+
+<script src="app/namespace.js"></script>
+<script src="app/util.js"></script>
+<script src="app/pubsub.js"></script>
+<script src="app/config_handler.js"></script>
+<script src="app/toolbar.js"></script>
+<script src="app/notification_display.js"></script>
+<script src="app/config_dialog.js"></script>
+<script src="app/app.js"></script>
+<script src="app/run.js"></script>
+
+
+<!-- App Specific -->
+<script src="app/error_handler.js"></script>
+<script src="app/logging_interface.js"></script>
+<script src="app/resource_controller.js"></script>
+<script src="app/concept_controller.js"></script>
+<script src="app/concept_models.js"></script>
+<script src="app/evolution.js"></script>
+<script src="app/tag_cloud.js"></script>
+<script src="app/interaction_controller.js"></script>
+
+</body>
+</html>

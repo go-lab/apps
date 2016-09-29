@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs
+        title="Go-Lab Starter Template"
+        author_email="johndoe@example.com"
+        author="John Doe"
+        height="800"
+        >
+        <Require feature="osapi" />
+        <Require feature="opensocial-2.5"/>
+
+        <!-- prevents app resources from being concatenated by graasp in process
+             of loading the app, remove this part if you want that to happen -->
+        <Require feature="content-rewrite">
+            <Param name="exclude-url">*</Param>
+        </Require>
+
+        <!-- add all language files here -->
+        <Locale messages="languages/en_ALL.xml" /> <!-- fallback language -->
+        <Locale lang="en" messages="languages/en_ALL.xml" />
+        <Locale lang="de" messages="languages/de_ALL.xml" />
+    </ModulePrefs>
+
+    <Content type="html" view="default">
+        <![CDATA[
+        <!-- @echo content -->
+        ]]>
+    </Content>
+</Module>

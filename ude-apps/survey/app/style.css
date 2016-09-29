@@ -1,0 +1,279 @@
+/* Graasp/Shindig default styles override
+ * --------------------------------------------------------------------------- */
+
+body, td, div, span, p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/* header
+ * --------------------------------------------------------------------------- */
+
+h1 {
+  background: #5050d2;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 9px 0;
+  font-size: 1.0em;
+  font-weight: normal;
+  text-align: center;
+}
+
+
+/* toolbar
+ * --------------------------------------------------------------------------- */
+.toolbar_wrapper {
+  background: #f5f5f5;
+  margin-bottom: 25px;
+}
+
+#toolbar ul {
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+}
+
+#toolbar ul li {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+#toolbar li a {
+  color: #777;
+  display: block;
+  font-size: 1em;
+  padding: 0 5px;
+}
+
+#toolbar li a:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+#toolbar li a:focus, #toolbar li a:active {
+  position: relative;
+  top: 1px;
+  color: #428bca;
+  text-decoration: none;
+}
+
+
+/* loading indicator
+ * --------------------------------------------------------------------------- */
+
+.cover {
+  position: absolute;
+  min-height: 200px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+#loading_indicator {
+  background-image: url('loading_indicator.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+/* notifications
+ * --------------------------------------------------------------------------- */
+
+#notifications {
+  width: 250px;
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  display: none;
+}
+
+
+/* error display
+ * --------------------------------------------------------------------------- */
+
+#error {
+  display: none;
+  margin-bottom: 25px;
+}
+
+#error .alert {
+  margin-bottom: 0;
+}
+
+
+/* misc
+ * --------------------------------------------------------------------------- */
+
+/* this is just glyphicon-share-alt flipped */
+.glyphicon-undo {
+  transform: scaleX(-1);
+}
+.glyphicon-undo:before {
+  content: "\e095";
+}
+
+
+/* app
+ * --------------------------------------------------------------------------- */
+
+#poll, #config, #results {
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+#poll, #config .item, #results {
+  border: 1px solid #e0e0e0;
+  position: relative;
+  background: #fbfbfb;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+
+/* -- poll -- */
+
+#poll > div, #results > div {
+  padding: 20px 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+#poll > div.form-group {
+  margin-bottom: 0;
+}
+
+#poll .likert-scale > label {
+  display: block;
+}
+
+#poll .smiley > label {
+  display: block;
+}
+
+#poll .likert-scale .radio {
+  display: inline-block;
+}
+
+#poll .smiley .radio {
+  display: inline-block;
+}
+
+#poll .smiley .radio input {
+  position: static;
+  width: 15px;
+  margin: 0 auto 5px;
+  display: block;
+}
+
+#poll .likert-scale .radio input {
+  position: static;
+  width: 15px;
+  margin: 0 auto 5px;
+  display: block;
+}
+
+#poll .smiley img {
+  display: block;
+  width: 75px;
+}
+
+#poll > div p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* -- config -- */
+
+#config .item {
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+#config .item.list-inline {
+  margin-left: 0;
+}
+
+#config .item:last-child, #config .item .form-group:last-child {
+  margin-bottom: 0;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.question_menu {
+  position: absolute;
+  top: 11px;
+  left: -30px;
+}
+
+.question_menu button {
+  display: block;
+  border-width: 0;
+  background: transparent;
+  padding: 3px 6px 2px 6px;
+}
+
+.question_menu button {
+  color: rgb(150, 150, 150);
+}
+
+.question_menu:hover button, #config .item:hover .question_menu button {
+  color: rgb(60, 60, 60);
+}
+
+.item.first .question_menu .move_item_up, .item.last .question_menu .move_item_down {
+  display: none;
+}
+
+#export .form-control[readonly] {
+  cursor: default;
+}
+
+#export textarea, #import textarea {
+  font-family: monospace;
+}
+
+@media (max-width: 820px) {
+  .question_menu {
+    right: 15px;
+    left: auto;
+  }
+
+  .question_menu button {
+    color: rgb(120, 120, 120);
+    display: inline;
+  }
+
+  #config .form-group label {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  #main > div, #config .item {
+    border-right-width: 0;
+    border-left-width: 0;
+  }
+}
+
+
+/* -- results -- */
+
+#results h3 {
+  font-size: 1em;
+  margin-top: 0;
+}
+
+#results svg {
+  min-height: 300px;
+}
+
+#results blockquote {
+  font-size: inherit;
+}

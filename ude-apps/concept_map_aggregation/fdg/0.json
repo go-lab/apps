@@ -1,0 +1,50 @@
+{"metadata":{
+    "title":"union_graph_by_label.gml","time":"0","directed":"true","measures":[{
+        "title":"Occurences","description":"number_of_occurences","class":"node","property":"oc","type":"double"
+    }
+        ,{
+            "title":"Weight","description":"none","class":"edge","property":"weight","type":"double"
+        }
+    ],"edgeproperties":[{
+        "weight":["string"]
+    }
+    ],"type":"","nodeproperties":[{
+        "oc":["string"]
+    }
+    ]
+}
+    ,
+    "data":{
+        "edges":[{
+            "id":"1","weight":"2","source":"0","target":"1"
+        }
+            ,{
+                "id":"2","weight":"2","source":"0","target":"2"
+            }
+            ,{
+                "id":"3","weight":"1","source":"0","target":"4"
+            }
+            ,{
+                "id":"4","weight":"1","source":"1","target":"3"
+            }
+            ,{
+                "id":"5","weight":"1","source":"2","target":"3"
+            }
+        ],"nodes":[{
+            "id":"0","oc":"2","label":"RESISTANCE"
+        }
+            ,{
+                "id":"1","oc":"2","label":"ELECTRIC CURRENT"
+            }
+            ,{
+                "id":"2","oc":"2","label":"VOLTAGE"
+            }
+            ,{
+                "id":"3","oc":"1","label":"ENERGY"
+            }
+            ,{
+                "id":"4","oc":"1","label":"OHM"
+            }
+        ]
+    }
+}

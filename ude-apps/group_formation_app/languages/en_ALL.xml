@@ -1,0 +1,127 @@
+<messagebundle>
+  <msg name="close_alert">Close alert</msg>
+  <msg name="content">Content</msg>
+
+  <msg name="new">New</msg>
+  <msg name="save">Save</msg>
+  <msg name="open">Open</msg>
+  <msg name="duplicate">Duplicate</msg>
+  <msg name="remove">Remove</msg>
+  <msg name="configure">Configure</msg>
+  <msg name="configuration">Configuration</msg>
+  <msg name="reset_to_default">Reset to default</msg>
+  <msg name="last_change">Last change</msg>
+  <msg name="action">Action</msg>
+  <msg name="config_reset_confirmation">This will reset the configuration to it's default. Changes you made yourself will be lost.</msg>
+
+  <msg name="graasp_student">student</msg>
+  <msg name="student">student</msg>
+  <msg name="thNickname">Nickname</msg>
+  <msg name="devModeFlagInfo">Development mode: technical information like ids may be visible which are not shown in
+    production mode
+  </msg>
+  <msg name="termMustNotBeEmpty">The field must not be empty!</msg>
+  <msg name="tableSynonymExists">A table already exists for the term:</msg>
+  <msg name="entryExistsInSynonymTable">An entry already exists in the current table for the synonym:</msg>
+
+  <msg name="selectGroupSize">Select Group Size</msg>
+  <msg name="selectedStudents:">Selected students:</msg>
+  <msg name="numberOfGroups:">Number of groups:</msg>
+  <msg name="groupSizes:">Group sizes</msg>
+  <msg name="calculation">Calculation</msg>
+  <msg name="startGroupFormation">Start Group Formation</msg>
+  <msg name="failureOnRequestTryAgain">Failure on request - please try again</msg>
+
+  <msg name="group:">Group:</msg>
+  <msg name="groupMembers:">Group members:</msg>
+  <msg name="totalConcepts:">Total concepts:</msg>
+  <msg name="uniqueCohortConcepts:">Unique cohort concepts:</msg>
+  <msg name="sharedReferenceConcepts:">Shared reference concepts:</msg>
+  <msg name="score:">Score:</msg>
+
+  <msg name="selectAll">Select all</msg>
+  <msg name="selectAllArtifacts">Select all artifacts</msg>
+  <msg name="selectAllStudents">Select all students</msg>
+  <msg name="thPhase">Phase</msg>
+  <msg name="thPhaseName">Phase Name</msg>
+  <msg name="thApp">App</msg>
+  <msg name="thReferenceModel">Reference Solution</msg>
+  <msg name="thGeneratorId">Generator Id</msg>
+  <msg name="thSelected">Selected</msg>
+
+  <msg name="Investigation">Investigation</msg>
+  <msg name="Orientation">Orientation</msg>
+  <msg name="Conceptualisation">Conceptualisation</msg>
+  <msg name="Conclusion">Conclusion</msg>
+  <msg name="Discussion">Discussion</msg>
+
+  <msg name="selected">selected</msg>
+  <msg name="select">Select</msg>
+
+  <msg name="selectReferenceModel">Select reference solution</msg>
+
+  <msg name="selectMoreThenOneRefModelInfo">When you select more than one reference solution, the concepts of these
+    solutions
+    will be aggregated.
+  </msg>
+
+  <msg name="thActorId">Actor Id</msg>
+  <msg name="thRole">Role</msg>
+  <msg name="thResourceType">Resource Type</msg>
+
+  <msg name="lookSatisfyingRequirements">Please take a look at the summary for satisfying requirements!</msg>
+
+  <msg name="selectNumberOfGroups">Please select the number of groups!</msg>
+  <msg name="success">Success</msg>
+  <msg name="allStudentsHaveResources">All students have resources for selected artifact sources.</msg>
+  <msg name="info">Info</msg>
+  <msg name="resourceReference">Resource Reference</msg>
+  <msg name="resourceReferenceNotSatisfied">Selecting a resource from an other student may be helpful to compensate a
+    single or a few missing resources of a student if you are not satisfied with a previous group formation. Avoid
+    selecting resources by strong students as you do not want to give the student knowledge he does not have.
+  </msg>
+  <msg name="clickOnBadge">Click on a badge</msg>
+  <msg name="toViewMissingResources">to view missing resources of a student.</msg>
+  <msg name="clearReferences">Clear References</msg>
+  <msg name="noSourcesSelected">No sources selected</msg>
+  <msg name="thResourceReference">Resource Reference</msg>
+  <msg name="thMissingResources">Missing Resources</msg>
+  <msg name="selectMissingResources">Select Missing Resources</msg>
+
+  <msg name="thSelectResource">Select Resource</msg>
+  <msg name="removeSelection">Remove Selection</msg>
+  <msg name="basisForCalculation">Basis For Calculation</msg>
+  <msg name="participation">Participation</msg>
+
+  <msg name="thParticipation">Participation</msg>
+  <msg name="warning">Warning</msg>
+  <msg name="sourcesSelectedStudentsNoArtifacts">Artifact sources are selected, for which selected students have not
+    created a resource for yet.
+  </msg>
+  <msg name="noStudentsSelected">not students selected</msg>
+  <msg name="missingResources">Missing Resources</msg>
+  <msg name="selectReferenceSolution">Select reference solution</msg>
+
+  <msg name="navBarResult">Result</msg>
+  <msg name="navBarCalculation">Calculation</msg>
+  <msg name="navBarSummary">Summary</msg>
+  <msg name="navBarParticipation">Participation</msg>
+  <msg name="navBarSources">Sources</msg>
+  <msg name="navBarStudents">Students</msg>
+  <msg name="navBarSynonyms">Synonyms</msg>
+
+  <msg name="resultDivHeading">View Calculation Result</msg>
+  <msg name="calculationDivHeading">Calculate Groups</msg>
+  <msg name="overviewDivHeading">View Summary</msg>
+  <msg name="participationDivHeading">Participation Issues</msg>
+  <msg name="artifactDivHeading">Select Artifact Sources</msg>
+  <msg name="studentDivHeading">Select Students</msg>
+  <msg name="synonymDivHeading">Edit Synonyms</msg>
+
+  <msg name="selectionSummaryHeading">Selection Summary</msg>
+  <msg name="teacher">teacher</msg>
+
+  <msg name="notSelected">not selected</msg>
+  <msg name="thTargetId">Target Id</msg>
+
+</messagebundle>

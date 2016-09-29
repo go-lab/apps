@@ -1,0 +1,81 @@
+{
+  "dependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "babel": "^5.4.7",
+    "bluebird": "^2.8.2",
+    "eslint-plugin-react": "^3.9.0",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^5.1.0",
+    "gulp-plumber": "^0.6.5",
+    "gulp-postcss": "^5.1.10",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.1",
+    "preprocess": "^2.1.1",
+    "rimraf": "^2.2.8"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "react"
+    ],
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true,
+      "jquery": true
+    },
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "globals": {
+      "React": true,
+      "moment": true,
+      "Immutable": true,
+      "golab": true,
+      "assert": true,
+      "d3": true,
+      "classNames": true,
+      "R": true,
+      "vertx": true,
+      "Slider": true
+    },
+    "rules": {
+      "no-var": 1,
+      "no-shadow": 0,
+      "strict": 0,
+      "new-cap": 0,
+      "quotes": [
+        1,
+        "single"
+      ],
+      "curly": [
+        2,
+        "multi-line"
+      ],
+      "comma-dangle": 0,
+      "no-use-before-define": [
+        2,
+        "nofunc"
+      ],
+      "jsx-quotes": [
+        1,
+        "prefer-single"
+      ],
+      "react/display-name": 0,
+      "react/jsx-boolean-value": 0,
+      "react/jsx-no-undef": 1,
+      "react/jsx-sort-props": 0,
+      "react/jsx-sort-prop-types": 0,
+      "react/jsx-uses-react": 1,
+      "react/jsx-uses-vars": 1,
+      "react/no-did-mount-set-state": 1,
+      "react/no-did-update-set-state": 1,
+      "react/no-multi-comp": 0,
+      "react/no-unknown-property": 1,
+      "react/prop-types": 0,
+      "react/react-in-jsx-scope": 1,
+      "react/self-closing-comp": 1,
+      "react/sort-comp": 0,
+      "react/wrap-multilines": 1
+    }
+  }
+}

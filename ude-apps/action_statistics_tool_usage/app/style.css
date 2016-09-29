@@ -1,0 +1,98 @@
+/* Graasp/Shindig default styles override
+ * --------------------------------------------------------------------------- */
+body, td, div, span, p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* header
+ * --------------------------------------------------------------------------- */
+h1 {
+    background: #5050d2;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 9px 0;
+    font-size: 1.0em;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* toolbar
+ * --------------------------------------------------------------------------- */
+.toolbar_wrapper {
+    background: #f5f5f5;
+}
+
+#toolbar ul {
+    list-style: none;
+    padding: 8px 10px;
+}
+
+#toolbar ul li {
+    display: inline-block;
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+#toolbar li a {
+    color: #777;
+    display: block;
+    font-size: 1.5em;
+    padding: 0 5px;
+}
+
+#toolbar li a:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+
+#toolbar li a:focus, #toolbar li a:active {
+    position: relative;
+    top: 1px;
+    color: #428bca;
+    text-decoration: none;
+}
+
+/* loading indicator
+ * --------------------------------------------------------------------------- */
+.cover {
+    position: absolute;
+    min-height: 200px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+#loading_indicator {
+    background-image: url('loading_indicator.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* error display
+ * --------------------------------------------------------------------------- */
+#error {
+    display: none;
+}
+
+/* main application
+ * --------------------------------------------------------------------------- */
+
+#content {
+    margin-left: 10px;
+}
+
+.nv-x .tick line {
+    display: none;
+}
+
+.nvd3 .nv-axis path.domain {
+    display: none;
+}
+
+/* .nvd3 .nv-axis.nv-x path.domain { */
+/*     stroke-opacity: 1; */
+/*     stroke-width: 1; */
+/* } */

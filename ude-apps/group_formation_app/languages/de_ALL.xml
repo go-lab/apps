@@ -1,0 +1,43 @@
+<messagebundle>
+  <msg name="posts">Beiträge</msg>
+  <msg name="close_alert">Hinweis schließen</msg>
+  <msg name="unnamed_post">Unbenannter Beitrag</msg>
+  <msg name="content">Inhalt</msg>
+  <msg name="save_post">Beitrag speichern</msg>
+  <msg name="remove_post">Beitrag entfernen</msg>
+  <msg name="add_new_post">Neuen Beitrag hinzufügen</msg>
+  <msg name="clear_posts">Alle Beiträge entfernen</msg>
+  <msg name="cancel">Abbrechen</msg>
+  <msg name="edit">Bearbeiten</msg>
+  <msg name="save_error">Beim Speichern des Beitrags ist ein Fehler aufgetreten.</msg>
+  <msg name="load_error">Beim Laden des Beitrags ist ein Fehler aufgetreten.</msg>
+  <msg name="load_posts_error">Beim Laden der Beiträge ist ein Fehler aufgetreten.</msg>
+  <msg name="display_error">Beim Anzeigen des Beitrags ist ein Fehler aufgetreten.</msg>
+  <msg name="remove_error">Beim Löschen des Beitrags ist ein Fehler aufgetreten.</msg>
+  <msg name="save_config_error">Beim Speichern der Konfiguration ist ein Fehler aufgetreten.</msg>
+  <msg name="error_occured">Ein Fehler ist aufgetreten.</msg>
+  <msg name="new">Neu</msg>
+  <msg name="save">Speichern</msg>
+  <msg name="open">Öffnen</msg>
+  <msg name="duplicate">Duplizieren</msg>
+  <msg name="remove">Löschen</msg>
+  <msg name="configure">Konfigurieren</msg>
+  <msg name="configuration">Konfiguration</msg>
+  <msg name="reset_to_default">Auf Standardeinstellung zurücksetzen</msg>
+  <msg name="post_title">Titel des Beitrags</msg>
+  <msg name="last_change">Letzte Änderung</msg>
+  <msg name="action">Aktion</msg>
+  <msg name="open_post">Beitrag öffnen</msg>
+  <msg name="unsaved_changes_prompt">Der Beitrag hat ungesicherte Änderungen, die verworfen werden.</msg>
+  <msg name="copy_of_post">Kopie von {0}</msg>
+  <msg name="post_removal_confirmation">Den Post "{0}" wirklich entfernen?.</msg>
+  <msg name="full_date_moment_format">DD.MM.YYYY HH:mm</msg>
+  <msg name="default_post_title">Voreingestellter Beitragstitel</msg>
+  <msg name="config_reset_confirmation">Die Konfiguration wird auf ihre Standardwerte zurückgesetzt. Eigene Veränderungen gehen verloren.</msg>
+  <msg name="graasp_student">Student</msg>
+  <msg name="thNickname">Spitzname</msg>
+  <msg name="devModeFlagInfo">Entwicklungmodus: technische Informationen wie Id's werden angezeigt, welche im
+    Produktionsmodus nicht sichtbar sind
+  </msg>
+  <msg>name="termMustNotBeEmpty">Das Feld darf nicht leer sein.</msg>
+</messagebundle>

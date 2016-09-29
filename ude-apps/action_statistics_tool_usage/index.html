@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Action Statistics</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="bower_components/nvd3/build/nv.d3.min.css" />
+    <link rel="stylesheet" href="app/style.css" type="text/css">
+</head>
+<body>
+    <h1>Action Statistics</h1>
+
+    <div id="toolbar-wrapper" class="toolbar_wrapper">
+        <div id="toolbar" role="toolbar"></div>
+    </div>
+
+    <div class="container" id="main">
+        <div class="row" id="error">
+            <div class="col-md-12">
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button
+                            type="button"
+                            class="close"
+                            data-dismiss="alert"
+                            aria-label="Close alert">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <span class="message"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cover" id="loading_indicator"></div>
+    </div>
+
+    <div id="content"></div>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bluebird/js/browser/bluebird.core.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.js"></script>
+    <script src="bower_components/bootstrap/js/alert.js"></script>
+    <script src="bower_components/d3/d3.min.js"></script>
+    <script src="bower_components/nvd3/build/nv.d3.js"></script>
+
+    <script type="text/javascript" src="../../libs/js/headJS/head.min.js"></script>
+
+    <!-- Go-Lab integration -->
+    <script src="../../libs/js/socket.io-1.2.1.js"></script>
+    <script src="../../libs/js/jquery.cookie.js"></script>
+    <script src="../../commons/js/utils.js"></script>
+    <script src="../../libs/js/underscore.js"></script>
+    <script src="http://shindig2.epfl.ch/ils/main/ils_graaspeu.js"></script>
+    <script src="../../commons/js/MetadataHandler.js"></script>
+    <script src="../../commons/js/StorageHandler.js"></script>
+    <script src="../../commons/js/CachingStorageHandler.js"></script>
+    <script src="../../commons/js/ActionLogger.js"></script>
+    <script src="../../commons/js/notificationClient.js"></script>
+    <script src="../../commons/js/languageHandlers.js"></script>
+    <script src="../../commons/js/createEnvironmentHandlers.js"></script>
+    <script src="../../commons/js/pretty_tool_name.js"></script>
+
+    <script src="app/configuration_definition.js" data-configuration-definition></script>
+    <script src="app/configuration_default.js" data-configuration></script>
+
+    <script src="app/namespace.js"></script>
+    <script src="app/util.js"></script>
+    <script src="app/pubsub.js"></script>
+    <script src="app/toolbar.js"></script>
+    <script src="app/action_bar_chart.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/run.js"></script>
+</body>
+</html>

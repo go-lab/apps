@@ -1,0 +1,90 @@
+{
+  "metadata":
+  {
+    "time": "undefined",
+    "title": "user-specific concept aggregation",
+    "description": "Aggregated concepts used single student",
+    "directed": "undefined",
+    "datalinks": [ "0.json" ],
+    "dimensions": [],
+    "edgeproperties": [],
+    "measures": [ [] ],
+    "type": "undefined",
+    "nodeproperties": [] },
+
+  "users":
+  [
+    {
+      "name": "Schueler1",
+      "concept":
+      [{
+        "name":"Widerstand",
+        "phase":
+        [
+          {
+            "name": "Orientation",
+            "apps": [
+              {
+                "id": 1,
+                "name": "Wiki"
+              },
+              {
+                "id": 2,
+                "name": "ConceptMap"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name":"Stromstärke",
+        "phase":
+        [
+          {
+            "name": "Orientation",
+            "apps": [
+              {
+                "id": 1,
+                "name": "Wiki"
+              },
+              {
+                "id": 2,
+                "name": "ConceptMap"
+              }
+            ]
+          }
+        ]
+      }]
+    },
+    {
+      "name": "Schueler2",
+      "concept":
+      [{
+        "name":"Ohm",
+        "phase":
+        [
+          {
+            "name": "Orientation",
+            "apps": [
+              {
+                "id": 1,
+                "name": "Wiki"
+              }
+            ]
+          },
+          {
+            "name": "Conclusion",
+            "apps": [
+              {
+                "id": 1,
+                "name": "HypothesenTool"
+              }
+            ]
+          }
+        ]
+      }]
+    }
+  ]
+}
+
+

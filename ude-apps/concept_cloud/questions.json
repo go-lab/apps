@@ -1,0 +1,45 @@
+{
+  "setR1": [
+    "Wie ist dieses Konzept zu verstehen?",
+    "Wie kannst du dieses Konzept besser verstehen?",
+    "Warum hast du das bereits erklärte Konzept nicht aufgegriffen?",
+    "Wie hängt dieses Konzept möglicherweise mit anderen zusammen, die du bereits verwendet hast?",
+    "Ist dieses Konzept neu für dich? In welchem Zusammenhang steht dieses Konzept mit dir bereits Bekannten in Zusammenhang?"
+  ],
+  "setR2": [
+    "Warum hast du das Konzept wieder verworfen?",
+    "Überlege noch einmal welche Inhalte durch die Ausarbeitung ausgebaut und verfestigt wurden!",
+    "Scheint dir der Sinn des Konzeptes schlüssig? Wenn nein, welche Phase könnte dir helfen, das Konzept besser zu verstehen?",
+    "Wo kannst du das Konzept als erstes aufgreifen? Wo macht es als erstes Sinn?",
+    "Was hilft dir dabei, das Konzept anzuwenden? Geh nochmal zurück, um dir den Inhalt anzusehen.",
+    "Ist dir etwas nicht klar geworden? Wenn ja, überlege welche Inhalte dir helfen könnten, das Konzept besser zu verstehen."
+  ],
+  "setY1": [
+    "War die Aufgabe für dich eindeutig gestellt?",
+    "Welche Fragen hast du noch?",
+    "Welche Fragen wurden nicht geklärt?",
+    "Wie hast du dir bei Unklarheiten Hilfe verschafft?",
+    "An welchen Stellen hast du noch Probleme oder Fragen bezüglich des Konzeptes?"
+  ],
+  "setY2": [
+    "Warum hast du das Konzept in dieser Phase nicht verwendet?",
+    "Warum hast du das Konzept zwischenzeitlich verworfen?",
+    "Welche Schwierigkeiten hattest du beim Nutzen des Konzepts?",
+    "Welche Querverbindungen kannst du zu anderen Konzepten ziehen?",
+    "Warst du dir bei der Verwendung des Konzeptes unsicher? Begründe deine Antwort!"
+  ],
+  "setG1": [
+    "Wie könntest du deine Hypothesen anders formulieren? Gibt es alternative Lösungswege?",
+    "Was würdest du das nächste Mal beim Formulieren der Hypothesen anders machen?",
+    "Kannst du das Konzept mit eigenen Worten erklären?",
+    "Würdest du bei einer wiederholten Bearbeitung dieses Konzept wieder verwenden? Begründe deine Antwort!",
+    "Welche Themenbereiche sind dir aufgefallen, die zum aktuellen Konzept dazugehören bzw. eng damit verknüpft sind?"
+  ],
+  "tG2": [
+    "Kannst du dieses Konzept mit den anderen verbinden? Lassen sich dadurch eventuell neue Schlüsse ziehen?",
+    "Mit wievielen anderen Konzepten und wie lässt sich dieses Konzept in Verbindung bringen?",
+    "Würdest du dieses Konzept als besonders wichtig einschätzen? Begründe deine Antwort!",
+    "Ist es dir leichter gefallen, dieses Konzept zu verstehen, als andere? Woran kann das liegen?",
+    "Wie würdest du vorgehen, wenn du anderen Schülern den Inhalt des Konzeptes vermitteln müsstest?"
+  ]
+}
