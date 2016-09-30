@@ -1,9 +1,0 @@
-@charset "utf-8";
-.commonImage_dcPowerMeter{background-image:url(../images/dataSources/dcPowerMeter.png)}
-.commonImage_dcVoltageSourceMeter{background-image:url(../images/dataSources/dcVoltageSourceMeter.png)}
-.commonImage_acVoltageSourceMeter{background-image:url(../images/dataSources/acVoltageSourceMeter.png)}
-.commonImage_frequencySourceMeter{background-image:url(../images/dataSources/frequencySourceMeter.png)}
-.commonImage_ohmMeter{background-image:url(../images/dataSources/ohmMeter.png)}
-.commonImage_ampereMeter{background-image:url(../images/dataSources/ampereMeter.png)}
-.commonImage_voltMeter{background-image:url(../images/dataSources/voltMeter.png)}
-.commonImage_wattMeter{background-image:url(../images/dataSources/wattMeter.png)}

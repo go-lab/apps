@@ -1,5 +1,0 @@
-@charset "utf-8";
-.golabTitleFont{font-size:16px;font-weight:700;letter-spacing:.75px;font-kerning:none;-webkit-font-variant-ligatures:no-common-ligatures;font-feature-settings:"liga" 0}
-.golabCloak,.ng-cloak,[ng-cloak],[ng\:cloak]{display:none!important}
-.pleaseWaitIcon{position:absolute;top:50%;left:50%;width:115px;height:115px;margin-top:-57.5px;margin-left:-57.5px;background:url(../images/loading-animation.gif) center no-repeat;background-size:115px;display:none}
-[golabCloak].pleaseWaitIcon,[ng-cloak].pleaseWaitIcon{display:block!important}

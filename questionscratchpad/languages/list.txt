@@ -1,7 +1,0 @@
-questioning_en_ALL.xml
-questioning_de_ALL.xml
-questioning_nl_ALL.xml
-questioning_et_ALL.xml
-questioning_es_ALL.xml
-questioning_pt_ALL.xml
-questioning_zh_ALL.xml
