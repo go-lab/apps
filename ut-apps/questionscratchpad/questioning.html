@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Go-Lab - Questioning Scratchpad v1.0</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div ng-cloak class="pleaseWaitIcon"></div>
+    <ng-include src="resourceLoader.getIncludeUrl('/questioningContent.html')"></ng-include>
+
+    <link rel="stylesheet" type="text/css" href="commons/css/golabStart.css"/>
+    <script type="text/javascript" src="commons/js/jsChecker.js"></script>
+    <script type="text/javascript" src="commons/js/errorHandler.js"></script>
+    <script data-configuration-definition type="text/javascript" charset="utf-8" src="configurations/configuration_definition.js"></script>
+    <script data-configuration type="text/javascript" charset="utf-8" src="configurations/configuration_default.js"></script>
+    <script type="text/javascript" src="libs/js/headJS/head.min.js"></script>
+    <script type="text/javascript" src="commons/js/resourceLoader.js"></script>
+    <script type="text/javascript" src="commons/js/commonsModules.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/questioningApp.js"></script>
+    <script type="text/javascript">
+        "use strict";
+        window.ut.tools.questioning.start()
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+hypothesis_en_ALL.xml
+hypothesis_de_ALL.xml
+hypothesis_el_ALL.xml
+hypothesis_nl_ALL.xml
+hypothesis_et_ALL.xml
+hypothesis_es_ALL.xml
+hypothesis_pt_ALL.xml
+hypothesis_zh_ALL.xml

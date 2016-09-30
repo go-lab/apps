@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<messagebundle toolId="hypothesis" mails="l.bollen@utwente.nl" requires="common">
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_add_button">Προσθήκη μιας ερώτησης</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_confidence">Πόσο σίγουροι είστε ότι η υπόθεση αυτή είναι σωστή?</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_configuration_conditionals">Λέξεις για τη διατύπωση υποθέσεων</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_configuration_confidence">Εμφάνιση δείκτη βεβαιότητας</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_configuration_freeInput">Εμφάνιση του πλαισίου για εισαγωγή κειμένου</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_configuration_title">Ρυθμίσεις εργαλείου</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_configuration_variables">Μεταβλητές</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_empty_hypothesis">Τοποθετήστε τις λέξεις σας εδώ και οργανώστε τις στη σειρά που θέλετε</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_free">Προσθέστε δική σας λέξη!</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_hypotheses">Οι υποθέσεις σας</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_hypothesesWithResourceName">{0}</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_notification_title">Ειδοποίηση</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_ok">Οκ</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_templates">Οι λέξεις σας</msg>
+  <msg toolId="hypothesis" name="ut_tools_hypothesis_trashcan">Διαγραφή ερώτησης</msg>
+  <msg toolId="hypothesis" name="help.helpDialog.content.hypothesis" format="textAngular">
+    <![CDATA[
+    
+    
+      
+<ul>
+   <li><b>Create a hypothesis</b> by dragging conditionals (e.g., if, then) and variables in the hypothesis box</li>
+   <li><b>Create your own elements</b> by writing them in the “type your own” box (and drag them to the hypothesis box)</li>
+   <li><b>Rearrange terms</b> by dragging them around</li>
+   <li><b>Delete terms</b> by dragging them to the trashcan</li>
+   <li><b>Add a hypothesis</b> by clicking the plus sign</li>
+   <li><b>Delete a hypothesis</b> by clicking the trashcan</li>
+   <li><b>Adjust your level of confidence</b> in a hypothesis by adjusting the "horseshoe" next to the hypothesis</li>
+</ul>
+
+   ]]></msg>
+
+  <msg toolId="common" name="collaboration.start.tooltip">Έναρξη συνεργασίας</msg>
+  <msg toolId="common" name="editConfiguration.authoringMode">Αποθήκευση αρχικού περιεχομένου</msg>
+  <msg toolId="common" name="editConfiguration.authoringMode.tooltip">Το περιεχόμενο του εργαλείου θα αποθηκευτεί ως το αρχικό περιεχόμενο για τους μαθητές</msg>
+  <msg toolId="common" name="editConfiguration.autoLoadLatestResource">Αυτόματη φόρτωση της τελευταίας πηγής</msg>
+  <msg toolId="common" name="editConfiguration.autoLoadLatestResource.tooltip">Το τελευταίο έγγραφο που αποθηκεύτηκε θα φορτωθει κατά την εκκίνηση</msg>
+  <msg toolId="common" name="editConfiguration.autoSave">Αυτόματη αποθήκευση</msg>
+  <msg toolId="common" name="editConfiguration.autoSave.tooltip">Οι αλλαγές θα αποθηκευτούν αυτόματα</msg>
+  <msg toolId="common" name="editConfiguration.close">κλείσιμο</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOption">Ατομική/συνεργατική</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOption.tooltip">Επιλέξτε εάν και εφόσον έχει ξεκινήσει η συνεργασία</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.disabled">Ατομική</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.manualStart">Ο χρήστης αποφασίζει</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.autoStart">Συνεργατική</msg>
+  <msg toolId="common" name="editConfiguration.debugOptions">Επιλογές εντοπισμού σφαλμάτων</msg>
+  <msg toolId="common" name="editConfiguration.defaultResourceName">Προεπιλεγμένο όνομα</msg>
+  <msg toolId="common" name="editConfiguration.defaultResourceName.tooltip">Το προεπιλεγμένο όνομα του εγγράφου</msg>
+  <msg toolId="common" name="editConfiguration.dialogTitle">Επεξεργασία διαμόρφωσης - {0}</msg>
+  <msg toolId="common" name="editConfiguration.helpHtml">Βοήθεια html</msg>
+  <msg toolId="common" name="editConfiguration.hideSection.tooltip">Απόκρυψη επιλογών</msg>
+  <msg toolId="common" name="editConfiguration.hideSectionNotAllowed.tooltip">Μπορεί να μην κρύψει τις επιλογές λόγω επιλογής</msg>
+  <msg toolId="common" name="editConfiguration.loadInitialResource">Φόρτωση αρχικού περιεχομένου</msg>
+  <msg toolId="common" name="editConfiguration.loadInitialResource.tooltip">Το αρχικό περιεχόμενο που αποθηκεύτηκε θα είναι το αρχικό περιεχομένο για τους μαθητές</msg>
+  <msg toolId="common" name="editConfiguration.multiDocumentMode">Αποθήκευση ως</msg>
+  <msg toolId="common" name="editConfiguration.multiDocumentMode.tooltip">Με την εμφάνιση των επιλογών για "Αποθήκευση ως" και "Άνοιγμα", οι μαθητές θα μπορούν να δουλεύουν με πολλά έγγραφα</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.addName.tooltip">Προσθήκη ονομασίας</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionDown.tooltip">Μετακίνηση του επιλεγμένου ονόματος προς τα κάτω</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionUp.tooltip">Μετακίνηση του επιλεγμένου ονόματος προς τα πάνω</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.removeName.tooltip">Διαγραφή επιλεγμένου ονόματος</msg>
+  <msg toolId="common" name="editConfiguration.specialLanguageTerms">Ειδικοί γλωσσικοί όροι</msg>
+  <msg toolId="common" name="editConfiguration.openButton.tooltip">Επεξεργασία διαμόρφωσης</msg>
+  <msg toolId="common" name="editConfiguration.resourceOptions">Επιλογές πηγών</msg>
+  <msg toolId="common" name="editConfiguration.showImportExport">Εμφάνιση των κουμπίων εισαγωγής/εξαγωγής</msg>
+  <msg toolId="common" name="editConfiguration.showImportExport.tooltip">Να εμφανίζονται τα κουμπιά εισαγωγής/εξαγωγής</msg>
+  <msg toolId="common" name="editConfiguration.showLoadConfiguration">Εμφάνιση του κουμπιού διαμόρφωσης</msg>
+  <msg toolId="common" name="editConfiguration.showLoadConfiguration.tooltip">Να εμφανίζεται το κουμπί για το άνοιγμα του χώρου διαμόρφωσης</msg>
+  <msg toolId="common" name="editConfiguration.showLoadExamples">Εμφάνιση των κουμπιών των παραδειγμάτων</msg>
+  <msg toolId="common" name="editConfiguration.showLoadExamples.tooltip">Να εμφανίζονται τα κουμπιά για τη φόρτωση των παραδειγμάτων</msg>
+  <msg toolId="common" name="editConfiguration.showModelJson">Εμφάνιση κουμπιού για το μοντέλο json</msg>
+  <msg toolId="common" name="editConfiguration.showModelJson.tooltip">Εμφάνιση του κουμπιού για το μοντέλο json</msg>
+  <msg toolId="common" name="editConfiguration.showResourceName">Εμφάνιση ονόματος</msg>
+  <msg toolId="common" name="editConfiguration.showResourceName.tooltip">Να εμφανίζεται το όνομα του αρχείου στο γραμμή του τίτλου</msg>
+  <msg toolId="common" name="editConfiguration.showSection.tooltip">Εμφάνιση επιλογών</msg>
+  <msg toolId="common" name="editConfiguration.useMyOwnToolHelp">Χρήση της δικής μου βοήθειας για το εργαλείο</msg>
+  <msg toolId="common" name="editConfiguration.useMyOwnToolHelp.tooltip">Να φαίνεται η δική μου βοήθεια για το εργαλείο στους μαθητές</msg>
+  <msg toolId="common" name="editConfiguration.useStandardToolHelp">Χρήση της πρότυπης βοήθειας για το εργαλείο</msg>
+  <msg toolId="common" name="editConfiguration.useStandardToolHelp.tooltip">Show the standard tool help to students</msg>
+  <msg toolId="common" name="help.helpDialog.buildDate">Build at {0}</msg>
+  <msg toolId="common" name="help.helpDialog.dialogTitle">Βοήθεια</msg>
+  <msg toolId="common" name="help.openButton.tooltip">Να εμφανίζεται η βοήθεια</msg>
+  <msg toolId="common" name="ils.tools">Εργαλεία</msg>
+  <msg toolId="common" name="loadSave.clear.tooltip">Διαγραφή περιεχομένου {0}</msg>
+  <msg toolId="common" name="loadSave.configurationDialog.dialogTitle">Φόρτωση διαμόρφωσης για {0}</msg>
+  <msg toolId="common" name="loadSave.delete.tooltip">Διαγραφή {0}</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.cancel">Ακύρωση</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.delete">Διαγραφή</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.dialogTitle">Διαγραφή {0}?</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.question">Είστε σίγουροι ότι θέλετε να διαγράψετε το {0}?</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.cancel">Ακύρωση</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.dialogTitle">Διαγραφή περιεχομένου;</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.erase">Διαγραφή</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.question">Είσαι σίγουρος/η ότι θέλεις να διαγράψεις το περιεχόμενο του {0};</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.cancel">Ακύρωση</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.dialogTitle">Διαγραφή ή επαναφορά περιεχομένου;</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.erase">Διαγραφή</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.question">Είσαι σίγουρος/η ότι θέλεις να διαγράψεις ή να επαναφέρεις το περιεχόμενο του {0};</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.reset">Επαναφορά</msg>
+  <msg toolId="common" name="loadSave.examples.tooltip">Παραδείγματα {0}</msg>
+  <msg toolId="common" name="loadSave.examplesDialog.category">Κατηγορία</msg>
+  <msg toolId="common" name="loadSave.examplesDialog.dialogTitle">Φόρτωση παραδείγματος {0}</msg>
+  <msg toolId="common" name="loadSave.export.tooltip">Εξαγωγή {0}</msg>
+  <msg toolId="common" name="loadSave.failure.delete" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Delete failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.import" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Import failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.listMetadata" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Directory listing failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.load" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Load failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.loadLatest" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Loading of latest resource failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.loadLatestConfiguration" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Loading of configuration failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.refresh" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Refresh failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.save" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Save failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.saveAs" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Save as failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.import.tooltip">Εισαγωγή {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.author">συγγραφέας</msg>
+  <msg toolId="common" name="loadSave.loadDialog.cancel">ακύρωση</msg>
+  <msg toolId="common" name="loadSave.loadDialog.date">ημερομηνία</msg>
+  <msg toolId="common" name="loadSave.loadDialog.dialogTitle">Φόρτωση {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.loadSelected">φόρτωση επιλεγμένων {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.title">τίτλος</msg>
+  <msg toolId="common" name="loadSave.loadDialog.tool">εργαλείο</msg>
+  <msg toolId="common" name="loadSave.loadDialog.type">πληκτρολογήστε</msg>
+  <msg toolId="common" name="loadSave.loadDialog.update">Ανανέωση λίστας</msg>
+  <msg toolId="common" name="loadSave.new.tooltip">Νέο {0}</msg>
+  <msg toolId="common" name="loadSave.notification.saved">{0} αποθηκεύτηκε</msg>
+  <msg toolId="common" name="loadSave.open.tooltip">Άνοιγμα {0}</msg>
+  <msg toolId="common" name="loadSave.redo.tooltip">Ακύρωση αναίρεσης</msg>
+  <msg toolId="common" name="loadSave.refresh.tooltip">Ανανέωση περιεχομένου {0}</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.cancel">Ακύρωση</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.dialogTitle">Αντικατάσταση της υφιστάμενης πηγής;</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.question">"{0}" υπάρχει ήδη. Επιθυμείς να κάνεις αντικατάσταση;</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.replace">Αντικατάσταση</msg>
+  <msg toolId="common" name="loadSave.save.tooltip">Αποθήκευση {0}</msg>
+  <msg toolId="common" name="loadSave.saveAs.tooltip">Αποθήκευση ως {0}</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.cancel">Απόρριψη</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.dialogTitle">Αποθήκευση αλλαγών?</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.discard">Απόρριψη</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.question">Θέλετε να αποθηκεύσετε τις αλλαγές στο {0}?</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.save">Αποθήκευση</msg>
+  <msg toolId="common" name="loadSave.saveDialog.cancel">Ακύρωση</msg>
+  <msg toolId="common" name="loadSave.saveDialog.dialogTitle">Εισαγωγή ονόματος για {0}</msg>
+  <msg toolId="common" name="loadSave.saveDialog.download">Κατέβασμα αρχείου</msg>
+  <msg toolId="common" name="loadSave.saveDialog.save">Αποθήκευση</msg>
+  <msg toolId="common" name="loadSave.saveDialog.saveResource">Αποθήκευση πηγής</msg>
+  <msg toolId="common" name="loadSave.showModelJson">Εμφάνιση του μοντέλου json</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.close">κλείσιμο</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.dialogTitle">{0} μοντέλο josn</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.refresh">ανανέωση μοντέλου json</msg>
+  <msg toolId="common" name="loadSave.title.unnamed">{0}</msg>
+  <msg toolId="common" name="loadSave.titleConfiguration.unnamed">{0} διαμόρφωση</msg>
+  <msg toolId="common" name="loadSave.undo.tooltip">Αναίρεση</msg>
+  <msg toolId="common" name="multiLoadSave.redo.tooltip">Ακύρωση αναίρεσης</msg>
+  <msg toolId="common" name="multiLoadSave.refresh.tooltip">Ανανέωση των πηγών</msg>
+  <msg toolId="common" name="multiLoadSave.undo.tooltip">Αναίρεση</msg>
+  <msg toolId="common" name="resourceImport.failure.createResource" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Failed to add resource {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.createResource.inCallback.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Unexpected error during callback of loading of file {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.createResource.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Unexpected error during add resource {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.deleteResource" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Failed to delete resource {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Failed to get directory listing<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Unexpected error during get directory listing<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.loadJson" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Failed to load file {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.loadJson.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Unexpected error during loading of file {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceJson.failure.noArray">Η λίστα πηγών πρέπει να είναι μια σειρά json</msg>
+  <msg toolId="common" name="resourceJson.failure.noContent">Η πηγή πρέπει να έχει μια ιδιότητα περιεχομένου</msg>
+  <msg toolId="common" name="resourceJson.failure.noMetadata">Η πηγή πρέπει να έχει μια ιδιότητα μεταδεδομένων</msg>
+  <msg toolId="common" name="resourceJson.failure.noObject">Η πηγή πρέπει να είναι ένα αντικείμενο json</msg>
+  <msg toolId="common" name="resources.type.name.circuit">Κύκλωμα</msg>
+  <msg toolId="common" name="resources.type.name.conceptMap">Εννοιολογικός χάρτης</msg>
+  <msg toolId="common" name="resources.type.name.conclusions">Συμπεράσματα</msg>
+  <msg toolId="common" name="resources.type.name.configuration">Διαμόρφωση</msg>
+  <msg toolId="common" name="resources.type.name.dataGraph">Γραφική αναπαράσταση δεδομένων</msg>
+  <msg toolId="common" name="resources.type.name.dataSet">Βάση δεδομένων</msg>
+  <msg toolId="common" name="resources.type.name.experiment_designs">experiment design</msg>
+  <msg toolId="common" name="resources.type.name.hypotheses">Υποθέσεις</msg>
+  <msg toolId="common" name="resources.type.name.hypotheses.single">Hypothesis</msg>
+  <msg toolId="common" name="resources.type.name.observations">Παρατηρήσεις</msg>
+  <msg toolId="common" name="resources.type.name.observations.single">Observation</msg>
+  <msg toolId="common" name="resources.type.name.questions">Ερωτήσεις</msg>
+  <msg toolId="common" name="resources.type.name.questions.single">Question</msg>
+  <msg toolId="common" name="resources.type.name.reflection">Αναστοχασμός</msg>
+  <msg toolId="common" name="resources.type.name.report">Αναφορά</msg>
+  <msg toolId="common" name="resources.type.name.resource">Πηγή</msg>
+  <msg toolId="common" name="resources.type.name.table">Πίνακας</msg>
+  <msg toolId="common" name="resources.type.name.testCommons">Common tests</msg>
+  <msg toolId="common" name="resources.type.name.model">Model</msg>
+  <msg toolId="common" name="resources.type.name.test">Test</msg>
+  <msg toolId="common" name="resources.type.name.phetSimWrapping">PhET Sim wrapping</msg>
+  <msg toolId="common" name="tools.name.goModel">GoModel Editor</msg>
+  <msg toolId="common" name="tools.name.circuitLab">Εργαστήριο κυκλωμάτων</msg>
+  <msg toolId="common" name="tools.name.conceptmapper">Εργαλείο Χαρτογράφησης</msg>
+  <msg toolId="common" name="tools.name.conclusionTool">Εργαλείο συμπερασμάτων</msg>
+  <msg toolId="common" name="tools.name.dataEditor">Επεξεργαστής δεδομένων</msg>
+  <msg toolId="common" name="tools.name.dataViewer">Εργαλείο επεξεργασίας δεδομέων</msg>
+  <msg toolId="common" name="tools.name.edt">Εργαλείο σχεδιασμού πειράματος</msg>
+  <msg toolId="common" name="tools.name.hypothesis scratchpad">Εργαλείο διατύπωσης υποθέσεων</msg>
+  <msg toolId="common" name="tools.name.observationTool">Εργαλείο Καταγραφής Παρατηρήσεων</msg>
+  <msg toolId="common" name="tools.name.questioning scratchpad">Εργαλείο διατύπωσης ερωτήσεων</msg>
+  <msg toolId="common" name="tools.name.reflect">Εργαλείο Αναστοχασμού</msg>
+  <msg toolId="common" name="tools.name.reflectionTool">Εργαλείο Αναστοχασμού</msg>
+  <msg toolId="common" name="tools.name.reportingTool">Εργαλείο Αναφοράς</msg>
+  <msg toolId="common" name="tools.name.resourceEditor">Σύνταξη βοηθήματος</msg>
+  <msg toolId="common" name="tools.name.tableTool">Εργαλείο πίνακα</msg>
+  <msg toolId="common" name="tools.name.testCommons">Test commons</msg>
+  <msg toolId="common" name="tools.name.ut.tools.conceptmapper">Εργαλείο Χαρτογράφησης</msg>
+  <msg toolId="common" name="tools.name.ut.tools.hypothesisScratchpad">Εργαλείο διατύπωσης υποθέσεων</msg>
+  <msg toolId="common" name="tools.name.ut.tools.questioningScratchpad">Εργαλείο διατύπωσης ερωτήσεων</msg>
+  <msg toolId="common" name="tools.name.phetSimWrapper">PhET Sim wrapper</msg>
+  <msg toolId="common" name="tools.name.quiz">Quiz tool</msg>
+</messagebundle>

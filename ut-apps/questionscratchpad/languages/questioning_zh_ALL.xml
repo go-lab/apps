@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<messagebundle toolId="questioning" mails="l.bollen@utwente.nl" requires="common">
+  <msg toolId="questioning" name="ut_tools_questioning_add_button">添加问题</msg>
+  <msg toolId="questioning" name="ut_tools_questioning_cancel">取消</msg>
+  <msg toolId="questioning" name="ut_tools_questioning_configuration_conditionals">条件句</msg>
+  <msg toolId="questioning" name="ut_tools_questioning_configuration_title">问题暂存器选项</msg>
+  <msg toolId="questioning" name="ut_tools_questioning_configuration_variables">变量</msg>
+  <msg toolId="questioning" name="ut_tools_questioning_empty_question">你的研究问题</msg>
+  <msg toolId="questioning" name="ut_tools_questioning_ok">可行</msg>
+  <msg toolId="questioning" name="ut_tools_questioning_questions">问题</msg>
+  <msg toolId="questioning" name="ut_tools_questioning_questionsWithResourceName">{0}</msg>
+  <msg toolId="questioning" name="ut_tools_questioning_save_title">问题集名称？</msg>
+  <msg toolId="questioning" name="ut_tools_questioning_templates">原理</msg>
+  <msg toolId="questioning" name="ut_tools_questioning_trashcan">删除问题</msg>
+  <msg toolId="questioning" name="help.helpDialog.content.questioning" format="textAngular">
+    <![CDATA[
+      
+<ul>
+   <li><b>Create a question</b> by dragging elements to the question box<br>
+   Complete the question by typing your own text in the question box</li>
+   <li><b>Add a question</b> by clicking the plus sign</li>
+   <li><b>Delete a question</b> by clicking the trashcan</li>
+</ul>
+
+   ]]></msg>
+
+   <msg toolId="common" name="collaboration.start.tooltip">Start collaboration</msg>
+   <msg toolId="common" name="editConfiguration.authoringMode">保存初始内容</msg>
+   <msg toolId="common" name="editConfiguration.authoringMode.tooltip">为学生保存初始内容</msg>
+   <msg toolId="common" name="editConfiguration.autoLoadLatestResource">自动加载最近文档</msg>
+   <msg toolId="common" name="editConfiguration.autoLoadLatestResource.tooltip">启动加载最近保存的文档</msg>
+   <msg toolId="common" name="editConfiguration.autoSave">自动保存</msg>
+   <msg toolId="common" name="editConfiguration.autoSave.tooltip">自动保存更改</msg>
+   <msg toolId="common" name="editConfiguration.close">关闭</msg>
+   <msg toolId="common" name="editConfiguration.collaborationStartupOption">Individual/Collaborative</msg>
+   <msg toolId="common" name="editConfiguration.collaborationStartupOption.tooltip">Select if and when the collaboration is started</msg>
+   <msg toolId="common" name="editConfiguration.collaborationStartupOptions.disabled">Individual</msg>
+   <msg toolId="common" name="editConfiguration.collaborationStartupOptions.manualStart">User decides</msg>
+   <msg toolId="common" name="editConfiguration.collaborationStartupOptions.autoStart">Collaborative</msg>
+   <msg toolId="common" name="editConfiguration.debugOptions">调试选项</msg>
+   <msg toolId="common" name="editConfiguration.defaultResourceName">默认名称</msg>
+   <msg toolId="common" name="editConfiguration.defaultResourceName.tooltip">文档默认名称</msg>
+   <msg toolId="common" name="editConfiguration.dialogTitle">{0}</msg>
+   <msg toolId="common" name="editConfiguration.helpHtml">帮助</msg>
+   <msg toolId="common" name="editConfiguration.hideSection.tooltip">隐藏选项</msg>
+   <msg toolId="common" name="editConfiguration.hideSectionNotAllowed.tooltip">加载初始内容</msg>
+   <msg toolId="common" name="editConfiguration.loadInitialResource">最初保存内容即为对学生的初始内容</msg>
+   <msg toolId="common" name="editConfiguration.loadInitialResource.tooltip">保存为</msg>
+   <msg toolId="common" name="editConfiguration.multiDocumentMode">“打开”按钮，学生可以多文档操作</msg>
+   <msg toolId="common" name="editConfiguration.multiDocumentMode.tooltip">添加名称</msg>
+   <msg toolId="common" name="editConfiguration.nameListEditor.addName.tooltip">被选名称上移</msg>
+   <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionDown.tooltip">被选名称下移</msg>
+   <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionUp.tooltip">删除所选名称</msg>
+   <msg toolId="common" name="editConfiguration.nameListEditor.removeName.tooltip">编辑配置</msg>
+   <msg toolId="common" name="editConfiguration.openButton.tooltip">资源设置</msg>
+   <msg toolId="common" name="editConfiguration.resourceOptions">输入/输出按钮</msg>
+   <msg toolId="common" name="editConfiguration.showImportExport">显示输入/输出按钮</msg>
+   <msg toolId="common" name="editConfiguration.showImportExport.tooltip">配置按钮</msg>
+   <msg toolId="common" name="editConfiguration.showLoadConfiguration">显示打开的配置对话框</msg>
+   <msg toolId="common" name="editConfiguration.showLoadConfiguration.tooltip">加载样例按钮</msg>
+   <msg toolId="common" name="editConfiguration.showLoadExamples">显示加载样例按钮</msg>
+   <msg toolId="common" name="editConfiguration.showLoadExamples.tooltip">JSON 模型按钮</msg>
+   <msg toolId="common" name="editConfiguration.showModelJson">显示JSON 模型按钮</msg>
+   <msg toolId="common" name="editConfiguration.showModelJson.tooltip">显示名称</msg>
+   <msg toolId="common" name="editConfiguration.showResourceName">标题栏显示文档名称</msg>
+   <msg toolId="common" name="editConfiguration.showResourceName.tooltip">显示选项</msg>
+   <msg toolId="common" name="editConfiguration.showSection.tooltip">基于{0}生成</msg>
+   <msg toolId="common" name="help.helpDialog.buildDate">帮助</msg>
+   <msg toolId="common" name="help.helpDialog.dialogTitle">显示帮助</msg>
+   <msg toolId="common" name="help.openButton.tooltip">删除内容 {0}</msg>
+   <msg toolId="common" name="ils.tools"></msg>
+   <msg toolId="common" name="loadSave.clear.tooltip">为 {0}加载配置</msg>
+   <msg toolId="common" name="loadSave.configurationDialog.dialogTitle">删除 {0}</msg>
+   <msg toolId="common" name="loadSave.delete.tooltip">取消</msg>
+   <msg toolId="common" name="loadSave.deleteResourceDialog.cancel">删除</msg>
+   <msg toolId="common" name="loadSave.deleteResourceDialog.delete">删除{0}？</msg>
+   <msg toolId="common" name="loadSave.deleteResourceDialog.dialogTitle">确定删除{0}？</msg>
+   <msg toolId="common" name="loadSave.deleteResourceDialog.question">取消</msg>
+   <msg toolId="common" name="loadSave.eraseContentDialog.cancel">删除内容？</msg>
+   <msg toolId="common" name="loadSave.eraseContentDialog.dialogTitle">删除</msg>
+   <msg toolId="common" name="loadSave.eraseContentDialog.erase">确定删除 {0}内容？</msg>
+   <msg toolId="common" name="loadSave.eraseContentDialog.question"></msg>
+   <msg toolId="common" name="loadSave.eraseResetContentDialog.cancel">取消</msg>
+   <msg toolId="common" name="loadSave.eraseResetContentDialog.dialogTitle">删除或重置内容？</msg>
+   <msg toolId="common" name="loadSave.eraseResetContentDialog.erase">删除</msg>
+   <msg toolId="common" name="loadSave.eraseResetContentDialog.question">删除或重置 {0}内容？</msg>
+   <msg toolId="common" name="loadSave.eraseResetContentDialog.reset">重置</msg>
+   <msg toolId="common" name="loadSave.examples.tooltip">样例 {0}</msg>
+   <msg toolId="common" name="loadSave.examplesDialog.category">类别</msg>
+   <msg toolId="common" name="loadSave.examplesDialog.dialogTitle">加载样例 {0}</msg>
+   <msg toolId="common" name="loadSave.export.tooltip">输出 {0}</msg>
+   <msg toolId="common" name="loadSave.failure.delete">删除失败<br/>错误: {0}</msg>
+   <msg toolId="common" name="loadSave.failure.import">导入失败<br/>错误: {0}</msg>
+   <msg toolId="common" name="loadSave.failure.listMetadata">目录列表失败<br/>错误: {0}</msg>
+   <msg toolId="common" name="loadSave.failure.load">加载失败<br/>错误: {0}</msg>
+   <msg toolId="common" name="loadSave.failure.loadLatest">加载最新资源失败<br/>错误: {0}</msg>
+   <msg toolId="common" name="loadSave.failure.loadLatestConfiguration">配置加载失败<br/>错误: {0}</msg>
+   <msg toolId="common" name="loadSave.failure.refresh">刷新失败<br/>错误: {0}</msg>
+   <msg toolId="common" name="loadSave.failure.save">保存失败<br/>错误: {0}</msg>
+   <msg toolId="common" name="loadSave.failure.saveAs">保存为失败的<br/>错误: {0}</msg>
+   <msg toolId="common" name="loadSave.import.tooltip">输入 {0}</msg>
+   <msg toolId="common" name="loadSave.loadDialog.author">程序设计者</msg>
+   <msg toolId="common" name="loadSave.loadDialog.cancel">取消</msg>
+   <msg toolId="common" name="loadSave.loadDialog.date">日期</msg>
+   <msg toolId="common" name="loadSave.loadDialog.dialogTitle">加载 {0}</msg>
+   <msg toolId="common" name="loadSave.loadDialog.loadSelected">加载选择的 {0}</msg>
+   <msg toolId="common" name="loadSave.loadDialog.title">标题</msg>
+   <msg toolId="common" name="loadSave.loadDialog.tool">工具</msg>
+   <msg toolId="common" name="loadSave.loadDialog.type">类型</msg>
+   <msg toolId="common" name="loadSave.loadDialog.update">刷新列表</msg>
+   <msg toolId="common" name="loadSave.new.tooltip">新 {0}</msg>
+   <msg toolId="common" name="loadSave.notification.saved">{0}被保存</msg>
+   <msg toolId="common" name="loadSave.open.tooltip">加载 {0}</msg>
+   <msg toolId="common" name="loadSave.redo.tooltip">重做</msg>
+   <msg toolId="common" name="loadSave.refresh.tooltip">刷新内容</msg>
+   <msg toolId="common" name="loadSave.replaceResourceDialog.cancel">取消</msg>
+   <msg toolId="common" name="loadSave.replaceResourceDialog.dialogTitle">替换当前资源？</msg>
+   <msg toolId="common" name="loadSave.replaceResourceDialog.question">{0}已经存在。确定替换它么？</msg>
+   <msg toolId="common" name="loadSave.replaceResourceDialog.replace">替换</msg>
+   <msg toolId="common" name="loadSave.save.tooltip">保存 {0}</msg>
+   <msg toolId="common" name="loadSave.saveAs.tooltip">保存为 {0}</msg>
+   <msg toolId="common" name="loadSave.saveChangesDialog.cancel">取消</msg>
+   <msg toolId="common" name="loadSave.saveChangesDialog.dialogTitle">保存改变么？</msg>
+   <msg toolId="common" name="loadSave.saveChangesDialog.discard">放弃</msg>
+   <msg toolId="common" name="loadSave.saveChangesDialog.question">确定保存你对{0}的改变么？</msg>
+   <msg toolId="common" name="loadSave.saveChangesDialog.save">保存</msg>
+   <msg toolId="common" name="loadSave.saveDialog.cancel">取消</msg>
+   <msg toolId="common" name="loadSave.saveDialog.dialogTitle">输入{0}的名称</msg>
+   <msg toolId="common" name="loadSave.saveDialog.download">下载</msg>
+   <msg toolId="common" name="loadSave.saveDialog.save">保存</msg>
+   <msg toolId="common" name="loadSave.saveDialog.saveResource">保存资源</msg>
+   <msg toolId="common" name="loadSave.showModelJson">显示JSON模型</msg>
+   <msg toolId="common" name="loadSave.showModelJsonDialog.close">关闭</msg>
+   <msg toolId="common" name="loadSave.showModelJsonDialog.dialogTitle">{0}JSON模型</msg>
+   <msg toolId="common" name="loadSave.showModelJsonDialog.refresh">刷新JSON模型</msg>
+   <msg toolId="common" name="loadSave.title.unnamed">{0}</msg>
+   <msg toolId="common" name="loadSave.titleConfiguration.unnamed">{0}配置</msg>
+   <msg toolId="common" name="loadSave.undo.tooltip">撤销</msg>
+   <msg toolId="common" name="multiLoadSave.redo.tooltip"></msg>
+   <msg toolId="common" name="multiLoadSave.refresh.tooltip"></msg>
+   <msg toolId="common" name="multiLoadSave.undo.tooltip"></msg>
+   <msg toolId="common" name="resourceImport.failure.createResource"></msg>
+   <msg toolId="common" name="resourceImport.failure.createResource.inCallback.unexpected"></msg>
+   <msg toolId="common" name="resourceImport.failure.createResource.unexpected"></msg>
+   <msg toolId="common" name="resourceImport.failure.deleteResource"></msg>
+   <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas"></msg>
+   <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas.unexpected"></msg>
+   <msg toolId="common" name="resourceImport.failure.loadJson"></msg>
+   <msg toolId="common" name="resourceImport.failure.loadJson.unexpected"></msg>
+   <msg toolId="common" name="resourceJson.failure.noArray"></msg>
+   <msg toolId="common" name="resourceJson.failure.noContent"></msg>
+   <msg toolId="common" name="resourceJson.failure.noMetadata"></msg>
+   <msg toolId="common" name="resourceJson.failure.noObject"></msg>
+   <msg toolId="common" name="resources.type.name.circuit">线路</msg>
+   <msg toolId="common" name="resources.type.name.conceptMap">概念图</msg>
+   <msg toolId="common" name="resources.type.name.conclusions">结论</msg>
+   <msg toolId="common" name="resources.type.name.configuration">配置按钮</msg>
+   <msg toolId="common" name="resources.type.name.dataGraph">数据图</msg>
+   <msg toolId="common" name="resources.type.name.dataSet">数据集</msg>
+   <msg toolId="common" name="resources.type.name.experiment_designs">试验设计</msg>
+   <msg toolId="common" name="resources.type.name.hypotheses">假设</msg>
+   <msg toolId="common" name="resources.type.name.observations">观察</msg>
+   <msg toolId="common" name="resources.type.name.questions">问题</msg>
+   <msg toolId="common" name="resources.type.name.reflection">反思</msg>
+   <msg toolId="common" name="resources.type.name.report"></msg>
+   <msg toolId="common" name="resources.type.name.resource">资源设置</msg>
+   <msg toolId="common" name="resources.type.name.table">表格</msg>
+   <msg toolId="common" name="resources.type.name.model">Model</msg>
+   <msg toolId="common" name="resources.type.name.test">Test</msg>
+   <msg toolId="common" name="resources.type.name.phetSimWrapping">PhET Sim wrapping</msg>
+   <msg toolId="common" name="tools.name.circuitLab">线路实验室</msg>
+   <msg toolId="common" name="tools.name.conceptmapper">概念映射器</msg>
+   <msg toolId="common" name="tools.name.conclusionTool">结论工具</msg>
+   <msg toolId="common" name="tools.name.dataEditor"></msg>
+   <msg toolId="common" name="tools.name.dataViewer">数据查看器</msg>
+   <msg toolId="common" name="tools.name.edt">试验设计工具</msg>
+   <msg toolId="common" name="tools.name.hypothesis scratchpad">假设暂存器</msg>
+   <msg toolId="common" name="tools.name.observationTool">观察工具</msg>
+   <msg toolId="common" name="tools.name.questioning scratchpad">提问暂存器</msg>
+   <msg toolId="common" name="tools.name.reflect">反思工具</msg>
+   <msg toolId="common" name="tools.name.reflectionTool">反思工具</msg>
+   <msg toolId="common" name="tools.name.reportingTool"></msg>
+   <msg toolId="common" name="tools.name.resourceEditor">资源编辑器</msg>
+   <msg toolId="common" name="tools.name.tableTool">表格工具</msg>
+   <msg toolId="common" name="tools.name.goModel"></msg>
+   <msg toolId="common" name="tools.name.ut.tools.conceptmapper">概念映射器</msg>
+   <msg toolId="common" name="tools.name.ut.tools.hypothesisScratchpad">假设暂存器</msg>
+   <msg toolId="common" name="tools.name.ut.tools.questioningScratchpad">提问暂存器</msg>
+   <msg toolId="common" name="tools.name.phetSimWrapper">PhET Sim wrapper</msg>
+   <msg toolId="common" name="tools.name.quiz">Quiz tool</msg>
+</messagebundle>
