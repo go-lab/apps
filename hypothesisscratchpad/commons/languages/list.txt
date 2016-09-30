@@ -1,7 +1,0 @@
-common_en_ALL.xml
-common_de_ALL.xml
-common_el_ALL.xml
-common_es_ALL.xml
-common_et_ALL.xml
-common_nl_ALL.xml
-common_pt_ALL.xml

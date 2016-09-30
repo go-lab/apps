@@ -1,1 +1,0 @@
-"use strict";"undefined"==typeof console&&(Console=function(){this.info=function(n){},this.log=function(n){},this.warn=function(n){},this.error=function(n){}},console=new Console),Array.isArray||(Array.isArray=function(n){return"[object Array]"===Object.prototype.toString.call(n)});

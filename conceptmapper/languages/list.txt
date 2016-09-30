@@ -1,7 +1,0 @@
-conceptmapper_en_ALL.xml
-conceptmapper_de_ALL.xml
-conceptmapper_nl_ALL.xml
-conceptmapper_et_ALL.xml
-conceptmapper_es_ALL.xml
-conceptmapper_pt_ALL.xml
-conceptmapper_zh_ALL.xml
