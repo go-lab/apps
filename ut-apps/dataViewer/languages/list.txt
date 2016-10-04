@@ -1,0 +1,6 @@
+dataViewer_en_ALL.xml
+dataViewer_nl_ALL.xml
+dataViewer_et_ALL.xml
+dataViewer_es_ALL.xml
+dataViewer_pt_ALL.xml
+dataViewer_zh_ALL.xml

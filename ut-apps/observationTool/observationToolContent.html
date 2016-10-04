@@ -1,0 +1,28 @@
+<div golabCloak resizeAtInit>
+    <div class="observationTool" ng-controller="observationToolCtrl">
+        <table class="verticalToolbarTable">
+            <tr>
+                <td class="verticalToolbarCell">
+                    <toolbar vertical="true">
+                        <observationControls></observationControls>
+                        <loadSave modelName="observationsModel"></loadSave>
+                        <li class="toolBarSpace"></li>
+                        <collaboration modelName="observationsModel"></collaboration>
+                        <li class="toolBarSpace"></li>
+                        <help></help>
+                        <editConfiguration></editConfiguration>
+                    </toolbar>
+                </td>
+                <td>
+                    <golabContainer containerTitle="i_observationTool.title" modelName="observationsModel">
+                        <div>
+                            <!--<observationEditor></observationEditor>-->
+                            <observations></observations>
+                        </div>
+                    </golabContainer>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

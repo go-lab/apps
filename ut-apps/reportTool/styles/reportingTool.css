@@ -1,0 +1,162 @@
+@charset "utf-8";
+.secondaryTextButton,.unselectable{-moz-user-select:-moz-none;-khtml-user-select:none;-ms-user-select:none;-o-user-select:none}
+.keepTogether,.report .reportSection .reportParagraph .conceptMapParagraph,.report .reportSection .reportParagraph .dataGraphParagraph,.report .reportSection .reportParagraph .observationParagraph,.report .reportSection .reportParagraph .tableParagraph{page-break-inside:avoid}
+.golabTitleFont{font-size:16px;font-weight:700;letter-spacing:.75px;font-kerning:none;-webkit-font-variant-ligatures:no-common-ligatures;font-feature-settings:"liga" 0}
+.unselectable{-webkit-user-select:none;user-select:none}
+.textSelectable{-moz-user-select:-moz-text;-khtml-user-select:text;-webkit-user-select:text;-ms-user-select:text;-o-user-select:text;user-select:text}
+.preventLongPress{-webkit-touch-callout:none!important;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+body,input,select,td,textarea,th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:15px;font-style:normal;font-variant:normal;font-weight:400;white-space:normal;line-height:normal;color:#3c3c3c}
+.gadgetBodyScrollBars{overflow-y:hidden;overflow-x:auto}
+.horizontalScrollBarReservation{width:100%;height:20px}
+h1{font-weight:400}
+.toolAreaContainer,.workAreaContainer{background:#EBEBEB;border:none;border-radius:3px}
+.toolArea{padding:5px}
+.areaLabel{width:100%;background:#4444ad;color:#fff;font-size:16px;text-align:center;height:25px}
+.activeButton{color:#4444ad;background-size:contain;-webkit-box-sizing:initial;-moz-box-sizing:initial;box-sizing:initial;cursor:pointer}
+.activeButton:hover{color:#0d0592;background-size:contain}
+.activeButton:active{font-weight:bolder;background-size:contain}
+.secondaryTextButton{-webkit-user-select:none;user-select:none;cursor:pointer}
+.fontAweSomeButton,.fontAweSomeButtonSmall{-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none}
+.pressedButton,.pressedButton:active,.pressedButton:hover{background:#74f257;background-size:contain}
+.disabledButton,.disabledButton:active,.disabledButton:hover{color:#939597;font-weight:400;cursor:default}
+.fontAweSomeStacked{position:relative}
+.fontAweSomeStacked .fontAweSomeStack{position:absolute;text-align:center}
+.fontAweSomeStacked2,.textButton{position:relative;display:inline-block}
+.fontAweSomeStacked .fontAweSomeUnderStar{padding-left:5px;padding-right:5px}
+.fontAweSomeStacked .fontAweSomeStackedStar{left:22px;top:6px;font-size:13px}
+.fontAweSomeStacked .fontAweSomeStackedStar:before{background:rgba(255,255,255,.4)}
+.fontAweSomeButton{padding:4px;margin:2px 2px 5px;font-size:23px;user-select:none}
+.fontAweSomeButtonSmall{padding:2px;margin:2px;font-size:13px;user-select:none}
+.fontAweSomeButtonLarge,.textButton{-moz-user-select:-moz-none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none;-khtml-user-select:none}
+.fontAweSomeButtonLarge{padding:6px;margin:2px 2px 5px;font-size:29px;user-select:none}
+.fontAweSomeButtonInHelp{font-size:19px;width:1.4em;text-align:center}
+.textButton{top:-.15em;margin-left:2px;margin-right:8px;font-size:18px;user-select:none;white-space:nowrap}
+.textButton:active{font-weight:100}
+.notActiveTextButton{cursor:default}
+.textButtonPlainSize{font-size:15px}
+.fontAweSomeStacked2{width:23px;height:23px;line-height:23px;margin-left:5.5px;margin-bottom:0}
+.fontAweSomeStacked2 .fontAweSomeStack{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.recordingButton .innerButton{font-size:6px;color:red}
+.recordingButton .pressedButton{font-size:12px}
+.disabledButton .innerButton{color:#939597}
+.golabDroppable{border:2px dotted #1BB71F!important}
+.dropObjectOutSideDropArea{opacity:.35}
+.toolbar{background:#EBEBEB;border-top:5px solid #fff}
+.toolbar,.toolbarPart{list-style-type:none;margin:0;position:relative;vertical-align:middle;padding:6px 0 1px}
+.toolbar li,.toolbarPart li{display:inline;color:#4444ad;font-size:20px}
+.toolbar li:hover,.toolbarPart li:hover{color:#0d0592}
+.toolbar li:active,.toolbarPart li:active{font-weight:bolder;-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}
+.toolbar li.status:hover,.toolbarPart li.status:hover{color:#4444ad}
+.toolbar li.status:active,.toolbarPart li.status:active{font-weight:400}
+.verticalToolbar{border-top:none;display:table;padding:0 6px 1px}
+.verticalToolbar li{display:list-item}
+table.verticalToolbarTable{border-spacing:0;padding:0;width:100%}
+table.verticalToolbarTable td{vertical-align:top;background:#EBEBEB;padding:0}
+.thing,.uploadImage table td{vertical-align:middle}
+table.verticalToolbarTable td.verticalToolbarCell{background:#EBEBEB;border-right:5px solid #fff;width:1%;min-width:3em}
+.inputCell,.reportingToolOptions .reportSectionConfigurationOptions input,.reportingToolOptions .reportSectionConfigurationOptions select,.reportingToolOptions .reportSectionConfigurationOptions textarea{width:100%}
+ul.toolbarPart{display:inline;padding-left:0}
+.toolBarBeginSpace{margin:.4em}
+.toolBarSpace{margin:1em}
+.evenColumnBackground{background-color:#fcfcff}
+.oddColumnBackground{background-color:#f3f3ff}
+.deselectedBorder{border:5px solid #fff}
+.selectedBorder{border:5px solid #74f257}
+.selectableListItem{margin-bottom:5px}
+.lastSelectableListItem{margin-bottom:0}
+@media print{#footer,#header,#nav{display:none!important}
+body,html{height:initial;overflow:visible}
+.noPrint{display:none}
+.golabContainerContent,.longPrint{max-height:inherit!important;overflow-y:visible!important}
+}
+.ui-droppable{border:2px dotted #1BB71F!important}
+.viewMode .ui-droppable{border:none!important}
+.hint{font-size:smaller;text-align:center;padding:3px}
+.reportingToolOptions .configurationOptionTitleReplacer{height:28px}
+.reportingToolOptions .reportSectionConfigurationOptions .row{padding-bottom:.3em}
+.reportingToolOptions .reportSectionConfigurationOptions .titleRow{padding-bottom:.2em}
+.reportingToolOptions .reportSectionConfigurationOptions textarea{height:5em}
+.allowedParagraphTypes .selectableParagraphType{display:block;text-align:center}
+.allowedParagraphTypes .selectableParagraphType .paragraphType{display:inline-table;padding:5px}
+.allowedParagraphTypes .selectableParagraphType .paragraphTypeName{font-size:12px;margin-bottom:10px;white-space:nowrap}
+.paragraphType .ConceptMap,.paragraphType .DataGraph,.paragraphType .Hypothesis,.paragraphType .Image,.paragraphType .Observation,.paragraphType .Question,.paragraphType .Table,.paragraphType .Text,.paragraphType .paragraphTypeProperties{min-width:35px;max-width:35px;min-height:35px;max-height:35px;margin:0}
+.floatingToolbar{position:fixed;background:#EBEBEB;border:2px solid #4444ad;border-left:none;z-index:100;opacity:.8}
+.paragraphType .ConceptMap,.paragraphType .DataGraph,.paragraphType .Hypothesis,.paragraphType .Image,.paragraphType .Observation,.paragraphType .Question,.paragraphType .Table,.paragraphType .Text{border:none;width:35px;height:35px}
+.floatingToolbar .dragBar{width:30px;height:100%;cursor:move;position:relative;background:url(../images/dragIcon.svg) no-repeat #4444ad;background-size:contain}
+.removeIndicator{position:absolute;z-index:100;background:url(../images/trashcan.svg) no-repeat;width:40px;height:40px}
+.dropObjectOutSideDropArea{cursor:no-drop!important}
+.paragraphType{display:inline-block;padding:0;width:35px;height:35px}
+.paragraphType .paragraphTypeProperties{width:35px;height:35px;background-repeat:no-repeat;background-size:contain;border:none}
+.paragraphType .Text{background:url(../images/paragraphTypeText.svg) no-repeat;background-size:contain}
+.paragraphType .ConceptMap{background:url(../images/paragraphTypeConceptMap.svg) no-repeat;background-size:contain}
+.paragraphType .Hypothesis{background:url(../images/paragraphTypeHypothesis.svg) no-repeat;background-size:contain}
+.paragraphType .Question{background:url(../images/paragraphTypeQuestion.svg) no-repeat;background-size:contain}
+.paragraphType .DataGraph{background:url(../images/paragraphTypeDataGraph.svg) no-repeat;background-size:contain}
+.paragraphType .Observation{background:url(../images/paragraphTypeObservation.svg) no-repeat;background-size:contain}
+.paragraphType .Image{background:url(../images/paragraphTypeImage.svg) no-repeat;background-size:contain}
+.paragraphType .Table{background:url(../images/paragraphTypeTable.svg) no-repeat;background-size:contain}
+.paragraphTypes{margin-bottom:-7px}
+.paragraphTypes .paragraphType{margin:5px;cursor:move}
+.htmlEditor .btn-default{padding:4px 7px;line-height:1em}
+.htmlEditor .ta-scroll-window{margin-bottom:5px;overflow-y:scroll}
+.htmlEditor .ta-scroll-window .ta-bind{min-height:15.5em}
+.htmlEditor .ta-scroll-window.form-control{min-height:15.5em;max-height:15.64em}
+.sectionExplanationEditor .ta-scroll-window .ta-bind{min-height:9em}
+.sectionExplanationEditor .ta-scroll-window.form-control{min-height:9em;max-height:9.14em}
+.ta-hidden-input{display:none}
+.report .reportSection{padding-top:.5em}
+.report .reportSection .reportSectionTitle{font-weight:700}
+.report .reportSection .reportSectionQuestion{padding:.2em}
+.report .reportSection .reportSectionAnswer{width:100%;height:5em}
+.report .reportSection .paragraphTypes .paragraphType{margin:10px;cursor:move}
+.report .reportSection .paragraphsContainer ul{list-style:none;padding-left:0;margin-bottom:0}
+.report .reportSection .paragraphsContainer ul .dropObjectOutSideDropArea,.report .reportSection .paragraphsContainer ul .dropObjectOutSideDropArea .reportParagraph .reportParagraphType .paragraphType{cursor:url(../images/trashcan.png) 13 14,auto!important}
+.report .reportSection .paragraphsContainerDropHeight{min-height:67px}
+.report .reportSection .reportParagraph{padding:10px;width:100%;position:relative}
+.report .reportSection .reportParagraph table.paragraphTable{width:100%}
+.report .reportSection .reportParagraph .reportParagraphType{width:1%}
+.report .reportSection .reportParagraph .reportParagraphType .paragraphType{margin-right:10px;cursor:move}
+.report .reportSection .reportParagraph .refreshParagraphButton{position:absolute;top:14px;right:22px;z-index:10}
+.report .reportSection .reportParagraph .reportParagraphContent{width:99%}
+.report .reportSection .reportParagraph .reportParagraphContent .centered{text-align:center}
+.report .reportSection .reportParagraph .reportParagraphContent .centered .inline-block{display:inline-block}
+.report .reportSection .reportParagraph .reportParagraphContent .paragraphContentTable,.report .reportSection .reportParagraph .reportParagraphTextarea{width:100%}
+.report .reportSection .reportParagraph .questionParagraph table{width:inherit}
+.report .reportSection .reportParagraph .observationParagraph .observation{border:none;text-align:left}
+.report .reportSection .reportParagraph .imageParagraph .uploadedImages{display:inline-block;width:100%;margin-bottom:-.3em;min-height:4em}
+.report .reportSection .reportParagraph .imageParagraph .uploadedImage{display:inline-block;position:relative}
+.report .reportSection .reportParagraph .imageParagraph .uploadedImage .imageDisplay{display:inline-block}
+.report .reportSection .reportParagraph .imageParagraph .uploadedImage .removeIndicator{top:10px;left:10px}
+.report .reportSection .reportParagraph .imageParagraph .uploadedImage .dropObjectOutSideDropArea{cursor:url(../images/trashcan.png) 13 14,auto!important}
+.report .reportSection .reportParagraph .imageParagraph img{margin:.5em}
+.report .reportSection .reportParagraph .conceptMapParagraph table{width:100%}
+.report .reportSection .reportParagraph .conceptMapParagraph .conceptMapCell{position:relative}
+.report .reportSection .reportParagraph .conceptMapParagraph .conceptMapCell .mouseCatcher{position:absolute;background-color:#ff0;opacity:0;width:100%;height:100%;z-index:7;cursor:default}
+.report .reportSection .reportParagraph .conceptMapParagraph .conceptMapView{border:1px solid #ccc;display:block}
+.uploadImage input[type=file],.urlCheckerImage{display:none}
+.report .reportSection .reportParagraph .conceptMapParagraph .conceptMapView .conceptMap{border-top:0;height:auto;min-height:initial;max-height:initial}
+.report .reportSection .reportParagraph .conceptMapParagraph .ui-droppable{border:none!important}
+.report .reportSection .reportParagraph .editMode .uploadedImages,.uploadImage{border:2px dotted #1BB71F!important}
+.report .reportSection .reportParagraph .editMode .imageDisplay{cursor:move}
+.report .reportSection .ObservationType .refreshParagraphButton{top:30px}
+.report .firstReportSection{padding-top:0}
+.uploadImage{padding:.5em;min-height:40px}
+.uploadImage table{width:100%}
+.uploadImage .imageUrlLabel{padding:4px}
+.uploadImage input[type=text]{width:100%}
+.uploadImageDropAbove{border-width:2px!important}
+.selectionList{overflow-y:auto;max-height:300px}
+.selectionList .phaseTitle{background-color:#EBEBEB;color:#0d0592;font-weight:700;padding:5px;margin-top:1em;margin-bottom:.5em}
+.selectionList .firstPhaseTitle{margin-top:0}
+.selectionList .resourceModelName{color:#0d0592;padding:0 0 2px 5px}
+.listItem{border-left:1px solid #ccc;border-top:1px solid #ccc;border-right:1px solid #ccc}
+.lastListItem{border-bottom:1px solid #ccc}
+.resourceModelName{color:#0d0592;font-size:16px;margin-top:.25em}
+.thing{display:inline-block;position:relative;width:100%;border:5px solid #fff;cursor:pointer;padding:0}
+.thing .hypothesisView{padding:2px}
+.thing .questionView{padding-left:5px;padding-right:5px}
+.selectedThing{border:5px solid #74f257;cursor:default}
+.ut_tools_hypothesis_table .ut_tools_hypothesis_concept{margin-left:0;margin-right:0}
+.ut_tools_hypothesis_table td.ut_tools_hypothesis_confidence{padding-left:2em}
+.readOnly .ui-droppable,.readOnly .ut_tools_hypothesis{border:none!important}
+.textParagraph ul{padding-left:40px!important;list-style:initial initial initial!important}

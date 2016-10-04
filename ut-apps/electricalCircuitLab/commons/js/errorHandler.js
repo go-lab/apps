@@ -1,0 +1,1 @@
+var isMobile=navigator.appVersion.toLowerCase().indexOf("mobile")>=0;window.onerror=function(r,o,e){isMobile&&alert("Error: "+r+"\nurl: "+o+"\nline #: "+e);var i=!1;return i};

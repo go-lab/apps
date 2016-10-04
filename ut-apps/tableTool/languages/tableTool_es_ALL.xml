@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<messagebundle toolId="tableTool" mails="j.sikken@utwente.nl" requires="common">
+  <msg toolId="tableTool" name="tableTool.configuration.columnNames">Nombres de columna</msg>
+  <msg toolId="tableTool" name="tableTool.configuration.rowNames">Nombres de fila</msg>
+  <msg toolId="tableTool" name="tableTool.configuration.tableTool">Opciones de la herramienta de tabla</msg>
+  <msg toolId="tableTool" name="tableTool.title">Tabla</msg>
+  <msg toolId="tableTool" name="tableTool.titleWithResourceName">{0}</msg>
+  <msg toolId="tableTool" name="help.helpDialog.content.tableTool" format="textAngular">
+    <![CDATA[        <ul>   <li>      Completa las celdas de la tabla</li></ul>   ]]></msg>
+
+  <msg toolId="common" name="collaboration.start.tooltip">Comienza la colaboración</msg>
+  <msg toolId="common" name="editConfiguration.authoringMode">Guardar contenido inicial</msg>
+  <msg toolId="common" name="editConfiguration.authoringMode.tooltip">El contenido de la herramienta se guardará como contenido inicial para los estudiantes</msg>
+  <msg toolId="common" name="editConfiguration.autoLoadLatestResource">Carga automática del último documento</msg>
+  <msg toolId="common" name="editConfiguration.autoLoadLatestResource.tooltip">El último documento guardado se cargará al inicio</msg>
+  <msg toolId="common" name="editConfiguration.autoSave">Guardar automático</msg>
+  <msg toolId="common" name="editConfiguration.autoSave.tooltip">Los cambios se guardarán automáticamente</msg>
+  <msg toolId="common" name="editConfiguration.close">Cerrar</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOption">Individual/colaborativo</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOption.tooltip">Seleccione si y cuándo se inicia la colaboración</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.disabled">Individual</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.manualStart">El usuario decide</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.autoStart">Collaborativa</msg>
+  <msg toolId="common" name="editConfiguration.debugOptions">Opciones de depuración</msg>
+  <msg toolId="common" name="editConfiguration.defaultResourceName">Nombre predeterminado</msg>
+  <msg toolId="common" name="editConfiguration.defaultResourceName.tooltip">Nombre predeterminado del documento</msg>
+  <msg toolId="common" name="editConfiguration.dialogTitle">{0}</msg>
+  <msg toolId="common" name="editConfiguration.helpHtml">Ayuda</msg>
+  <msg toolId="common" name="editConfiguration.hideSection.tooltip">Ocultar opciones</msg>
+  <msg toolId="common" name="editConfiguration.hideSectionNotAllowed.tooltip">Ocultar opciones</msg>
+  <msg toolId="common" name="editConfiguration.loadInitialResource">Cargar contenido inicial</msg>
+  <msg toolId="common" name="editConfiguration.loadInitialResource.tooltip">El contenido inicial guardado será el contenido inicial para los estudiantes</msg>
+  <msg toolId="common" name="editConfiguration.multiDocumentMode">Guardar como</msg>
+  <msg toolId="common" name="editConfiguration.multiDocumentMode.tooltip">Al mostrar los botones "Guardar como" y "Abrir", los estudiantes pueden trabajar con varios documentos</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.addName.tooltip">Añadir nombre</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionDown.tooltip">Mover nombre seleccionado hacia abajo</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionUp.tooltip">Mover nombre seleccionado hacia arriba</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.removeName.tooltip">Eliminar nombre seleccionado</msg>
+  <msg toolId="common" name="editConfiguration.specialLanguageTerms">Special language terms</msg>
+  <msg toolId="common" name="editConfiguration.openButton.tooltip">Editar configuración</msg>
+  <msg toolId="common" name="editConfiguration.resourceOptions">Opciones de recursos</msg>
+  <msg toolId="common" name="editConfiguration.showImportExport">Botones de importar/exportar</msg>
+  <msg toolId="common" name="editConfiguration.showImportExport.tooltip">Mostrar botones de importar/exportar</msg>
+  <msg toolId="common" name="editConfiguration.showLoadConfiguration">Botón de configuración</msg>
+  <msg toolId="common" name="editConfiguration.showLoadConfiguration.tooltip">Mostrar el botón de diálogo de configuración abierta</msg>
+  <msg toolId="common" name="editConfiguration.showLoadExamples">Botones de cargar ejemplos</msg>
+  <msg toolId="common" name="editConfiguration.showLoadExamples.tooltip">Mostrar botones de cargar jemplos</msg>
+  <msg toolId="common" name="editConfiguration.showModelJson">Botón modelo json</msg>
+  <msg toolId="common" name="editConfiguration.showModelJson.tooltip">Mostrar botón modelo json</msg>
+  <msg toolId="common" name="editConfiguration.showResourceName">Mostrar nombre</msg>
+  <msg toolId="common" name="editConfiguration.showResourceName.tooltip">Mostrar el nombre del documento en la barra de título</msg>
+  <msg toolId="common" name="editConfiguration.showSection.tooltip">Mostrar opciones</msg>
+  <msg toolId="common" name="editConfiguration.useMyOwnToolHelp">Uso mi propia herramienta de ayuda</msg>
+  <msg toolId="common" name="editConfiguration.useMyOwnToolHelp.tooltip">Mostrar mi propia herramienta de ayuda a los estudiantes</msg>
+  <msg toolId="common" name="editConfiguration.useStandardToolHelp">Utilice la herramienta estándar de ayuda</msg>
+  <msg toolId="common" name="editConfiguration.useStandardToolHelp.tooltip">Mostrar la herramienta estándar de ayuda a los estudiantes</msg>
+  <msg toolId="common" name="help.helpDialog.buildDate">Construido en {0}</msg>
+  <msg toolId="common" name="help.helpDialog.dialogTitle">Ayuda</msg>
+  <msg toolId="common" name="help.openButton.tooltip">Mostrar ayuda</msg>
+  <msg toolId="common" name="ils.tools">Herramientas</msg>
+  <msg toolId="common" name="loadSave.clear.tooltip">Borrar contenido {0}</msg>
+  <msg toolId="common" name="loadSave.configurationDialog.dialogTitle">Cargar configuración para {0}</msg>
+  <msg toolId="common" name="loadSave.delete.tooltip">Eliminar {0}</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.delete">Eliminar</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.dialogTitle">Eliminar {0}</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.question">¿Estás seguro de que quieres eliminar este {0}?</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.dialogTitle">¿Borrar contenido?</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.erase">Borrar contenido</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.question">¿Estás seguro de que quieres borrar el contenido de este {0}?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.dialogTitle">¿Borrar o resetear el contenido?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.erase">Borrar contenido</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.question">¿Estás seguro de que quieres borrar o resetear el contenido de este {0}?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.reset">Resetear</msg>
+  <msg toolId="common" name="loadSave.examples.tooltip">Ejemplos {0}</msg>
+  <msg toolId="common" name="loadSave.examplesDialog.category">Categoría</msg>
+  <msg toolId="common" name="loadSave.examplesDialog.dialogTitle">Cargar ejemplo {0}</msg>
+  <msg toolId="common" name="loadSave.export.tooltip">Exportar {0}</msg>
+  <msg toolId="common" name="loadSave.failure.delete" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error al eliminar<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.import" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error al importar<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.listMetadata" format="textAngular">
+    <![CDATA[
+    
+    
+    <p>        Error al listar el directorio<br/>Error: {0}</p>]]></msg>
+  <msg toolId="common" name="loadSave.failure.load" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error de carga<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.loadLatest" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error al cargar el &#250;ltimo recurso<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.loadLatestConfiguration" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error al cargar la configuraci&#243;n<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.refresh" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error al actualizar<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.save" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error al guardar<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.saveAs" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error al guardar como<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.import.tooltip">Importar {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.author">Autor</msg>
+  <msg toolId="common" name="loadSave.loadDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.loadDialog.date">Fecha</msg>
+  <msg toolId="common" name="loadSave.loadDialog.dialogTitle">Cargar {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.loadSelected">Cargar {0} seleccionado</msg>
+  <msg toolId="common" name="loadSave.loadDialog.title">Título</msg>
+  <msg toolId="common" name="loadSave.loadDialog.tool">Herramienta</msg>
+  <msg toolId="common" name="loadSave.loadDialog.type">Tipo</msg>
+  <msg toolId="common" name="loadSave.loadDialog.update">Actualizar lista</msg>
+  <msg toolId="common" name="loadSave.new.tooltip">Nuevo {0}</msg>
+  <msg toolId="common" name="loadSave.notification.saved">{0} guardado</msg>
+  <msg toolId="common" name="loadSave.open.tooltip">Cargar {0}</msg>
+  <msg toolId="common" name="loadSave.redo.tooltip">Rehacer</msg>
+  <msg toolId="common" name="loadSave.refresh.tooltip">Actualizar contenido {0}</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.dialogTitle">¿Reemplazar recurso existente?</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.question">"{0}" ya existe. ¿Desea reemplazarlo?</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.replace">Reemplazar</msg>
+  <msg toolId="common" name="loadSave.save.tooltip">Guardar {0}</msg>
+  <msg toolId="common" name="loadSave.saveAs.tooltip">Guardar como {0}</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.dialogTitle">¿Guardar cambios?</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.discard">Descartar</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.question">¿Desea guardar los cambios de {0}?</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.save">Guardar</msg>
+  <msg toolId="common" name="loadSave.saveDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.saveDialog.dialogTitle">Introduzca el nombre de {0}</msg>
+  <msg toolId="common" name="loadSave.saveDialog.download">Descargar</msg>
+  <msg toolId="common" name="loadSave.saveDialog.save">Guardar</msg>
+  <msg toolId="common" name="loadSave.saveDialog.saveResource">Guardar recurso</msg>
+  <msg toolId="common" name="loadSave.showModelJson">Mostrar modelo json</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.close">Cerrar</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.dialogTitle">{0} modelo json</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.refresh">Actualizar modelo json</msg>
+  <msg toolId="common" name="loadSave.title.unnamed">{0}</msg>
+  <msg toolId="common" name="loadSave.titleConfiguration.unnamed">Configuración de {0}</msg>
+  <msg toolId="common" name="loadSave.undo.tooltip">Deshacer</msg>
+  <msg toolId="common" name="multiLoadSave.redo.tooltip">Rehacer</msg>
+  <msg toolId="common" name="multiLoadSave.refresh.tooltip">Actualizar contenido</msg>
+  <msg toolId="common" name="multiLoadSave.undo.tooltip">Deshacer</msg>
+  <msg toolId="common" name="resourceImport.failure.createResource" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error al a&#241;adir recurso{0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.createResource.inCallback.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error inesperado durante la respuesta de la carga del archivo {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.createResource.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error inesperado al a&#241;adir un recurso {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.deleteResource" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error al eliminar recurso {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error al obtener el listado de directorios<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error inesperado a la hora de obtener el listado de directorios<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.loadJson" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error de carga de archivo {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.loadJson.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Error inesperado durante la carga de archivo {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceJson.failure.noArray">La lista de recursos debe ser una matriz de json</msg>
+  <msg toolId="common" name="resourceJson.failure.noContent">El recurso debe tener una propiedad de contenido</msg>
+  <msg toolId="common" name="resourceJson.failure.noMetadata">El recurso debe tener una propiedad de metadatos</msg>
+  <msg toolId="common" name="resourceJson.failure.noObject">El recurso debe ser un objeto json</msg>
+  <msg toolId="common" name="resources.type.name.circuit">Circuito</msg>
+  <msg toolId="common" name="resources.type.name.conceptMap">Mapa conceptual</msg>
+  <msg toolId="common" name="resources.type.name.conclusions">Conclusiones</msg>
+  <msg toolId="common" name="resources.type.name.configuration">Configuración</msg>
+  <msg toolId="common" name="resources.type.name.dataGraph">Gráfica de datos</msg>
+  <msg toolId="common" name="resources.type.name.dataSet">Conjunto de datos</msg>
+  <msg toolId="common" name="resources.type.name.experiment_designs">Diseño del experimento</msg>
+  <msg toolId="common" name="resources.type.name.hypotheses">Hipótesis</msg>
+  <msg toolId="common" name="resources.type.name.hypotheses.single">Hypothesis</msg>
+  <msg toolId="common" name="resources.type.name.observations">Observaciones</msg>
+  <msg toolId="common" name="resources.type.name.observations.single">Observation</msg>
+  <msg toolId="common" name="resources.type.name.questions">Preguntas</msg>
+  <msg toolId="common" name="resources.type.name.questions.single">Question</msg>
+  <msg toolId="common" name="resources.type.name.reflection">Reflexión</msg>
+  <msg toolId="common" name="resources.type.name.report">Informe</msg>
+  <msg toolId="common" name="resources.type.name.resource">Recurso</msg>
+  <msg toolId="common" name="resources.type.name.table">Tabla</msg>
+  <msg toolId="common" name="resources.type.name.testCommons">Pruebas comunes</msg>
+  <msg toolId="common" name="resources.type.name.model">Modelo</msg>
+  <msg toolId="common" name="resources.type.name.test">Prueba</msg>
+  <msg toolId="common" name="resources.type.name.phetSimWrapping">Envolver el Simulador PhET</msg>
+  <msg toolId="common" name="tools.name.goModel">Editor GoModel</msg>
+  <msg toolId="common" name="tools.name.circuitLab">Laboratorio de circuito</msg>
+  <msg toolId="common" name="tools.name.conceptmapper">Herramienta de Mapa Conceptual</msg>
+  <msg toolId="common" name="tools.name.conclusionTool">Herramienta de conclusiones</msg>
+  <msg toolId="common" name="tools.name.dataEditor">Editor de datos</msg>
+  <msg toolId="common" name="tools.name.dataViewer">Visor de datos</msg>
+  <msg toolId="common" name="tools.name.edt">Herramienta de diseño del experimento</msg>
+  <msg toolId="common" name="tools.name.hypothesis scratchpad">Bloc de hipótesis</msg>
+  <msg toolId="common" name="tools.name.observationTool">Herramienta de observación</msg>
+  <msg toolId="common" name="tools.name.questioning scratchpad">Bloc de cuestionario</msg>
+  <msg toolId="common" name="tools.name.reflect">Herramienta de reflexión</msg>
+  <msg toolId="common" name="tools.name.reflectionTool">Herramienta de reflexión</msg>
+  <msg toolId="common" name="tools.name.reportingTool">He</msg>
+  <msg toolId="common" name="tools.name.resourceEditor">Editor de recurso</msg>
+  <msg toolId="common" name="tools.name.tableTool">Herramienta tabla</msg>
+  <msg toolId="common" name="tools.name.testCommons">Tests comunes</msg>
+  <msg toolId="common" name="tools.name.ut.tools.conceptmapper">Herramienta de Mapa Conceptual</msg>
+  <msg toolId="common" name="tools.name.ut.tools.hypothesisScratchpad">Bloc de hipótesis</msg>
+  <msg toolId="common" name="tools.name.ut.tools.questioningScratchpad">Bloc de cuestionario</msg>
+  <msg toolId="common" name="tools.name.phetSimWrapper">"Envolvedor" del Simulador PhET</msg>
+  <msg toolId="common" name="tools.name.quiz">Herramienta de test</msg>
+</messagebundle>

@@ -1,0 +1,378 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<messagebundle toolId="electricalCircuitLab" mails="j.sikken@utwente.nl" requires="common, dataViewer">
+  <msg toolId="electricalCircuitLab" name="availableCircuits.category">Categoria:</msg>
+  <msg toolId="electricalCircuitLab" name="availableCircuits.circuit">Circuito:</msg>
+  <msg toolId="electricalCircuitLab" name="availableCircuits.full">Completo</msg>
+  <msg toolId="electricalCircuitLab" name="availableCircuits.predefined">Predefinido</msg>
+  <msg toolId="electricalCircuitLab" name="availableCircuits.realistic">Realista</msg>
+  <msg toolId="electricalCircuitLab" name="availableCircuits.symbolic">Simbólico</msg>
+  <msg toolId="electricalCircuitLab" name="availableCircuits.view">Vista</msg>
+  <msg toolId="electricalCircuitLab" name="availableConfigurations.category">Categoria</msg>
+  <msg toolId="electricalCircuitLab" name="availableConfigurations.configuration">Configuração</msg>
+  <msg toolId="electricalCircuitLab" name="availableConfigurations.imageSet">Conjunto de imagens</msg>
+  <msg toolId="electricalCircuitLab" name="availableConfigurations.showLights">Mostrar luzes</msg>
+  <msg toolId="electricalCircuitLab" name="availableConfigurations.showResisterColorBars">Mostrar barras de cores das resistências</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.failed">Erro interno, circuito muito complexo</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.internalError">Erro interno, circuito muito complexo</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.invalidStateValues">Erro interno, circuito muito complexo</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.lateShortCircuit">Curtocircuito</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.ohmMeterPowerSupplyCombination">Não suportado: ohmímetro e fonte de alimentação</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.powerSupplyInBranch">Não suportado: fonte de alimentação no ramo</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.shortCircuit">Curtocircuito</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.toManyOhmMeterSources">Não suportado: ohmímetros múltiplos</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.toManyPowerSupplies">Não suportado: várias fontes de alimentação</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.unknownResultType">Erro interno, circuito muito complexo</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.circuitBoardSize">Tamanho da placa do circuito</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.circuitLab">Opções do laboratório de circuito elétrico</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.imageSet">Conjunto de imagens de componentes</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.showLightBulbPowerValue">Mostrar valor da potência da lâmpada</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.showLightBulbVoltageValue">Mostrar valor da tensão da lâmpada</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.showLightEffect">Mostrar efeito de luz</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.showResistorColorBars">Mostrar barra de cores da resistência</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.showResistorValue">Mostrar o valor da resistência</msg>
+  <msg toolId="electricalCircuitLab" name="editConfiguration.cancel">Cancelar</msg>
+  <msg toolId="electricalCircuitLab" name="editConfiguration.title">Editar configuração</msg>
+  <msg toolId="electricalCircuitLab" name="editResistorDialog.title">Edit resistor value</msg>
+  <msg toolId="electricalCircuitLab" name="testCircuits.category">Categoria:</msg>
+  <msg toolId="electricalCircuitLab" name="testCircuits.circuit">Circuito:</msg>
+  <msg toolId="electricalCircuitLab" name="testCircuits.clearCircuit">Limpar circuito</msg>
+  <msg toolId="electricalCircuitLab" name="testCircuits.reload">Recarregar</msg>
+  <msg toolId="electricalCircuitLab" name="titles.circuitBoard">Placa de circuito</msg>
+  <msg toolId="electricalCircuitLab" name="titles.circuitBoardWithResourceName">{0}</msg>
+  <msg toolId="electricalCircuitLab" name="titles.circuitJson">Circuito json</msg>
+  <msg toolId="electricalCircuitLab" name="titles.circuits">Circuitos</msg>
+  <msg toolId="electricalCircuitLab" name="titles.components">Componentes</msg>
+  <msg toolId="electricalCircuitLab" name="titles.dataCollector">Colector de dados</msg>
+  <msg toolId="electricalCircuitLab" name="titles.dataGraph">Gráfico de dados</msg>
+  <msg toolId="electricalCircuitLab" name="titles.dataSetJson">Conjunto de dados json</msg>
+  <msg toolId="electricalCircuitLab" name="titles.hints">Sugestões</msg>
+  <msg toolId="electricalCircuitLab" name="titles.labConfiguration">Configuração do laboratório</msg>
+  <msg toolId="electricalCircuitLab" name="titles.meters">Medidores</msg>
+  <msg toolId="electricalCircuitLab" name="titles.testCircuits">Circuitos de teste</msg>
+  <msg toolId="electricalCircuitLab" name="help.helpDialog.content.electricalCircuitLab" format="textAngular">
+    <![CDATA[
+    
+          <ul>   <li> Baterias<br/><span style="color: rgb(85, 85, 85);text-align: left;float: none;background-color: rgb(255, 255, 255);">As pilhas do recipiente &#34;Componentes&#34; trabalham de forma independente da fonte de alimentação.</span><br/></li>   <li> Medidores<br/><span style="color: rgb(85, 85, 85);text-align: left;float: none;background-color: rgb(255, 255, 255);">O círculo com a letra do medidor representa o sensor. Arraste os pequenos círculos dentro de cada medidor e coloque-os na placa de circuito.</span><br/></li>   <li> Removendo as coisas<br/> Poderá remover coisas do circuito, arrastando-as para fora da área do circuito. </li>   <li> Editando os valores da resistência<br/> Selecione a resistência e clique sobre ela. </li>   <li> Interruptores<br/> Selecione o interruptor e clique sobre ele. </li>   <li> Lâmpadas<br/>As lâmpadas não funcionam no IE9 ou anterior.</li></ul>   ]]></msg>
+
+  <msg toolId="common" name="collaboration.start.tooltip">Iniciar a colaboração</msg>
+  <msg toolId="common" name="editConfiguration.authoringMode">Guardar o conteúdo inicial</msg>
+  <msg toolId="common" name="editConfiguration.authoringMode.tooltip">O conteúdo da ferramenta ficará guardado como conteúdo inicial para os alunos</msg>
+  <msg toolId="common" name="editConfiguration.autoLoadLatestResource">Carregamento automático do último documento</msg>
+  <msg toolId="common" name="editConfiguration.autoLoadLatestResource.tooltip">O documento guardado mais recente será carregado na inicialização</msg>
+  <msg toolId="common" name="editConfiguration.autoSave">Guardar automático</msg>
+  <msg toolId="common" name="editConfiguration.autoSave.tooltip">As alterações serão guardadas automaticamente</msg>
+  <msg toolId="common" name="editConfiguration.close">Fechar</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOption">Indivíduo/colaborativo</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOption.tooltip">Selecione se e quando a colaboração é iniciada</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.disabled">Indivíduo</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.manualStart">Usuário decide</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.autoStart">Colaborativo</msg>
+  <msg toolId="common" name="editConfiguration.debugOptions">Opções de depuração</msg>
+  <msg toolId="common" name="editConfiguration.defaultResourceName">Nome padrão</msg>
+  <msg toolId="common" name="editConfiguration.defaultResourceName.tooltip">O nome padrão do documento</msg>
+  <msg toolId="common" name="editConfiguration.dialogTitle">{0}</msg>
+  <msg toolId="common" name="editConfiguration.helpHtml">Ajuda</msg>
+  <msg toolId="common" name="editConfiguration.hideSection.tooltip">Ocultar opções</msg>
+  <msg toolId="common" name="editConfiguration.hideSectionNotAllowed.tooltip">Ocultar opções</msg>
+  <msg toolId="common" name="editConfiguration.loadInitialResource">Carregar conteúdo inicial</msg>
+  <msg toolId="common" name="editConfiguration.loadInitialResource.tooltip">O conteúdo inicial guardado será o conteúdo inicial para os alunos</msg>
+  <msg toolId="common" name="editConfiguration.multiDocumentMode">Guardar como</msg>
+  <msg toolId="common" name="editConfiguration.multiDocumentMode.tooltip">Ao mostrar os botões "Guardar como" e "Abrir", os alunos podem trabalhar com vários documentos</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.addName.tooltip">Adicionar nome</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionDown.tooltip">Mova o nome selecionado para baixo</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionUp.tooltip">Mova o nome selecionado para cima</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.removeName.tooltip">Apague o nome selecionado</msg>
+  <msg toolId="common" name="editConfiguration.specialLanguageTerms">Special language terms</msg>
+  <msg toolId="common" name="editConfiguration.openButton.tooltip">Editar configuração</msg>
+  <msg toolId="common" name="editConfiguration.resourceOptions">Opções de recursos</msg>
+  <msg toolId="common" name="editConfiguration.showImportExport">Botões de importar/exportar</msg>
+  <msg toolId="common" name="editConfiguration.showImportExport.tooltip">Mostrar botões importar/exportar</msg>
+  <msg toolId="common" name="editConfiguration.showLoadConfiguration">Botão de configuração</msg>
+  <msg toolId="common" name="editConfiguration.showLoadConfiguration.tooltip">Mostrar o botão de diálogo de configuração aberta</msg>
+  <msg toolId="common" name="editConfiguration.showLoadExamples">Botões de carregar exemplos</msg>
+  <msg toolId="common" name="editConfiguration.showLoadExamples.tooltip">Mostrar botões de carregar exemplos</msg>
+  <msg toolId="common" name="editConfiguration.showModelJson">Botão modelo json</msg>
+  <msg toolId="common" name="editConfiguration.showModelJson.tooltip">Mostrar botão modelo json</msg>
+  <msg toolId="common" name="editConfiguration.showResourceName">Mostrar nome</msg>
+  <msg toolId="common" name="editConfiguration.showResourceName.tooltip">Mostrar o nome do documento na barra de título</msg>
+  <msg toolId="common" name="editConfiguration.showSection.tooltip">Mostrar opções</msg>
+  <msg toolId="common" name="editConfiguration.useMyOwnToolHelp">Usar minha própria ferramenta ajuda</msg>
+  <msg toolId="common" name="editConfiguration.useMyOwnToolHelp.tooltip">Mostrar a minha própria ferramenta ajuda aos estudantes</msg>
+  <msg toolId="common" name="editConfiguration.useStandardToolHelp">Usar a ferramenta padrão de ajuda</msg>
+  <msg toolId="common" name="editConfiguration.useStandardToolHelp.tooltip">Mostrar a ajuda da ferramenta padrão para estudantes</msg>
+  <msg toolId="common" name="help.helpDialog.buildDate">Construído em {0}</msg>
+  <msg toolId="common" name="help.helpDialog.dialogTitle">Ajuda</msg>
+  <msg toolId="common" name="help.openButton.tooltip">Mostrar ajuda</msg>
+  <msg toolId="common" name="ils.tools">Ferramentas</msg>
+  <msg toolId="common" name="loadSave.clear.tooltip">Apagar conteúdo {0}</msg>
+  <msg toolId="common" name="loadSave.configurationDialog.dialogTitle">Carregar configuração para o {0}</msg>
+  <msg toolId="common" name="loadSave.delete.tooltip">Apagar {0}</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.delete">Apagar</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.dialogTitle">Apagar {0}?</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.question">De certeza que quer apagar isto {0}?</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.dialogTitle">Apagar conteúdo?</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.erase">Apagar</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.question">De certeza que quer apagar o conteúdo disto {0}?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.dialogTitle">Apagar ou redefinir o conteúdo?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.erase">Apagar</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.question">De certeza que quer apagar o conteúdo disto {0}?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.reset">Redefinir</msg>
+  <msg toolId="common" name="loadSave.examples.tooltip">Examplos {0}</msg>
+  <msg toolId="common" name="loadSave.examplesDialog.category">Categoria</msg>
+  <msg toolId="common" name="loadSave.examplesDialog.dialogTitle">Carregar examplo {0}</msg>
+  <msg toolId="common" name="loadSave.export.tooltip">Exportar {0}</msg>
+  <msg toolId="common" name="loadSave.failure.delete" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Falha ao apagar<br />Erro: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.import" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Falha ao importar<br />Erro: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.listMetadata" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Falha da listagem de diretorias<br />Erro: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.load" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Falha ao carregar<br />Erro: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.loadLatest" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Falha ao carregar o &#250;ltimo recurso<br />Erro: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.loadLatestConfiguration" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Falha ao carregar a configura&#231;&#227;o<br />Erro: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.refresh" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Falha na atualiza&#231;&#227;o<br />Erro: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.save" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Falha ao guardar<br />Erro: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.saveAs" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Falha ao Guardar Como<br />Erro: {0}]]></msg>
+  <msg toolId="common" name="loadSave.import.tooltip">Importar {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.author">Autor</msg>
+  <msg toolId="common" name="loadSave.loadDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.loadDialog.date">Data</msg>
+  <msg toolId="common" name="loadSave.loadDialog.dialogTitle">Carregar {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.loadSelected">Carregar selecionado {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.title">Título</msg>
+  <msg toolId="common" name="loadSave.loadDialog.tool">Ferramenta</msg>
+  <msg toolId="common" name="loadSave.loadDialog.type">Tipo</msg>
+  <msg toolId="common" name="loadSave.loadDialog.update">Ataulizar lista</msg>
+  <msg toolId="common" name="loadSave.new.tooltip">Novo {0}</msg>
+  <msg toolId="common" name="loadSave.notification.saved">{0} guardado</msg>
+  <msg toolId="common" name="loadSave.open.tooltip">Carregar {0}</msg>
+  <msg toolId="common" name="loadSave.redo.tooltip">Refazer</msg>
+  <msg toolId="common" name="loadSave.refresh.tooltip">Atualizar conteúdo {0}</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.dialogTitle">Substituir recurso existente?</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.question">"{0}" já existe. Deseja substituir?</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.replace">Substituir</msg>
+  <msg toolId="common" name="loadSave.save.tooltip">Guardar {0}</msg>
+  <msg toolId="common" name="loadSave.saveAs.tooltip">Guardar como {0}</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.dialogTitle">Guardar modificações?</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.discard">Descartar</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.question">Deseja guardar suas modificações de {0}?</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.save">Guardar</msg>
+  <msg toolId="common" name="loadSave.saveDialog.cancel">Cancelar</msg>
+  <msg toolId="common" name="loadSave.saveDialog.dialogTitle">Introduza o nome de {0}</msg>
+  <msg toolId="common" name="loadSave.saveDialog.download">Descarregar</msg>
+  <msg toolId="common" name="loadSave.saveDialog.save">Guardar</msg>
+  <msg toolId="common" name="loadSave.saveDialog.saveResource">Guardar recurso</msg>
+  <msg toolId="common" name="loadSave.showModelJson">Mostrar modelo json</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.close">Fechar</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.dialogTitle">{0} modelo json</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.refresh">Atualizar modelo json</msg>
+  <msg toolId="common" name="loadSave.title.unnamed">{0}</msg>
+  <msg toolId="common" name="loadSave.titleConfiguration.unnamed">{0} configuração</msg>
+  <msg toolId="common" name="loadSave.undo.tooltip">Desfazer</msg>
+  <msg toolId="common" name="multiLoadSave.redo.tooltip">Refazer</msg>
+  <msg toolId="common" name="multiLoadSave.refresh.tooltip">Atualizar conteúdo</msg>
+  <msg toolId="common" name="multiLoadSave.undo.tooltip">Desfazer</msg>
+  <msg toolId="common" name="resourceImport.failure.createResource" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Falha ao adicionar recurso {0}<br />Erro: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.createResource.inCallback.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Erro inesperado durante a chamada de retorno do carregamento do ficheiro {0}<br />Erro: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.createResource.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Erro inesperado durante a adi&#231;&#227;o do recurso {0}<br />Erro: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.deleteResource" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Falha ao apagar recurso {0}<br />Erro: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Falha na obten&#231;&#227;o da lista de diret&#243;rios<br />Erro: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Erro inesperado durante a obten&#231;&#227;o da lista de diret&#243;rios<br />Erro: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.loadJson" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Falha ao carregar ficheiro {0}<br />Erro: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.loadJson.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Erro inesperado durante o carregamento do ficheiro {0}<br />Erro: {1}]]></msg>
+  <msg toolId="common" name="resourceJson.failure.noArray">Lista de recursos deve ser uma matriz JSON</msg>
+  <msg toolId="common" name="resourceJson.failure.noContent">O recurso deve ter uma propriedade de conteúdo</msg>
+  <msg toolId="common" name="resourceJson.failure.noMetadata">O recurso deve ter uma propriedade de metadados</msg>
+  <msg toolId="common" name="resourceJson.failure.noObject">O recurso deve ser um objeto json</msg>
+  <msg toolId="common" name="resources.type.name.circuit">Circuito</msg>
+  <msg toolId="common" name="resources.type.name.conceptMap">Mapa conceptual</msg>
+  <msg toolId="common" name="resources.type.name.conclusions">Conclusões</msg>
+  <msg toolId="common" name="resources.type.name.configuration">Configuração</msg>
+  <msg toolId="common" name="resources.type.name.dataGraph">Gráfico de dados</msg>
+  <msg toolId="common" name="resources.type.name.dataSet">Conjunto de dados</msg>
+  <msg toolId="common" name="resources.type.name.experiment_designs">Desenho da experiência</msg>
+  <msg toolId="common" name="resources.type.name.hypotheses">Hipóteses</msg>
+  <msg toolId="common" name="resources.type.name.hypotheses.single">Hypothesis</msg>
+  <msg toolId="common" name="resources.type.name.observations">Observações</msg>
+  <msg toolId="common" name="resources.type.name.observations.single">Observation</msg>
+  <msg toolId="common" name="resources.type.name.questions">Questões</msg>
+  <msg toolId="common" name="resources.type.name.questions.single">Question</msg>
+  <msg toolId="common" name="resources.type.name.reflection">Reflexão</msg>
+  <msg toolId="common" name="resources.type.name.report">Relatório</msg>
+  <msg toolId="common" name="resources.type.name.resource">Recurso</msg>
+  <msg toolId="common" name="resources.type.name.table">Tabela</msg>
+  <msg toolId="common" name="resources.type.name.testCommons">Testes comuns</msg>
+  <msg toolId="common" name="resources.type.name.model">Modelo</msg>
+  <msg toolId="common" name="resources.type.name.test">Teste</msg>
+  <msg toolId="common" name="resources.type.name.phetSimWrapping">PhET Sim wraping</msg>
+  <msg toolId="common" name="tools.name.goModel">Editor de GoModel</msg>
+  <msg toolId="common" name="tools.name.circuitLab">Laboratório do circuito</msg>
+  <msg toolId="common" name="tools.name.conceptmapper">Mapear Conceitos</msg>
+  <msg toolId="common" name="tools.name.conclusionTool">Ferramenta de Conclusão</msg>
+  <msg toolId="common" name="tools.name.dataEditor">Editor de dados</msg>
+  <msg toolId="common" name="tools.name.dataViewer">Visualizador de dados</msg>
+  <msg toolId="common" name="tools.name.edt">Ferramenta de desenho da experiência</msg>
+  <msg toolId="common" name="tools.name.hypothesis scratchpad">Esboçar hipóteses</msg>
+  <msg toolId="common" name="tools.name.observationTool">Ferramenta de observação</msg>
+  <msg toolId="common" name="tools.name.questioning scratchpad">Esboçar questões</msg>
+  <msg toolId="common" name="tools.name.reflect">Ferramenta de reflexão</msg>
+  <msg toolId="common" name="tools.name.reflectionTool">Ferramenta de reflexão</msg>
+  <msg toolId="common" name="tools.name.reportingTool">Ferramenta de relatórios</msg>
+  <msg toolId="common" name="tools.name.resourceEditor">Editor de recurso</msg>
+  <msg toolId="common" name="tools.name.tableTool">Ferramenta da tabela</msg>
+  <msg toolId="common" name="tools.name.testCommons">Testes comuns</msg>
+  <msg toolId="common" name="tools.name.ut.tools.conceptmapper">Mapear Conceito</msg>
+  <msg toolId="common" name="tools.name.ut.tools.hypothesisScratchpad">Esboçar hipóteses</msg>
+  <msg toolId="common" name="tools.name.ut.tools.questioningScratchpad">Esboçar questões</msg>
+  <msg toolId="common" name="tools.name.phetSimWrapper">Invólucro do PhET Sim</msg>
+  <msg toolId="common" name="tools.name.quiz">Ferramenta de Questões</msg>
+
+  <msg toolId="dataViewer" name="dataCollector.saveDialog.dataSourceColumn">Introduz o nome do conjunto de dados</msg>
+  <msg toolId="dataViewer" name="dataCollector.clearDataSetDialog.title">Clear data?</msg>
+  <msg toolId="dataViewer" name="dataCollector.clearDataSetDialog.question">Are you sure you want to clear the data?</msg>
+  <msg toolId="dataViewer" name="dataCollector.clearDataSetDialog.clear">Limpar</msg>
+  <msg toolId="dataViewer" name="dataCollector.clearDataSetDialog.cancel">Cancelar</msg>
+  <msg toolId="dataViewer" name="dataGraph.chartType.tooltip">Selecionar tipo de gráfico</msg>
+  <msg toolId="dataViewer" name="dataGraph.dropArea.leftYAxis.tooltip">Arraste e largue os dados para o eixo do Y à esquerda</msg>
+  <msg toolId="dataViewer" name="dataGraph.dropArea.rightYAxis.tooltip">Arraste e largue os dados para o eixo do Y à direita</msg>
+  <msg toolId="dataViewer" name="dataGraph.dropArea.xAxis.tooltip">Arraste e largue dados para o eixo do X</msg>
+  <msg toolId="dataViewer" name="dataGraph.dropArea.yAxis.tooltip">Arraste e largue dados para o eixo do Y</msg>
+  <msg toolId="dataViewer" name="dataGraph.editor.button.tooltip">Editar gráfico</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.AreaChart">Gráfico de área</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.BarChart">Gráfico de barras</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.ColumnChart">Gráfico de colunas</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.LineChart">Gráfico de linhas</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.ScatterChart">Gráfico de dispersão</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.Table">Tabela</msg>
+  <msg toolId="dataViewer" name="dataGraph.suggestion.addVariables">Arrasta os dados do "Conjunto de Dados" para o eixo dos X ou dos Y</msg>
+  <msg toolId="dataViewer" name="dataGraph.title">Gráfico de dados</msg>
+  <msg toolId="dataViewer" name="dataGraph.titleWithResourceName">Gráfico de dados - {0}</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.addColumn">Adicionar coluna</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.addRow">Adicionar linha</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.addRowOrColumn">Adicionar linha ou coluna</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.button.tooltip">Editar Conjunto de Dados</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.column">Coluna</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.deleteSelectedRowsAndColumns">Apagar as colunas e linhas selecionadas</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.dialog.title">Editar conjunto de dados</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.dialog.titleWithResourceName">Editar conjunto de dados {0}</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.display">Visualização</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.label">Etiqueta</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.moveSelectedRowsDown">Mover para baixo as linhas selecionadas</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.moveSelectedRowsUp">Mover para cima as linhas selecionadas</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.row">Linha</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.sortAscendingOnSelectedColumns">Ordenar por ordem crescente</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.sortDescendingOnSelectedColumns">Ordenar por ordem decrescente</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.value">Valor</msg>
+  <msg toolId="dataViewer" name="dataSet.rows">{0} linhas</msg>
+  <msg toolId="dataViewer" name="dataSet.suggestion.loadDataSet">Por favor, carregar um conjunto de dados selecionando o ícone carregar da secção "Conjunto de dados"</msg>
+  <msg toolId="dataViewer" name="dataSet.title">Conjunto de dados</msg>
+  <msg toolId="dataViewer" name="dataSet.titleWithResourceName">Conjunto de dados - {0}</msg>
+  <msg toolId="dataViewer" name="help.helpDialog.content.dataViewer" format="textAngular">
+    <![CDATA[
+    
+          <ul>    <li>        <b>Carregar um conjunto de dados</b> usando o ícone de importação</li>    <li>        <b>Criar uma tabela de dados ou gráficos</b> pelo arrastar dos dados desde a caixa &#34;Conjunto de Dados&#34; para o eixo do X ou Y no &#34;Gráfico de Dados&#34;    </li>    <li>        <b>Remover dados dos eixos X ou Y</b> ao arrastá-los para fora da área</li>    <li>        <b>Selecionar um tipo de gráfico ou tabela</b> através do menu de seleção situado no “gráfico de dispersão”    </li></ul>   ]]></msg>
+</messagebundle>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+   <ModulePrefs
+           title="Report tool"
+           height="600"
+           width="900"
+           author="Jakob Sikken"
+           author_email="j.sikken@utwente.nl"
+   >
+      <Locale messages="languages/reportTool_en_ALL.xml"/>
+      <Locale lang="en" messages="languages/reportTool_en_ALL.xml"/>
+      <Require feature="osapi"/>
+      <Require feature="dynamic-height"/>
+   </ModulePrefs>
+   <Content type="html"><![CDATA[
+      <head>
+         <meta charset="utf-8"/>
+         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+         <title>Report tool</title>
+         <link rel="stylesheet" type="text/css" href="commons/css/golabStart.css"/>
+         <script type="text/javascript" src="commons/js/errorHandler.js"></script>
+         <script type="text/javascript" src="commons/js/jsChecker.js"></script>
+         <script type="text/javascript" src="libs/js/headJS/head.min.js"></script>
+         <script type="text/javascript" src="commons/js/resourceLoader.js"></script>
+         <script type="text/javascript" src="commons/js/commonsModules.js"></script>
+         <script type="text/javascript"
+                 src="scripts/dataViewerModule.js"></script>
+         <script type="text/javascript"
+                 src="scripts/observationToolModule.js"></script>
+         <script type="text/javascript"
+                 src="scripts/hypothesisApp.js"></script>
+         <script type="text/javascript"
+                 src="scripts/questioningApp.js"></script>
+         <script type="text/javascript"
+                 src="scripts/conceptMapperApp1.0.js"></script>
+         <script type="text/javascript"
+                 src="scripts/tableToolModule.js"></script>
+         <script type="text/javascript" src="scripts/reportingToolModule.js"></script>
+         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      </head>
+      <body class="gadgetBodyScrollBars">
+      <div class="pleaseWaitIcon" ng-cloak></div>
+
+      <ng-include src="resourceLoader.getIncludeUrl('/reportToolContent.html')"></ng-include>
+
+      <script type="text/javascript">
+         "use strict";
+         window.ut.tools.reportingtool.startReportingTool()
+      </script>
+      </body>
+      ]]></Content>
+</Module>

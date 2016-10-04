@@ -1,0 +1,6 @@
+tableTool_en_ALL.xml
+tableTool_nl_ALL.xml
+tableTool_es_ALL.xml
+tableTool_et_ALL.xml
+tableTool_pt_ALL.xml
+tableTool_zh_ALL.xml

@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<messagebundle toolId="tableTool" mails="j.sikken@utwente.nl" requires="common">
+  <msg toolId="tableTool" name="tableTool.configuration.columnNames">Veergude nimed</msg>
+  <msg toolId="tableTool" name="tableTool.configuration.rowNames">Ridade nimed</msg>
+  <msg toolId="tableTool" name="tableTool.configuration.tableTool">Tabelitöörista valikud</msg>
+  <msg toolId="tableTool" name="tableTool.title">Tabel</msg>
+  <msg toolId="tableTool" name="tableTool.titleWithResourceName">{0}</msg>
+  <msg toolId="tableTool" name="help.helpDialog.content.tableTool" format="textAngular">
+    <![CDATA[
+    
+    
+
+<ul>
+   <li>
+      Fill in the cells of the table
+   </li>
+</ul>
+
+   ]]></msg>
+
+  <msg toolId="common" name="collaboration.start.tooltip">Start collaboration</msg>
+  <msg toolId="common" name="editConfiguration.authoringMode">Salvesta algne sisu</msg>
+  <msg toolId="common" name="editConfiguration.authoringMode.tooltip">Tööriista sisu salvestatakse õpilaste jaoks kui algne sisu</msg>
+  <msg toolId="common" name="editConfiguration.autoLoadLatestResource">Laadi viimane dokument automaatselt</msg>
+  <msg toolId="common" name="editConfiguration.autoLoadLatestResource.tooltip">Viimane salvestatud dokument laaditakse alustamisel</msg>
+  <msg toolId="common" name="editConfiguration.autoSave">Salvesta automaatselt</msg>
+  <msg toolId="common" name="editConfiguration.autoSave.tooltip">Muudatused salvestatakse automaatselt</msg>
+  <msg toolId="common" name="editConfiguration.close">Sule</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOption">Individual/Collaborative</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOption.tooltip">Select if and when the collaboration is started</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.disabled">Individual</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.manualStart">User decides</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.autoStart">Collaborative</msg>
+  <msg toolId="common" name="editConfiguration.debugOptions">Vigade kõrvaldamise valikud</msg>
+  <msg toolId="common" name="editConfiguration.defaultResourceName">Vaikimisi nimi</msg>
+  <msg toolId="common" name="editConfiguration.defaultResourceName.tooltip">Dokumendi vaikimisi nimi</msg>
+  <msg toolId="common" name="editConfiguration.dialogTitle">Redigeeri seadistust - {0}</msg>
+  <msg toolId="common" name="editConfiguration.helpHtml">Abi</msg>
+  <msg toolId="common" name="editConfiguration.hideSection.tooltip">Peida valikud</msg>
+  <msg toolId="common" name="editConfiguration.hideSectionNotAllowed.tooltip">Peida valikud</msg>
+  <msg toolId="common" name="editConfiguration.loadInitialResource">Laadi algne sisu</msg>
+  <msg toolId="common" name="editConfiguration.loadInitialResource.tooltip">Salvestatud algne sisu hakkab õpilaste jaoks olema algne sisu</msg>
+  <msg toolId="common" name="editConfiguration.multiDocumentMode">Salvesta kui</msg>
+  <msg toolId="common" name="editConfiguration.multiDocumentMode.tooltip">Näidates nuppe „Salvesta kui“ ja „Ava“, saavad õpilased töötada mitme dokumendiga</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.addName.tooltip">Lisa nimi</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionDown.tooltip">Liigu valitud nimest ühe võrra alla</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionUp.tooltip">Liigu valitud nimest ühe võrra üles</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.removeName.tooltip">Kustuta valitud nimi</msg>
+  <msg toolId="common" name="editConfiguration.specialLanguageTerms">Special language terms</msg>
+  <msg toolId="common" name="editConfiguration.openButton.tooltip">Redigeeri seadistust</msg>
+  <msg toolId="common" name="editConfiguration.resourceOptions">Reassursside valikud</msg>
+  <msg toolId="common" name="editConfiguration.showImportExport">Impordi-/ekspordinupud</msg>
+  <msg toolId="common" name="editConfiguration.showImportExport.tooltip">Näita impordi-/ekspordinuppe</msg>
+  <msg toolId="common" name="editConfiguration.showLoadConfiguration">Seadistusnupp</msg>
+  <msg toolId="common" name="editConfiguration.showLoadConfiguration.tooltip">Näita seadistusakna avamise nuppu</msg>
+  <msg toolId="common" name="editConfiguration.showLoadExamples">Näidete laadimise nupud</msg>
+  <msg toolId="common" name="editConfiguration.showLoadExamples.tooltip">Näita näidete laadimise nuppe</msg>
+  <msg toolId="common" name="editConfiguration.showModelJson">Mudeli json'i nupp</msg>
+  <msg toolId="common" name="editConfiguration.showModelJson.tooltip">Näita mudeli json'i nuppu</msg>
+  <msg toolId="common" name="editConfiguration.showResourceName">Näita nime</msg>
+  <msg toolId="common" name="editConfiguration.showResourceName.tooltip">Näita pealkirjareal dokumendi nime</msg>
+  <msg toolId="common" name="editConfiguration.showSection.tooltip">Näita valikuid</msg>
+  <msg toolId="common" name="editConfiguration.useMyOwnToolHelp">Use my own tool help</msg>
+  <msg toolId="common" name="editConfiguration.useMyOwnToolHelp.tooltip">Show the my own tool help to students</msg>
+  <msg toolId="common" name="editConfiguration.useStandardToolHelp">Use standard tool help</msg>
+  <msg toolId="common" name="editConfiguration.useStandardToolHelp.tooltip">Show the standard tool help to students</msg>
+  <msg toolId="common" name="help.helpDialog.buildDate">Ehitatud {0}</msg>
+  <msg toolId="common" name="help.helpDialog.dialogTitle">Abi</msg>
+  <msg toolId="common" name="help.openButton.tooltip">Näita abi</msg>
+  <msg toolId="common" name="ils.tools">Tools</msg>
+  <msg toolId="common" name="loadSave.clear.tooltip">Kustuta sisu {0}</msg>
+  <msg toolId="common" name="loadSave.configurationDialog.dialogTitle">Laadi seadistus {0}</msg>
+  <msg toolId="common" name="loadSave.delete.tooltip">Kustuta {0}</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.cancel">Tühista</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.delete">Kustuta</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.dialogTitle">Kustuta {0}?</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.question">Kas oled kindel, et soovid selle {0} kustutada?</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.cancel">Tühista</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.dialogTitle">Kustuta sisu?</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.erase">Kustuta</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.question">Kas oled kindel, et soovid selle {0} sisu kustutada?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.cancel">Tühista</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.dialogTitle">Kustuta või seadista sisu uuesti?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.erase">Kustuta</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.question">Kas oled kindel, et soovid selle {0} sisu kustutada või uuesti seadistada?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.reset">Seadista uuesti</msg>
+  <msg toolId="common" name="loadSave.examples.tooltip">Näited {0}</msg>
+  <msg toolId="common" name="loadSave.examplesDialog.category">Kategooria</msg>
+  <msg toolId="common" name="loadSave.examplesDialog.dialogTitle">Laadi näide {0}</msg>
+  <msg toolId="common" name="loadSave.export.tooltip">Ekspordi {0}</msg>
+  <msg toolId="common" name="loadSave.failure.delete" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Kustutamine eba&#245;nnestus<br />Viga: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.import" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Importimine eba&#245;nnestus<br />Viga: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.listMetadata" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Failide ja kataloogide nimistu kuvamine eba&#245;nnestus<br />Viga: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.load" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Laadimine eba&#245;nnestus<br />Viga: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.loadLatest" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Viimase ressursi laadimine eba&#245;nnestus<br />Viga: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.loadLatestConfiguration" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Seadistuse laadimine eba&#245;nnestus<br />Viga: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.refresh" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    V&#228;rskendamine eba&#245;nnestus<br />Viga: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.save" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Salvestamine eba&#245;nnestus<br />Viga: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.saveAs" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Salvesta kui eba&#245;nnestus<br />Viga: {0}]]></msg>
+  <msg toolId="common" name="loadSave.import.tooltip">Impordi {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.author">Autor</msg>
+  <msg toolId="common" name="loadSave.loadDialog.cancel">Tühista</msg>
+  <msg toolId="common" name="loadSave.loadDialog.date">Kuupäev</msg>
+  <msg toolId="common" name="loadSave.loadDialog.dialogTitle">Laadi {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.loadSelected">Laadi valik {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.title">Pealkiri</msg>
+  <msg toolId="common" name="loadSave.loadDialog.tool">Tööriist</msg>
+  <msg toolId="common" name="loadSave.loadDialog.type">Trüki</msg>
+  <msg toolId="common" name="loadSave.loadDialog.update">Värskenda loetelu</msg>
+  <msg toolId="common" name="loadSave.new.tooltip">Uus {0}</msg>
+  <msg toolId="common" name="loadSave.notification.saved">{0} salvestatud</msg>
+  <msg toolId="common" name="loadSave.open.tooltip">Laadi {0}</msg>
+  <msg toolId="common" name="loadSave.redo.tooltip">Tee uuesti (Redo)</msg>
+  <msg toolId="common" name="loadSave.refresh.tooltip">Värskenda sisu {0}</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.cancel">Tühista</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.dialogTitle">Asenda olemasolev ressurss?</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.question">"{0}" on juba olemas. Kas soovid selle asendada?</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.replace">Asenda</msg>
+  <msg toolId="common" name="loadSave.save.tooltip">Salvesta {0}</msg>
+  <msg toolId="common" name="loadSave.saveAs.tooltip">Salvesta kui {0}</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.cancel">Tühista</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.dialogTitle">Salvesta muudatused?</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.discard">Ära kasuta</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.question">Kas soovid salvestada oma {0} muudatused?</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.save">Salvesta</msg>
+  <msg toolId="common" name="loadSave.saveDialog.cancel">Tühista</msg>
+  <msg toolId="common" name="loadSave.saveDialog.dialogTitle">Sisesta nimi {0}</msg>
+  <msg toolId="common" name="loadSave.saveDialog.download">Laadi alla</msg>
+  <msg toolId="common" name="loadSave.saveDialog.save">Salvesta</msg>
+  <msg toolId="common" name="loadSave.saveDialog.saveResource">Salvesta ressurss</msg>
+  <msg toolId="common" name="loadSave.showModelJson">Näita mudeli json'i</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.close">Sule</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.dialogTitle">{0} mudeli json</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.refresh">Värskenda mudeli json'i</msg>
+  <msg toolId="common" name="loadSave.title.unnamed">{0}</msg>
+  <msg toolId="common" name="loadSave.titleConfiguration.unnamed">{0} Seadistus</msg>
+  <msg toolId="common" name="loadSave.undo.tooltip">Võta tagasi (Undo)</msg>
+  <msg toolId="common" name="multiLoadSave.redo.tooltip">Tee uuesti (Redo)</msg>
+  <msg toolId="common" name="multiLoadSave.refresh.tooltip">Värskenda sisu</msg>
+  <msg toolId="common" name="multiLoadSave.undo.tooltip">Võta tagasi (Undo)</msg>
+  <msg toolId="common" name="resourceImport.failure.createResource" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Ressursi lisamine eba&#245;nnestus {0}<br />Viga: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.createResource.inCallback.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Faili laadimise tagasikutsungi k&#228;igus tekkis ootamatu viga {0}<br />Viga: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.createResource.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Ressursi lisamisel tekkis ootamatu viga {0}<br />Viga: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.deleteResource" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Ressursi kustutamine eba&#245;nnestus {0}<br />Viga: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Failide ja kataloogide nimistu kuvamine eba&#245;nnestus<br />Viga: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Failide ja kataloogide nimistu kuvamisel tekkis ootamatu viga<br />Viga: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.loadJson" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Faili laadimine eba&#245;nnestus {0}<br />Viga: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.loadJson.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Faili laadimisel tekkis ootamatu viga {0}<br />Viga: {1}]]></msg>
+  <msg toolId="common" name="resourceJson.failure.noArray">Ressursiloetelu peab olema json'i massiiv</msg>
+  <msg toolId="common" name="resourceJson.failure.noContent">Ressursil peab olema sisu omadus</msg>
+  <msg toolId="common" name="resourceJson.failure.noMetadata">Ressursil peab olema metaandmete omadus</msg>
+  <msg toolId="common" name="resourceJson.failure.noObject">Ressurss peab olema json'i objekt</msg>
+  <msg toolId="common" name="resources.type.name.circuit">Vooluahel</msg>
+  <msg toolId="common" name="resources.type.name.conceptMap">Mõistekaart</msg>
+  <msg toolId="common" name="resources.type.name.conclusions">Järeldused</msg>
+  <msg toolId="common" name="resources.type.name.configuration">Seadistus</msg>
+  <msg toolId="common" name="resources.type.name.dataGraph">Diagramm</msg>
+  <msg toolId="common" name="resources.type.name.dataSet">Andmed</msg>
+  <msg toolId="common" name="resources.type.name.experiment_designs">Katse kavandamine</msg>
+  <msg toolId="common" name="resources.type.name.hypotheses">Hüpoteesid</msg>
+  <msg toolId="common" name="resources.type.name.hypotheses.single">Hupotees</msg>
+  <msg toolId="common" name="resources.type.name.observations">Vaatlused</msg>
+  <msg toolId="common" name="resources.type.name.observations.single">Vaatlus</msg>
+  <msg toolId="common" name="resources.type.name.questions">Küsimused</msg>
+  <msg toolId="common" name="resources.type.name.questions.single">Küsimus</msg>
+  <msg toolId="common" name="resources.type.name.reflection">Refleksioon</msg>
+  <msg toolId="common" name="resources.type.name.report">Raport</msg>
+  <msg toolId="common" name="resources.type.name.resource">Ressurss</msg>
+  <msg toolId="common" name="resources.type.name.table">Tabel</msg>
+  <msg toolId="common" name="resources.type.name.testCommons">Common tests</msg>
+  <msg toolId="common" name="resources.type.name.model">Mudel</msg>
+  <msg toolId="common" name="resources.type.name.test">Test</msg>
+  <msg toolId="common" name="resources.type.name.phetSimWrapping">PhET Sim wrapping</msg>
+  <msg toolId="common" name="tools.name.goModel">GoModel Editor</msg>
+  <msg toolId="common" name="tools.name.circuitLab">Vooluahelate labor</msg>
+  <msg toolId="common" name="tools.name.conceptmapper">Mõistekaardi tööriist</msg>
+  <msg toolId="common" name="tools.name.conclusionTool">Järeldamise tööriist</msg>
+  <msg toolId="common" name="tools.name.dataEditor">Data editor</msg>
+  <msg toolId="common" name="tools.name.dataViewer">Andmete vaatur</msg>
+  <msg toolId="common" name="tools.name.edt">Katse kavandamise tööriist</msg>
+  <msg toolId="common" name="tools.name.hypothesis scratchpad">Hüpoteesi sõnastamise tööriist</msg>
+  <msg toolId="common" name="tools.name.observationTool">Vaatlemise tööriist</msg>
+  <msg toolId="common" name="tools.name.questioning scratchpad">Küsimuse sõnastamise tööriist</msg>
+  <msg toolId="common" name="tools.name.reflect">Refleksiooni tööriist</msg>
+  <msg toolId="common" name="tools.name.reflectionTool">Refleksiooni tööriist</msg>
+  <msg toolId="common" name="tools.name.reportingTool">Reporting tool</msg>
+  <msg toolId="common" name="tools.name.resourceEditor">Ressursside redigeerija</msg>
+  <msg toolId="common" name="tools.name.tableTool">Tabelitööriist</msg>
+  <msg toolId="common" name="tools.name.testCommons">Test commons</msg>
+  <msg toolId="common" name="tools.name.ut.tools.conceptmapper">Mõistekaardi tööriist</msg>
+  <msg toolId="common" name="tools.name.ut.tools.hypothesisScratchpad">Hüpoteesi sõnastamise tööriist</msg>
+  <msg toolId="common" name="tools.name.ut.tools.questioningScratchpad">Küsimuse sõnastamise tööriist</msg>
+  <msg toolId="common" name="tools.name.phetSimWrapper">PhET Sim wrapper</msg>
+  <msg toolId="common" name="tools.name.quiz">Quiz tool</msg>
+</messagebundle>

@@ -1,0 +1,31 @@
+<div golabCloak resizeAtInit>
+    <div class="reportingTool" ng-controller="reportingToolCtrl">
+        <table class="verticalToolbarTable">
+            <tr>
+                <td class="verticalToolbarCell noPrint">
+                    <toolbar vertical="true">
+                        <loadSave modelName="reportModel" undoRedo="true"></loadSave>
+                        <li class="toolBarSpace"></li>
+                        <!--<updateParagraphsButton></updateParagraphsButton>-->
+                        <editModeButton></editModeButton>
+                        <printButton></printButton>
+                        <li class="toolBarSpace"></li>
+                        <collaboration modelName="reportModel"></collaboration>
+                        <li class="toolBarSpace"></li>
+                        <help></help>
+                        <editConfiguration XdataStoreName="reportConfigurations">
+                            <reportToolConfigurationOptions></reportToolConfigurationOptions>
+                        </editConfiguration>
+                    </toolbar>
+                </td>
+                <td>
+                    <golabContainer containerTitle="i_reportingTool.title" modelName="reportModel">
+                        <paragraphTypesToolbar></paragraphTypesToolbar>
+                        <report></report>
+                    </golabContainer>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

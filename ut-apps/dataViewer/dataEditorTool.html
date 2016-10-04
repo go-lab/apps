@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Data editor tool</title>
+    <link rel="stylesheet" type="text/css" href="commons/css/golabStart.css"/>
+    <script type="text/javascript" src="commons/js/errorHandler.js"></script>
+    <script type="text/javascript" src="commons/js/jsChecker.js"></script>
+    <script type="text/javascript" src="libs/js/headJS/head.min.js"></script>
+    <script type="text/javascript" src="commons/js/resourceLoader.js"></script>
+    <script type="text/javascript" src="commons/js/commonsModules.js"></script>
+    <script type="text/javascript" src="scripts/dataViewerModule.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+</head>
+<body>
+
+<div class="pleaseWaitIcon" golabCloak></div>
+
+<ng-include src="resourceLoader.getIncludeUrl('/dataEditorToolContent.html')"></ng-include>
+
+<script type="text/javascript">
+    "use strict";
+    window.golab.tools.dataviewer.startDataEditor()
+</script>
+
+</body>
+</html>

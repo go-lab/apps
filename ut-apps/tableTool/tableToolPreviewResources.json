@@ -1,0 +1,64 @@
+[
+  {
+    "_id": "a5c3f178-ff7a-452a-c266-d17dc23ffa5f",
+    "metadata": {
+      "id": "a5c3f178-ff7a-452a-c266-d17dc23ffa5f",
+      "published": "2015-02-26T09:24:58.346Z",
+      "actor": {
+        "objectType": "person",
+        "id": "sikken@http://130.89.152.19:8080/",
+        "displayName": "sikken"
+      },
+      "target": {
+        "objectType": "configuration",
+        "forApplication": "tableTool",
+        "id": "70ad09b4-7dc0-4a82-d71a-62bbf30d10bfssf",
+        "displayName": "Table tool configuration"
+      },
+      "generator": {
+        "objectType": "application",
+        "url": "http://130.89.152.19:8080/golab/tools/tableTool/src/main/webapp/tableTool.html",
+        "id": "tableTool@http://130.89.152.19:8080/golab/tools/tableTool/src/main/webapp/tableTool.html",
+        "displayName": "tableTool"
+      },
+      "provider": {
+        "objectType": "ils",
+        "url": "http://130.89.152.19:8080/golab/tools/tableTool/src/main/webapp/tableTool.html",
+        "id": "http://130.89.152.19:8080/",
+        "inquiryPhase": "unknown",
+        "inquiryPhaseId": "unknown",
+        "inquiryPhaseName": "unknown",
+        "displayName": "[sikken] Table tool"
+      }
+    },
+    "content": {
+      "configUISettings": {
+        "showHideSections": {
+          "i_editConfiguration_resourceOptions": false,
+          "i_editConfiguration_debugOptions": false,
+          "i_editConfiguration_helpHtml": false,
+          "i_tableTool_configuration_tableTool": true
+        }
+      },
+      "autoLoadLatestResource": true,
+      "showResourceName": true,
+      "singleDocumentMode": true,
+      "showImportExport": false,
+      "showLoadExamples": false,
+      "showLoadConfiguration": true,
+      "showModelJson": true,
+      "autoSave": true,
+      "defaultResourceName": "",
+      "loadInitialResource": true,
+      "initialResourceString": null,
+      "rowLabels": [
+        "row 1",
+        "row 2"
+      ],
+      "columnLabels": [
+        "column 1",
+        "column 2"
+      ]
+    }
+  }
+]

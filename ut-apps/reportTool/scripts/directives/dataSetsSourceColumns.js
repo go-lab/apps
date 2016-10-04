@@ -1,0 +1,2 @@
+(function(){"use strict";var t;window.ut=window.ut||{},ut.tools=ut.tools||{},ut.tools.dataviewer=ut.tools.dataviewer||{},t=function(){return{restrict:"E",template:'<ul>\n  <li ng-repeat="dataSet in dataSets">\n      {{dataSet.title}}\n      <dataSourceColumns></dataSourceColumns>\n  </li>\n</ul>',replace:!0,link:function(t,e,a){}}},window.ut.tools.dataviewer.dataViewerTool.directive("datasetssourcecolumns",[t])}).call(this);
+//# sourceMappingURL=dataSetsSourceColumns.js.map

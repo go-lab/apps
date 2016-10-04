@@ -1,0 +1,18 @@
+@charset "utf-8";
+.unselectable{-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}
+.textSelectable{-moz-user-select:-moz-text;-khtml-user-select:text;-webkit-user-select:text;-ms-user-select:text;-o-user-select:text;user-select:text}
+.preventLongPress{-webkit-touch-callout:none!important;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+table.valueTable{border-collapse:collapse}
+table.valueTable th{font-weight:700}
+table.valueTable tr.odd{background-color:#f7f7f7}
+table.valueTable tr.even{background-color:#e0e0e0}
+table.valueTable td,table.valueTable th{border:1px solid #d3d3d3;padding:2px;font-size:12px}
+table.valueTable th.centered{text-align:center}
+td.alignRight{text-align:right}
+.connectionPointState{position:absolute;line-height:9px;font-size:10px;background:#e8e8e8;padding:1px}
+.stateValue{text-align:center}
+.voltage{color:#00f}
+.current{color:#007400}
+.imaginary{border-left:2px solid red}
+.circuitJson{font-size:12px}
+.buttonCursor{cursor:default;-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}

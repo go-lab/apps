@@ -1,0 +1,2 @@
+(function(){"use strict";var t;window.ut=window.ut||{},ut.commons=ut.commons||{},ut.tools=ut.tools||{},ut.tools.conclusions=ut.tools.conclusions||{},t=function(){return{restrict:"E",template:'<div class="statement hypothesis" ng-show="hypothesis">\n  <span ng-repeat="element in hypothesis.elements"\n    class="hypothesisElement_{{element.type}}">{{element.text}}</span>\n</div>',replace:!0,link:function(t,s,o){}}},ut.tools.conclusions.conclusionTool.directive("hypothesis".toLowerCase(),[t])}).call(this);
+//# sourceMappingURL=hypothesis.js.map

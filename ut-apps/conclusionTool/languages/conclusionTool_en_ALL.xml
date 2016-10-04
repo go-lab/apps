@@ -1,0 +1,452 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<messagebundle toolId="conclusionTool" mails="j.sikken@utwente.nl" requires="common, dataViewer, observationTool">
+  <msg toolId="conclusionTool" name="conclusions.addData">Add data</msg>
+  <msg toolId="conclusionTool" name="conclusions.argueExplanation.noData">Adjust your confidence in the hypothesis.</msg>
+  <msg toolId="conclusionTool" name="conclusions.argueExplanation.withData">Adjust your confidence in the hypothesis, now that you have the gathered data.</msg>
+  <msg toolId="conclusionTool" name="conclusions.argueTitle">Argumentation</msg>
+  <msg toolId="conclusionTool" name="conclusions.changeExplanation.confidence">Explain what has changed your confidence.</msg>
+  <msg toolId="conclusionTool" name="conclusions.changeExplanation.noConfidence">Describe what you have learned.</msg>
+  <msg toolId="conclusionTool" name="conclusions.changeExplanation.question">Describe what you have learned.</msg>
+  <msg toolId="conclusionTool" name="conclusions.confidenceTitle">Hypothesis confidence</msg>
+  <msg toolId="conclusionTool" name="conclusions.configuration.conclusionTool">Conclusion tool options</msg>
+  <msg toolId="conclusionTool" name="conclusions.configuration.showHypothesisConfidenceMeter">Show confidence meter</msg>
+  <msg toolId="conclusionTool" name="conclusions.configuration.showHypothesisConfidenceMeter.tooltip">Show the hypothesis confidence meter</msg>
+  <msg toolId="conclusionTool" name="conclusions.configuration.useDataGraphs">Use data graphs</msg>
+  <msg toolId="conclusionTool" name="conclusions.configuration.useDataGraphs.tooltip">Let the students add data graphs</msg>
+  <msg toolId="conclusionTool" name="conclusions.configuration.useExamples">Use examples</msg>
+  <msg toolId="conclusionTool" name="conclusions.configuration.useExamples.tooltip">Let the students add examples</msg>
+  <msg toolId="conclusionTool" name="conclusions.configuration.useObservations">Use observations</msg>
+  <msg toolId="conclusionTool" name="conclusions.configuration.useObservations.tooltip">Let the students add observations</msg>
+  <msg toolId="conclusionTool" name="conclusions.dataDetails.createdAt">Created at {0}</msg>
+  <msg toolId="conclusionTool" name="conclusions.dataDetails.createdBy">Created by {0}</msg>
+  <msg toolId="conclusionTool" name="conclusions.dataDetails.dialogTitle">Details of {0}</msg>
+  <msg toolId="conclusionTool" name="conclusions.dataDetails.usedTool">Created in the {0}</msg>
+  <msg toolId="conclusionTool" name="conclusions.dataTitle">Data: {0}</msg>
+  <msg toolId="conclusionTool" name="conclusions.deleteData">Delete selected data</msg>
+  <msg toolId="conclusionTool" name="conclusions.hypothesisConfidence.initial.tooltip">Initial confidence in hypothesis</msg>
+  <msg toolId="conclusionTool" name="conclusions.hypothesisConfidence.modified.tooltip">Current confidence in hypothesis, click and drag to change</msg>
+  <msg toolId="conclusionTool" name="conclusions.loadDataExampleDialog.dialogTitle">Load example {0}</msg>
+  <msg toolId="conclusionTool" name="conclusions.observationDetails.dialogTitle">Details of observation</msg>
+  <msg toolId="conclusionTool" name="conclusions.selectDataSourceDialog.dataGraphExample">Data graph example</msg>
+  <msg toolId="conclusionTool" name="conclusions.selectDataSourceDialog.dataGraphResource">Data graph resource</msg>
+  <msg toolId="conclusionTool" name="conclusions.selectDataSourceDialog.dialogTitle">Select kind of data to add</msg>
+  <msg toolId="conclusionTool" name="conclusions.selectDataSourceDialog.observation">Observation</msg>
+  <msg toolId="conclusionTool" name="conclusions.selectObservationDialog.dialogTitle">Select observation</msg>
+  <msg toolId="conclusionTool" name="conclusions.suggestion.addData">Please add data</msg>
+  <msg toolId="conclusionTool" name="conclusions.thumbnail.tooltip">Double click to view details</msg>
+  <msg toolId="conclusionTool" name="conclusions.title">Conclusions</msg>
+  <msg toolId="conclusionTool" name="conclusions.titleWithResourceName">{0}</msg>
+  <msg toolId="conclusionTool" name="statements.suggestion.createStatements">Please create hypotheses/questions</msg>
+  <msg toolId="conclusionTool" name="statements.suggestion.refreshStatements">Please refresh hypotheses/questions</msg>
+  <msg toolId="conclusionTool" name="statements.title">Hypotheses/questions</msg>
+  <msg toolId="conclusionTool" name="help.helpDialog.content.conclusionTool" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    
+      
+<ul>
+    <li>
+        <b>Select a hypothesis or question</b> by clicking it and do the following:
+        <ul>
+          <li>
+              <b>Add one or more data graphs and/or observations</b> by clicking the plus icon
+          </li>
+          <li>
+              <b>Double click on the added data or observation</b> for more information
+          </li>
+          <li>
+              <b>Adjust the confidence level</b> of the hypothesis, if available
+          </li>
+          <li>
+              <b>Explain your change</b> or <b>describe what you have learned</b> by typing in text in the text box
+          </li>
+        </ul>
+    </li>
+    <li>
+        <b>Select the next hypothesis or question</b> and repeat the steps above
+    </li>
+</ul>
+
+   ]]></msg>
+
+  <msg toolId="common" name="collaboration.start.tooltip">Start collaboration</msg>
+  <msg toolId="common" name="editConfiguration.authoringMode">Save initial content</msg>
+  <msg toolId="common" name="editConfiguration.authoringMode.tooltip">The content of the tool will saved as initial content for the students</msg>
+  <msg toolId="common" name="editConfiguration.autoLoadLatestResource">Auto load latest document</msg>
+  <msg toolId="common" name="editConfiguration.autoLoadLatestResource.tooltip">The latest saved document will be loaded at startup</msg>
+  <msg toolId="common" name="editConfiguration.autoSave">Auto save</msg>
+  <msg toolId="common" name="editConfiguration.autoSave.tooltip">Changes will be automatically saved</msg>
+  <msg toolId="common" name="editConfiguration.close">Close</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOption">Individual/Collaborative</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOption.tooltip">Select if and when the collaboration is started</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.disabled">Individual</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.manualStart">User decides</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.autoStart">Collaborative</msg>
+  <msg toolId="common" name="editConfiguration.debugOptions">Debug options</msg>
+  <msg toolId="common" name="editConfiguration.defaultResourceName">Default name</msg>
+  <msg toolId="common" name="editConfiguration.defaultResourceName.tooltip">The default name of the document</msg>
+  <msg toolId="common" name="editConfiguration.dialogTitle">{0}</msg>
+  <msg toolId="common" name="editConfiguration.helpHtml">Help</msg>
+  <msg toolId="common" name="editConfiguration.hideSection.tooltip">Hide options</msg>
+  <msg toolId="common" name="editConfiguration.hideSectionNotAllowed.tooltip">May not hide options because of selection</msg>
+  <msg toolId="common" name="editConfiguration.loadInitialResource">Load initial content</msg>
+  <msg toolId="common" name="editConfiguration.loadInitialResource.tooltip">The saved initial content will be the initial content for the students</msg>
+  <msg toolId="common" name="editConfiguration.multiDocumentMode">Save as</msg>
+  <msg toolId="common" name="editConfiguration.multiDocumentMode.tooltip">By showing the "Save as" and "Open" buttons, the students can work with multiple documents</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.addName.tooltip">Add name</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionDown.tooltip">Move selected name down</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionUp.tooltip">Move selected name up</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.removeName.tooltip">Delete selected name</msg>
+  <msg toolId="common" name="editConfiguration.specialLanguageTerms">Special language terms</msg>
+  <msg toolId="common" name="editConfiguration.openButton.tooltip">Edit configuration</msg>
+  <msg toolId="common" name="editConfiguration.resourceOptions">Resource options</msg>
+  <msg toolId="common" name="editConfiguration.showImportExport">Import/export buttons</msg>
+  <msg toolId="common" name="editConfiguration.showImportExport.tooltip">Show import/export buttons</msg>
+  <msg toolId="common" name="editConfiguration.showLoadConfiguration">Configuration button</msg>
+  <msg toolId="common" name="editConfiguration.showLoadConfiguration.tooltip">Show the open configuration dialog button</msg>
+  <msg toolId="common" name="editConfiguration.showLoadExamples">Load examples buttons</msg>
+  <msg toolId="common" name="editConfiguration.showLoadExamples.tooltip">Show load examples buttons</msg>
+  <msg toolId="common" name="editConfiguration.showModelJson">Model json button</msg>
+  <msg toolId="common" name="editConfiguration.showModelJson.tooltip">Show model json button</msg>
+  <msg toolId="common" name="editConfiguration.showResourceName">Show name</msg>
+  <msg toolId="common" name="editConfiguration.showResourceName.tooltip">Show the document name in the title bar</msg>
+  <msg toolId="common" name="editConfiguration.showSection.tooltip">Show options</msg>
+  <msg toolId="common" name="editConfiguration.useMyOwnToolHelp">Use my own tool help</msg>
+  <msg toolId="common" name="editConfiguration.useMyOwnToolHelp.tooltip">Show the my own tool help to students</msg>
+  <msg toolId="common" name="editConfiguration.useStandardToolHelp">Use standard tool help</msg>
+  <msg toolId="common" name="editConfiguration.useStandardToolHelp.tooltip">Show the standard tool help to students</msg>
+  <msg toolId="common" name="help.helpDialog.buildDate">Built at {0}</msg>
+  <msg toolId="common" name="help.helpDialog.dialogTitle">Help</msg>
+  <msg toolId="common" name="help.openButton.tooltip">Show help</msg>
+  <msg toolId="common" name="ils.tools">Tools</msg>
+  <msg toolId="common" name="loadSave.clear.tooltip">Erase content {0}</msg>
+  <msg toolId="common" name="loadSave.configurationDialog.dialogTitle">Load configuration for the {0}</msg>
+  <msg toolId="common" name="loadSave.delete.tooltip">Delete {0}</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.cancel">Cancel</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.delete">Delete</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.dialogTitle">Delete {0}?</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.question">Are you sure you want to delete this {0}?</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.cancel">Cancel</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.dialogTitle">Erase content?</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.erase">Erase</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.question">Are you sure you want to erase the content of this {0}?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.cancel">Cancel</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.dialogTitle">Erase or reset content?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.erase">Erase</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.question">Are you sure you want to erase or reset the content of this {0}?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.reset">Reset</msg>
+  <msg toolId="common" name="loadSave.examples.tooltip">Examples {0}</msg>
+  <msg toolId="common" name="loadSave.examplesDialog.category">Category</msg>
+  <msg toolId="common" name="loadSave.examplesDialog.dialogTitle">Load example {0}</msg>
+  <msg toolId="common" name="loadSave.export.tooltip">Export {0}</msg>
+  <msg toolId="common" name="loadSave.failure.delete" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Delete failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.import" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Import failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.listMetadata" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Directory listing failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.load" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Load failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.loadLatest" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Loading of latest resource failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.loadLatestConfiguration" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Loading of configuration failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.refresh" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Refresh failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.save" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Save failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.saveAs" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Save as failed<br />Error: {0}]]></msg>
+  <msg toolId="common" name="loadSave.import.tooltip">Import {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.author">Author</msg>
+  <msg toolId="common" name="loadSave.loadDialog.cancel">Cancel</msg>
+  <msg toolId="common" name="loadSave.loadDialog.date">Date</msg>
+  <msg toolId="common" name="loadSave.loadDialog.dialogTitle">Load {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.loadSelected">Load selected {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.title">Title</msg>
+  <msg toolId="common" name="loadSave.loadDialog.tool">Tool</msg>
+  <msg toolId="common" name="loadSave.loadDialog.type">Type</msg>
+  <msg toolId="common" name="loadSave.loadDialog.update">Refresh list</msg>
+  <msg toolId="common" name="loadSave.new.tooltip">New {0}</msg>
+  <msg toolId="common" name="loadSave.notification.saved">{0} saved</msg>
+  <msg toolId="common" name="loadSave.open.tooltip">Load {0}</msg>
+  <msg toolId="common" name="loadSave.redo.tooltip">Redo</msg>
+  <msg toolId="common" name="loadSave.refresh.tooltip">Refresh content {0}</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.cancel">Cancel</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.dialogTitle">Replace existing resource?</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.question">"{0}" does already exists. Do you want to replace it?</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.replace">Replace</msg>
+  <msg toolId="common" name="loadSave.save.tooltip">Save {0}</msg>
+  <msg toolId="common" name="loadSave.saveAs.tooltip">Save as {0}</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.cancel">Cancel</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.dialogTitle">Save changes?</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.discard">Discard</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.question">Do you want to save your {0} changes?</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.save">Save</msg>
+  <msg toolId="common" name="loadSave.saveDialog.cancel">Cancel</msg>
+  <msg toolId="common" name="loadSave.saveDialog.dialogTitle">Enter name of {0}</msg>
+  <msg toolId="common" name="loadSave.saveDialog.download">Download</msg>
+  <msg toolId="common" name="loadSave.saveDialog.save">Save</msg>
+  <msg toolId="common" name="loadSave.saveDialog.saveResource">Save resource</msg>
+  <msg toolId="common" name="loadSave.showModelJson">Show model json</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.close">Close</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.dialogTitle">{0} model json</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.refresh">Refresh model json</msg>
+  <msg toolId="common" name="loadSave.title.unnamed">{0}</msg>
+  <msg toolId="common" name="loadSave.titleConfiguration.unnamed">{0} configuration</msg>
+  <msg toolId="common" name="loadSave.undo.tooltip">Undo</msg>
+  <msg toolId="common" name="multiLoadSave.redo.tooltip">Redo</msg>
+  <msg toolId="common" name="multiLoadSave.refresh.tooltip">Refresh resources</msg>
+  <msg toolId="common" name="multiLoadSave.undo.tooltip">Undo</msg>
+  <msg toolId="common" name="resourceImport.failure.createResource" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Failed to add resource {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.createResource.inCallback.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Unexpected error during callback of loading of file {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.createResource.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Unexpected error during add resource {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.deleteResource" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Failed to delete resource {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Failed to get directory listing<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Unexpected error during get directory listing<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.loadJson" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Failed to load file {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceImport.failure.loadJson.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Unexpected error during loading of file {0}<br />Error: {1}]]></msg>
+  <msg toolId="common" name="resourceJson.failure.noArray">Resource list must be a json array</msg>
+  <msg toolId="common" name="resourceJson.failure.noContent">Resource must have a content property</msg>
+  <msg toolId="common" name="resourceJson.failure.noMetadata">Resource must have a metadata property</msg>
+  <msg toolId="common" name="resourceJson.failure.noObject">Resource must be a json object</msg>
+  <msg toolId="common" name="resources.type.name.circuit">Circuit</msg>
+  <msg toolId="common" name="resources.type.name.conceptMap">Concept map</msg>
+  <msg toolId="common" name="resources.type.name.conclusions">Conclusions</msg>
+  <msg toolId="common" name="resources.type.name.configuration">Configuration</msg>
+  <msg toolId="common" name="resources.type.name.dataGraph">Data graph</msg>
+  <msg toolId="common" name="resources.type.name.dataSet">Data set</msg>
+  <msg toolId="common" name="resources.type.name.experiment_designs">Experiment design</msg>
+  <msg toolId="common" name="resources.type.name.hypotheses">Hypotheses</msg>
+  <msg toolId="common" name="resources.type.name.hypotheses.single">Hypothesis</msg>
+  <msg toolId="common" name="resources.type.name.observations">Observations</msg>
+  <msg toolId="common" name="resources.type.name.observations.single">Observation</msg>
+  <msg toolId="common" name="resources.type.name.questions">Questions</msg>
+  <msg toolId="common" name="resources.type.name.questions.single">Question</msg>
+  <msg toolId="common" name="resources.type.name.reflection">Reflection</msg>
+  <msg toolId="common" name="resources.type.name.report">Report</msg>
+  <msg toolId="common" name="resources.type.name.resource">Resource</msg>
+  <msg toolId="common" name="resources.type.name.table">Table</msg>
+  <msg toolId="common" name="resources.type.name.testCommons">Common tests</msg>
+  <msg toolId="common" name="resources.type.name.model">Model</msg>
+  <msg toolId="common" name="resources.type.name.test">Test</msg>
+  <msg toolId="common" name="resources.type.name.phetSimWrapping">PhET Sim wrapping</msg>
+  <msg toolId="common" name="tools.name.goModel">GoModel Editor</msg>
+  <msg toolId="common" name="tools.name.circuitLab">Circuit lab</msg>
+  <msg toolId="common" name="tools.name.conceptmapper">Concept Mapper</msg>
+  <msg toolId="common" name="tools.name.conclusionTool">Conclusion tool</msg>
+  <msg toolId="common" name="tools.name.dataEditor">Data editor</msg>
+  <msg toolId="common" name="tools.name.dataViewer">Data viewer</msg>
+  <msg toolId="common" name="tools.name.edt">Experiment design tool</msg>
+  <msg toolId="common" name="tools.name.hypothesis scratchpad">Hypothesis scratchpad</msg>
+  <msg toolId="common" name="tools.name.observationTool">Observation tool</msg>
+  <msg toolId="common" name="tools.name.questioning scratchpad">Questioning scratchpad</msg>
+  <msg toolId="common" name="tools.name.reflect">Reflection tool</msg>
+  <msg toolId="common" name="tools.name.reflectionTool">Reflection tool</msg>
+  <msg toolId="common" name="tools.name.reportingTool">Reporting tool</msg>
+  <msg toolId="common" name="tools.name.resourceEditor">Resource editor</msg>
+  <msg toolId="common" name="tools.name.tableTool">Table tool</msg>
+  <msg toolId="common" name="tools.name.testCommons">Test commons</msg>
+  <msg toolId="common" name="tools.name.ut.tools.conceptmapper">Concept Mapper</msg>
+  <msg toolId="common" name="tools.name.ut.tools.hypothesisScratchpad">Hypothesis scratchpad</msg>
+  <msg toolId="common" name="tools.name.ut.tools.questioningScratchpad">Questioning scratchpad</msg>
+  <msg toolId="common" name="tools.name.phetSimWrapper">PhET Sim wrapper</msg>
+  <msg toolId="common" name="tools.name.quiz">Quiz tool</msg>
+  <msg toolId="common" name="tools.name.bond">Bond lab</msg>
+
+  <msg toolId="dataViewer" name="dataCollector.saveDialog.dataSourceColumn">Enter name of data set</msg>
+  <msg toolId="dataViewer" name="dataCollector.clearDataSetDialog.title">Clear data?</msg>
+  <msg toolId="dataViewer" name="dataCollector.clearDataSetDialog.question">Are you sure you want to clear the data?</msg>
+  <msg toolId="dataViewer" name="dataCollector.clearDataSetDialog.clear">Clear</msg>
+  <msg toolId="dataViewer" name="dataCollector.clearDataSetDialog.cancel">Cancel</msg>
+  <msg toolId="dataViewer" name="dataCollector.showDataSetJsonDialog.title">Data set model json</msg>
+  <msg toolId="dataViewer" name="dataGraph.chartType.tooltip">Select chart type</msg>
+  <msg toolId="dataViewer" name="dataGraph.dropArea.leftYAxis.tooltip">Drag and drop data for the left Y axis</msg>
+  <msg toolId="dataViewer" name="dataGraph.dropArea.rightYAxis.tooltip">Drag and drop data for the right Y axis</msg>
+  <msg toolId="dataViewer" name="dataGraph.dropArea.xAxis.tooltip">Drag and drop data for the X axis</msg>
+  <msg toolId="dataViewer" name="dataGraph.dropArea.yAxis.tooltip">Drag and drop data for the Y axis</msg>
+  <msg toolId="dataViewer" name="dataGraph.editor.button.tooltip">Edit chart</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.AreaChart">Area chart</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.BarChart">Bar chart</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.ColumnChart">Column chart</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.LineChart">Line chart</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.ScatterChart">Scatter chart</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.Table">Table</msg>
+  <msg toolId="dataViewer" name="dataGraph.suggestion.addVariables">Please drag data from the "Data set" container to the X or Y axis</msg>
+  <msg toolId="dataViewer" name="dataGraph.title">Data graph</msg>
+  <msg toolId="dataViewer" name="dataGraph.titleWithResourceName">Data graph - {0}</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.addColumn">Add new column</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.addRow">Add new row</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.addRowOrColumn">Add new row or column</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.button.tooltip">Edit Data set</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.column">Column</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.deleteSelectedRowsAndColumns">Delete selected rows and columns</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.dialog.title">Edit data set</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.dialog.titleWithResourceName">Edit data set {0}</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.display">Display</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.label">Label</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.moveSelectedRowsDown">Move selected rows down</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.moveSelectedRowsUp">Move selected rows up</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.row">Row</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.sortAscendingOnSelectedColumns">Sort up based on selected column</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.sortDescendingOnSelectedColumns">Sort down based on selected column</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.value">Value</msg>
+  <msg toolId="dataViewer" name="dataSet.rows">{0} rows</msg>
+  <msg toolId="dataViewer" name="dataSet.suggestion.loadDataSet">Please load a data set through the load icon in the "Data set" container</msg>
+  <msg toolId="dataViewer" name="dataSet.title">Data set</msg>
+  <msg toolId="dataViewer" name="dataSet.titleWithResourceName">Data set - {0}</msg>
+  <msg toolId="dataViewer" name="help.helpDialog.content.dataViewer" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    
+      
+<ul>
+    <li>
+        <b>Load a data set</b> through the load icon
+    </li>
+    <li>
+        <b>Create a data table or charts</b> by dragging data from the "Data set" container to the X or Y axis in the "Data graph"
+    </li>
+    <li>
+        <b>Remove data from the X or Y axis</b> by dragging it out the area
+    </li>
+    <li>
+        <b>Select a type of chart or table</b> through the drop down menu under “scatter chart”
+    </li>
+</ul>
+
+   ]]></msg>
+
+  <msg toolId="observationTool" name="observationTool.addObservation">Add observation</msg>
+  <msg toolId="observationTool" name="observationTool.deleteObservation">Delete selected observation</msg>
+  <msg toolId="observationTool" name="observationTool.observationTitleWithoutPhase">Observation created at {0}, last modified at {1}</msg>
+  <msg toolId="observationTool" name="observationTool.observationTitleWithPhase">Observation created at {0}, last modified at {1}, in {2}</msg>
+  <msg toolId="observationTool" name="observationTool.title">Observations</msg>
+  <msg toolId="observationTool" name="observationTool.titleWithResourceName">{0}</msg>
+  <msg toolId="observationTool" name="help.helpDialog.content.observationTool" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    
+      
+<ul>
+    <li>
+        <b>Observations</b> are qualitative statements about outcomes of experiments (e.g., heavy objects sink)
+    </li>
+    <li>
+        <b>Create an observation</b> by clicking the plus icon and type the observation in the empty box
+    </li>
+    <li>
+        <b>Remove an observation</b> by selecting it and click the minus icon
+    </li>
+    <li>
+        <b>Clear the whole set of observations</b> by clicking the erase icon
+    </li>
+    <li>
+        <b>Observations</b> can be retrieved in the <b>conclusion tool</b> where you can relate them to <b>hypotheses</b> and/or <b>research questions</b>
+    </li>
+</ul>
+
+   ]]></msg>
+</messagebundle>

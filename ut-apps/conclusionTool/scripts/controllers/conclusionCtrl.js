@@ -1,0 +1,2 @@
+(function(){"use strict";var o;window.ut=window.ut||{},ut.commons=ut.commons||{},ut.tools=ut.tools||{},ut.tools.conclusions=ut.tools.conclusions||{},o=function(o,n,t){var e;return o.conclusionModel=n,e=function(){return o.selectedStatementConclusion=n.getSelectedStatementConclusion()},n.addListeners(["modelLoaded","modelCleared","selectedStatementChanged"],e),e()},ut.tools.conclusions.conclusionTool.controller("conclusionCtrl",["$scope","conclusionModel","languageHandler",o])}).call(this);
+//# sourceMappingURL=conclusionCtrl.js.map

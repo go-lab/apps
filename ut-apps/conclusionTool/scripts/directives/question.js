@@ -1,0 +1,2 @@
+(function(){"use strict";var o;window.ut=window.ut||{},ut.commons=ut.commons||{},ut.tools=ut.tools||{},ut.tools.conclusions=ut.tools.conclusions||{},o=function(){return{restrict:"E",template:'<div class="statement question" ng-show="question">\n  {{question.text}}\n</div>',replace:!0,link:function(o,t,n){}}},ut.tools.conclusions.conclusionTool.directive("question".toLowerCase(),[o])}).call(this);
+//# sourceMappingURL=question.js.map

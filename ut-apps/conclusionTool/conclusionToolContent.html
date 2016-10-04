@@ -1,0 +1,55 @@
+<div golabCloak resizeAtInit>
+    <div class="conclusionTool" ng-controller="conclusionCtrl">
+
+        <table class="verticalToolbarTable golabContainerBottomSeparator" ng-controller="statementsCtrl">
+            <tr>
+                <td class="verticalToolbarCell">
+                    <toolbar vertical="true">
+                        <statementsControls></statementsControls>
+                    </toolbar>
+                </td>
+                <td>
+                    <golabContainer containerTitle="i_statements.title" XmodelName="multiHypothesesModel">
+                        <div>
+                            <statementsList></statementsList>
+                        </div>
+                    </golabContainer>
+                </td>
+            </tr>
+        </table>
+        <table class="verticalToolbarTable golabContainerBottomSeparator" ng-controller="dataListCtrl">
+            <tr>
+                <td class="verticalToolbarCell">
+                    <toolbar vertical="true">
+                        <span ng-hide="configurationModel.noDataOptions">
+                            <dataListControls></dataListControls>
+                            <li class="toolBarSpace"></li>
+                        </span>
+                        <loadSave modelName="conclusionModel"></loadSave>
+                        <li class="toolBarSpace"></li>
+                        <collaboration modelName="conclusionModel"></collaboration>
+                        <li class="toolBarSpace"></li>
+                        <help></help>
+                        <editConfiguration>
+                            <conclusionToolConfigurationOptions></conclusionToolConfigurationOptions>
+                        </editConfiguration>
+                    </toolbar>
+                </td>
+                <td>
+                    <golabContainer containerTitle="i_conclusions.title"  modelName="conclusionModel" Xminimize="horizontal">
+                        <table width="100%">
+                            <tr>
+                                <td width="5%" ng-hide="configurationModel.noDataOptions">
+                                    <dataList></dataList>
+                                </td>
+                                <td>
+                                    <conclusions></conclusions>
+                                </td>
+                            </tr>
+                        </table>
+                    </golabContainer>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

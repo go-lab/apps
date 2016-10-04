@@ -1,0 +1,6 @@
+@charset "utf-8";
+.golabTitleFont{font-size:16px;font-weight:700;letter-spacing:.75px;font-kerning:none;-webkit-font-variant-ligatures:no-common-ligatures;font-feature-settings:"liga" 0}
+.ui-notification.warning{color:#fff;background:#f0ad4e}
+.ui-notification.error{color:#b4000b;background:#EBEBEB;border:1px solid #b4000b}
+.ui-notification.success{color:#0d0592;background:#EBEBEB;border:1px solid #0d0592}
+.ui-notification.info{color:#646464;background:#EBEBEB;border:1px solid #646464}

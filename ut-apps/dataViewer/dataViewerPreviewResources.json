@@ -1,0 +1,623 @@
+[
+  {
+    "_id": "40b12ec2-70ed-44b1-a798-18492408c893",
+    "metadata": {
+      "id": "40b12ec2-70ed-44b1-a798-18492408c893",
+      "published": "2015-03-05T16:37:17.168Z",
+      "actor": {
+        "objectType": "person",
+        "id": "jakob@http://130.89.152.19:8080/",
+        "displayName": "jakob"
+      },
+      "target": {
+        "objectType": "configuration",
+        "forApplication": "dataViewer",
+        "id": "70ad09b4-7dc0-4a82-d71a-62bbf30d10bfssf",
+        "displayName": "Data viewer configuration"
+      },
+      "generator": {
+        "objectType": "application",
+        "url": "http://130.89.152.19:8080/golab/tools/dataViewer/src/main/webapp/dataViewerTool.html?notificationServer=null",
+        "id": "dataViewer@http://130.89.152.19:8080/golab/tools/dataViewer/src/main/webapp/dataViewerTool.html?notificationServer=null",
+        "displayName": "dataViewer"
+      },
+      "provider": {
+        "objectType": "ils",
+        "url": "http://130.89.152.19:8080/golab/tools/dataViewer/src/main/webapp/dataViewerTool.html?notificationServer=null",
+        "id": "http://130.89.152.19:8080/",
+        "inquiryPhase": "unknown",
+        "inquiryPhaseId": "unknown",
+        "inquiryPhaseName": "unknown",
+        "displayName": "[jakob] Data viewer tool"
+      }
+    },
+    "content": {
+      "configUISettings": {
+        "showHideSections": {
+          "i_editConfiguration_debugOptions": true,
+          "i_editConfiguration_resourceOptions": false,
+          "i_editConfiguration_helpHtml": false
+        }
+      },
+      "help": "<ul>\n    <li>\n        <b>Load a data set</b> through the load icon\n    </li>\n    <li>\n        <b>Create a data table or charts</b> by dragging data from the \"Data set\" container to the X or Y axis in the \"Data graph\"\n    </li>\n    <li>\n        <b>Remove data from the X or Y axis</b> by dragging it out the area\n    </li>\n    <li>\n        <b>Select a type of chart or table</b> through the drop down menu under “scatter chart”\n    </li>\n</ul>",
+      "autoLoadLatestResource": true,
+      "showResourceName": true,
+      "singleDocumentMode": false,
+      "showImportExport": false,
+      "showLoadExamples": false,
+      "showLoadConfiguration": true,
+      "showModelJson": false,
+      "autoSave": false,
+      "defaultResourceName": "",
+      "loadInitialResource": true,
+      "initialResourceString": null
+    }
+  },
+  {
+    "_id": "66a31ded-40d6-4793-b1f4-b4e58610cc76",
+    "metadata": {
+      "id": "66a31ded-40d6-4793-b1f4-b4e58610cc76",
+      "published": "2015-03-05T16:36:42.218Z",
+      "actor": {
+        "objectType": "person",
+        "id": "jakob@http://130.89.152.19:8080/",
+        "displayName": "jakob"
+      },
+      "target": {
+        "objectType": "dataSet",
+        "id": "c0bed402-187f-bc3c-fd90-380b8fde24be",
+        "displayName": "Circuit with resistor and power supply"
+      },
+      "generator": {
+        "objectType": "application",
+        "url": "http://130.89.152.19:8080/golab/tools/dataViewer/src/main/webapp/dataViewerTool.html?notificationServer=null",
+        "id": "dataViewer@http://130.89.152.19:8080/golab/tools/dataViewer/src/main/webapp/dataViewerTool.html?notificationServer=null",
+        "displayName": "dataViewer"
+      },
+      "provider": {
+        "objectType": "ils",
+        "url": "http://130.89.152.19:8080/golab/tools/dataViewer/src/main/webapp/dataViewerTool.html?notificationServer=null",
+        "id": "http://130.89.152.19:8080/",
+        "inquiryPhase": "unknown",
+        "inquiryPhaseId": "unknown",
+        "inquiryPhaseName": "unknown",
+        "displayName": "Data viewer tool"
+      }
+    },
+    "content": {
+      "dataSourceColumns": [
+        {
+          "imageInformation": {
+            "type": "commonImage",
+            "value": "dcVoltageSourceMeter.png"
+          },
+          "unit": "V"
+        },
+        {
+          "imageInformation": {
+            "type": "commonImage",
+            "value": "ampereMeter.png"
+          },
+          "unit": "A"
+        }
+      ],
+      "dataTable": {
+        "cols": [
+          {
+            "id": "dcVoltageSource",
+            "label": "power",
+            "pattern": "",
+            "type": "number",
+            "p": {}
+          },
+          {
+            "id": "amp1",
+            "label": "amp 1",
+            "pattern": "",
+            "type": "number"
+          }
+        ],
+        "rows": [
+          {
+            "c": [
+              {
+                "v": 0,
+                "f": "0.000 V",
+                "p": {}
+              },
+              {
+                "v": 0,
+                "f": "0.000 µA",
+                "p": {}
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 1,
+                "f": "1.000 V",
+                "p": {}
+              },
+              {
+                "v": 0.01,
+                "f": "10.00 mA",
+                "p": {}
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 2,
+                "f": "2.000 V",
+                "p": {}
+              },
+              {
+                "v": 0.02,
+                "f": "20.00 mA",
+                "p": {}
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 3,
+                "f": "3.000 V",
+                "p": {}
+              },
+              {
+                "v": 0.03,
+                "f": "30.00 mA",
+                "p": {}
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 4,
+                "f": "4.000 V",
+                "p": {}
+              },
+              {
+                "v": 0.04,
+                "f": "40.00 mA",
+                "p": {}
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 5,
+                "f": "5.000 V",
+                "p": {}
+              },
+              {
+                "v": 0.05,
+                "f": "50.00 mA",
+                "p": {}
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_id": "64d2c1d9-853a-44bc-b892-a526e0cbdf25",
+    "metadata": {
+      "id": "64d2c1d9-853a-44bc-b892-a526e0cbdf25",
+      "published": "2015-03-05T16:34:37.236Z",
+      "actor": {
+        "objectType": "person",
+        "id": "jakob@http://130.89.152.19:8080/",
+        "displayName": "jakob"
+      },
+      "target": {
+        "objectType": "dataSet",
+        "id": "1e6e2801-77dd-c0e4-73cf-8037f6218d40",
+        "displayName": "Circuit with light, resistor and power supply"
+      },
+      "generator": {
+        "objectType": "application",
+        "url": "http://130.89.152.19:8080/golab/tools/dataViewer/src/main/webapp/dataViewerTool.html?notificationServer=null",
+        "id": "dataViewer@http://130.89.152.19:8080/golab/tools/dataViewer/src/main/webapp/dataViewerTool.html?notificationServer=null",
+        "displayName": "dataViewer"
+      },
+      "provider": {
+        "objectType": "ils",
+        "url": "http://130.89.152.19:8080/golab/tools/dataViewer/src/main/webapp/dataViewerTool.html?notificationServer=null",
+        "id": "http://130.89.152.19:8080/",
+        "inquiryPhase": "unknown",
+        "inquiryPhaseId": "unknown",
+        "inquiryPhaseName": "unknown",
+        "displayName": "Data viewer tool"
+      }
+    },
+    "content": {
+      "dataSourceColumns": [
+        {
+          "imageInformation": {
+            "type": "commonImage",
+            "value": "dcVoltageSourceMeter.png"
+          },
+          "unit": "V"
+        },
+        {
+          "imageInformation": {
+            "type": "commonImage",
+            "value": "ampereMeter.png"
+          },
+          "unit": "A"
+        },
+        {
+          "imageInformation": {
+            "type": "commonImage",
+            "value": "voltMeter.png"
+          },
+          "unit": "V"
+        },
+        {
+          "imageInformation": {
+            "type": "commonImage",
+            "value": "wattMeter.png"
+          },
+          "unit": "W"
+        }
+      ],
+      "dataTable": {
+        "cols": [
+          {
+            "id": "dcVoltageSource0",
+            "label": "power",
+            "pattern": "",
+            "type": "number"
+          },
+          {
+            "id": "amp0",
+            "label": "amp 1",
+            "pattern": "",
+            "type": "number"
+          },
+          {
+            "id": "volt0",
+            "label": "volt 1",
+            "pattern": "",
+            "type": "number"
+          },
+          {
+            "id": "watt0",
+            "label": "power 1",
+            "pattern": "",
+            "type": "number"
+          }
+        ],
+        "rows": [
+          {
+            "c": [
+              {
+                "v": 0,
+                "f": "0.000 V"
+              },
+              {
+                "v": 0,
+                "f": "0.000 µA"
+              },
+              {
+                "v": 0,
+                "f": "0.000 µV"
+              },
+              {
+                "v": 0,
+                "f": "0.000 µW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 1,
+                "f": "1.000 V"
+              },
+              {
+                "v": 0.01,
+                "f": "10.00 mA"
+              },
+              {
+                "v": 0.5,
+                "f": "500.0 mV"
+              },
+              {
+                "v": 0.005,
+                "f": "5.000 mW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 2,
+                "f": "2.000 V"
+              },
+              {
+                "v": 0.02,
+                "f": "20.00 mA"
+              },
+              {
+                "v": 1,
+                "f": "1.000 V"
+              },
+              {
+                "v": 0.02,
+                "f": "20.00 mW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 3,
+                "f": "3.000 V"
+              },
+              {
+                "v": 0.03,
+                "f": "30.00 mA"
+              },
+              {
+                "v": 1.5,
+                "f": "1.500 V"
+              },
+              {
+                "v": 0.045,
+                "f": "45.00 mW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 4,
+                "f": "4.000 V"
+              },
+              {
+                "v": 0.04,
+                "f": "40.00 mA"
+              },
+              {
+                "v": 2,
+                "f": "2.000 V"
+              },
+              {
+                "v": 0.08,
+                "f": "80.00 mW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 5,
+                "f": "5.000 V"
+              },
+              {
+                "v": 0.05,
+                "f": "50.00 mA"
+              },
+              {
+                "v": 2.5,
+                "f": "2.500 V"
+              },
+              {
+                "v": 0.125,
+                "f": "125.0 mW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 6,
+                "f": "6.000 V"
+              },
+              {
+                "v": 0.06,
+                "f": "60.00 mA"
+              },
+              {
+                "v": 3,
+                "f": "3.000 V"
+              },
+              {
+                "v": 0.18,
+                "f": "180.0 mW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 7,
+                "f": "7.000 V"
+              },
+              {
+                "v": 0.07,
+                "f": "70.00 mA"
+              },
+              {
+                "v": 3.5,
+                "f": "3.500 V"
+              },
+              {
+                "v": 0.245,
+                "f": "245.0 mW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 8,
+                "f": "8.000 V"
+              },
+              {
+                "v": 0.08,
+                "f": "80.00 mA"
+              },
+              {
+                "v": 4,
+                "f": "4.000 V"
+              },
+              {
+                "v": 0.32,
+                "f": "320.0 mW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 9,
+                "f": "9.000 V"
+              },
+              {
+                "v": 0.09,
+                "f": "90.00 mA"
+              },
+              {
+                "v": 4.5,
+                "f": "4.500 V"
+              },
+              {
+                "v": 0.405,
+                "f": "405.0 mW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 10,
+                "f": "10.00 V"
+              },
+              {
+                "v": 0.1,
+                "f": "100.0 mA"
+              },
+              {
+                "v": 5,
+                "f": "5.000 V"
+              },
+              {
+                "v": 0.5,
+                "f": "500.0 mW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 11,
+                "f": "11.00 V"
+              },
+              {
+                "v": 0.11,
+                "f": "110.0 mA"
+              },
+              {
+                "v": 5.5,
+                "f": "5.500 V"
+              },
+              {
+                "v": 0.605,
+                "f": "605.0 mW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 12,
+                "f": "12.00 V"
+              },
+              {
+                "v": 0,
+                "f": "0.000 µA"
+              },
+              {
+                "v": 12,
+                "f": "12.00 V"
+              },
+              {
+                "v": 0,
+                "f": "0.000 µW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 13,
+                "f": "13.00 V"
+              },
+              {
+                "v": 0,
+                "f": "0.000 µA"
+              },
+              {
+                "v": 13,
+                "f": "13.00 V"
+              },
+              {
+                "v": 0,
+                "f": "0.000 µW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 14,
+                "f": "14.00 V"
+              },
+              {
+                "v": 0,
+                "f": "0.000 µA"
+              },
+              {
+                "v": 14,
+                "f": "14.00 V"
+              },
+              {
+                "v": 0,
+                "f": "0.000 µW"
+              }
+            ]
+          },
+          {
+            "c": [
+              {
+                "v": 15,
+                "f": "15.00 V"
+              },
+              {
+                "v": 0,
+                "f": "0.000 µA"
+              },
+              {
+                "v": 15,
+                "f": "15.00 V"
+              },
+              {
+                "v": 0,
+                "f": "0.000 µW"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,45 @@
+<div ng-controller="circuitBoardCtrl" golabCloak resizeAtInit>
+
+    <table class="circuitTable" id="mainContainers">
+        <tr>
+            <td valign="top" align="left">
+                <golabContainer containerTitle="i_titles.components" class="mainElement" id="components"
+                                minimize="vertical">
+                    <componentList></componentList>
+                </golabContainer>
+            </td>
+            <td valign="top">
+                <golabContainer containerTitle="i_titles.circuitBoard" modelName="circuitModel" class="mainElement" id="circuitBoard">
+                    <circuitBoard></circuitBoard>
+                </golabContainer>
+            </td>
+            <td valign="top">
+                <golabContainer containerTitle="i_titles.meters" class="mainElement" id="meters"
+                                style="position:relative;" minimize="vertical">
+                    <meterList></meterList>
+                </golabContainer>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="99">
+                <toolbar>
+                    <loadSave modelName="circuitBoardModel" dataStoreName="predefinedCircuitStore"></loadSave>
+                    <li class="toolBarSpace"></li>
+                    <collaboration modelName="circuitBoardModel"></collaboration>
+                    <li class="toolBarSpace"></li>
+                    <help></help>
+                    <editConfiguration dataStoreName="labConfigurations">
+                        <circuitLabConfigurationOptions></circuitLabConfigurationOptions>
+                    </editConfiguration>
+                </toolbar>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        fixCircuitSimulatorLayout = function () {
+            ut.commons.utils.equalizeHeight(".mainElement")
+        }
+        setTimeout(fixCircuitSimulatorLayout, 0)
+    </script>
+
+</div>

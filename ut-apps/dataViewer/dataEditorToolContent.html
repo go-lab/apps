@@ -1,0 +1,27 @@
+<div golabCloak resizeAtInit style="overflow-x: hidden" ng-controller="dataEditorCtrl">
+    <table class="dataViewer" ng-controller="dataSetEditorCtrl">
+        <tr>
+            <td class="toolPart">
+                <golabContainer containerTitle="i_dataSet.title" modelName="dataSet">
+                    <div>
+                        <dataSetEditor></dataSetEditor>
+                    </div>
+                </golabContainer>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <toolbar>
+                    <loadSave modelName="dataSet" dataStoreName="dataSetStore"></loadSave>
+                    <li class="toolBarSpace"></li>
+                    <dataSetEditorControls></dataSetEditorControls>
+                    <li class="toolBarSpace"></li>
+                    <collaboration modelName="dataSet"></collaboration>
+                    <li class="toolBarSpace"></li>
+                    <help></help>
+                    <editConfiguration></editConfiguration>
+                </toolbar>
+            </td>
+        </tr>
+    </table>
+</div>

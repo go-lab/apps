@@ -1,0 +1,2 @@
+(function(){"use strict";var o;window.ut=window.ut||{},ut.tools=ut.tools||{},ut.tools.observationtool=ut.tools.observationtool||{},ut.commons=ut.commons||{},ut.commons.utils=ut.commons.utils||{},o=function(){return{restrict:"E",template:'<textarea class="observationEditor" ng-model="observation.text"></textarea>\n',replace:!0,link:function(o,t,s){}}},window.ut.tools.observationtool.observationTool.directive("observationEditor".toLowerCase(),[o])}).call(this);
+//# sourceMappingURL=observationEditor.js.map

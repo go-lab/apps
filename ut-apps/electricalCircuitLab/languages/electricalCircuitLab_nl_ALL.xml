@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<messagebundle toolId="electricalCircuitLab" mails="j.sikken@utwente.nl" requires="common, dataViewer">
+  <msg toolId="electricalCircuitLab" name="availableCircuits.category">Categorie:</msg>
+  <msg toolId="electricalCircuitLab" name="availableCircuits.circuit">Circuit:</msg>
+  <msg toolId="electricalCircuitLab" name="availableCircuits.full">Volledig</msg>
+  <msg toolId="electricalCircuitLab" name="availableCircuits.predefined">Voorgedefinieerd</msg>
+  <msg toolId="electricalCircuitLab" name="availableCircuits.realistic">Realisties</msg>
+  <msg toolId="electricalCircuitLab" name="availableCircuits.symbolic">Symbolies</msg>
+  <msg toolId="electricalCircuitLab" name="availableCircuits.view">Weergave</msg>
+  <msg toolId="electricalCircuitLab" name="availableConfigurations.category">Categorie</msg>
+  <msg toolId="electricalCircuitLab" name="availableConfigurations.configuration">Configuratie</msg>
+  <msg toolId="electricalCircuitLab" name="availableConfigurations.imageSet">Plaatjes set</msg>
+  <msg toolId="electricalCircuitLab" name="availableConfigurations.showLights">Laat licht zien</msg>
+  <msg toolId="electricalCircuitLab" name="availableConfigurations.showResisterColorBars">Laat weerstand kleur strepen zien</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.failed">Interne fout, circuit te ingewikkeld</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.internalError">Interne fout, circuit te ingewikkeld</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.invalidStateValues">Interne fout, circuit te ingewikkeld</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.lateShortCircuit">Kortsluiting</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.ohmMeterPowerSupplyCombination">Niet ondersteund: ohm meter en spanningsbron</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.powerSupplyInBranch">Niet ondersteund: spanningsbron in tak</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.shortCircuit">Kortsluiting</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.toManyOhmMeterSources">Niet ondersteund: meerdere ohm meters</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.toManyPowerSupplies">Niet ondersteund: meerdere spanningsbronnen</msg>
+  <msg toolId="electricalCircuitLab" name="circuitErrors.unknownResultType">Interne fout, circuit te ingewikkeld</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.circuitLab">Electrisch circuit lab opties</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.circuitBoardSize">Circuit bord afmetingen</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.circuitBoardSize.tooltip">Selecteer de afmetingen van het circuit board in aantal of componenten (beedte*hoogte)</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.imageSet">Component plaatjes set</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.imageSet.tooltip">Selecteer de gewenste plaatjes set voor de componenten</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.showLightBulbPowerValue">Toon lamp vermogens waarde</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.showLightBulbVoltageValue">Toon lamp spannings waarde</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.showLightEffect">Toon lamp licht effect</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.showResistorColorBars">Toon weerstand kleuren balk</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.showResistorValue">Toon weerstandswaarde</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.dcMode">DC mode</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.dcMode.tooltip">Gebruik de DC (gelijkstroom) mode</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.acMode">AC mode</msg>
+  <msg toolId="electricalCircuitLab" name="circuitLab.configuration.acMode.tooltip">Gebruik de AC (wisselstroom) mode</msg>
+  <msg toolId="electricalCircuitLab" name="editConfiguration.cancel">Annuleer</msg>
+  <msg toolId="electricalCircuitLab" name="editConfiguration.title">Wijzig configuratie</msg>
+  <msg toolId="electricalCircuitLab" name="editResistorDialog.title">Wijzig weerstandswaarde</msg>
+  <msg toolId="electricalCircuitLab" name="testCircuits.category">Categorie:</msg>
+  <msg toolId="electricalCircuitLab" name="testCircuits.circuit">Circuit:</msg>
+  <msg toolId="electricalCircuitLab" name="testCircuits.clearCircuit">Gooi circuit weg</msg>
+  <msg toolId="electricalCircuitLab" name="testCircuits.reload">Herlaad</msg>
+  <msg toolId="electricalCircuitLab" name="titles.circuitBoard">Circuit bord</msg>
+  <msg toolId="electricalCircuitLab" name="titles.circuitBoardWithResourceName">Circuit bord - {0}</msg>
+  <msg toolId="electricalCircuitLab" name="titles.circuitJson">Circuit json</msg>
+  <msg toolId="electricalCircuitLab" name="titles.circuits">Circuits</msg>
+  <msg toolId="electricalCircuitLab" name="titles.components">Componenten</msg>
+  <msg toolId="electricalCircuitLab" name="titles.dataCollector">Data collector</msg>
+  <msg toolId="electricalCircuitLab" name="titles.dataGraph">Data grafiek</msg>
+  <msg toolId="electricalCircuitLab" name="titles.dataSetJson">Dataset json</msg>
+  <msg toolId="electricalCircuitLab" name="titles.hints">Tips</msg>
+  <msg toolId="electricalCircuitLab" name="titles.labConfiguration">Lab configuratie</msg>
+  <msg toolId="electricalCircuitLab" name="titles.meters">Meters</msg>
+  <msg toolId="electricalCircuitLab" name="titles.testCircuits">Test circuits</msg>
+  <msg toolId="electricalCircuitLab" name="help.helpDialog.content.electricalCircuitLab" format="textAngular">
+    <![CDATA[
+    
+    
+      
+<ul>
+   <li> <b>Batterijen</b><br/> De batterijen werken onafhankelijk van de voeding. </li>
+   <li> <b>Meters</b><br/> De cirkels, met een letter er in, zijn de sensoren. Sleep de kleine cirkels van elke meter naar het circuit bord.</li>
+   <li> <b>Dingen verwijderen</b><br/>Je kan dingen van het circuit bord verwijderen, door ze buiten het circuit te slepen.  </li>
+   <li> <b>Wijzigen component waarde</b><br/> Selecteer de component en klik erop. </li>
+   <li> <b>Schakelaar bedienen</b><br/> Selecteer de schakelaar en klik erop. </li>
+   <li> <b>Lampen</b><br/> De lampen zie je niet branden in IE9 en ouder. </li>
+</ul>
+
+   ]]></msg>
+
+  <msg toolId="common" name="collaboration.start.tooltip">Start samenwerking</msg>
+  <msg toolId="common" name="editConfiguration.authoringMode">Oorspronkelijke inhoud opslaan</msg>
+  <msg toolId="common" name="editConfiguration.authoringMode.tooltip">De inhoud van de tool zal worden bewaard als eerste inhoud voor de studenten</msg>
+  <msg toolId="common" name="editConfiguration.autoLoadLatestResource">Laad automatisch het laatst bewaarde document</msg>
+  <msg toolId="common" name="editConfiguration.autoLoadLatestResource.tooltip">Het laatst opgeslagen document zal bij het opstarten worden geladen</msg>
+  <msg toolId="common" name="editConfiguration.autoSave">Automatisch opslaan</msg>
+  <msg toolId="common" name="editConfiguration.autoSave.tooltip">Wijzigingen worden automatisch opgeslagen</msg>
+  <msg toolId="common" name="editConfiguration.close">Sluit</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOption">Individueel/samenwerking</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOption.tooltip">Selecteer indien en wanneer de samenwerking wordt gestart</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.disabled">Individuele</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.manualStart">Gebruiker beslist</msg>
+  <msg toolId="common" name="editConfiguration.collaborationStartupOptions.autoStart">Collaboratieve</msg>
+  <msg toolId="common" name="editConfiguration.debugOptions">Debug opties</msg>
+  <msg toolId="common" name="editConfiguration.defaultResourceName">Standaardnaam</msg>
+  <msg toolId="common" name="editConfiguration.defaultResourceName.tooltip">De standaardnaam van het document</msg>
+  <msg toolId="common" name="editConfiguration.dialogTitle">Wijzig configuratie - {0}</msg>
+  <msg toolId="common" name="editConfiguration.helpHtml">Help</msg>
+  <msg toolId="common" name="editConfiguration.hideSection.tooltip">Verberg opties</msg>
+  <msg toolId="common" name="editConfiguration.hideSectionNotAllowed.tooltip">Mag opties niet verbergen vanwege selectie</msg>
+  <msg toolId="common" name="editConfiguration.loadInitialResource">Oorspronkelijke inhoud laden</msg>
+  <msg toolId="common" name="editConfiguration.loadInitialResource.tooltip">De opgeslagen initiële inhoud zal de aanvankelijke inhoud voor de studenten zijn</msg>
+  <msg toolId="common" name="editConfiguration.multiDocumentMode">Bewaar als</msg>
+  <msg toolId="common" name="editConfiguration.multiDocumentMode.tooltip">Door het tonen van de "Opslaan als" en "Open" knoppen, kunnen de studenten werken met meerdere documenten</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.addName.tooltip">Voeg een naam toe</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionDown.tooltip">Verplaats de geselecteerde naam naar beneden</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.moveSelectionUp.tooltip">Verplaats de geselecteerde naam naar boven</msg>
+  <msg toolId="common" name="editConfiguration.nameListEditor.removeName.tooltip">Verwijder de geselecteerde naam</msg>
+  <msg toolId="common" name="editConfiguration.specialLanguageTerms">Speciale taal termen</msg>
+  <msg toolId="common" name="editConfiguration.openButton.tooltip">Wijzig configuratie</msg>
+  <msg toolId="common" name="editConfiguration.resourceOptions">Resource opties</msg>
+  <msg toolId="common" name="editConfiguration.showImportExport">Import / export knoppen</msg>
+  <msg toolId="common" name="editConfiguration.showImportExport.tooltip">Toon import / export knoppen</msg>
+  <msg toolId="common" name="editConfiguration.showLoadConfiguration">Configuratieknop</msg>
+  <msg toolId="common" name="editConfiguration.showLoadConfiguration.tooltip">Toon de dialoogvenster open configuratie knop</msg>
+  <msg toolId="common" name="editConfiguration.showLoadExamples">Laden voorbeelden knoppen</msg>
+  <msg toolId="common" name="editConfiguration.showLoadExamples.tooltip">Toon laad voorbeelden knoppen</msg>
+  <msg toolId="common" name="editConfiguration.showModelJson">Model json-knop</msg>
+  <msg toolId="common" name="editConfiguration.showModelJson.tooltip">Model json knop weergeven</msg>
+  <msg toolId="common" name="editConfiguration.showResourceName">Toon naam</msg>
+  <msg toolId="common" name="editConfiguration.showResourceName.tooltip">De documentnaam in de titelbalk weergeven</msg>
+  <msg toolId="common" name="editConfiguration.showSection.tooltip">Toon opties</msg>
+  <msg toolId="common" name="editConfiguration.useMyOwnToolHelp">Eigen help</msg>
+  <msg toolId="common" name="editConfiguration.useMyOwnToolHelp.tooltip">Laad mijn eigen help aan de studenten zien</msg>
+  <msg toolId="common" name="editConfiguration.useStandardToolHelp">Standaard help</msg>
+  <msg toolId="common" name="editConfiguration.useStandardToolHelp.tooltip">Laad de standard help aan de studenten zien</msg>
+  <msg toolId="common" name="help.helpDialog.buildDate">Gemaakt op {0}</msg>
+  <msg toolId="common" name="help.helpDialog.dialogTitle">Help</msg>
+  <msg toolId="common" name="help.openButton.tooltip">Laat help zien</msg>
+  <msg toolId="common" name="ils.tools">Tools</msg>
+  <msg toolId="common" name="loadSave.clear.tooltip">Wis inhoud {0}</msg>
+  <msg toolId="common" name="loadSave.configurationDialog.dialogTitle">Laad configuratie voor de {0}</msg>
+  <msg toolId="common" name="loadSave.delete.tooltip">Verwijder {0}</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.cancel">Annuleer</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.delete">Verwijder</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.dialogTitle">Verwijder {0}?</msg>
+  <msg toolId="common" name="loadSave.deleteResourceDialog.question">Weet u zeker dat u dit {0} wilt verwijderen?</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.cancel">Annuleer</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.dialogTitle">Inhoud wissen?</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.erase">Wis</msg>
+  <msg toolId="common" name="loadSave.eraseContentDialog.question">Weet u zeker dat u de inhoud van deze {0} wilt wissen?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.cancel">Annuleer</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.dialogTitle">Inhoud wissen of herstellen?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.erase">Wissen</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.question">Weet u zeker dat u de inhoud van deze {0} wilt wissen of resetten?</msg>
+  <msg toolId="common" name="loadSave.eraseResetContentDialog.reset">Reset</msg>
+  <msg toolId="common" name="loadSave.examples.tooltip">Voorbeelden {0}</msg>
+  <msg toolId="common" name="loadSave.examplesDialog.category">Categorie</msg>
+  <msg toolId="common" name="loadSave.examplesDialog.dialogTitle">Laad voorbeeld {0}</msg>
+  <msg toolId="common" name="loadSave.export.tooltip">Exporteer {0}</msg>
+  <msg toolId="common" name="loadSave.failure.delete" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Verwijderen mislukt<br />Fout: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.import" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Importeren mislukt<br />Fout: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.listMetadata" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Inhoudsopgave bestanden mislukt<br />Fout: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.load" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Laden mislukt<br />Fout: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.loadLatest" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Laden van laatste resource mislukt<br />Fout: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.loadLatestConfiguration" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Laden van laatste configuratie mislukt<br />Fout: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.refresh" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Verversen mislukt<br />Fout: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.save" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Bewaren mislukt<br />Fout: {0}]]></msg>
+  <msg toolId="common" name="loadSave.failure.saveAs" format="textAngular">
+    <![CDATA[
+    
+    
+    
+    
+    Bewaren als mislukt<br />Fout: {0}]]></msg>
+  <msg toolId="common" name="loadSave.import.tooltip">Importeer {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.author">Auteur</msg>
+  <msg toolId="common" name="loadSave.loadDialog.cancel">Annuleer</msg>
+  <msg toolId="common" name="loadSave.loadDialog.date">Datum</msg>
+  <msg toolId="common" name="loadSave.loadDialog.dialogTitle">Laad {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.loadSelected">Laad geselecteerde {0}</msg>
+  <msg toolId="common" name="loadSave.loadDialog.title">Titel</msg>
+  <msg toolId="common" name="loadSave.loadDialog.tool">Tool</msg>
+  <msg toolId="common" name="loadSave.loadDialog.type">Type</msg>
+  <msg toolId="common" name="loadSave.loadDialog.update">Ververs lijst</msg>
+  <msg toolId="common" name="loadSave.new.tooltip">Nieuw {0}</msg>
+  <msg toolId="common" name="loadSave.notification.saved">{0} bewaard</msg>
+  <msg toolId="common" name="loadSave.open.tooltip">Open {0}</msg>
+  <msg toolId="common" name="loadSave.redo.tooltip">Opnieuw uitvoeren</msg>
+  <msg toolId="common" name="loadSave.refresh.tooltip">Ververs inhoud {0}</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.cancel">Annuleer</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.dialogTitle">Vervang bestaande resource?</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.question">"{0}" bestaat al. Wilt u het vervangen?</msg>
+  <msg toolId="common" name="loadSave.replaceResourceDialog.replace">Vervang</msg>
+  <msg toolId="common" name="loadSave.save.tooltip">Bewaar {0}</msg>
+  <msg toolId="common" name="loadSave.saveAs.tooltip">Bewaar als {0}</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.cancel">Annuleer</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.dialogTitle">Bewaar veranderingen?</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.discard">Gooi weg</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.question">Wilt u de wijzigingen in {0} bewaren?</msg>
+  <msg toolId="common" name="loadSave.saveChangesDialog.save">Bewaar</msg>
+  <msg toolId="common" name="loadSave.saveDialog.cancel">Annuleer</msg>
+  <msg toolId="common" name="loadSave.saveDialog.dialogTitle">Voer naam in voor {0}</msg>
+  <msg toolId="common" name="loadSave.saveDialog.download">Downloaden</msg>
+  <msg toolId="common" name="loadSave.saveDialog.save">Bewaar</msg>
+  <msg toolId="common" name="loadSave.saveDialog.saveResource">Bewaar resource</msg>
+  <msg toolId="common" name="loadSave.showModelJson">Laad model json zien</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.close">Sluit</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.dialogTitle">{0} model json</msg>
+  <msg toolId="common" name="loadSave.showModelJsonDialog.refresh">Ververs model json</msg>
+  <msg toolId="common" name="loadSave.title.unnamed">{0}</msg>
+  <msg toolId="common" name="loadSave.titleConfiguration.unnamed">{0} configuratie</msg>
+  <msg toolId="common" name="loadSave.undo.tooltip">Ongedaan maken</msg>
+  <msg toolId="common" name="multiLoadSave.redo.tooltip">Opnieuw uitvoeren</msg>
+  <msg toolId="common" name="multiLoadSave.refresh.tooltip">Ververs resources</msg>
+  <msg toolId="common" name="multiLoadSave.undo.tooltip">Ongedaan maken</msg>
+  <msg toolId="common" name="resourceImport.failure.createResource" format="textAngular">
+    <![CDATA[
+    
+    
+    <p>        Failed to add resource {0}<br/>Error: {1}</p>]]></msg>
+  <msg toolId="common" name="resourceImport.failure.createResource.inCallback.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    <p>        Unexpected error during callback of loading of file {0}<br/>Error: {1}</p>]]></msg>
+  <msg toolId="common" name="resourceImport.failure.createResource.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    <p>        Unexpected error during add resource {0}<br/>Error: {1}</p>]]></msg>
+  <msg toolId="common" name="resourceImport.failure.deleteResource" format="textAngular">
+    <![CDATA[
+    
+    
+    <p>        Failed to delete resource {0}<br/>Error: {1}</p>]]></msg>
+  <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas" format="textAngular">
+    <![CDATA[
+    
+    
+    <p>        Failed to get directory listing<br/>Error: {1}</p>]]></msg>
+  <msg toolId="common" name="resourceImport.failure.listResourceMetaDatas.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    <p>        Unexpected error during get directory listing<br/>Error: {1}</p>]]></msg>
+  <msg toolId="common" name="resourceImport.failure.loadJson" format="textAngular">
+    <![CDATA[
+    
+    
+    <p>        Failed to load file {0}<br/>Error: {1}</p>]]></msg>
+  <msg toolId="common" name="resourceImport.failure.loadJson.unexpected" format="textAngular">
+    <![CDATA[
+    
+    
+    <p>        Unexpected error during loading of file {0}<br/>Error: {1}</p>]]></msg>
+  <msg toolId="common" name="resourceJson.failure.noArray">Bron lijst moet een json array zijn</msg>
+  <msg toolId="common" name="resourceJson.failure.noContent">Bron moet een eigenschap inhoud hebben</msg>
+  <msg toolId="common" name="resourceJson.failure.noMetadata">Bron moet een eigenschap metagegevens hebben</msg>
+  <msg toolId="common" name="resourceJson.failure.noObject">Bron moet een json-object zijn</msg>
+  <msg toolId="common" name="resources.type.name.circuit">Circuit</msg>
+  <msg toolId="common" name="resources.type.name.conceptMap">Concept Map</msg>
+  <msg toolId="common" name="resources.type.name.conclusions">Conclusies</msg>
+  <msg toolId="common" name="resources.type.name.configuration">Configuratie</msg>
+  <msg toolId="common" name="resources.type.name.dataGraph">Data grafiek</msg>
+  <msg toolId="common" name="resources.type.name.dataSet">Dataset</msg>
+  <msg toolId="common" name="resources.type.name.experiment_designs">Experiment ontwerp</msg>
+  <msg toolId="common" name="resources.type.name.hypotheses">Hypotheses</msg>
+  <msg toolId="common" name="resources.type.name.hypotheses.single">Hypothese</msg>
+  <msg toolId="common" name="resources.type.name.observations">Observaties</msg>
+  <msg toolId="common" name="resources.type.name.observations.single">Observatie</msg>
+  <msg toolId="common" name="resources.type.name.questions">Vragen</msg>
+  <msg toolId="common" name="resources.type.name.questions.single">Vraag</msg>
+  <msg toolId="common" name="resources.type.name.reflection">Reflectie</msg>
+  <msg toolId="common" name="resources.type.name.report">Rapport</msg>
+  <msg toolId="common" name="resources.type.name.resource">Bron</msg>
+  <msg toolId="common" name="resources.type.name.table">Tabel</msg>
+  <msg toolId="common" name="resources.type.name.testCommons">Gemeenschappelijke tests</msg>
+  <msg toolId="common" name="resources.type.name.model">Model</msg>
+  <msg toolId="common" name="resources.type.name.test">Test</msg>
+  <msg toolId="common" name="resources.type.name.phetSimWrapping">PhET Sim verpakken</msg>
+  <msg toolId="common" name="tools.name.goModel">GoModel Editor</msg>
+  <msg toolId="common" name="tools.name.circuitLab">Circuit lab</msg>
+  <msg toolId="common" name="tools.name.conceptmapper">Concept Mapper</msg>
+  <msg toolId="common" name="tools.name.conclusionTool">Conclusie tool</msg>
+  <msg toolId="common" name="tools.name.dataEditor">Data editor</msg>
+  <msg toolId="common" name="tools.name.dataViewer">Data viewer</msg>
+  <msg toolId="common" name="tools.name.edt">Experiment ontwerp tool</msg>
+  <msg toolId="common" name="tools.name.hypothesis scratchpad">Hypothese kladblok</msg>
+  <msg toolId="common" name="tools.name.observationTool">Observatie tool</msg>
+  <msg toolId="common" name="tools.name.questioning scratchpad">Vragen kladblok</msg>
+  <msg toolId="common" name="tools.name.reflect">Reflectie tool</msg>
+  <msg toolId="common" name="tools.name.reflectionTool">Reflectie tool</msg>
+  <msg toolId="common" name="tools.name.reportingTool">Rapportage tool</msg>
+  <msg toolId="common" name="tools.name.resourceEditor">Resource editor</msg>
+  <msg toolId="common" name="tools.name.tableTool">Tabel tool</msg>
+  <msg toolId="common" name="tools.name.testCommons">Test commons</msg>
+  <msg toolId="common" name="tools.name.ut.tools.conceptmapper">Concept Mapper</msg>
+  <msg toolId="common" name="tools.name.ut.tools.hypothesisScratchpad">Hypothese kladblok</msg>
+  <msg toolId="common" name="tools.name.ut.tools.questioningScratchpad">Vragen kladblok</msg>
+  <msg toolId="common" name="tools.name.phetSimWrapper">PhET Sim wrapper</msg>
+  <msg toolId="common" name="tools.name.quiz">Quiz tool</msg>
+
+  <msg toolId="dataViewer" name="dataCollector.saveDialog.dataSourceColumn">Voer naam in voor data set</msg>
+  <msg toolId="dataViewer" name="dataCollector.clearDataSetDialog.title">Data wissen?</msg>
+  <msg toolId="dataViewer" name="dataCollector.clearDataSetDialog.question">Weet u zeker dat u de data wilt wissen?</msg>
+  <msg toolId="dataViewer" name="dataCollector.clearDataSetDialog.clear">Wis</msg>
+  <msg toolId="dataViewer" name="dataCollector.clearDataSetDialog.cancel">Annuleer</msg>
+  <msg toolId="dataViewer" name="dataGraph.chartType.tooltip">Selecteer type grafiek</msg>
+  <msg toolId="dataViewer" name="dataGraph.dropArea.leftYAxis.tooltip">Klik en sleep data voor de linker y-as</msg>
+  <msg toolId="dataViewer" name="dataGraph.dropArea.rightYAxis.tooltip">Klik en sleep data voor de rechter y-as</msg>
+  <msg toolId="dataViewer" name="dataGraph.dropArea.xAxis.tooltip">Klik en sleep data voor de x-as</msg>
+  <msg toolId="dataViewer" name="dataGraph.dropArea.yAxis.tooltip">Klik en sleep data voor de y-as</msg>
+  <msg toolId="dataViewer" name="dataGraph.editor.button.tooltip">Wijzig grafiek</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.AreaChart">Vlakkendiagram</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.BarChart">Staafdiagram horizontaal</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.ColumnChart">Staafdiagram verticaal</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.LineChart">Lijngrafiek</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.ScatterChart">Puntenwolk</msg>
+  <msg toolId="dataViewer" name="dataGraph.graphType.Table">Tabel</msg>
+  <msg toolId="dataViewer" name="dataGraph.suggestion.addVariables">Sleep data van "Data set" container naar de X of Y as</msg>
+  <msg toolId="dataViewer" name="dataGraph.title">Data grafiek</msg>
+  <msg toolId="dataViewer" name="dataGraph.titleWithResourceName">Data grafiek - {0}</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.addColumn">Voeg nieuwe kolom toe</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.addRow">Voeg nieuwe rij toe</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.addRowOrColumn">Voeg nieuwe rij of kolom toe</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.button.tooltip">Wijzig Data set</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.column">Kolom</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.deleteSelectedRowsAndColumns">Verwijder geselecteerde rijen en kolommen</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.dialog.title">Wijzig data set</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.dialog.titleWithResourceName">Wijzig data set {0}</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.display">Weergave</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.label">Label</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.moveSelectedRowsDown">Verplaats geselecteerde rijen omlaag</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.moveSelectedRowsUp">Verplaats geselecteerde rijen omhoog</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.row">Rij</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.sortAscendingOnSelectedColumns">Sorteer laag-hoog op basis van geselecteerde kolom</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.sortDescendingOnSelectedColumns">Sorteer hoog-laag op basis van geselecteerde kolom</msg>
+  <msg toolId="dataViewer" name="dataSet.editor.value">Waarde</msg>
+  <msg toolId="dataViewer" name="dataSet.rows">{0} rijen</msg>
+  <msg toolId="dataViewer" name="dataSet.suggestion.loadDataSet">Laad een data set door op het laad icoon te klikken in de "Data set" container</msg>
+  <msg toolId="dataViewer" name="dataSet.title">Dataset</msg>
+  <msg toolId="dataViewer" name="dataSet.titleWithResourceName">Dataset - {0}</msg>
+  <msg toolId="dataViewer" name="help.helpDialog.content.dataViewer" format="textAngular">
+    <![CDATA[
+    
+          <ul>    <li>        <b>Laad een dataset </b>door op het laad icoon te klikken</li>    <li>        <b>Creëer een data tabel of grafiek </b>door data te slepen van de &#34;Data set&#34; container naar de X- of Y-as in de &#34;Data grafiek&#34;    </li>    <li>        <b>Verwijder data van de X- of Y-as</b> door deze uit het gebied te slepen</li>    <li>        <b>Selecteer een type grafiek of tabel</b> via het keuzemenu onder “puntenwolk”    </li></ul>   ]]></msg>
+</messagebundle>

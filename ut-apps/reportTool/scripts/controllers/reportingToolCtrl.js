@@ -1,0 +1,2 @@
+"use strict";var ut;!function(o){var t;!function(o){var t;!function(o){function t(o,t,n,e,i){var a=o;a.reporting={editMode:!1};var u=function(){n.autoSave&&t.updateReportParagraphs()};e(function(){i(u,r)},r)}var r=250;o.reportingTool.controller("reportingToolCtrl",["$scope","reportModel","configurationModel","$timeout","$interval",t])}(t=o.reportingtool||(o.reportingtool={}))}(t=o.tools||(o.tools={}))}(ut||(ut={}));
+//# sourceMappingURL=reportingToolCtrl.js.map

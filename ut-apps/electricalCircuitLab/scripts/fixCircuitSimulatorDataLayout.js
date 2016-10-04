@@ -1,0 +1,2 @@
+(function(){"use strict";window.ut=window.ut||{},ut.simulations=ut.simulations||{},ut.simulations.electricity=ut.simulations.electricity||{},ut.simulations.electricity.fixLayout=function(){var t,i,u,e;return i=$("#components"),t=$("#circuitBoard"),e=$("#meters"),u=Math.max(i.height(),t.height(),e.height()),i.height(u),t.height(u),e.height(u)}}).call(this);
+//# sourceMappingURL=fixCircuitSimulatorDataLayout.js.map

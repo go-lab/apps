@@ -1,0 +1,1188 @@
+[
+  {
+    "metadata": {
+      "id": "0a6e6603-6fe4-4d08-d3eb-287551dd8d9a",
+      "published": "2016-05-03T13:11:06.646Z",
+      "actor": {
+        "objectType": "html_student",
+        "id": "sikken@http://130.89.152.19:8080/",
+        "displayName": "sikken"
+      },
+      "target": {
+        "objectType": "dataGraph",
+        "id": "111851c7-0a69-4b51-a4fa-5c34a21e31d1",
+        "displayName": "power-current scatter graph"
+      },
+      "generator": {
+        "objectType": "application",
+        "url": "http://130.89.152.19:8080/golab/dataViewerTool.html",
+        "id": "dataViewer@http://130.89.152.19:8080/golab/dataViewerTool.html",
+        "displayName": "dataViewer"
+      },
+      "provider": {
+        "objectType": "ils",
+        "url": "http://130.89.152.19:8080/golab/dataViewerTool.html",
+        "id": "http://130.89.152.19:8080/",
+        "inquiryPhase": "unknown",
+        "inquiryPhaseId": "unknown",
+        "inquiryPhaseName": "unknown",
+        "displayName": "Data viewer tool"
+      },
+      "publishedServer": "2016-05-03T13:11:15.035Z"
+    },
+    "content": {
+      "dataSet": {
+        "metadata": {
+          "id": "a22a85e8-998c-4465-9c58-775d958914b4",
+          "published": "2016-05-03T12:56:52.560Z",
+          "actor": {
+            "objectType": "html_student",
+            "id": "sikken@http://130.89.152.19:8080/",
+            "displayName": "sikken"
+          },
+          "target": {
+            "objectType": "dataSet",
+            "id": "1e6e2801-77dd-c0e4-73cf-8037f6218d40",
+            "displayName": "Circuit with light, resistor and power supply"
+          },
+          "generator": {
+            "objectType": "application",
+            "url": "http://130.89.152.19:8080/golab/dataViewerTool.html",
+            "id": "dataViewer@http://130.89.152.19:8080/golab/dataViewerTool.html",
+            "displayName": "dataViewer"
+          },
+          "provider": {
+            "objectType": "ils",
+            "url": "http://130.89.152.19:8080/golab/dataViewerTool.html",
+            "id": "http://130.89.152.19:8080/",
+            "inquiryPhase": "unknown",
+            "inquiryPhaseId": "unknown",
+            "inquiryPhaseName": "unknown",
+            "displayName": "[sikken] Data viewer tool"
+          }
+        },
+        "content": {
+          "dataSourceColumns": [
+            {
+              "imageInformation": {
+                "type": "commonImage",
+                "value": "dcVoltageSourceMeter.png"
+              },
+              "unit": "V"
+            },
+            {
+              "imageInformation": {
+                "type": "commonImage",
+                "value": "ampereMeter.png"
+              },
+              "unit": "A"
+            },
+            {
+              "imageInformation": {
+                "type": "commonImage",
+                "value": "voltMeter.png"
+              },
+              "unit": "V"
+            },
+            {
+              "imageInformation": {
+                "type": "commonImage",
+                "value": "wattMeter.png"
+              },
+              "unit": "W"
+            }
+          ],
+          "dataTable": {
+            "cols": [
+              {
+                "id": "dcVoltageSource0",
+                "label": "power",
+                "pattern": "",
+                "type": "number",
+                "p": {}
+              },
+              {
+                "id": "amp0",
+                "label": "amp 1",
+                "pattern": "",
+                "type": "number",
+                "p": {}
+              },
+              {
+                "id": "volt0",
+                "label": "volt 1",
+                "pattern": "",
+                "type": "number"
+              },
+              {
+                "id": "watt0",
+                "label": "power 1",
+                "pattern": "",
+                "type": "number"
+              }
+            ],
+            "rows": [
+              {
+                "c": [
+                  {
+                    "v": 0,
+                    "f": "0.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µA",
+                    "p": {}
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µV"
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 1,
+                    "f": "1.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.01,
+                    "f": "10.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.5,
+                    "f": "500.0 mV"
+                  },
+                  {
+                    "v": 0.005,
+                    "f": "5.000 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 2,
+                    "f": "2.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.02,
+                    "f": "20.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 1,
+                    "f": "1.000 V"
+                  },
+                  {
+                    "v": 0.02,
+                    "f": "20.00 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 3,
+                    "f": "3.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.03,
+                    "f": "30.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 1.5,
+                    "f": "1.500 V"
+                  },
+                  {
+                    "v": 0.045,
+                    "f": "45.00 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 4,
+                    "f": "4.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.04,
+                    "f": "40.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 2,
+                    "f": "2.000 V"
+                  },
+                  {
+                    "v": 0.08,
+                    "f": "80.00 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 5,
+                    "f": "5.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.05,
+                    "f": "50.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 2.5,
+                    "f": "2.500 V"
+                  },
+                  {
+                    "v": 0.125,
+                    "f": "125.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 6,
+                    "f": "6.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.06,
+                    "f": "60.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 3,
+                    "f": "3.000 V"
+                  },
+                  {
+                    "v": 0.18,
+                    "f": "180.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 7,
+                    "f": "7.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.07,
+                    "f": "70.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 3.5,
+                    "f": "3.500 V"
+                  },
+                  {
+                    "v": 0.245,
+                    "f": "245.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 8,
+                    "f": "8.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.08,
+                    "f": "80.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 4,
+                    "f": "4.000 V"
+                  },
+                  {
+                    "v": 0.32,
+                    "f": "320.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 9,
+                    "f": "9.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.09,
+                    "f": "90.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 4.5,
+                    "f": "4.500 V"
+                  },
+                  {
+                    "v": 0.405,
+                    "f": "405.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 10,
+                    "f": "10.00 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.1,
+                    "f": "100.0 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 5,
+                    "f": "5.000 V"
+                  },
+                  {
+                    "v": 0.5,
+                    "f": "500.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 11,
+                    "f": "11.00 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.11,
+                    "f": "110.0 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 5.5,
+                    "f": "5.500 V"
+                  },
+                  {
+                    "v": 0.605,
+                    "f": "605.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 12,
+                    "f": "12.00 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µA",
+                    "p": {}
+                  },
+                  {
+                    "v": 12,
+                    "f": "12.00 V"
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 13,
+                    "f": "13.00 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µA",
+                    "p": {}
+                  },
+                  {
+                    "v": 13,
+                    "f": "13.00 V"
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 14,
+                    "f": "14.00 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µA",
+                    "p": {}
+                  },
+                  {
+                    "v": 14,
+                    "f": "14.00 V"
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 15,
+                    "f": "15.00 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µA",
+                    "p": {}
+                  },
+                  {
+                    "v": 15,
+                    "f": "15.00 V"
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µW",
+                    "p": {}
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "chartTypes": [
+        "ScatterChart",
+        "LineChart",
+        "AreaChart",
+        "BarChart",
+        "ColumnChart",
+        "Table"
+      ],
+      "chartType": "ScatterChart",
+      "chartOptions": {},
+      "xAxisColumnId": "dcVoltageSource0",
+      "yAxisColumnIds": [
+        "amp0",
+        "watt0"
+      ]
+    }
+  },
+  {
+    "metadata": {
+      "id": "0a6e6603-6fe4-4d08-d3eb-287551dd8d9a",
+      "published": "2016-05-03T13:11:06.646Z",
+      "actor": {
+        "objectType": "html_student",
+        "id": "sikken@http://130.89.152.19:8080/",
+        "displayName": "sikken"
+      },
+      "target": {
+        "objectType": "dataGraph",
+        "id": "111851c7-0a69-4b51-a4fa-5c34a21e31d1",
+        "displayName": "power-current line graph"
+      },
+      "generator": {
+        "objectType": "application",
+        "url": "http://130.89.152.19:8080/golab/dataViewerTool.html",
+        "id": "dataViewer@http://130.89.152.19:8080/golab/dataViewerTool.html",
+        "displayName": "dataViewer"
+      },
+      "provider": {
+        "objectType": "ils",
+        "url": "http://130.89.152.19:8080/golab/dataViewerTool.html",
+        "id": "http://130.89.152.19:8080/",
+        "inquiryPhase": "unknown",
+        "inquiryPhaseId": "unknown",
+        "inquiryPhaseName": "unknown",
+        "displayName": "Data viewer tool"
+      },
+      "publishedServer": "2016-05-03T13:11:15.035Z"
+    },
+    "content": {
+      "dataSet": {
+        "metadata": {
+          "id": "a22a85e8-998c-4465-9c58-775d958914b4",
+          "published": "2016-05-03T12:56:52.560Z",
+          "actor": {
+            "objectType": "html_student",
+            "id": "sikken@http://130.89.152.19:8080/",
+            "displayName": "sikken"
+          },
+          "target": {
+            "objectType": "dataSet",
+            "id": "1e6e2801-77dd-c0e4-73cf-8037f6218d40",
+            "displayName": "Circuit with light, resistor and power supply"
+          },
+          "generator": {
+            "objectType": "application",
+            "url": "http://130.89.152.19:8080/golab/dataViewerTool.html",
+            "id": "dataViewer@http://130.89.152.19:8080/golab/dataViewerTool.html",
+            "displayName": "dataViewer"
+          },
+          "provider": {
+            "objectType": "ils",
+            "url": "http://130.89.152.19:8080/golab/dataViewerTool.html",
+            "id": "http://130.89.152.19:8080/",
+            "inquiryPhase": "unknown",
+            "inquiryPhaseId": "unknown",
+            "inquiryPhaseName": "unknown",
+            "displayName": "[sikken] Data viewer tool"
+          }
+        },
+        "content": {
+          "dataSourceColumns": [
+            {
+              "imageInformation": {
+                "type": "commonImage",
+                "value": "dcVoltageSourceMeter.png"
+              },
+              "unit": "V"
+            },
+            {
+              "imageInformation": {
+                "type": "commonImage",
+                "value": "ampereMeter.png"
+              },
+              "unit": "A"
+            },
+            {
+              "imageInformation": {
+                "type": "commonImage",
+                "value": "voltMeter.png"
+              },
+              "unit": "V"
+            },
+            {
+              "imageInformation": {
+                "type": "commonImage",
+                "value": "wattMeter.png"
+              },
+              "unit": "W"
+            }
+          ],
+          "dataTable": {
+            "cols": [
+              {
+                "id": "dcVoltageSource0",
+                "label": "power",
+                "pattern": "",
+                "type": "number",
+                "p": {}
+              },
+              {
+                "id": "amp0",
+                "label": "amp 1",
+                "pattern": "",
+                "type": "number",
+                "p": {}
+              },
+              {
+                "id": "volt0",
+                "label": "volt 1",
+                "pattern": "",
+                "type": "number"
+              },
+              {
+                "id": "watt0",
+                "label": "power 1",
+                "pattern": "",
+                "type": "number"
+              }
+            ],
+            "rows": [
+              {
+                "c": [
+                  {
+                    "v": 0,
+                    "f": "0.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µA",
+                    "p": {}
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µV"
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 1,
+                    "f": "1.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.01,
+                    "f": "10.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.5,
+                    "f": "500.0 mV"
+                  },
+                  {
+                    "v": 0.005,
+                    "f": "5.000 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 2,
+                    "f": "2.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.02,
+                    "f": "20.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 1,
+                    "f": "1.000 V"
+                  },
+                  {
+                    "v": 0.02,
+                    "f": "20.00 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 3,
+                    "f": "3.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.03,
+                    "f": "30.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 1.5,
+                    "f": "1.500 V"
+                  },
+                  {
+                    "v": 0.045,
+                    "f": "45.00 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 4,
+                    "f": "4.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.04,
+                    "f": "40.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 2,
+                    "f": "2.000 V"
+                  },
+                  {
+                    "v": 0.08,
+                    "f": "80.00 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 5,
+                    "f": "5.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.05,
+                    "f": "50.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 2.5,
+                    "f": "2.500 V"
+                  },
+                  {
+                    "v": 0.125,
+                    "f": "125.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 6,
+                    "f": "6.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.06,
+                    "f": "60.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 3,
+                    "f": "3.000 V"
+                  },
+                  {
+                    "v": 0.18,
+                    "f": "180.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 7,
+                    "f": "7.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.07,
+                    "f": "70.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 3.5,
+                    "f": "3.500 V"
+                  },
+                  {
+                    "v": 0.245,
+                    "f": "245.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 8,
+                    "f": "8.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.08,
+                    "f": "80.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 4,
+                    "f": "4.000 V"
+                  },
+                  {
+                    "v": 0.32,
+                    "f": "320.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 9,
+                    "f": "9.000 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.09,
+                    "f": "90.00 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 4.5,
+                    "f": "4.500 V"
+                  },
+                  {
+                    "v": 0.405,
+                    "f": "405.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 10,
+                    "f": "10.00 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.1,
+                    "f": "100.0 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 5,
+                    "f": "5.000 V"
+                  },
+                  {
+                    "v": 0.5,
+                    "f": "500.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 11,
+                    "f": "11.00 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0.11,
+                    "f": "110.0 mA",
+                    "p": {}
+                  },
+                  {
+                    "v": 5.5,
+                    "f": "5.500 V"
+                  },
+                  {
+                    "v": 0.605,
+                    "f": "605.0 mW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 12,
+                    "f": "12.00 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µA",
+                    "p": {}
+                  },
+                  {
+                    "v": 12,
+                    "f": "12.00 V"
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 13,
+                    "f": "13.00 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µA",
+                    "p": {}
+                  },
+                  {
+                    "v": 13,
+                    "f": "13.00 V"
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 14,
+                    "f": "14.00 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µA",
+                    "p": {}
+                  },
+                  {
+                    "v": 14,
+                    "f": "14.00 V"
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µW",
+                    "p": {}
+                  }
+                ]
+              },
+              {
+                "c": [
+                  {
+                    "v": 15,
+                    "f": "15.00 V",
+                    "p": {}
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µA",
+                    "p": {}
+                  },
+                  {
+                    "v": 15,
+                    "f": "15.00 V"
+                  },
+                  {
+                    "v": 0,
+                    "f": "0.000 µW",
+                    "p": {}
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "chartTypes": [
+        "ScatterChart",
+        "LineChart",
+        "AreaChart",
+        "BarChart",
+        "ColumnChart",
+        "Table"
+      ],
+      "chartType": "LineChart",
+      "chartOptions": {},
+      "xAxisColumnId": "dcVoltageSource0",
+      "yAxisColumnIds": [
+        "amp0",
+        "watt0"
+      ]
+    }
+  },
+  {
+    "metadata": {
+      "id": "fe29f321-161e-400b-bdf2-b7e7f45dc314",
+      "published": "2016-05-17T13:46:29.808Z",
+      "actor": {
+        "objectType": "html_student",
+        "id": "sikken@http://130.89.152.19:8080/",
+        "displayName": "sikken"
+      },
+      "target": {
+        "objectType": "hypotheses",
+        "id": "70bd772d-19bc-4d79-deb0-b0de2fc5da62",
+        "displayName": "hypotheses"
+      },
+      "generator": {
+        "objectType": "application",
+        "url": "http://130.89.152.19:8080/golab/hypothesis.html",
+        "id": "hypothesis scratchpad@http://130.89.152.19:8080/golab/hypothesis.html",
+        "displayName": "hypothesis scratchpad"
+      },
+      "provider": {
+        "objectType": "ils",
+        "url": "http://130.89.152.19:8080/golab/hypothesis.html",
+        "id": "http://130.89.152.19:8080/",
+        "inquiryPhase": "unknown",
+        "inquiryPhaseId": "unknown",
+        "inquiryPhaseName": "unknown",
+        "displayName": "Go-Lab - Hypothesis Scratchpad v1.1"
+      },
+      "publishedServer": "2016-05-17T13:46:33.927Z"
+    },
+    "content": [
+      {
+        "id": "d0a6f00e-8c43-47f3-c12a-ffa33ac6bf0d",
+        "elements": [
+          {
+            "text": "IF",
+            "type": "conditional"
+          },
+          {
+            "text": "electric current",
+            "type": "variable"
+          },
+          {
+            "text": "increases",
+            "type": "conditional"
+          },
+          {
+            "text": "THEN",
+            "type": "conditional"
+          },
+          {
+            "text": "power consumption",
+            "type": "free"
+          },
+          {
+            "text": "increases",
+            "type": "conditional"
+          }
+        ],
+        "tested": false,
+        "approved": false,
+        "state": "unclear",
+        "confidence": 80,
+        "showConfidenceMeter": true
+      },
+      {
+        "id": "4d13a176-41be-489d-faa3-173fc92620be",
+        "elements": [
+          {
+            "text": "IF",
+            "type": "conditional"
+          },
+          {
+            "text": "electric current",
+            "type": "variable"
+          },
+          {
+            "text": "increases",
+            "type": "conditional"
+          },
+          {
+            "text": "THEN",
+            "type": "conditional"
+          },
+          {
+            "text": "luminous intensity",
+            "type": "variable"
+          },
+          {
+            "text": "increases",
+            "type": "conditional"
+          }
+        ],
+        "tested": false,
+        "approved": false,
+        "state": "unclear",
+        "confidence": 70,
+        "showConfidenceMeter": true
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "id": "d2585cd1-cf6b-46ff-fee3-ea71f589b0dd",
+      "published": "2016-05-17T14:28:30.663Z",
+      "actor": {
+        "objectType": "html_student",
+        "id": "sikken@http://130.89.152.19:8080/",
+        "displayName": "sikken"
+      },
+      "target": {
+        "objectType": "observations",
+        "id": "97fe7567-3b12-46d9-e9da-8591e285bbbd",
+        "displayName": "Observations"
+      },
+      "generator": {
+        "objectType": "application",
+        "url": "http://130.89.152.19:8080/golab/observationTool.html",
+        "id": "observationTool@http://130.89.152.19:8080/golab/observationTool.html",
+        "displayName": "observationTool"
+      },
+      "provider": {
+        "objectType": "ils",
+        "url": "http://130.89.152.19:8080/golab/observationTool.html",
+        "id": "http://130.89.152.19:8080/",
+        "inquiryPhase": "unknown",
+        "inquiryPhaseId": "unknown",
+        "inquiryPhaseName": "unknown",
+        "displayName": "Observation tool"
+      },
+      "publishedServer": "2016-05-17T14:28:34.972Z"
+    },
+    "content": {
+      "observations": [
+        {
+          "id": "fb6fda22-7d02-4426-9dd4-38b40b92929b",
+          "created": "2016-05-17T13:47:52.026Z",
+          "lastModified": "2016-05-17T14:06:15.318Z",
+          "text": "The light bulb burns brighter when the current increases",
+          "inquiryPhase": null,
+          "metadata": {
+            "target": {
+              "objectType": "observation"
+            }
+          }
+        },
+        {
+          "id": "a1e40c0a-c24d-4ff4-dfe7-0d0120a4b5d1",
+          "created": "2016-05-17T14:06:20.225Z",
+          "lastModified": "2016-05-17T14:28:27.121Z",
+          "text": "The light bulb blows up when the current is to large",
+          "inquiryPhase": null,
+          "metadata": {
+            "target": {
+              "objectType": "observation"
+            }
+          }
+        }
+      ]
+    }
+  }
+]

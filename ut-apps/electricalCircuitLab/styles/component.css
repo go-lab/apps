@@ -1,0 +1,95 @@
+@charset "utf-8";
+.secondaryTextButton,.unselectable{-moz-user-select:-moz-none;-khtml-user-select:none;-ms-user-select:none;-o-user-select:none}
+.component,.preventLongPress{-webkit-touch-callout:none!important;-webkit-tap-highlight-color:transparent}
+.componentBeingDragged,.dropObjectOutSideDropArea{opacity:.35}
+.golabTitleFont{font-size:16px;font-weight:700;letter-spacing:.75px;font-kerning:none;-webkit-font-variant-ligatures:no-common-ligatures;font-feature-settings:"liga" 0}
+.unselectable{-webkit-user-select:none;user-select:none}
+.textSelectable{-moz-user-select:-moz-text;-khtml-user-select:text;-webkit-user-select:text;-ms-user-select:text;-o-user-select:text;user-select:text}
+.preventLongPress{-webkit-user-select:none}
+body,input,select,td,textarea,th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:15px;font-style:normal;font-variant:normal;font-weight:400;white-space:normal;line-height:normal;color:#3c3c3c}
+.gadgetBodyScrollBars{overflow-y:hidden;overflow-x:auto}
+.horizontalScrollBarReservation{width:100%;height:20px}
+h1{font-weight:400}
+.toolAreaContainer,.workAreaContainer{background:#EBEBEB;border:none;border-radius:3px}
+.toolArea{padding:5px}
+.areaLabel{width:100%;background:#4444ad;color:#fff;font-size:16px;text-align:center;height:25px}
+.activeButton{color:#4444ad;background-size:contain;-webkit-box-sizing:initial;-moz-box-sizing:initial;box-sizing:initial;cursor:pointer}
+.activeButton:hover{color:#0d0592;background-size:contain}
+.activeButton:active{font-weight:bolder;background-size:contain}
+.secondaryTextButton{-webkit-user-select:none;user-select:none;cursor:pointer}
+.fontAweSomeButton,.fontAweSomeButtonSmall{-moz-user-select:-moz-none;-khtml-user-select:none;-ms-user-select:none;-o-user-select:none}
+.pressedButton,.pressedButton:active,.pressedButton:hover{background:#74f257;background-size:contain}
+.disabledButton,.disabledButton:active,.disabledButton:hover{color:#939597;font-weight:400;cursor:default}
+.fontAweSomeStacked{position:relative}
+.fontAweSomeStacked .fontAweSomeStack{position:absolute;text-align:center}
+.fontAweSomeStacked2,.textButton{position:relative;display:inline-block}
+.fontAweSomeStacked .fontAweSomeUnderStar{padding-left:5px;padding-right:5px}
+.fontAweSomeStacked .fontAweSomeStackedStar{left:22px;top:6px;font-size:13px}
+.fontAweSomeStacked .fontAweSomeStackedStar:before{background:rgba(255,255,255,.4)}
+.fontAweSomeButton{padding:4px;margin:2px 2px 5px;font-size:23px;-webkit-user-select:none;user-select:none}
+.fontAweSomeButtonSmall{padding:2px;margin:2px;font-size:13px;-webkit-user-select:none;user-select:none}
+.fontAweSomeButtonLarge,.textButton{-moz-user-select:-moz-none;-ms-user-select:none;-o-user-select:none;-khtml-user-select:none}
+.fontAweSomeButtonLarge{padding:6px;margin:2px 2px 5px;font-size:29px;-webkit-user-select:none;user-select:none}
+.fontAweSomeButtonInHelp{font-size:19px;width:1.4em;text-align:center}
+.textButton{top:-.15em;margin-left:2px;margin-right:8px;font-size:18px;-webkit-user-select:none;user-select:none;white-space:nowrap}
+.textButton:active{font-weight:100}
+.notActiveTextButton{cursor:default}
+.textButtonPlainSize{font-size:15px}
+.fontAweSomeStacked2{width:23px;height:23px;line-height:23px;margin-left:5.5px;margin-bottom:0}
+.fontAweSomeStacked2 .fontAweSomeStack{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.recordingButton .innerButton{font-size:6px;color:red}
+.recordingButton .pressedButton{font-size:12px}
+.disabledButton .innerButton{color:#939597}
+.golabDroppable{border:2px dotted #1BB71F!important}
+.toolbar{background:#EBEBEB;border-top:5px solid #fff}
+.toolbar,.toolbarPart{list-style-type:none;margin:0;position:relative;vertical-align:middle;padding:6px 0 1px}
+.toolbar li,.toolbarPart li{display:inline;color:#4444ad;font-size:20px}
+.toolbar li:hover,.toolbarPart li:hover{color:#0d0592}
+.toolbar li:active,.toolbarPart li:active{font-weight:bolder;-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}
+.toolbar li.status:hover,.toolbarPart li.status:hover{color:#4444ad}
+.toolbar li.status:active,.toolbarPart li.status:active{font-weight:400}
+.verticalToolbar{border-top:none;display:table;padding:0 6px 1px}
+.verticalToolbar li{display:list-item}
+table.verticalToolbarTable{border-spacing:0;padding:0;width:100%}
+table.verticalToolbarTable td{vertical-align:top;background:#EBEBEB;padding:0}
+table.verticalToolbarTable td.verticalToolbarCell{background:#EBEBEB;border-right:5px solid #fff;width:1%;min-width:3em}
+ul.toolbarPart{display:inline;padding-left:0}
+.toolBarBeginSpace{margin:.4em}
+.toolBarSpace{margin:1em}
+.evenColumnBackground{background-color:#fcfcff}
+.oddColumnBackground{background-color:#f3f3ff}
+.deselectedBorder{border:5px solid #fff}
+.selectedBorder{border:5px solid #74f257}
+.selectableListItem{margin-bottom:5px}
+.lastSelectableListItem{margin-bottom:0}
+.rotate0{transform:rotate(0);-ms-transform:rotate(0);-moz-transform:rotate(0);-webkit-transform:rotate(0);-o-transform:rotate(0)}
+.rotate90{transform:rotate(90deg);-ms-transform:rotate(90deg);-moz-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg)}
+.rotate180{transform:rotate(180deg);-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);-o-transform:rotate(180deg)}
+.rotate270{transform:rotate(270deg);-ms-transform:rotate(270deg);-moz-transform:rotate(270deg);-webkit-transform:rotate(270deg);-o-transform:rotate(270deg)}
+.componentWrapper{position:relative;width:82px;height:82px}
+.componentWrapper .componentLabel{position:absolute;top:0;left:4px;font-size:12px;color:#939597;width:30px}
+.componentWrapper .componentLabelPositioned{top:-2px}
+.component{display:inline-block;border:1px solid #939597;background-color:#fff;background-size:82px;width:82px;height:82px;-webkit-user-select:none}
+.component tr{width:82px;min-width:82px}
+.component td{padding:0;margin:0;border:0;line-height:0;text-align:center;width:78px}
+.component td.valueCell{vertical-align:bottom;height:23px}
+.component td.valueCell .componentValue{font-size:12px;line-height:12px}
+.component td.valueCell .topValue{position:absolute;top:14px;left:1px;display:table-cell;text-align:center;width:78px}
+.componentView,.resistorColorBand{display:inline-block}
+.component td.colorBands{height:28px}
+.component td.bottomValueCell{vertical-align:top}
+.component td.bottomValueCell .componentValue{display:inline-block;width:78px}
+.componentSelected{border:1px solid #4444ad}
+.resistorColorBand{min-height:22px;min-width:5px;margin-left:-1px;margin-right:3px;background:#0f0}
+.resistorColorBackground0{background:#000}
+.resistorColorBackground1{background:#864300}
+.resistorColorBackground2{background:red}
+.resistorColorBackground3{background:#ff8000}
+.resistorColorBackground4{background:#ff0}
+.resistorColorBackground5{background:#0f0}
+.resistorColorBackground6{background:#0035ff}
+.resistorColorBackground7{background:#9b00ff}
+.resistorColorBackground8{background:#7f7f7f}
+.resistorColorBackground9{background:#fff}
+.componentLightBulbLight{width:84px;height:84px}
+.componentView .componentSelected{border:1px solid #939597}

@@ -1,0 +1,107 @@
+@charset "utf-8";
+.golabTitleFont{font-size:16px;font-weight:700;letter-spacing:.75px;font-kerning:none;-webkit-font-variant-ligatures:no-common-ligatures;font-feature-settings:"liga" 0}
+.unselectable{-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}
+.textSelectable{-moz-user-select:-moz-text;-khtml-user-select:text;-webkit-user-select:text;-ms-user-select:text;-o-user-select:text;user-select:text}
+.fontAweSomeButton,.secondaryTextButton{-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none}
+.preventLongPress{-webkit-touch-callout:none!important;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+body,input,select,td,textarea,th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:15px;font-style:normal;font-variant:normal;font-weight:400;white-space:normal;line-height:normal;color:#3c3c3c}
+.gadgetBodyScrollBars{overflow-y:hidden;overflow-x:auto}
+.horizontalScrollBarReservation{width:100%;height:20px}
+h1{font-weight:400}
+.toolAreaContainer,.workAreaContainer{background:#EBEBEB;border:none;border-radius:3px}
+.toolArea{padding:5px}
+.areaLabel{width:100%;background:#4444ad;color:#fff;font-size:16px;text-align:center;height:25px}
+.activeButton{color:#4444ad;background-size:contain;-webkit-box-sizing:initial;-moz-box-sizing:initial;box-sizing:initial;cursor:pointer}
+.activeButton:hover{color:#0d0592;background-size:contain}
+.activeButton:active{font-weight:bolder;background-size:contain}
+.secondaryTextButton{user-select:none;cursor:pointer}
+.pressedButton,.pressedButton:active,.pressedButton:hover{background:#74f257;background-size:contain}
+.disabledButton,.disabledButton:active,.disabledButton:hover{color:#939597;font-weight:400;cursor:default}
+.fontAweSomeStacked{position:relative}
+.fontAweSomeStacked .fontAweSomeStack{position:absolute;text-align:center}
+.fontAweSomeStacked2,.textButton{position:relative;display:inline-block}
+.fontAweSomeStacked .fontAweSomeUnderStar{padding-left:5px;padding-right:5px}
+.fontAweSomeStacked .fontAweSomeStackedStar{left:22px;top:6px;font-size:13px}
+.fontAweSomeStacked .fontAweSomeStackedStar:before{background:rgba(255,255,255,.4)}
+.fontAweSomeButton{padding:4px;margin:2px 2px 5px;font-size:23px;user-select:none}
+.fontAweSomeButtonLarge,.fontAweSomeButtonSmall{-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none}
+.fontAweSomeButtonSmall{padding:2px;margin:2px;font-size:13px;user-select:none}
+.fontAweSomeButtonLarge{padding:6px;margin:2px 2px 5px;font-size:29px;user-select:none}
+.textButton,.toolbar li:active,.toolbarPart li:active{-moz-user-select:-moz-none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none;-khtml-user-select:none}
+.fontAweSomeButtonInHelp{font-size:19px;width:1.4em;text-align:center}
+.textButton{top:-.15em;margin-left:2px;margin-right:8px;font-size:18px;user-select:none;white-space:nowrap}
+.textButton:active{font-weight:100}
+.notActiveTextButton{cursor:default}
+.textButtonPlainSize{font-size:15px}
+.fontAweSomeStacked2{width:23px;height:23px;line-height:23px;margin-left:5.5px;margin-bottom:0}
+.fontAweSomeStacked2 .fontAweSomeStack{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.recordingButton .innerButton{font-size:6px;color:red}
+.recordingButton .pressedButton{font-size:12px}
+.disabledButton .innerButton{color:#939597}
+.golabDroppable{border:2px dotted #1BB71F!important}
+.dropObjectOutSideDropArea{opacity:.35}
+.toolbar{background:#EBEBEB;border-top:5px solid #fff}
+.toolbar,.toolbarPart{list-style-type:none;margin:0;position:relative;vertical-align:middle;padding:6px 0 1px}
+.toolbar li,.toolbarPart li{display:inline;color:#4444ad;font-size:20px}
+.toolbar li:hover,.toolbarPart li:hover{color:#0d0592}
+.toolbar li:active,.toolbarPart li:active{font-weight:bolder;user-select:none}
+.toolbar li.status:hover,.toolbarPart li.status:hover{color:#4444ad}
+.toolbar li.status:active,.toolbarPart li.status:active{font-weight:400}
+.verticalToolbar{border-top:none;display:table;padding:0 6px 1px}
+.verticalToolbar li{display:list-item}
+table.verticalToolbarTable{border-spacing:0;padding:0;width:100%}
+table.verticalToolbarTable td{vertical-align:top;background:#EBEBEB;padding:0}
+table.verticalToolbarTable td.verticalToolbarCell{background:#EBEBEB;border-right:5px solid #fff;width:1%;min-width:3em}
+ul.toolbarPart{display:inline;padding-left:0}
+.toolBarBeginSpace{margin:.4em}
+.toolBarSpace{margin:1em}
+.evenColumnBackground{background-color:#fcfcff}
+.oddColumnBackground{background-color:#f3f3ff}
+.deselectedBorder{border:5px solid #fff}
+.selectedBorder{border:5px solid #74f257}
+.selectableListItem{margin-bottom:5px}
+.lastSelectableListItem{margin-bottom:0}
+#meters{-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}
+.device{position:relative;width:170px;background:#fff;border:1px solid #939597;margin-bottom:5px;z-index:2}
+.device .iconLabel{width:60px;text-align:center}
+.device .deviceIcon{margin:10px 10px 4px;width:41px;height:41px;background-size:contain}
+.device .sensor,.sensor{width:26px;height:26px;border-radius:15px}
+.device .label{font-size:12px;color:#3c3c3c}
+.device .iconButton{pointer-events:auto}
+.device .onMeter{opacity:.25}
+.sensor{position:absolute;background-size:contain}
+.dcPowerSupply .powerValue,.device .display{margin:5px;background:#fff;text-align:right;position:absolute}
+.device .sensor{position:absolute;z-index:10;top:46px}
+.device .sensor0{left:65px}
+.device .sensor1{left:133px}
+.device .sensorHole{opacity:.5}
+.device .display{-moz-user-select:-moz-text;-khtml-user-select:text;-webkit-user-select:text;-ms-user-select:text;-o-user-select:text;user-select:text;padding:1px;left:60px;top:5px;width:90px;font-size:15px;border:1px solid #939597;border-radius:2px}
+.dcPowerSupply,.meter{height:80px}
+.dcPowerSupply .powerImage{position:absolute;margin:5px;pointer-events:visible}
+.dcPowerSupply .powerOnOff{position:absolute;margin:5px;left:16px;top:50px}
+.dcPowerSupply .powerValue{left:60px;top:10px;width:70px;font-size:16px}
+.powerControl{position:absolute;left:65px;top:46px;white-space:nowrap;line-height:10px;background:#EBEBEB}
+.powerControl .fontAweSomeButton{padding:0;margin:0 3px 0 4px;font-size:30px}
+.powerChangeSlider{position:absolute;left:65px;top:54px;width:90px;height:15px}
+.powerChangeSlider .ui-slider-handle{height:22px;width:22px;top:-5px}
+.dcPowerSupply .powerOff{background-color:#abaeff}
+.dcPowerSupply .powerOff:hover{background-color:#1BB71F}
+.dcPowerSupply .powerOff:active,.dcPowerSupply .powerOn{background-color:#74f257}
+.dcPowerSupply .shortCircuit{background-color:#fa3927}
+.dcPowerSupply .displayInput{width:50px;text-align:right;padding:2px 0 0}
+.logoContainer{width:160px;position:absolute;bottom:0;text-align:center}
+.sensor_ampere0{background-image:url(../images/ampere0.png)}
+.sensor_ampere1{background-image:url(../images/ampere1.png)}
+.sensor_ampere2{background-image:url(../images/ampere2.png)}
+.sensor_voltMinus0{background-image:url(../images/voltMinus0.png)}
+.sensor_voltMinus1{background-image:url(../images/voltMinus1.png)}
+.sensor_voltMinus2{background-image:url(../images/voltMinus2.png)}
+.sensor_voltPlus0{background-image:url(../images/voltPlus0.png)}
+.sensor_voltPlus1{background-image:url(../images/voltPlus1.png)}
+.sensor_voltPlus2{background-image:url(../images/voltPlus2.png)}
+.sensor_wattVA0{background-image:url(../images/wattVA0.png)}
+.sensor_wattVA1{background-image:url(../images/wattVA1.png)}
+.sensor_wattVA2{background-image:url(../images/wattVA2.png)}
+.sensor_wattV0{background-image:url(../images/wattV0.png)}
+.sensor_wattV1{background-image:url(../images/wattV1.png)}
+.sensor_wattV2{background-image:url(../images/wattV2.png)}

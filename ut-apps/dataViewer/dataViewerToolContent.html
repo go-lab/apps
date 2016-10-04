@@ -1,0 +1,41 @@
+<div golabCloak resizeAtInit style="overflow-x: hidden; overflow-y: hidden">
+    <table class="dataViewer" ng-controller="dataViewerCtrl">
+        <tr>
+            <td class="toolPart" width="1%">
+                <golabContainer containerTitle="i_dataSet.title">
+                    <!--<dataSetDescription></dataSetDescription>-->
+                    <dataSourceColumns></dataSourceColumns>
+                </golabContainer>
+            </td>
+            <td class="verticalToolSeparator"></td>
+            <td class="toolPart">
+                <golabContainer containerTitle="i_dataGraph.title" modelName="dataGraph">
+                    <div ng-controller="dataGraphCtrl">
+                        <dataGraph></dataGraph>
+                    </div>
+                </golabContainer>
+            </td>
+        </tr>
+        <tr>
+            <td width="1%">
+                <toolbar style="white-space:nowrap;">
+                    <loadSave modelName="dataSet" dataStoreName="dataSetStore" new="false" open="true" save="false"></loadSave>
+                    <editDataSetButton></editDataSetButton>
+                </toolbar>
+            </td>
+            <td class="verticalToolSeparator"></td>
+            <td>
+                <toolbar>
+                    <loadSave modelName="dataGraph"></loadSave>
+                    <li class="toolBarSpace"></li>
+                    <editChartButton></editChartButton>
+                    <li class="toolBarSpace"></li>
+                    <collaboration modelName="dataGraph"></collaboration>
+                    <li class="toolBarSpace"></li>
+                    <help></help>
+                    <editConfiguration></editConfiguration>
+                </toolbar>
+            </td>
+        </tr>
+    </table>
+</div>

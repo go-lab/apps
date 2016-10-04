@@ -1,0 +1,106 @@
+@charset "utf-8";
+.golabTitleFont{font-size:16px;font-weight:700;letter-spacing:.75px;font-kerning:none;-webkit-font-variant-ligatures:no-common-ligatures;font-feature-settings:"liga" 0}
+.unselectable{-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}
+.textSelectable{-moz-user-select:-moz-text;-khtml-user-select:text;-webkit-user-select:text;-ms-user-select:text;-o-user-select:text;user-select:text}
+.fontAweSomeButton,.secondaryTextButton{-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none}
+.preventLongPress{-webkit-touch-callout:none!important;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+body,input,select,td,textarea,th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:15px;font-style:normal;font-variant:normal;font-weight:400;white-space:normal;line-height:normal;color:#3c3c3c}
+.gadgetBodyScrollBars{overflow-y:hidden;overflow-x:auto}
+.horizontalScrollBarReservation{width:100%;height:20px}
+h1{font-weight:400}
+.toolAreaContainer,.workAreaContainer{background:#EBEBEB;border:none;border-radius:3px}
+.toolArea{padding:5px}
+.areaLabel{width:100%;background:#4444ad;color:#fff;font-size:16px;text-align:center;height:25px}
+.activeButton{color:#4444ad;background-size:contain;-webkit-box-sizing:initial;-moz-box-sizing:initial;box-sizing:initial;cursor:pointer}
+.activeButton:hover{color:#0d0592;background-size:contain}
+.activeButton:active{font-weight:bolder;background-size:contain}
+.secondaryTextButton{-o-user-select:none;user-select:none;cursor:pointer}
+.pressedButton,.pressedButton:active,.pressedButton:hover{background:#74f257;background-size:contain}
+.disabledButton,.disabledButton:active,.disabledButton:hover{color:#939597;font-weight:400;cursor:default}
+.fontAweSomeStacked{position:relative}
+.fontAweSomeStacked .fontAweSomeStack{position:absolute;text-align:center}
+.fontAweSomeStacked2,.textButton{position:relative;display:inline-block}
+.fontAweSomeStacked .fontAweSomeUnderStar{padding-left:5px;padding-right:5px}
+.fontAweSomeStacked .fontAweSomeStackedStar{left:22px;top:6px;font-size:13px}
+.fontAweSomeStacked .fontAweSomeStackedStar:before{background:rgba(255,255,255,.4)}
+.fontAweSomeButton{padding:4px;margin:2px 2px 5px;font-size:23px;-o-user-select:none;user-select:none}
+.fontAweSomeButtonLarge,.fontAweSomeButtonSmall{-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none}
+.fontAweSomeButtonSmall{padding:2px;margin:2px;font-size:13px;-o-user-select:none;user-select:none}
+.fontAweSomeButtonLarge{padding:6px;margin:2px 2px 5px;font-size:29px;-o-user-select:none;user-select:none}
+.textButton,.toolbar li:active,.toolbarPart li:active{-moz-user-select:-moz-none;-webkit-user-select:none;-ms-user-select:none;-khtml-user-select:none}
+.fontAweSomeButtonInHelp{font-size:19px;width:1.4em;text-align:center}
+.textButton{top:-.15em;margin-left:2px;margin-right:8px;font-size:18px;-o-user-select:none;user-select:none;white-space:nowrap}
+.textButton:active{font-weight:100}
+.notActiveTextButton{cursor:default}
+.textButtonPlainSize{font-size:15px}
+.fontAweSomeStacked2{width:23px;height:23px;line-height:23px;margin-left:5.5px;margin-bottom:0}
+.fontAweSomeStacked2 .fontAweSomeStack{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.hypothesisDisplay,.statement{position:relative;display:inline-block}
+.recordingButton .innerButton{font-size:6px;color:red}
+.recordingButton .pressedButton{font-size:12px}
+.disabledButton .innerButton{color:#939597}
+.golabDroppable{border:2px dotted #1BB71F!important}
+.dropObjectOutSideDropArea{opacity:.35}
+.toolbar{background:#EBEBEB;border-top:5px solid #fff}
+.toolbar,.toolbarPart{list-style-type:none;margin:0;position:relative;vertical-align:middle;padding:6px 0 1px}
+.toolbar li,.toolbarPart li{display:inline;color:#4444ad;font-size:20px}
+.toolbar li:hover,.toolbarPart li:hover{color:#0d0592}
+.toolbar li:active,.toolbarPart li:active{font-weight:bolder;-o-user-select:none;user-select:none}
+.toolbar li.status:hover,.toolbarPart li.status:hover{color:#4444ad}
+.toolbar li.status:active,.toolbarPart li.status:active{font-weight:400}
+.verticalToolbar{border-top:none;display:table;padding:0 6px 1px}
+.verticalToolbar li{display:list-item}
+table.verticalToolbarTable{border-spacing:0;padding:0;width:100%}
+table.verticalToolbarTable td{vertical-align:top;background:#EBEBEB;padding:0}
+table.verticalToolbarTable td.verticalToolbarCell{background:#EBEBEB;border-right:5px solid #fff;width:1%;min-width:3em}
+ul.toolbarPart{display:inline;padding-left:0}
+.toolBarBeginSpace{margin:.4em}
+.toolBarSpace{margin:1em}
+.evenColumnBackground{background-color:#fcfcff}
+.oddColumnBackground{background-color:#f3f3ff}
+.deselectedBorder{border:5px solid #fff}
+.selectedBorder{border:5px solid #74f257}
+.selectableListItem{margin-bottom:5px}
+.lastSelectableListItem{margin-bottom:0}
+.blockExplanation,.blockTitle{margin-bottom:10px}
+.ui-droppable{border:2px dotted #1BB71F!important}
+.conclusionTool,.conclusionTool .verticalToolbarTable{width:100%}
+table.contentTable td{padding-left:14px}
+.dataList{-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;overflow:auto;overflow-x:hidden;overflow-y:scroll;white-space:nowrap;height:332px;width:230px;border:1px solid #939597}
+.observationTextBlock,.observationThumbnail .observationThumbnailText{background:#EBEBEB;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;white-space:pre-wrap;word-break:normal}
+.dataList .dataThumbnail{display:block}
+.dataThumbnail{display:inline-block;text-align:center;padding:5px;border:5px solid #fff;cursor:pointer}
+.dataThumbnail .dataChart{width:190px;height:125px}
+.dataDetailed{text-align:left;padding-left:5px}
+.dataDetailed .dataChart{width:500px;height:300px;min-width:500px;min-height:300px}
+.observationTextBlock{border:1px solid #939597;border-radius:0;font-size:15px}
+.observationThumbnail .observationThumbnailText{border:1px solid #939597;border-radius:0;max-height:95px;overflow-y:scroll;text-align:left;font-size:12px}
+.blockTitle{font-weight:700;white-space:nowrap}
+.conclusionsBlock{padding-left:10px}
+.argueText{width:100%;height:100px}
+.sr-only{display:none}
+table.resultTable td{padding:2px}
+.resultList{padding-left:0;list-style:none}
+.horizontalResultList li{display:inline}
+.result{border:none;padding:2px;margin:2px;font-size:19px;font-weight:400;background:0 0;-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}
+.result.yes:before{content:"\f00c";color:#00ab53}
+.result.no:before{content:"\f00d";color:#b4000b}
+.result.unclear:before{content:"\f128";color:#646464}
+.actionSuggestion{display:inline-block;font-size:20px}
+.hypothesisDisplay{height:40px;width:828px}
+.golabSectionTitle{color:#0d0592;font-size:16px;margin-top:.5em}
+.firstGolabSectionTitle{margin-top:0}
+.golabSectionContent{padding-left:3em}
+.statementsTitle{color:#0d0592;font-size:16px;margin-top:.25em;margin-left:-.5em}
+.statementList{margin:5px}
+.statement{width:100%;padding-top:6px;padding-bottom:6px;vertical-align:middle;border:5px solid #fff;cursor:pointer}
+.hypothesis{min-height:63px;line-height:40px}
+.hypothesis .hypothesisElement_conditional{margin:5px;padding:5px;color:#fff;background:#4444ad;vertical-align:middle}
+.hypothesis .hypothesisElement_input,.hypothesis .hypothesisElement_output,.hypothesis .hypothesisElement_variable{margin:5px;padding:5px;color:#fff;background:#abaeff;vertical-align:middle}
+.hypothesis .hypothesisElement_free{margin:5px;padding:5px;color:#fff;background:#939597;vertical-align:middle}
+.hypothesis .hypothesisConfidence{position:absolute;right:2px;top:1px}
+.question{min-height:39px;padding-left:6px}
+.selectedData,.selectedObservation,.selectedStatement{border:5px solid #74f257;cursor:default}
+.confidenceControls{height:60px;vertical-align:top}
+.confidenceControls .confidenceArrow{top:-20px;vertical-align:top;color:#939597;margin-left:.2em;margin-right:.2em}
+.observationList{height:15em;overflow-y:scroll;background:#EBEBEB}
