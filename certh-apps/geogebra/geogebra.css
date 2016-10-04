@@ -1,0 +1,333 @@
+
+@font-face
+{
+
+    font-family: 'EuphemiaUCAS';
+    font-style:normal;
+    font-weight:normal;
+    src: local("fonts/Euphemia-UCAS/Euphemia_UCAS_Regular_2.6.6.ttf"), url("fonts/Euphemia-UCAS/Euphemia_UCAS_Regular_2.6.6.ttf");
+
+}
+
+body,html{
+    overflow: hidden;
+    font-size: 14px;
+}
+
+html, html *, body, h1, h2,h3, p {
+    font-family: "EuphemiaUCAS","Arial"; !important;
+}
+
+#main_content{
+}
+
+
+/* Cloud Dialogue START */
+
+#popup_group{
+    position: absolute;
+    background-color: #d0ebf2;
+    left: 0;
+    right: 0;
+    height: 320px;
+    padding: 20px 50px;
+    word-spacing: 4px;
+}
+
+#doc_url_input_dialog {
+
+}
+#button_select{
+    background-color: #eee;
+    margin: 0 0 0 -20px;
+    padding: 0 0 0 20px;
+}
+
+#button_select>button{
+    color: #5050d2;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 5px;
+    padding: 10px;
+    outline: none;
+}
+#button_select>button.active{
+    background-color: #5050d2;
+    color: white;
+}
+#button_select>button:hover{
+    background-color: #5050d2;
+    color: white;
+}
+
+#doc_url_input_dialog > h1{
+    font-size: 26px;
+    font-weight: normal;
+}
+#doc_url_input_dialog > h2{
+    font-size: 15px;
+}
+
+#doc_url_input_field {
+
+    border: 0px solid transparent;
+    border-radius: 7px;
+    height: 30px;
+    text-align: left;
+    width: 80%;
+    display: block;
+    margin-top: 10px;
+    margin-left: -5px;
+    max-width: 640px;
+    min-width: 320px;
+}
+
+#doc_url_input_dialog > input.error {
+
+    color: red;
+}
+
+#doc_url_input_field::-webkit-input-placeholder { /* WebKit browsers */
+    font-weight: normal;
+    color: #A3BDCA;
+    padding: 0px;
+}
+#doc_url_input_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-weight: normal;
+    color: #A3BDCA;
+}
+#doc_url_input_field::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-weight: normal;
+    color: #A3BDCA;
+}
+#doc_url_input_field:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-weight: normal;
+    color: #A3BDCA;
+}
+
+#change_geogebra{
+    height: 320px;
+    padding: 13px 30px 0 10px;
+    word-break: break-word;}
+
+#change_geogebra button{
+    background-color: #5050d2;
+    color: white;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    margin-right: 3px;
+    padding: 7px;
+    outline: none;
+}
+#change_geogebra button:disabled{
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+#geogebraButtonControls{
+    display: block;
+    margin: 13px 0 0 0;
+
+}
+#change_geogebra #editQuizButton{
+    background-color: #1bb71f;
+}
+#change_geogebra #resetQuizButton{
+    background-color: #dd4b39;
+}
+#currentQuizUrl{
+    font-size: 18px;
+    line-height: 1.4em;
+    font-weight: bold;
+}
+
+.loading_error {
+
+
+}
+
+#popup_group > a {
+    text-decoration: underline;
+
+}
+
+#popup_group > a:hover{
+}
+
+/* Cloud Dialogue END */
+
+#status_indicator{
+    background-size: cover;
+    border-radius: 12px;
+    bottom: 8%;
+    height: 40px;
+    opacity: 0.7;
+    position: fixed;
+    right: 3%;
+    width: 40px;
+    display: none;
+}
+
+
+/* Quiz Container START */
+
+.geogebra_container {
+    margin: 0 auto;
+    padding: 0;
+    font-weight: normal;
+}
+
+.geogebra_container .question p {
+    font-size: 20px;
+    max-height: 8em;
+}
+
+.geogebra_container .question_container h1 {
+    font-size: 28px;
+}
+
+.geogebra_container .revealed_answer p {
+    min-height: 4em;
+    margin: 10px auto;
+}
+
+.geogebra_container > li {
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+.geogebra_container .possible_answer {
+    background: none repeat scroll 0 0 rgba(118, 214, 255, 0.2);
+    border-radius: 2px;
+    margin-left: 0 !important;
+}
+.geogebra_container .possible_answer:hover {
+    background: none repeat scroll 0 0 rgba(118, 214, 255, 0.8);
+    color: #000000;
+    cursor: pointer;
+}
+
+.how_you_did{
+
+    background-color: #FFC0CB;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    top: 62px;
+    margin: 10px;
+    opacity: 0.4;
+    padding: 6px 30px;
+    position: fixed;
+    right: 10px;
+}
+
+.how_you_did:hover{
+    opacity: 0.9;
+
+}
+
+/* Quiz Container END */
+/* Quiz Results START */
+
+#geogebra_results{
+    margin: 0px ;
+    display: table;
+    width:100%;
+}
+
+
+.geogebraResults{
+    color: #000000;
+    display: table-cell;
+    font-size: 18px;
+    margin: 0 7px 7px 10px;
+    padding: 10px 7px;
+}
+.geogebraEntry{
+    display: table-row;
+}
+.geogebraEntry:first-child,
+.geogebraEntry:nth-child(2n+1){
+    background-color: #ffffff;
+}
+.geogebraEntry:nth-child(2n){
+    background-color: #eeeeee;
+
+}
+.studentName{
+
+
+}
+
+#xls{
+    font-size: 14px;
+    outline: none;
+    margin-top: 14px;
+}
+.questionHeader .questionId{
+    background-color: transparent;
+    border: 1px solid darkgray;
+}
+.questionId{
+    background-color: rgb(118, 214, 255);
+    margin: 0 3px;
+    border: 1px solid transparent;
+    width:22px;
+    height:22px;
+    text-align: center;
+    display: inline-block;
+    cursor: default;
+    opacity: 0.7;
+    -webkit-transition: opacity 0.5;
+    -moz-transition: opacity 0.5;
+    -ms-transition: opacity 0.5;
+    -o-transition: opacity 0.5;
+    transition: opacity 0.5;
+}
+
+.questionId:hover{
+    opacity: 1;
+    -webkit-transition: opacity 0.5;
+    -moz-transition: opacity 0.5;
+    -ms-transition: opacity 0.5;
+    -o-transition: opacity 0.5;
+    transition: opacity 0.5;
+}
+.correct{
+    background-color: #62da97;
+}
+
+.wrong{
+    background-color: #ff8362;
+}
+
+/* Quiz Results END */
+
+
+
+#status_indicator > img{
+    width:100%;
+    height:100%;
+}
+
+#status_indicator > #network{
+}
+
+#status_indicator > #user{
+}
+
+#status_indicator .hidden{
+    display: none;
+}
+
+.no_errors{
+    background-color: #39A033;
+}
+
+.errors{
+    background-color: #FF2F40;
+    color: #FF2F40;
+}
