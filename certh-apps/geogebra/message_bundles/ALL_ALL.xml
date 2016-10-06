@@ -1,0 +1,12 @@
+<messagebundle>
+  <msg name="welcome_msg">Welcome to Geogebra!</msg>
+  <msg name="url_prompt_msg">To start, enter the URL or ID of the Gogebra material to embed</msg>
+  <msg name="validating_url_msg">Validating URL...</msg>
+  <msg name="invalid_url_msg">Invalid URL</msg>
+  <msg name="geogebra_url">Geogebra URL</msg>
+  <msg name="help_msg_1">Need help? Go to the</msg>
+  <msg name="help_msg_2">or try a simple</msg>
+  <msg name="help_msg_3"></msg>
+  <msg name="example_link">example</msg>
+  <msg name="example_link_URL">http://web.geogebra.org/app/?id=1835189</msg>
+</messagebundle>
