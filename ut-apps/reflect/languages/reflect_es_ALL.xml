@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<messagebundle mails="pablo.orduna@deusto.es">
+  <msg name="click_to_get_data">Haga clic para conseguir los datos</msg>
+  <msg name="click_to_refresh_data">Haga clic para actualizar los datos</msg>
+  <msg name="conceptualisation">Conceptualización</msg>
+  <msg name="conclusion">Conclusión</msg>
+  <msg name="discussion">Discusión</msg>
+  <msg name="enter_your_response">Escriba su respuesta</msg>
+  <msg name="general_time_spent">¿Dedicaste relativamente más tiempo del que esperabas en una o más fases? (por ejemplo, una fase particularmente dificil o una fase que atrajo tu atención). Explica por qué crees que tu tiempo en las fases de investigación difieren del tiempo normal estimado. Si tu tiempo fue el mismo entonces explica si crees que todos los proyectos de investigación siguen esta misma distribución.</msg>
+  <msg name="general_transition">¿Hizo usted la visita en las fases por el orden dado (muestra desde arriba hacia abajo en la tabla de abajo)? Si no es así, ¿podría explicar por qué?</msg>
+  <msg name="inquiry_phase">Fase de investigación</msg>
+  <msg name="introduction_time_spent">
+    <![CDATA[<p>La reflexión implica pensar de nuevo sobre lo que hiciste y las elecciones realizadas. Por favor mira el tiempo de acceso a la actividad, a continuaci&#243;n recuerda c&#243;mo pasaste tu tiempo en las fases de investigaci&#243;n. El tiempo general sugerido ha sido provisto por el creador del ILS para ayudarte a hacer las comparaciones.</p>]]></msg>
+  <msg name="introduction_transition">Reflexión implica pensar de nuevo sobre lo que hizo y las decisiones que tomaste. Echa un vistazo a cómo se avanzó a través de las diferentes fases del ILS.</msg>
+  <msg name="investigation">Investigación</msg>
+  <msg name="language">es</msg>
+  <msg name="orientation">Orientación</msg>
+  <msg name="percentage_time_spent">Porcentaje de tiempo invertido en una fase</msg>
+  <msg name="please_answer_question">Por favor contesta la siguiente pregunta:</msg>
+  <msg name="suggested">Sugerido</msg>
+  <msg name="title_reflecting_on_time_spent">Reflexionar sobre el tiempo invertido en las fases de investigación</msg>
+  <msg name="title_reflecting_on_transition">Reflexionando sobre la "navegación" en las fases de indagación</msg>
+  <msg name="tooltip_help">Ver ayuda</msg>
+  <msg name="transitions">Transiciones</msg>
+  <msg name="transitions_subtitle">(Cuándo y por cuánto tiempo has visitado las fases de indagación)</msg>
+  <msg name="yours">Tuyo</msg>
+</messagebundle>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+    <ModulePrefs
+        title="Reflection tool"
+        author="Anjo Anjewierden"
+        author_email="a.a.anjewierden@utwente.nl"
+        width="850"
+        height="900"
+        >
+      <Require feature="osapi" />
+      <Require feature="content-rewrite">
+        <Param name="exclude-url">*</Param>
+      </Require>
+      <Require feature="dynamic-height"/>
+      <Locale messages="languages/reflect_en_ALL.xml" />
+      <Locale lang="en" messages="languages/reflect_en_ALL.xml" />
+      <Locale lang="nl" messages="languages/reflect_nl_ALL.xml" />
+      <Locale lang="et" messages="languages/reflect_et_ALL.xml" />
+      <Locale lang="es" messages="languages/reflect_es_ALL.xml" />
+      <Locale lang="zh" messages="languages/reflect_zh_ALL.xml" />
+      <Locale lang="pt" messages="languages/reflect_pt_ALL.xml" />
+    </ModulePrefs>
+    <Content type="html" href="reflect.html" view="default"></Content>
+</Module>

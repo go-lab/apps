@@ -1,0 +1,121 @@
+/*  $Id$        -*- mode: javascript -*-
+ *  
+ *  File        module.src
+ *  Part of	Go-Lab Reflection Tool
+ *  Author      Anjo Anjewierden, a.a.anjewierden@utwente.nl
+ *  Purpose     Loading of source code
+ *  Works with  ECMAScript 5.1
+ *  
+ *  Notice      Copyright (c) 2014  University of Twente
+ *  
+ *  History     27/10/14  (Created)
+ *		16/04/15  (Last modified)
+ */ 
+
+"use strict";
+
+(function() {
+    var golab = this.golab = this.golab || {};
+    var common = golab.common = golab.common || {};
+    var ut = this.ut = this.ut || {};
+    var tools = ut.tools = ut.tools || {};
+    var reflect = tools.reflect = tools.reflect || {};
+
+    console.log('REFLECT COMPILED ' + __DATE__ + ' ' + __TIME__);
+
+    common.resourceLoader = common.resourceLoader || {};
+
+    var reflect_scripts_module = {
+        reflect_scripts: [
+            [ "css/reflect.css"
+            ],
+            [ "js/reflect.js",
+              "js/messages.js"
+            ],
+            [ "js/model.js",
+              "js/file.js",
+              "js/rules.js",
+              "js/phases.js"
+            ]
+        ]
+    };
+
+    common.resourceLoader.addResourceModules(reflect_scripts_module, "/tools/reflect/");
+
+    var module = {
+        Reflect: [
+            [ "font-awesome",
+              "/libs/js/jsonr.js",
+              "jquery",
+              "jquery-ui",
+              "angular1.3",
+              "ui-notification",
+              "goLabUtils",
+              "eventEmitter",
+              "/libs/js/angular/localStorageModule.js",
+              "/libs/js/jquery.filter_input.js",
+              "/libs/h/goodies.js"
+            ],
+            [ "createEnvironmentHandlers"
+            ],
+            [ "textAngular",
+              "/commons/js/PersistencyUtils.js",
+              "/commons/js/utils.js",
+              "/commons/js/angular/dragAndDrop.js",
+              "/commons/js/angular/ngDataStore.js",
+              "/commons/js/angular/resourceIOUI.js",
+              "/commons/js/dataSource.js",
+              "/commons/js/dataStore.js"
+            ],
+            [ "reflect_scripts"
+            ]
+        ]
+    };
+
+    common.resourceLoader.addResourceModules(module);
+
+    reflect.createEnvironmentHandlers = function(ready) {
+        return common.createEnvironmentHandlers(
+            "reflection",
+            "reflect",
+            common.resourceLoader.getDesiredLanguage(),
+            function(metadataHandler, storageHandler, actionLogger, languageHandler) {
+                reflect.metadataHandler = metadataHandler;
+                reflect.storageHandler = storageHandler;
+                reflect.actionLogger = actionLogger;
+                reflect.languageHandler = languageHandler;
+                reflect.resourceLoader = common.resourceLoader;
+
+                reflect.base_url = common.resourceLoader.getRootUrl();
+                
+                return ready();
+            });
+    };
+
+    var configuration;
+
+    var startReflect = function() {
+        var loadAndStartReflect = function() {
+            common.resourceLoader.orderedLoad([["Reflect"]]);
+            return common.resourceLoader.ready(function() {
+                reflect.createEnvironmentHandlers(function() {
+                    reflect.configure(configuration, function() {
+                        angular.bootstrap(document.body, ['reflect']);
+                        reflect.start();
+                    })
+                })
+            })
+        };
+
+        if (typeof gadgets !== "undefined") {
+            return gadgets.util.registerOnLoadHandler(loadAndStartReflect);
+        } else {
+            return loadAndStartReflect();
+        }
+    };
+
+    reflect.startReflect = function(conf) {
+        configuration = conf;
+        return startReflect();
+    };
+}).call(this);

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<messagebundle mails="pablo.orduna@deusto.es">
+  <msg name="click_to_get_data">Clique para obter os dados</msg>
+  <msg name="click_to_refresh_data">Clique para atualizar os dados</msg>
+  <msg name="conceptualisation">Conceptualização</msg>
+  <msg name="conclusion">Conclusão</msg>
+  <msg name="discussion">Discussão</msg>
+  <msg name="enter_your_response">Insira sua resposta</msg>
+  <msg name="general_time_spent">Passou relativamente mais tempo do que seria de esperar numa ou mais fases? Se assim foi, por favor considere porque foi o caso (por exemplo, uma fase particularmente difícil ou uma fase chamou sua atenção). Explique porque acha que seu tempo nas fases do cenário difere do tempo sugerido como normal. Se o seu tempo foi o mesmo, então explique se acha que todos os projetos de "inquiry" seguem esta distribuição geral.</msg>
+  <msg name="general_transition">Você visitou as fases na ordem dada (mostrado de cima para baixo no gráfico abaixo)? Se não, você poderia explicar porquê?</msg>
+  <msg name="inquiry_phase">Fase de Inquérito</msg>
+  <msg name="introduction_time_spent">Reflexão implica relembrar sobre o que fez e as escolhas que tomou. Por favor, olhe para o tempo da atividade logo abaixo para lembrar como gastou o seu tempo nas fases do inquérito. Uma norma de tempo sugerida, fornecido pelo criador ILS, foi adicionada para ajudá-lo a fazer comparações.</msg>
+  <msg name="introduction_transition">Reflexão envolve relembrar sobre o que fez e as escolhas tomadas. Dê uma vista de olhos em como progrediu através das diferentes fases do ILS.</msg>
+  <msg name="investigation">Investigação</msg>
+  <msg name="language">pt</msg>
+  <msg name="orientation">Orientação</msg>
+  <msg name="percentage_time_spent">Porcentagem do tempo gasto numa fase</msg>
+  <msg name="please_answer_question">Por favor, responda a(s) seguinte(s) pergunta(s):</msg>
+  <msg name="suggested">Sugerido</msg>
+  <msg name="title_reflecting_on_time_spent">Refletindo sobre o tempo gasto nas fases do inquérito</msg>
+  <msg name="title_reflecting_on_transition">Refletindo sobre como navegar as fases de inquérito</msg>
+  <msg name="tooltip_help">Ver ajuda</msg>
+  <msg name="transitions">Transitions</msg>
+  <msg name="transitions_subtitle">(When and for how long you visited the inquiry phases)</msg>
+  <msg name="yours">Seu</msg>
+</messagebundle>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Reflection tool</title>
+
+    <link rel="stylesheet" type="text/css" href="../../commons/css/golabStart.css"/>
+    <script type="text/javascript" src="../../commons/js/errorHandler.js"></script>
+    <script type="text/javascript" src="../../commons/js/jsChecker.js"></script>
+    <script type="text/javascript" src="../../libs/js/headJS/head.js"></script>
+    <script type="text/javascript" src="../../commons/js/resourceLoader.js"></script>
+    <script type="text/javascript" src="../../commons/js/commonsModules.js"></script>
+
+   <script src="http://code.highcharts.com/adapters/standalone-framework.js"></script>
+   <script src="http://code.highcharts.com/highcharts.src.js"></script>
+   <script src="http://code.highcharts.com/highcharts-more.js"></script>
+   <script src="http://code.highcharts.com/modules/heatmap.js"></script>
+   <script src="http://blacklabel.github.io/custom_events/customEvents.js"></script>
+
+    <script type="text/javascript" src="js/module.js"></script>
+  </head>
+
+  <body ng-controller="reflect_controller">
+    <div class="pleaseWaitIcon" ng-cloak=""></div>
+
+    <div ng-cloak="">
+      <table class="verticalToolbarTable">
+        <tr>
+          <td class="verticalToolbarCell">
+            <ul class="toolbar verticalToolbar">
+              <li class="toolBarBeginSpace"></li>
+              <li title="{{ 'click_to_refresh_data' | translate}}"
+                  ng-click="request_data()">
+                <i class="fa fa-refresh fontAweSomeButton activeButton"></i>
+              </li>
+              <li title="{{'tooltip_help' | translate}}">
+                <i ng-show="configuration.show_help"
+                   class="fa fa-question fontAweSomeButton activeButton"
+                   ng-click="show_help()"
+                   title="{{'tooltip_help' | translate}}">
+                </i>
+              </li>
+              <li ng-show="configuration.show_configuration"
+                  ng-click="edit_configuration()">
+                <i class="fa fa-gear fontAweSomeButton activeButton"></i>
+              </li>
+            </ul>
+          </td>
+          <td style="verticalToolbarCell">
+            <golabContainer containerTitle="{{ 'title_reflecting_on_transition' | translate }}">
+              <div style="margin: 5px" ng-bind-html="'introduction_transition' | translate"></div>
+
+              <div ng-show="!status.agent_data_available">
+                <p class="center">
+                  <span title="{{ 'click_to_get_data' | translate}}"
+                        ng-click="request_data()">
+                    <i style="font-size: 60px" class="fa fa-refresh"></i>
+                  </span>
+                </p>
+              </div>
+              <div ng-show="status.agent_data_available"
+                   class="table pct90 center"
+                   style="background-color: white; margin-left: auto; margin-right: auto;">
+              </div>
+
+              <div class="table full">
+                <div class="row pct90" id="transitions" style="text-align: center"
+                     ng-controller="reflect1_controller">
+                </div>
+              </div>
+            </golabContainer>
+
+            <div style="height: 5px"></div>
+
+            <golabContainer ng-show="questions.length > 0" containerTitle="{{ 'please_answer_question' | translate }}">
+              <div class="table full"
+                   ng-repeat="question in questions">
+                <div class="row full" style="padding: 5px">
+                  {{question.text}}
+                </div>
+                <div class="row full">
+                  <textarea class="full"
+                            style="height: 75px; resize: none; overflow-y: scroll; border: 1px solid green"
+                            placeholder="{{ 'enter_your_response' | translate}}"
+                            ng-blur="answers_on_blur()"
+                            ng-model="answers[question.name]">
+                  </textarea>
+                </div>
+              </div>
+            </golabContainer>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!--------------------------------------------------------------
+        *  Configuration
+        *-------------------------------------------------------------->
+
+    <div id="reflect_dialog_help" hidden>
+      <p ng-bind-html="configuration.help_text">
+      </p>
+    </div>
+
+    <div id="reflect_configuration"
+         style="background-color: #EEE;"
+         hidden>
+      <table class="full" style="background-color: #EEE">
+        <tr class="full">
+          <td class="center"
+              ng-class="{reflect_conf_tab: configuring == 'questions', empty: true}"
+              ng-click="set_configuring('questions')" style="width: 33%">
+            <i class="fa" ng-class="{'fa-chevron-down': configuring == 'questions',
+                                    'fa-chevron-right': true}"></i> <b>Questions</b>
+          </td>
+          <td class="center"
+              ng-class="{reflect_conf_tab: configuring == 'norms', empty: true}"
+              ng-click="set_configuring('norms')"
+              style="width: 33%">
+            <i class="fa" ng-class="{'fa-chevron-down': configuring == 'norms',
+                                    'fa-chevron-right': true}"></i> <b>Norms</b>
+          </td>
+          <td class="center"
+              ng-class="{reflect_conf_tab: configuring == 'help', empty: true}"
+              ng-click="set_configuring('help')" style="width: 33%">
+            <i class="fa" ng-class="{'fa-chevron-down': configuring == 'help',
+                                    'fa-chevron-right': true}"></i> <b>Help</b>
+          </td>
+        </tr>
+      </table>
+
+      <div ng-show="configuring == 'help'" style="background-color: white;
+                                                  padding: 5px">
+        <div text-angular ng-model="configuration.help_text"></div>
+      </div>
+
+      <div class="full" style="border: 5px solid #EEE">
+
+        <table class="full" ng-show="configuring == 'norms'"
+               style="background-color: white">
+          <tr>
+            <td colspan="2"><hr/></td>
+          </tr>
+          <tr><td><b>Phase</b></td><td><b>Norm (%)</b></td></tr>
+          <tr>
+            <td colspan="2"><hr/></td>
+          </tr>
+          <tr ng-repeat="phase in model.phases">
+            <td>{{phase.name}}</td>
+            <td>
+              <input ng-model="phase.norm" type="number"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr/></td>
+          </tr>
+          <tr>
+            <td><b>Total</b></td>
+            <td><b>{{model.norm_sum()}}</b></td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr/></td>
+          </tr>
+        </table>
+
+        <table class="full" ng-show="configuring == 'questions'"
+               style="background-color: white">
+          <tr class="full">
+            <td class="top pct25">
+
+              <!-- Questions list -->
+              <table>
+                <tr ng-click="add_question()"
+                    title="Click to add a question">
+                  <td style="min-width: 20px">&nbsp;</td>
+                  <td style="min-width: 20px">&nbsp;</td>
+                  <td class="reflect_conf_header">Questions</td>
+                  <td style="min-width: 20px"><i class="fa fa-plus activeButton"></i></td>
+                </tr>
+                <tr ng-repeat="question in questions">
+                  <td style="min-width: 20px">
+                    <i ng-show="question.name== specify_question.name && !$first"
+                       ng-click="up_question(question)"
+                       title="Click to move question up"
+                       class="fa fa-arrow-up activeButton">
+                    </i>
+                  </td>
+                  <td style="min-width: 20px">
+                    <i ng-show="question.name == specify_question.name && !$last"
+                       ng-click="down_question(question)"
+                       title="Click to move question down"
+                       class="fa fa-arrow-down activeButton">
+                    </i>
+                  </td>
+                  <td ng-class="{reflect_conf_question_selected: specify_question.name == question.name, reflect_conf_question: true}"
+                      ng-click="edit_question(question)">
+                    {{question.name}} &nbsp;
+                  </td>
+                  <td style="min-width: 20px">
+                    <i ng-show="question.name == specify_question.name"
+                       ng-click="delete_question(question)"
+                       title="Click to delete this question"
+                       class="fa fa-close activeButton">
+                    </i>
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+            <td class="top pct75">
+              <div style="min-height: 400px">
+                <table ng-show="specify_question"
+                       class="full top">
+                  <tr class="full"><td><b>Name</b></td></tr>
+                  <tr class="full">
+                    <td>
+                      <input type="text"
+                             ng-class="{reflect_conf_question_name_empty: !specify_question.name}"
+                             ng-model="specify_question.name"/>
+                    </td>
+                  </tr>
+                  <tr class="full"><td><b>Question</b></td></tr>
+                  <tr class="full">
+                    <td class="full">
+                      <textarea style="height: 300px; width: 100%; border: 1px solid black"
+                                ng-show="specify_question.name.length > 0"
+                                ng-model="specify_question.text">
+                      </textarea>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var reflect = window.ut.tools.reflect;
+      var conf = {
+      type: 'time_spent'
+      };
+      reflect.startReflect(conf);
+    </script>
+  </body>
+</html>

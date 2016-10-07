@@ -1,0 +1,85 @@
+<messagebundle>
+   <msg name="variables">Variabelen</msg>
+<msg name="system">Berekend</msg>
+<msg name="tooltip_drop_system"/>
+<msg name="tooltip_system_variable">
+De waarde wordt automatisch uitgerekend als je de waarden van de variabelen aan de linkerkant hebt ingevuld.
+</msg>
+<msg name="add_experiment_row">Voeg experiment toe</msg>
+<msg name="and">en</msg>
+<msg name="available">beschikbaar</msg>
+<msg name="cancel">Annuleer</msg>
+<msg name="confirm">Bevestig</msg>
+<msg name="continue">Verder</msg>
+<msg name="delete">Verwijder</msg>
+<msg name="enter_number">Getal</msg>
+<msg name="enter_text">Tekst</msg>
+<msg name="enter_value">Waarde</msg>
+<msg name="experiment">Experiment</msg>
+<msg name="experiment_data">Experiment data</msg>
+<msg name="experiment_design">Experiment Ontwerp</msg>
+<msg name="instruction_add_trial">
+Klik op
+<i class="fa fa-plus"/>
+om een experiment toe te voegen aan je ontwerp.
+</msg>
+<msg name="instruction_continue_to_lab">
+Als je klaar bent met je ontwerp, kun je experimenten selecteren en uitvoeren in het lab. Of voeg meer experimenten toe.
+</msg>
+<msg name="instruction_drag_variables">
+Selecteer en sleep alle eigenschappen naar "Varieer" of "Houd constant", en selecteer en sleep ten minste één variabele die je wilt meten naar “Meet”.
+</msg>
+<msg name="instruction_enter_results">
+Je kunt je resultaten per experiment invullen. Zodra je een experiment hebt ontworpen, uitgevoerd, en de resultaten hebt ingevuld, wordt dit automatisch opgeslagen in een tabel
+<i class="fa fa-table"/>
+waar je al je uitgevoerde experimenten kunt bekijken en deze per variabele kan sorteren.
+</msg>
+<msg name="instruction_enter_values">
+Voer waarden in
+<i class="fa fa-edit"/>
+voor alle eigenschappen in de experimenten.
+</msg>
+<msg name="instruction_finished"/>
+<msg name="keep_constant">Houd constant</msg>
+<msg name="lab">Lab</msg>
+<msg name="language">nl</msg>
+<msg name="measure">Meet</msg>
+<msg name="measures">Metingen</msg>
+<msg name="ok">OK</msg>
+<msg name="properties">Eigenschappen</msg>
+<msg name="really_clear_design">
+Niet alle experimenten zijn uitgevoerd. Wil je de incomplete experimenten verwijderen en opnieuw beginnen?
+</msg>
+<msg name="remark">Opmerking</msg>
+<msg name="specify_value">Bepaal de waarde voor</msg>
+<msg name="title_experiments_dialog">Uitgevoerde experimenten</msg>
+<msg name="tooltip_completed_variable">Waarde is onderdeel van een afgerond experiment</msg>
+<msg name="tooltip_delete_experiment_trial">Verwijder dit experiment</msg>
+<msg name="tooltip_drop_control">
+Sleep eigenschappen die je constant wilt houden hier naar toe
+</msg>
+<msg name="tooltip_drop_dependent">
+Sleep eigenschappen die je wilt meten hier naar toe
+</msg>
+<msg name="tooltip_drop_independent">
+Sleep eigenschappen die je wilt wijzigen hier naar toe
+</msg>
+<msg name="tooltip_drop_computed">
+Deze variabele wordt automatisch berekend aan de hand van andere variabelen</msg>
+<msg name="tooltip_edit_configuration">Edit the configuration</msg>
+<msg name="tooltip_edit_variable">Klik om de waarde van deze variabele te bepalen</msg>
+<msg name="tooltip_help">Bekijk het hulp scherm</msg>
+<msg name="tooltip_hide_available_variables">Verberg eigenschappen en metingen</msg>
+<msg name="tooltip_measures_list">Sleep metingen naar "Meet"</msg>
+<msg name="tooltip_new_design">
+Verwijder het huidige ontwerp en begin met een nieuwe. De experimenten die je al hebt uitgevoerd, kun je dan nog steeds bekijken in de geschiedenistabel.
+</msg>
+<msg name="tooltip_properties_list">
+Sleep eigenschappen naar "Varieer" of "Houd constant"
+</msg>
+<msg name="tooltip_show_about">Over dit programma ...</msg>
+<msg name="tooltip_show_available_variables">Laat eigenschappen en metingen zien</msg>
+<msg name="tooltip_view_experiments">Bekijk je eerder uitgevoerde experimenten.</msg>
+<msg name="vary">Varieer</msg>
+<msg name="warning">Waarschuwing</msg>
+</messagebundle>

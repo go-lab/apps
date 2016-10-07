@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Chempy: Chemical Equation Entry</title>
+
+    <link rel="stylesheet" type="text/css" href="../../commons/css/golabStart.css"/>
+    <script type="text/javascript" src="../../commons/js/errorHandler.js"></script>
+    <script type="text/javascript" src="../../commons/js/jsChecker.js"></script>
+    <script type="text/javascript" src="../../libs/js/headJS/head.js"></script>
+    <script type="text/javascript" src="../../commons/js/resourceLoader.js"></script>
+    <script type="text/javascript" src="../../commons/js/commonsModules.js"></script>
+    <script type="text/javascript" src="js/module.js"></script>
+  </head>
+
+  <body ng-controller="chempy_controller">
+    <div class="pleaseWaitIcon" ng-cloak=""></div>
+
+    <div ng-cloak=""
+         style="font-size: 21px; line-height: 30px">
+
+      <span ng-show="configuration.show_configuration"
+            ng-click="edit_configuration()"
+            title="Edit configuration">
+        <i style="color: blue" class="fa fa-gear"></i>
+      </span>
+      <chempy answer="{{configuration.answer}}"
+              tries="{{configuration.tries}}"
+              help_button="{{configuration.help_button}}">
+      </chempy>
+    </div>
+
+    <div id="chempy_configuration" hidden
+       style="font-size: 15px; padding: 5px">
+
+      <table class="full" style="background-color: #EEE">
+        <tr class="full">
+          <td class="center" style="width: 100%">
+            <i class="fa fa-chevron-down"></i> <b>Options</b>
+        </td>
+        </tr>
+      </table>
+
+      <table class="full"
+             style="background-color: white">
+        <tr style="vertical-align: top">
+          <td>Answer:</td>
+          <td><input ng-model="configuration.answer"/></td>
+          <td>
+            Enter the answer without sub- and superscripts.  For
+              example: <b>Na+ + Cl- &gt; NaCl</b>, or <b>Fe+3</b>.
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td>Tries:</td>
+          <td><input ng-model="configuration.tries"/></td>
+          <td>
+            Number of times students can try to enter an answer.  After this
+            many tries, the answer is shown (with a yellow background).
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td>Help button:</td>
+          <td><input type="checkbox" ng-model="configuration.help_button"/></td>
+          <td>
+            If set, a help button (question mark) shows how to enter a formula or equation to students.
+          </td>
+        </tr>
+      </table>
+
+    <script type="text/javascript">
+      var chempy = window.ut.tools.chempy;
+      var conf = {};
+      chempy.startChempy(conf);
+    </script>
+  </body>
+</html>

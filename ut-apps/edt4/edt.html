@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Experiment Design Tool</title>
+
+    <link rel="stylesheet" type="text/css" href="../../commons/css/golabStart.css"/>
+    <script type="text/javascript" src="../../commons/js/errorHandler.js"></script>
+    <script type="text/javascript" src="../../commons/js/jsChecker.js"></script>
+    <script type="text/javascript" src="../../libs/js/headJS/head.js"></script>
+    <script type="text/javascript" src="../../commons/js/resourceLoader.js"></script>
+    <script type="text/javascript" src="../../commons/js/commonsModules.js"></script>
+    <script type="text/javascript" src="js/module.js"></script>
+  </head>
+
+  <body ng-controller="controller_edt">
+
+    <div class="pleaseWaitIcon" ng-cloak=""></div>
+    <div ng-cloak="">
+      <golabContainer containerTitle="{{'experiment_design'|g4i18n}}">
+        <experiment_design></experiment_design>
+      </golabContainer>
+    </div>
+
+    <div id="edt_dialog_warning" hidden>
+    </div>
+
+    <div id="edt_dialog_specify_value" hidden>
+      <div id="edt_dialog_values" style="background-color: white;">
+        <button ng-class="{edt_property_value_on: value.name == dialog.selected_value, edt_property_value_off: value.name != dialog.selected_value}"
+            ng-repeat="value in dialog.values"
+            ng-click="selected_property_value(value.name)">{{value.label}}
+        </button>
+      </div>
+    </div>
+
+    <!-- angular based slider input -->
+    <div id="edt_dialog_slider_value" hidden>
+      <p class="center">{{input.variable}}:
+        <span ng-bind-html="input | formatVariableValue"></span>
+      </p>
+      <div id="edt_slider_specify_value"></div>
+      <div style="padding: 3px">
+        <span style="float: left">
+          <span>{{input.minimum}}</span>
+          <span ng-bind-html="input | formatVariableUnit"></span>
+        </span>
+        <span style="float: right">
+          <span>{{input.maximum}}</span>
+          <span ng-bind-html="input | formatVariableUnit"></span>
+        </span>
+      </div>
+    </div>
+
+    <div id="edt_dialog_help" hidden>
+      <div style="display: inline-block; max-height: 350px"
+           id="edt_help_content">
+        <p ng-bind-html="help_text">      </p>
+      </div>
+      <div class="dialogButtonRow">
+        <i class="fa fa-times fa-fw activeButton fontAweSomeButton dialogButton"
+           ng-click="close_dialog('edt_dialog_help')">
+        </i>
+      </div>
+    </div>
+
+    <div id="edt_dialog_range_error" hidden>
+    </div>
+
+    <div id="edt_dialog_about" hidden>
+      <p style="text-align: center">
+        <a href="http://golabz.eu" target="golab">
+          <img border="0"
+             src="http://www.golabz.eu/sites/all/themes/go_labz/images/go-lab/golab-badge-40px.png"/></a><br>
+        <b>Experiment Design Tool</b><br>
+        (version {{configuration.version}})<br><br>
+      </p>
+
+      <p style="text-align: center">
+        <table>
+          <tr> <td colspan="2"><hr></td> </tr>
+          <tr class="top">
+            <th class="right">Design:</th>
+            <td>
+              Siswa van Riesen (<a href="mailto:s.a.n.vanriesen@utwente.nl"><i style="color: #888" class="fa fa-envelope"></i></a>), Anjo Anjewierden (<a href="mailto:a.a.anjewierden@utwente.nl"><i style="color: #888" class="fa fa-envelope"></i></a>), and many others.
+            </td>
+          </tr>
+          <tr>
+            <th class="right">Implementation:</th>
+            <td>Anjo Anjewierden.</td>
+          </tr>
+          <tr> <td colspan="2"><hr></td> </tr>
+        </table>
+      </p>
+      <div class="dialogButtonRow">
+        <i class="fa fa-times fa-fw activeButton fontAweSomeButton dialogButton"
+           ng-click="close_dialog('edt_dialog_about')">
+        </i>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var edt = window.ut.tools.edt;
+      var conf = {};
+      edt.startEDT(conf);
+    </script>
+  </body>
+</html>

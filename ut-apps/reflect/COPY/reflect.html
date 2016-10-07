@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Reflection tool</title>
+
+    <link rel="stylesheet" type="text/css" href="../../commons/css/golabStart.css"/>
+    <script type="text/javascript" src="../../commons/js/errorHandler.js"></script>
+    <script type="text/javascript" src="../../commons/js/jsChecker.js"></script>
+    <script type="text/javascript" src="../../libs/js/headJS/head.js"></script>
+    <script type="text/javascript" src="../../commons/js/resourceLoader.js"></script>
+    <script type="text/javascript" src="../../commons/js/commonsModules.js"></script>
+    <script type="text/javascript" src="js/module.js"></script>
+<!--
+    <script type="text/javascript" src="http://shindig2.epfl.ch/ils/main/ils_graaspeu.js"></script>
+-->
+  </head>
+
+  <body ng-controller="reflect_controller" style="font-size: 21px">
+    <div class="pleaseWaitIcon" ng-cloak=""></div>
+
+    <div ng-cloak="">
+      <golabContainer containerTitle="{{ 'title_reflecting_on_time_spent' | translate }}">
+        <div ng-bind-html="'introduction_time_spent' | translate"></div>
+        <hr>
+        <div ng-show="!status.agent_data_available">
+          <p class="center">
+            <span title="{{ 'click_to_get_data' | translate}}"
+                  ng-click="request_data()">
+              <i style="font-size: 60px" class="fa fa-refresh"></i>
+            </span>
+          </p>
+        </div>
+        <div ng-show="status.agent_data_available"
+             class="table pct80 center border"
+             style="background-color: white; margin-left: auto; margin-right: auto;">
+          <div class="row full">
+            <div class="cell pct30 borderrb header">{{ 'inquiry_phase' | translate}}</div>
+            <div class="cell pct70 borderb header">{{ 'percentage_time_spent' | translate}}
+              &nbsp; &nbsp; &nbsp; &nbsp;
+              <span title="{{ 'click_to_refresh_data' | translate}}"
+                    ng-click="request_data()">
+                <i class="fa fa-refresh"></i>
+              </span>
+            </div>
+          </div>
+          <div class="row full" ng-repeat="row in model.data">
+            <div class="cell pct30 gborderrb padding middle bold">{{row.phase | translate}}</div>
+            <div class="cell pct70 gborderb middle">
+              <div class="table full">
+                <div class="time_spent_student" style="width: {{row.percentage_student}}%;">
+                </div>
+                <div class="time_spent_norm"
+                     style="width: {{row.percentage_norm}}%;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row full border">
+            <div class="cell pct30">
+            </div>
+            <div class="cell pct70">
+              <div class="table full">
+                <div class="cell pct10 time_spent_legend"></div>
+                <div class="cell pct10 time_spent_legend"></div>
+                <div class="cell pct10 time_spent_legend"></div>
+                <div class="cell pct10 time_spent_legend"></div>
+                <div class="cell pct10 time_spent_legend"></div>
+                <div class="cell pct10 time_spent_legend"></div>
+                <div class="cell pct10 time_spent_legend"></div>
+                <div class="cell pct10 time_spent_legend"></div>
+                <div class="cell pct10 time_spent_legend"></div>
+                <div class="cell pct10"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row full">
+            <div class="cell pct30">
+            </div>
+            <div class="cell pct70">
+              <div class="table full">
+                <div class="cell right pct10">10%</div>
+                <div class="cell right pct10">20%</div>
+                <div class="cell right pct10">30%</div>
+                <div class="cell right pct10">40%</div>
+                <div class="cell right pct10">50%</div>
+                <div class="cell right pct10">60%</div>
+                <div class="cell right pct10">70%</div>
+                <div class="cell right pct10">80%</div>
+                <div class="cell right pct10">90%</div>
+                <div class="cell right pct10">&nbsp;</div>
+              </div>
+              <div class="row full">&nbsp;</div>
+              <div class="row full">
+                <div class="cell middle pct50">&nbsp;</div>
+                <div class="cell middle pct5 time_spent_student_legend"></div>
+                <div class="cell middle pct3">&nbsp;</div>
+                <div class="cell middle pct15 left">{{ 'yours' | translate }}</div>
+                <div class="cell middle pct5 time_spent_norm_legend"></div>
+                <div class="cell middle pct3">&nbsp;</div>
+                <div class="cell middle pct15 left">{{ 'suggested' | translate }}</div>
+                <div class="cell middle pct4">&nbsp;</div>
+
+              </div>
+              <div class="row full">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div ng-repeat="question in questions.time_spent">
+          <div class="table full">
+            <div class="row full">
+              <div class="row top padding border"><b>{{ 'please_answer_question' | translate}}</b><br><p>{{question.text}}</p></div>
+              <div class="row">
+                <textarea style="font-size: 21px; height: 100%; width: 100%; border: 1px solid red"
+                          placeholder="{{ 'enter_your_response' | translate}}"
+                          ng-blur="answers_on_blur(question.id)"
+                          ng-model="answers.time_spent[question.id]">
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </golabContainer>
+    </div>
+
+    <script type="text/javascript">
+      var reflect = window.ut.tools.reflect;
+      var conf = {
+      type: 'time_spent'
+      };
+      reflect.startReflect(conf);
+    </script>
+  </body>
+</html>

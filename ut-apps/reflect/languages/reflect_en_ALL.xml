@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<messagebundle mails="pablo.orduna@deusto.es">
+  <msg name="click_to_get_data">Click to get the data</msg>
+  <msg name="click_to_refresh_data">Click to refresh the data</msg>
+  <msg name="conceptualisation">Conceptualisation</msg>
+  <msg name="conclusion">Conclusion</msg>
+  <msg name="discussion">Discussion</msg>
+  <msg name="enter_your_response">Enter your response</msg>
+  <msg name="general_time_spent">Did you spend relatively more time than could be expected in one or more of the phases? If so, please consider why this was the case (e.g., a phase particularly difficult or a phase engaged your attention). Explain why you think your time in the inquiry phases differed from the suggested norm time. If your time was the same then explain if you think all inquiry projects follow this general distribution.</msg>
+  <msg name="general_transition">Did you visit the phases in the order given (shown from top to bottom in the chart below)? If not, could you explain why?</msg>
+  <msg name="inquiry_phase">Inquiry phase</msg>
+  <msg name="introduction_time_spent">Reflection involves thinking back about what you did and the choices you made. Please look at the activity time log below to recall how you spent your time in the inquiry phases. A suggested norm time, provided by the ILS creator, has been added to help you make comparisons.</msg>
+  <msg name="introduction_transition">Reflection involves thinking back about what you did and the choices you made. Have a look at how you progressed through the different phases in the ILS.</msg>
+  <msg name="investigation">Investigation</msg>
+  <msg name="language">en</msg>
+  <msg name="orientation">Orientation</msg>
+  <msg name="percentage_time_spent">Percentage of time you spent in a phase</msg>
+  <msg name="please_answer_question">Please answer the following question(s):</msg>
+  <msg name="suggested">Suggested</msg>
+  <msg name="title_reflecting_on_time_spent">Reflecting on time spent in inquiry phases</msg>
+  <msg name="title_reflecting_on_transition">Reflecting on navigating the inquiry phases</msg>
+  <msg name="tooltip_help">View help</msg>
+  <msg name="transitions">Transitions</msg>
+  <msg name="transitions_subtitle">(When and for how long you visited the inquiry phases)</msg>
+  <msg name="yours">Yours</msg>
+</messagebundle>

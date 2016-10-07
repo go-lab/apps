@@ -1,0 +1,60 @@
+/*  $Id$	-*- mode: css -*-
+ *  
+ *  File	entry.less
+ *  Part of     Go-Lab Entry Tool
+ *  Author	Anjo Anjewierden, a.a.anjewierden@utwente.nl
+ *  Purpose	Cascading style sheet
+ *  Works with	Less, CSS
+ *  
+ *  Notice	Copyright (c) 2016  University of Twente
+ *  
+ *  History	01/03/16  (Created)
+ *  		30/06/16  (Last modified)
+ */ 
+
+@charset "utf-8";
+
+@import "../../commons/css/golabColors";
+@import "../../commons/css/golabStyle";
+@import "../../commons/css/utils";
+
+@correct-color: rgba(98, 218, 151, 0.5);
+@correct-color-strong: rgba(98, 218, 151, 1);
+@wrong-color: rgba(255, 131, 98, 0.5);
+@wrong-color-strong: rgba(255, 131, 98, 1);
+@tries-color: rgba(246, 246, 59, 0.9);
+
+@none-color: rgba(118, 214, 255, 0.2);		// Very light blue
+//@enter-color: rgba(118, 214, 255, 0.1);		// Light blue
+@enter-color: "#ebebeb";
+@enter-hover: rgba(118, 214, 255, 0.8);		// Darker blue
+
+.entry-font {
+    font-family: @golabFontFamily;
+    font-size: 18px;
+};
+
+.entry-full {
+    width: 100%;
+};
+
+//  Make popover wider
+.popover {
+    max-width: 400px;
+};
+
+.entry-has-popover:hover {
+    color: blue;
+};
+
+.entry-text-input {
+    background-color: #ebebeb;
+    color: #000000;
+    border: 0px;
+    resize: none;
+    padding: 5px !important;
+};
+
+.entry-resize {
+    resize: both;
+};

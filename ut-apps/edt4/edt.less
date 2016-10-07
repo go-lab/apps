@@ -1,0 +1,619 @@
+/*  $Id$	-*- mode: css -*-
+ *  
+ *  File	edt.less
+ *  Part of	Go-Lab Experimental Design Tool
+ *  Author	Anjo Anjewierden, a.a.anjewierden@utwente.nl
+ *  Purpose	Cascading style sheet
+ *  Works with	Less, CSS
+ *  
+ *  Notice	Copyright (c) 2013  University of Twente
+ *  
+ *  History	21/03/13  (Created)
+ *  		02/11/14  (Last modified)
+ */ 
+
+@charset "utf-8";
+
+@import "../../commons/css/golabColors";
+@import "../../commons/css/golabStyle";
+@import "../../commons/css/utils";
+
+@oldprimaryColor: #00BACC;
+@oldprimaryColorLight: #92D6E3;
+@oldprimaryColorText: #00B7CD;
+
+@oldsecondaryColor: #FAA519;
+@oldsecondaryColorLight: #FDBE63;
+@oldsecondaryColorText: #FAA519;
+
+@oldtertiaryColor: #939597;
+@oldtertiaryColorLight: #f5f5f5;
+@oldtertiaryColorText: #3f3f3f;
+
+@golabEvenColumnColor: #f8f8ff;
+@golabOddColumnColor: #ddddee;
+
+/*
+@tableOddColor: #eeeeff;
+@tableEvenColor: #ddeeff;
+*/
+
+@tableOddColor: @golabOddColumnColor;
+@tableEvenColor: @golabEvenColumnColor;
+
+
+.ta-editor {
+    min-height: 300px;
+    height: auto;
+    overflow: auto;
+    font-family: inherit;
+    font-size: 100%;
+    margin:20px 0;
+}
+
+.btn-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.edt_configuration_label {
+    font-weight: bold;
+/*    border-bottom: 1px dotted black; */
+};
+
+
+/*------------------------------------------------------------
+ *  For the configuration (edt_conf_ ...)
+ *------------------------------------------------------------*/
+
+@selectionWidth: 2px;
+
+.edt_conf_tab {
+    background-color: @golabOddColumnColor;
+    border-top: 1px solid @primaryColor;
+    border-left: 1px solid @primaryColor;
+    border-right: 1px solid @primaryColor;
+}
+
+.empty {
+};
+
+.edt_disabled {
+    color: grey;
+};
+
+.edt_stringEditor {
+  border: @selectionWidth solid @golabWhite;
+
+  input {
+    width: 100%;
+  }
+};
+
+.edt_selectedStringEditor {
+  div {
+    border: @selectionWidth solid @secondaryColorLight;
+    width: 90%;
+  }
+};
+
+
+.edt_unselectedStringEditor {
+  div {
+    width: 90%;
+  }
+};
+
+
+.edt_conf_feedback {
+    color: red;
+}
+
+//  In the list of variables, measures
+.edt_conf_header {
+    color: white;
+    background-color: @primaryColor;
+    font-size: 17px;
+    min-width: 150px;
+    font-weight: bold;
+}
+
+//  In the list of variables, measures
+.edt_conf_variable {
+    color: black;
+    background-color: white;
+    vertical-align: middle;
+    font-size: 15px;
+    border: 1px solid black;
+    padding: 2px;
+}
+
+//  In the list of variables, measures
+.edt_conf_variable_selected {
+    color: black;
+    background-color: @golabOddColumnColor;
+    vertical-align: middle;
+    font-size: 15px;
+    border: 1px solid black;
+    padding: 2px;
+    font-weight: bold;
+};
+
+.edt_conf_variable_name_empty {
+    border: 1px solid red;
+};
+
+input[type="radio"] + span {
+    display: inline-block;
+    width: 8em;
+    cursor: pointer;
+    background-color: @golabEvenColumnColor;
+    color: black;
+    text-align: center;
+    font-weight: normal;
+    border: 1px solid black;
+}
+
+input[type="number"] {
+    width: 3em;
+};
+
+.edt_numerical {
+    width: 5em;
+    text-align: right;
+};
+
+.edt_text {
+    width: 8em;
+    text-align: left;
+};
+
+input[type="radio"]:checked + span {
+    display: inline-block;
+    width: 8em;
+//    color: black;
+    background-color: @golabOddColumnColor;
+    font-weight: bold;
+};
+
+#edt_dialog_content {
+    overflow-y: scroll;
+};
+
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+};
+
+#edt_configuration > .ui-dialog-titlebar-close {
+    visibility: hidden !important;
+    width: 100%;
+    max-width: 700px;
+};
+
+.middle {
+    vertical-align: middle;
+};
+
+.no_white_space {
+    padding: 0px;
+    margin: 0px;
+};
+
+.top {
+    vertical-align: top;
+};
+
+.border {
+    border: 1px solid black;
+};
+
+.full {
+    width: 100%;
+};
+
+.cell {
+    display: table-cell;
+};
+
+.row {
+    display: table-row;
+};
+
+.table {
+    display: table;
+};
+
+.pct25 {
+    width: 25%;
+};
+
+.pct75 {
+    width: 75%;
+};
+
+.right {
+    text-align: right;
+};
+
+.left {
+    text-align: left;
+};
+
+.center {
+    text-align: center;
+};
+
+.edt_input_dependent_finished {
+    width: 10em;
+};
+
+.edt_input_dependent_passive {
+    width: 10em;
+};
+
+.edt_input_dependent_active {
+    width: 10em;
+    border: 1px solid red !important;
+};
+
+.edt_property_value_on {
+    background-color: @secondaryColorLight;
+    min-height: 30px;
+    display: inline;
+    font-size: 1em;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.edt_property_value_off {
+    background-color: @primaryColorLight;
+    min-height: 30px;
+    display: inline;
+    font-size: 1em;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*------------------------------------------------------------
+ *  General
+ *------------------------------------------------------------*/
+
+/*  No text cursor */
+body {
+    cursor: default;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -khtml-user-select: none !important; 
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+   font-size: 20px;
+}
+
+.edt_term {
+    font-weight: bold;
+}
+
+
+/*------------------------------------------------------------
+ *  Dialogs
+ *------------------------------------------------------------*/
+
+//  Hide close button from dialog if class="no-close"
+.no-close .ui-dialog-titlebar-close {
+  display: none
+}
+
+//  Variable header (e.g., Vary, Keep constant)
+.edt_variable_header {
+    background-color: @primaryColor;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    height: 2em;
+};
+
+.edt_variable_header_empty {
+    background-color: @primaryColor;
+    color: white;
+    font-size: 15px;
+    height: 2em;
+    width: 30%;
+};
+
+//  Table with list of properties and measures to select from
+.edt_variable_list {
+    border: 0px solid grey;
+    background-color: white;
+    font-size: 15px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 6px 6px;
+}
+
+//  In the list of variables, measures
+.edt_variable_assigned {
+    color: grey;
+    vertical-align: middle;
+    font-size: 15px;
+    border: 1px solid lightgrey;
+    box-shadow: 3px 3px white;
+    padding: 5px;
+}
+
+//  In the list of properties, measures
+.edt_variable_unassigned {
+    color: black;
+    vertical-align: middle;
+    font-size: 15px;
+    border: 1px solid @primaryColor;
+//    box-shadow: 3px 3px grey;
+    padding: 5px;
+}
+
+//  In the list of properties, measures
+.edt_variable_text {
+    padding-right: 3px;
+    background-color: white;
+    box-shadow: 1px 2px 2px 1px grey;
+}
+
+//  For properties assigned to a role in the list
+.edt_property_assigned {
+    color: black;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid @primaryColor;
+    box-shadow: 3px 3px grey;
+    padding: 5px;
+    font-weight: bold;
+}
+
+//  For cells within a row
+.edt_row_index {
+    color: black;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+//  For cells within a row
+.edt_row_cell {
+    color: black;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 15px;
+    height: 38px;
+};
+
+/*
+.edt_row_selected {
+    background-color: #ccccee;
+//    border: 1px solid black;
+};
+*/
+
+.edt_cell_empty {
+    color: white;
+    background-color: white !important;
+}
+
+.edt_role_list {
+//    border-collapse: collapse;	// separate
+    border-collapse: separate;
+    border-spacing: 12px 3px;
+};
+
+.edt_variable_list tr:nth-child(odd) {
+    background-color:  @tableEvenColor;
+}
+
+.edt_variable_list tr:nth-child(even) {
+    background-color:  @tableEvenColor;
+}
+
+//  In the list of variables, measures
+.edt_experiment_header {
+    text-align: center;
+    vertical-align: top;
+    font-size: 15px;
+    border: 1px solid lightgrey;
+//    box-shadow: 3px 3px white;
+    padding: 2px;
+}
+
+.edt_experiment_list {
+    border-collapse: separate;
+    border-spacing: 12px 3px;
+};
+
+.edt_experiment_list tr:nth-child(odd) {
+    background-color:  @tableOddColor;
+}
+
+.edt_experiment_list tr:nth-child(even) {
+    background-color:  @tableEvenColor;
+}
+
+.edt_drag_here {
+    column-span: all;
+    font-style: italic;
+    text-align: center;
+}
+
+
+/*------------------------------------------------------------
+ *  Experimental design table
+ *------------------------------------------------------------*/
+
+.edt_table_experiment_specification {
+    text-align: center;
+}
+
+.edt_table_experiment_specification tr:nth-child(odd) {
+    background-color:  #dce7fa;
+}
+
+.edt_table_experiment_specification tr:nth-child(even) {
+    background-color:  #b5ddeb;
+}
+
+.edt_th_variable, .edt_th_nth {
+//    background-color: @tertiaryColorLight;
+//    color: black;
+    padding: 2px;
+//    min-width: 100px;
+//    max-width: 200px;
+}
+
+.edt_conclusion_table {
+    width: 100%;
+    border: 2px solid @secondaryColor;
+}
+
+.edt_tr_experiment_run {
+}
+
+.edt_tr_experiment_run_fixed {
+    opacity: 0.5;
+    background-color: 'grey'
+}
+
+.edt_td_experiment_run {
+}
+
+
+/*------------------------------------------------------------
+ *  Overall layout
+ *------------------------------------------------------------*/
+
+#edt_content_heuristics ul {
+  padding-left: 20px;
+}
+
+.edt_div_main {
+    padding: 2px;
+}
+
+.edt_div_sub {
+    border: 0px solid @tertiaryColor;
+}
+
+#vbl_form_container, #vbl_aquarium_container, #vbl_graph_container {
+  .toolAreaContainer;
+  .unselectable;
+}
+
+#vbl_form {
+  .toolArea;
+}
+
+#vbl_aquarium {
+  .toolArea;
+  width: 50%;
+}
+
+#vbl_graph {
+  .toolArea;
+  width: 50%;
+}
+
+
+/*------------------------------------------------------------
+ *  Buttons
+ *------------------------------------------------------------*/
+
+#edt_table {
+    width: 100%;
+/*  height: 700px; */
+    padding: 5px;
+    border-collapse: collapse;
+/*  text-align: center; */
+}
+
+.edt_table_header {
+    background-color: @primaryColor;
+    color: white;
+    font-weight: bold;
+    padding: 6px;
+}
+
+.edt_section_header {
+    background-color: white;
+    color: black;
+    padding: 0px;
+    font-size: 16px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#edt_header {
+    border: 1px solid black;
+    width: 100%;
+}
+
+#edt_instruction_space {
+    border: 1px solid black;
+    width: 50%;
+}
+
+#edt_experiment_space {
+    border: 1px solid black;
+    border-spacing: 3px;
+/*  width: 67%;
+    height: 67%; */
+    padding: 5px;
+}
+
+#edt_selection_space {
+    border: 1px solid black;
+}
+
+#edt_experiment_space > td {
+    padding-top: 3px;
+}
+
+#edt_selection_space > td {
+    padding-top: 3px;
+}
+
+#edt_instruction_space > td {
+    padding-top: 3px;
+}
+
+#edt_instruction_space {
+    border: 1px solid black;
+    width: 50%;
+}
+
+#edt_experimental_setup {
+    background-color: #E8E8E9;
+    color: white;
+}
+
+#edt_all_fluids {
+    background-color: #E8E8E9;
+    color: white;
+}
+
+#edt_all_instruments {
+    background-color: #E8E8E9;
+    color: white;
+}
+
+#edt_all_object_properties {
+    background-color: #15B8CE;
+    color: white;
+}
+
+#edt_all_object_measures {
+    background-color: #FAA61B;
+    color: white;
+}
+
+
+
+

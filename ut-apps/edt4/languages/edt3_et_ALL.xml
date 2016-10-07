@@ -1,0 +1,49 @@
+<messagebundle>
+   <msg name="add_experiment_row">Lisa rida uue katse jaoks</msg>
+   <msg name="and">ja</msg>
+   <msg name="available">saadaval</msg>
+   <msg name="cancel">Tühista</msg>
+   <msg name="confirm">Kinnita</msg>
+   <msg name="continue">Jätka</msg>
+   <msg name="delete">Kustuta</msg>
+   <msg name="enter_number">Arv</msg>
+   <msg name="enter_text">Tekst</msg>
+   <msg name="enter_value">Väärtus</msg>
+   <msg name="experiment">Katse</msg>
+   <msg name="experiment_data">Katse andmed</msg>
+   <msg name="experiment_design">Katse kavandamine</msg>
+   <msg name="instruction_add_trial">Uue katse lisamiseks klõpsa nupul <i class="fa fa-plus"></i>.</msg>
+   <msg name="instruction_continue_to_lab">Katse on planeeritud. Kui soovid lisa katseid planeerida, klõpsa pluss märgil. Kui Sa enam uusi katseid ei planeeri, siis alusta ülesandes oleva labori abil nende läbiviimist.</msg>
+   <msg name="instruction_drag_variables">Lahtrisse „Muuda“ lohista need omadused, mida soovid katses muuta. Ülejäänud, mida muuta ei soovi, lohista lahtrisse „Jäta samaks“. Lahtrisse „Mõõda“ lohista see, mida katse abil mõõdad.</msg>
+   <msg name="instruction_enter_results">Katse on planeeritud. Kui soovid lisa katseid planeerida, klõpsa pluss märgil. Kui Sa enam uusi katseid ei planeeri, siis alusta ülesandes oleva labori abil nende läbiviimist.</msg>
+   <msg name="instruction_enter_values">Klõpsa nupul <i class="fa fa-edit"></i>, et ära määrata iga omaduse väärtused. Lahter „Mõõda“ jäta tühjaks, selle täidad ära pärast katse tegemist.</msg>
+   <msg name="instruction_finished"></msg>
+   <msg name="keep_constant">Jäta samaks</msg>
+   <msg name="lab">Labor</msg>
+   <msg name="language">et</msg>
+   <msg name="measure">Mõõda</msg>
+   <msg name="measures">Mõõtmised</msg>
+   <msg name="ok">OK</msg>
+   <msg name="properties">Omadused</msg>
+   <msg name="really_clear_design">Kõik katsed ei ole lõpetatud. Kas tahad tõesti selle kavandi puhastada ja uue luua?</msg>
+   <msg name="remark">Märkus</msg>
+   <msg name="specify_value">Täpsusta ... väärtus</msg>
+   <msg name="title_experiments_dialog">Tehtud katsed</msg>
+   <msg name="tooltip_completed_variable">Väärtus on osa lõpetatud katsest</msg>
+   <msg name="tooltip_delete_experiment_trial">Kustuta see katse</msg>
+   <msg name="tooltip_drop_control">Lohista siia omadused, mille tahad samaks jätta</msg>
+   <msg name="tooltip_drop_dependent">Lohista mõõtmised siia</msg>
+   <msg name="tooltip_drop_independent">Lohista siia omadused, mida tahad muuta</msg>
+   <msg name="tooltip_edit_configuration">Muuda seadistust</msg>
+   <msg name="tooltip_edit_variable">Klõpsa selle muutuja väärtuse täpsustamiseks</msg>
+   <msg name="tooltip_help">Vaata abi</msg>
+   <msg name="tooltip_hide_available_variables">Peida saadaval omadused ja mõõtmised</msg>
+   <msg name="tooltip_measures_list">Lohista mõõtmised "Mõõtmistesse"</msg>
+   <msg name="tooltip_new_design">Kustuta praegune kavand ja alusta uuega. Juba tehtud katseid saad endiselt vaadata ajaloo tabelis.</msg>
+   <msg name="tooltip_properties_list">Lohista omadused lahtritesse "Muuda" või "Jäta samaks"</msg>
+   <msg name="tooltip_show_about">Selle kohta lähemalt ...</msg>
+   <msg name="tooltip_show_available_variables">Näita saadaval omadusi ja mõõtmisi</msg>
+   <msg name="tooltip_view_experiments">Vaata oma tehtud katseid.</msg>
+   <msg name="vary">Muuda</msg>
+   <msg name="warning">Hoiatus</msg>
+</messagebundle>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+   <ModulePrefs
+           title="Questionnaire tool"
+           author="Anjo Anjewierden"
+           author_email="a.a.anjewierden@utwente.nl"
+           width="900"
+           height="800"
+           >
+      <Require feature="osapi"/>
+      <Require feature="content-rewrite">
+        <Param name="exclude-url">*</Param>
+      </Require>
+      <Require feature="dynamic-height"/>
+      <Locale messages="languages/quest_en_ALL.xml"/>
+      <Locale lang="en" messages="languages/quest_en_ALL.xml"/>
+   </ModulePrefs>
+   <Content type="html" href="quest.html" view="default"></Content>
+</Module>

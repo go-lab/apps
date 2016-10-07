@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<messagebundle mails="pablo.orduna@deusto.es">
+  <msg name="click_to_get_data">Klõpsa andmete saamiseks</msg>
+  <msg name="click_to_refresh_data">Klõpsa andmete värskendamiseks</msg>
+  <msg name="conceptualisation">Hüpoteeside püstitamine</msg>
+  <msg name="conclusion">Järeldamine</msg>
+  <msg name="discussion">Arutlemine</msg>
+  <msg name="enter_your_response">Sisesta oma vastus</msg>
+  <msg name="general_time_spent">Kas Sul kulus mõnes etapis suhteliselt rohkem aega, kui võis eeldada? Kui jah, siis palun mõtle, miks see nii oli (näiteks kas mõni etapp oli eriti raske või kõitis Sinu tähelepanu). Selgita, miks Sinu arvates erineb Sinul uurimisetappides kulunud aeg soovituslikust normajast. Kui Sinu aeg oli aga sama, siis palun selgita, kas Sinu arvates järgivad kõik uurimisprojektid seesugust üldist ajajaotust.</msg>
+  <msg name="general_transition">Did you visit the phases in the order given (shown from top to bottom in the chart below)? If not, could you explain why?</msg>
+  <msg name="inquiry_phase">Uurimisetapp</msg>
+  <msg name="introduction_time_spent">
+    <![CDATA[<p>Reflekteerimine t&#228;hendab, et m&#245;tled tagasivaatavalt oma tegevuse ja valikute &#252;le. Palun vaata allolevat tegevuste ajalogi, et tuletada meelde, kuidas Sinu aeg uurimisetappides kulus. Lisatud on ka soovituslik normaeg, et saaksid oma aegu sellega v&#245;rrelda.</p>]]></msg>
+  <msg name="introduction_transition">Reflection involves thinking back about what you did and the choices you made. Have a look at how you progressed through the different phases in the ILS.</msg>
+  <msg name="investigation">Uurimine</msg>
+  <msg name="language">et</msg>
+  <msg name="orientation">Suunaseadmine</msg>
+  <msg name="percentage_time_spent">Etapile kulunud aja protsent</msg>
+  <msg name="please_answer_question">Palun vasta järgmisele küsimusele:</msg>
+  <msg name="suggested">Soovituslik</msg>
+  <msg name="title_reflecting_on_time_spent">Uurimisetappidele kulutatud aja üle reflekteerimine</msg>
+  <msg name="title_reflecting_on_transition">Reflecting on navigating the inquiry phases</msg>
+  <msg name="tooltip_help">Vaata abi</msg>
+  <msg name="transitions">Transitions</msg>
+  <msg name="transitions_subtitle">(When and for how long you visited the inquiry phases)</msg>
+  <msg name="yours">Sinu</msg>
+</messagebundle>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+   <ModulePrefs
+           title="Entry tool"
+           author="Anjo Anjewierden"
+           author_email="a.a.anjewierden@utwente.nl"
+           width="800"
+           height="200"
+           >
+      <Require feature="osapi"/>
+      <Require feature="content-rewrite">
+        <Param name="exclude-url">*</Param>
+      </Require>
+      <Require feature="dynamic-height"/>
+      <Locale messages="languages/entry_en_ALL.xml"/>
+      <Locale lang="en" messages="languages/entry_en_ALL.xml"/>
+   </ModulePrefs>
+   <Content type="html" href="entry.html" view="default"></Content>
+</Module>

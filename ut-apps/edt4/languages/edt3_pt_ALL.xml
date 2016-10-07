@@ -1,0 +1,49 @@
+<messagebundle>
+   <msg name="add_experiment_row">Adicionar linha ao experimento</msg>
+   <msg name="and">e</msg>
+   <msg name="available">disponível</msg>
+   <msg name="cancel">Cancelar</msg>
+   <msg name="confirm">Confirmar</msg>
+   <msg name="continue">Continuar</msg>
+   <msg name="delete">Apagar</msg>
+   <msg name="enter_number">Número</msg>
+   <msg name="enter_text">Texto</msg>
+   <msg name="enter_value">Valor</msg>
+   <msg name="experiment">Experiência</msg>
+   <msg name="experiment_data">Dados da experiência</msg>
+   <msg name="experiment_design">Desenho da experiência</msg>
+   <msg name="instruction_add_trial">Pressione <i class="fa fa-plus"></i> para adicionar um ensaio experimental ao seu projeto.  Desenha pelo menos três ensaios experimentais.</msg>
+   <msg name="instruction_continue_to_lab">Se tiver concluído seu projeto, pode selecionar e realizar experiências no laboratório. Caso contrário, adicione ensaios experimentais.</msg>
+   <msg name="instruction_drag_variables">Selecione e arraste TODAS as propriedades para "Variar" ou "Mantenha constante", e selecionar e arrastar pelo menos uma variável que deseja medir para "Medir".</msg>
+   <msg name="instruction_enter_results">Pode inserir seus resultados por ensaio experimental. Assim que tiver finalizado um ensaio, digitando o resultado que obteve, ele será automaticamente guardado numa tabela <i class="fa fa-table"> </i> onde pode ver todos os seus ensaios experimentais realizados e classificá-los de forma ascendente ou descendente por variável.</msg>
+   <msg name="instruction_enter_values">Introduzir valores <i class="fa fa-edit"></i> para todas as propriedades nos ensaios experimentais.</msg>
+   <msg name="instruction_finished">You have completed this set of experimental trials.  You can add additional trials, analyse the results with <i class="fa fa-table"></i>, or create a new set of experiments with <i class="fa fa-eraser"></i>.</msg>
+   <msg name="keep_constant">Manter constante</msg>
+   <msg name="lab">Lab</msg>
+   <msg name="language">pt</msg>
+   <msg name="measure">Medir</msg>
+   <msg name="measures">Medidas</msg>
+   <msg name="ok">OK</msg>
+   <msg name="properties">Propriedades</msg>
+   <msg name="really_clear_design">Nem todas as experiências foram completadas. Queres realmente limpar este desenho e criar um novo??</msg>
+   <msg name="remark">Observação</msg>
+   <msg name="specify_value">Especificar valor para</msg>
+   <msg name="title_experiments_dialog">Ensaios experimentais realizados</msg>
+   <msg name="tooltip_completed_variable">O valor é parte de uma experiência concluída</msg>
+   <msg name="tooltip_delete_experiment_trial">Apague este ensaio experimental</msg>
+   <msg name="tooltip_drop_control">Largue as propriedades que deseja manter constante aqui</msg>
+   <msg name="tooltip_drop_dependent">Largue as medições aqui</msg>
+   <msg name="tooltip_drop_independent">Largue as propriedades que deseja variar aqui</msg>
+   <msg name="tooltip_edit_configuration">Editar a configuração</msg>
+   <msg name="tooltip_edit_variable">Clique para especificar o valor dessa variável</msg>
+   <msg name="tooltip_help">Ver ajuda</msg>
+   <msg name="tooltip_hide_available_variables">Ocultar propriedades e medidas disponíveis</msg>
+   <msg name="tooltip_measures_list">Arrastar medidas para "Medir"</msg>
+   <msg name="tooltip_new_design">Excluir o projeto atual e começar com um novo. Ainda será capaz de ver as experiências já realizadas na tabela do histórico.</msg>
+   <msg name="tooltip_properties_list">Arrastar propridades para "Variar" ou "Manter constante"</msg>
+   <msg name="tooltip_show_about">Sobre esta ferramenta ...</msg>
+   <msg name="tooltip_show_available_variables">Mostrar propriedades e medições disponiveis</msg>
+   <msg name="tooltip_view_experiments">Ver os ensaios experimentais realizados</msg>
+   <msg name="vary">Variar</msg>
+   <msg name="warning">Aviso</msg>
+</messagebundle>

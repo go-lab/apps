@@ -1,0 +1,92 @@
+<messagebundle mails="a.a.anjewierden@utwente.nl">
+  <msg name="help_text" format="textAngular">
+    <![CDATA[
+    <p><strong>Designing experiments and entering results</strong><br/>
+    <em>Selecting variables</em></p>
+    <ul>
+      <li>Drag variables from &#8220;properties&#8221; to &#8220;vary&#8221;
+      and &#8220;keep constant&#8221;.</li><ul><li>If you vary a variable,
+      choose one value for each trial.</li><li>For variables you keep constant
+      you chooise a single value; all other trials will automatically be
+      assigned that value.</li></ul><li>Drag variables from
+      &#8220;measures&#8221; to
+      &#8220;measure&#8221;.</li>&#10;</ul>&#10;<p><em>Adding and deleting
+      experimental trials</em></p><ul><li>Add a trial by pressing <i class="fa
+      fa-plus"></i>.</li> <li>To delete a trial click the minus icon at the
+      end of a row.  </li>&#10;</ul>&#10;<p><em>Assigning values to
+      variables</em></p><ul><li>Click <i class="fa fa-edit"></i> to choose a
+      value.  In order to be able to assign values to variables you jave to
+      have at least one trial.</li>&#10;</ul>&#10;<p><em>Entering
+      measures/results </em></p><ul><li>Enter measures/results by pressing <i
+      class="fa fa-edit"></i>, type the value and press enter.<br/></li>
+      </ul><p><strong>Adjusting or deleting trials</strong><br/>&#10;&#160;
+      <em>Deleting or moving variables</em></p><ul><li>You can delete a
+      variable by dragging it it outside the table.</li><li>You can move a
+      variable by dragging it from one box to
+      another.</li>&#10;</ul>&#10;<p><em>Deleting
+      trials</em></p><ul><li>Delete a trials by clicking the minus icon at the
+      end of a row. Warning: You cannot retrieve deleted trials. Trials for
+      which you entered a result are automatically saved in the history table
+      <i class="fa fa-table"></i>. </li>&#10;</ul>&#10;<p><em>Adjusting values</em>
+      </p><ul><li>Adjust a value by pressing <i class="fa
+      fa-edit"></i>.</li>&#10;</ul>&#10;<p><em>Delete all (except history table)
+      <i class="fa
+      fa-table"></i>.</em></p><ul><li>By pressing <i class="fa
+      fa-eraser"></i>&#160; the entire experiment design is cleared.<br/></li>&#10;</ul>&#10;<p><strong>View and sort conducted trials</strong></p><ul><li>All your conducted trials can be viewed by clicking <i class="fa fa-table"></i>.</li><li>Trials can be sorted per variable by pressing <i class="fa fa-sort"></i>.</li><li>You can delete trials by pressing the minus icon.  You cannot retrieve those deleted trials.</li>&#10;</ul><p><b>Saving space</b></p><p></p><ul><li>You can save space by toggling <i class="fa
+      fa-angle-double-left"></i>.</li></ul><p></p>
+      ]]>
+  </msg>
+  <msg name="variables">Variables</msg> 
+  <msg name="system">Computed</msg> 
+  <msg name="tooltip_drop_system"></msg> <msg name="tooltip_system_variable">The
+  value is automatically computed when you have entered the values on the
+  left.</msg>
+
+   <msg name="add_experiment_row">Add experiment row</msg>
+   <msg name="and">and</msg>
+   <msg name="available">available</msg>
+   <msg name="cancel">Cancel</msg>
+   <msg name="confirm">Confirm</msg>
+   <msg name="continue">Continue</msg>
+   <msg name="delete">Delete</msg>
+   <msg name="enter_number">Number</msg>
+   <msg name="enter_text">Text</msg>
+   <msg name="enter_value">Value</msg>
+   <msg name="experiment">Experiment</msg>
+   <msg name="experiment_data">Experiment data</msg>
+   <msg name="experiment_design">Experiment Design</msg>
+   <msg name="instruction_add_trial">Press <i class="fa fa-plus"></i> to add an experimental trial to your design.  Design at least three experimental trials.</msg>
+   <msg name="instruction_continue_to_lab">If you have completed your design, you can select and conduct experiments in the lab. Otherwise, add experimental trials.</msg>
+   <msg name="instruction_drag_variables">Select and drag ALL properties to "Vary" or to "Keep constant", and select and drag at least one variable you want to measure to "Measure".</msg>
+   <msg name="instruction_enter_results">You can enter your results per experimental trial. Once you finalized a trial by entering the result you obtained, it will automatically be saved in a table <i class="fa fa-table"></i> where you can view all your conducted experimental trials and sort them ascending or descending per variable.</msg>
+   <msg name="instruction_enter_values">Enter values <i class="fa fa-edit"></i> for all properties in the experimental trials.</msg>
+   <msg name="instruction_finished">You have completed this set of experimental trials.  You can add additional trials, analyse the results with <i class="fa fa-table"></i>, or create a new set of experiments with <i class="fa fa-eraser"></i>.</msg>
+   <msg name="keep_constant">Keep constant</msg>
+   <msg name="lab">Lab</msg>
+   <msg name="language">en</msg>
+   <msg name="measure">Measure</msg>
+   <msg name="measures">Measures</msg>
+   <msg name="ok">OK</msg>
+   <msg name="properties">Properties</msg>
+   <msg name="really_clear_design">Not all experiments have been completed. Do you really want to clear this design and create a new one?</msg>
+   <msg name="remark">Remark</msg>
+   <msg name="specify_value">Specify value for</msg>
+   <msg name="title_experiments_dialog">Conducted experimental trials</msg>
+   <msg name="tooltip_completed_variable">Value is part of a completed experiment</msg>
+   <msg name="tooltip_delete_experiment_trial">Delete this experimental trial</msg>
+   <msg name="tooltip_drop_control">Drop properties you want to keep constant here</msg>
+   <msg name="tooltip_drop_dependent">Drop measures here</msg>
+   <msg name="tooltip_drop_independent">Drop properties you want to vary here</msg>
+   <msg name="tooltip_edit_configuration">Edit the configuration</msg>
+   <msg name="tooltip_edit_variable">Click to specify the value of this variable</msg>
+   <msg name="tooltip_help">View help</msg>
+   <msg name="tooltip_hide_available_variables">Hide available properties and measures</msg>
+   <msg name="tooltip_measures_list">Drag measures to "Measure"</msg>
+   <msg name="tooltip_new_design">Delete the current design and start with a new one. You will still be able to view the experiments you already conducted in the history table</msg>
+   <msg name="tooltip_properties_list">Drag properties to "Vary" or "Keep constant"</msg>
+   <msg name="tooltip_show_about">About this tool ...</msg>
+   <msg name="tooltip_show_available_variables">Show available properties and measures</msg>
+   <msg name="tooltip_view_experiments">View the experimental trials you conducted</msg>
+   <msg name="vary">Vary</msg>
+   <msg name="warning">Warning</msg>
+</messagebundle>

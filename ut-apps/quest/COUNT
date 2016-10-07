@@ -1,0 +1,10 @@
+wc Makefile \
+   model.js \
+   module.js \
+   quest.html \
+   quest.js \
+   quest.json \
+   quest.less \
+   quest.xml \
+   resource.js \
+   teacher.js

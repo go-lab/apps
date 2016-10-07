@@ -1,0 +1,412 @@
+/*  $Id$        -*- mode: javascript -*-
+ *  
+ *  File        reflect.src
+ *  Part of     Go-Lab Reflection tool
+ *  Author      Anjo Anjewierden, a.a.anjewierden@utwente.nl
+ *  Purpose     Main code and angular handling
+ *  Works with  ECMAScript 5.1
+ *  
+ *  Notice      Copyright (c) 2014, 2015  University of Twente
+ *  
+ *  History     27/10/14  (Created)
+ *		17/04/15  (Last modified)
+ */ 
+
+/*------------------------------------------------------------
+ *  Directives
+ *------------------------------------------------------------*/
+
+#include "../../libs/h/js.h"
+
+"use strict";
+
+(function() {
+    var ut = this.ut = this.ut || {};
+    var golab = this.golab = this.golab || {};
+    var tools = ut.tools = ut.tools || {};
+    var reflect = tools.reflect = tools.reflect || {};
+    var utils = this.ut.commons.utils = this.ut.commons.utils || {};
+
+    var WEBSERVICE_URL = "http://golab.collide.info/analytics/reflection";
+    var language = null;
+
+    reflect.model = null;	// Set in reflect.start()
+    reflect.norm = null;	// Should be in configuration
+    reflect.ils_structure = null;	
+
+    reflect.configuration = {
+        auto_save: true,
+        show_configuration: true,
+        show_about: true
+    };
+
+    reflect.percentage_norm = function(phase) {
+        var data = reflect.model.data;
+        forall(i, data, entry) {
+            if (entry.phase === phase)
+                return entry.percentage_norm;
+        }
+    };
+
+    var ORIENTATION = 'orientation';
+    var CONCEPTUALISATION = 'conceptualisation';
+    var INVESTIGATION = 'investigation';
+    var CONCLUSION = 'conclusion';
+    var DISCUSSION = 'discussion';
+
+    reflect.phases = {};
+    reflect.phases[ORIENTATION] = {
+        phase: ORIENTATION,
+        colour: '#CC9900'
+    };
+    reflect.phases[CONCEPTUALISATION] = {
+        phase: CONCEPTUALISATION,
+        colour: '#009999'
+    };
+    reflect.phases[INVESTIGATION] = {
+        phase: INVESTIGATION,
+        colour: '#99CC00'
+    };
+    reflect.phases[CONCLUSION] = {
+        phase: CONCLUSION,
+        colour: '#999966'
+    };
+    reflect.phases[DISCUSSION] = {
+        phase: DISCUSSION,
+        colour: '#333333'
+    };
+
+    var other_colour = 'white';
+
+    /**
+     *  Called before angular is started.
+     */
+    reflect.configure = function(spec, ready) {
+        var type = spec.type || 'time_spent';
+
+        for (var p in spec) {
+            reflect.configuration[p] = spec[p];
+        }
+
+        reflect.clear_previous_resources();
+        reflect.model = new reflect.Model({
+            type: type,
+            data: [ { phase: ORIENTATION,
+                      percentage_student: 0
+                    },
+                    { phase: CONCEPTUALISATION,
+                      percentage_student: 0
+                    },
+                    { phase: INVESTIGATION,
+                      percentage_student: 0
+                    },
+                    { phase: CONCLUSION,
+                      percentage_student: 0
+                    },
+                    { phase: DISCUSSION,
+                      percentage_student: 0
+                    }
+                  ]
+        });
+
+        ready();
+    };
+
+    /**
+     *  Called after angular is finished.
+     */
+    reflect.start = function(spec) {
+        if (window.ils) {
+            window.ils.get_phase_and_tool_structure(function(result, error) {
+                if (result.error) {
+                    printf('window.ils.get_phase_and_tool_structure');
+                    printf('ERROR ' + JSON.stringify(result,null,4));
+                } else {
+                    printf(JSON.stringify(result,null,4));
+                    reflect.ils_structure = result;
+                }
+                reflect.generate_questions('time_spent');
+                reflect.scope_apply();
+            });
+        } else {
+            reflect.generate_questions('time_spent');
+            reflect.scope_apply();
+        }
+    };
+
+
+    /**
+     *  Generate questions based on the data.
+     *  Sub can currently only be 'time_spent'.
+     */
+    reflect.generate_questions = function(sub) {
+        var rules = reflect.rules[sub];
+        reflect.scope.questions = reflect.questions = reflect.questions || {};  // TBD - elsewhere
+        var questions = reflect.questions[sub] = [];
+        var pcts = reflect.model.data;
+
+        forall(i, rules, rule) {
+            if (rule.condition === true) {
+                push_question(rule);
+                continue;
+            }
+
+            if (typeof(rule.condition) === 'object') {
+                var phase = rule.condition.phase;
+                var op = rule.condition.comparison;
+                var threshold = rule.condition.threshold;
+                var student, norm;
+
+                forall(i, pcts, pct) {
+                    if (pct.phase === phase) {
+                        var student = pct.percentage;
+                        var norm = reflect.percentage_norm(phase);
+                    }
+                }
+                
+                if (student !== null && norm !== null && norm > 0) {
+                    switch (op) {
+                    case '<': 
+                        var low = student / norm;
+
+                        if (low < threshold)
+                            push_question(rule);
+                        continue;
+
+                    case '>': 
+                        var low = student / norm;
+
+                        if (low > threshold)
+                            push_question(rule);
+                        continue;
+                        
+                    case '=': 
+                        var low = student / norm;
+                        var high = 1 / (student/norm);
+
+                        if ((low < 1 && low > threshold) || (high > 1 && high < threshold))
+                            push_question(rule);
+                        continue;
+
+                    default:
+                        console.log('COMPARISON OPERATOR ' + op + ' unknown');
+                    }
+                }
+            }
+        }
+
+        function push_question(rule) {
+            var question = {};
+
+            question.id = rule.id;
+            question.text = rule.text[language];
+            questions.push(question);
+        };
+    };
+
+    /**
+     *  Call $apply() when changes made did not originate from angular.
+     */
+    reflect.scope_apply = function() {
+        var scope = reflect.scope;
+
+        if (!scope.$$phase) 
+            scope.$apply();
+    }
+
+    reflect.userId = function() {
+        var handler = reflect.metadataHandler;
+        var md = handler.getMetadata();
+
+        return md.actor.id;
+    };
+
+    reflect.ilsId = function() {
+        var handler = reflect.metadataHandler;
+        var md = handler.getMetadata();
+
+        return md.generator.id;
+    };
+
+    /**
+     *  Log the action given by verb and content.  If save is true or
+     *  undefined, and auto_save is active then the current model is also
+     *  saved.
+     */
+    reflect.log = function(verb, content, save) {
+        save = default(save, true);
+
+        reflect.actionLogger.log(verb, content);
+        if (save && reflect.configuration.auto_save) {
+            reflect.model.save_data_set();
+        }
+    };
+
+
+    /**
+     * Set up angular.
+     */
+    var ng_reflect = angular.module("reflect", ['ngSanitize', 'LocalStorageModule', 'golabUtils']).config(
+        function($sceDelegateProvider) {
+            var url1 = reflect.base_url + '/**';
+            var url2 = 'http://go-lab.collide.info' + '/**';
+            var url3 = 'http://golab.collide.info' + '/**';
+
+            $sceDelegateProvider.resourceUrlWhitelist(
+                [ url1, url2, url3
+                ]);
+            console.log('$sceDelegateProvider ' + url1);
+            console.log('$sceDelegateProvider ' + url2);
+            console.log('$sceDelegateProvider ' + url3);
+        });
+
+    ng_reflect.filter('translate', function() {
+        return function (msg) {
+            var rval = translate(msg);
+            return rval;
+        }});
+
+    ng_reflect.controller("reflect_controller", function($scope) {
+        reflect.scope = $scope;
+        
+        $scope.this_scope = 'Reflect scope';
+        $scope.base_url = reflect.base_url;
+        $scope.model = reflect.model;
+
+        $scope.status = {
+            agent_data_available: false
+        };
+
+        console.log('MODEL BEFORE NORMS ');
+        console.log(JSON.stringify($scope.model,null,4));
+
+        $scope.model.norms([
+            { phase: ORIENTATION,
+              percentage: 30
+            },
+            { phase: CONCEPTUALISATION,
+              percentage: 20
+            },
+            { phase: INVESTIGATION,
+              percentage: 30
+            },
+            { phase: CONCLUSION,
+              percentage: 15
+            },
+            { phase: DISCUSSION,
+              percentage: 5
+            }
+        ]);
+
+        console.log('MODEL BEFORE PERCENTAGES ');
+        console.log(JSON.stringify($scope.model,null,4));
+
+        $scope.model.percentages([
+            { phase: ORIENTATION,
+              percentage: 20
+            },
+            { phase: CONCEPTUALISATION,
+              percentage: 30
+            },
+            { phase: INVESTIGATION,
+              percentage: 35
+            },
+            { phase: CONCLUSION,
+              percentage: 15
+            },
+            { phase: DISCUSSION,
+              percentage: 0
+            }
+        ]);
+
+        console.log('MODEL AFTER PERCENTAGES ');
+        console.log(JSON.stringify($scope.model,null,4));
+
+        $scope.request_data = function() {
+            $scope.status.agent_data_available = true;
+            reflect.generate_questions(reflect.model.type);
+            reflect.scope_apply();
+
+            var spec = {
+                userId: reflect.userId(),
+                ilsId: reflect.ilsId(),
+                agentType: "reflection",
+                agentName: "time_spent",
+                parameters: {}
+            };
+
+            console.log('request');
+            console.log(JSON.stringify(spec,null,4));
+ 
+            $.post(WEBSERVICE_URL, spec, function(result) {
+                var data;
+
+                if (typeof(result) === 'string')
+                    data = JSON.parse(result);
+                else
+                    data = result;
+
+                console.log(JSON.stringify(data,null,4));
+
+                $scope.model.agent_update(data);
+                $scope.status.agent_data_available = true;
+                reflect.generate_questions(reflect.model.type);
+                reflect.scope_apply();
+            })
+        };
+
+        $scope.save_answers = function() {
+            console.log('SAVE ANSWERS ');
+            console.log(JSON.stringify($scope.answers,null,4));
+            reflect.model.update_resource();
+        }
+
+        $scope.answers_on_blur = function(answer_id) {
+            reflect-model.update_resource();
+        };
+    });
+
+    ng_reflect.factory('languageHandler', function() {
+        language = reflect.languageHandler.getMessage('language');
+        return reflect.languageHandler;
+    });
+
+    ng_reflect.filter('capitalize', function() {
+        return function (val) {
+            return (typeof(val) === 'string' ? utils.capitalize(val) : val);
+        };});
+
+    reflect.translate = function(msg, lang0) {
+        return translate(msg, lang0);
+    };
+
+    function translate(msg, lang0) {
+        if (!language) {
+            if (typeof(reflect.languageHandler.getLanguage) === 'function') {
+                language = reflect.languageHandler.getLanguage();
+                if (language === 'ALL')
+                    language = 'en';
+            }
+        }
+        if (!language) {
+            language = reflect.languageHandler.getMessage('language');
+        }
+
+        var lang = lang0 || language;
+        var struct = reflect.messages[msg];
+
+        if (!(lang && struct && struct[lang])) {
+            var rval = reflect.languageHandler.getMessage(msg);
+
+            if (rval[0] !== '?')
+                return rval;
+
+            printf('    [Reflect] warning: translating ' + msg + ' to ' + lang + ' failed');
+            return rval;
+        }
+    
+        struct = struct[lang];
+
+        return struct;
+    };
+}).call(this);

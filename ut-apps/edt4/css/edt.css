@@ -1,0 +1,843 @@
+/*  $Id$	-*- mode: css -*-
+ *  
+ *  File	edt.less
+ *  Part of	Go-Lab Experimental Design Tool
+ *  Author	Anjo Anjewierden, a.a.anjewierden@utwente.nl
+ *  Purpose	Cascading style sheet
+ *  Works with	Less, CSS
+ *  
+ *  Notice	Copyright (c) 2013  University of Twente
+ *  
+ *  History	21/03/13  (Created)
+ *  		02/11/14  (Last modified)
+ */@charset "utf-8";
+/*
+
+the original golab colors
+
+*/
+/*
+@primaryColor: #00BACC;
+@primaryColorLight: #92D6E3;
+@primaryColorText: #00B7CD;
+
+@secondaryColor: #FAA519;
+@secondaryColorLight: #FDBE63;
+@secondaryColorText: #FAA519;
+
+@tertiaryColor: #939597;
+@tertiaryColorLight: #f5f5f5;
+@tertiaryColorText: #3f3f3f;
+*/
+.golabTitleFont {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.75px;
+  font-kerning: none;
+  -webkit-font-variant-ligatures: no-common-ligatures;
+  font-feature-settings: "liga" 0;
+}
+/*
+
+the new graasp golab colors
+
+*/
+/*
+
+the original golab colors
+
+*/
+/*
+@primaryColor: #00BACC;
+@primaryColorLight: #92D6E3;
+@primaryColorText: #00B7CD;
+
+@secondaryColor: #FAA519;
+@secondaryColorLight: #FDBE63;
+@secondaryColorText: #FAA519;
+
+@tertiaryColor: #939597;
+@tertiaryColorLight: #f5f5f5;
+@tertiaryColorText: #3f3f3f;
+*/
+.golabTitleFont {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.75px;
+  font-kerning: none;
+  -webkit-font-variant-ligatures: no-common-ligatures;
+  font-feature-settings: "liga" 0;
+}
+/*
+
+the new graasp golab colors
+
+*/
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.textSelectable {
+  -moz-user-select: -moz-text;
+  -khtml-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  -o-user-select: text;
+  user-select: text;
+}
+/* this works on iOS, not on android */
+.preventLongPress {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body,
+td,
+th,
+select,
+input,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  white-space: normal;
+  line-height: normal;
+  color: #3c3c3c;
+}
+.gadgetBodyScrollBars {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.horizontalScrollBarReservation {
+  width: 100%;
+  height: 20px;
+}
+h1 {
+  font-weight: normal;
+}
+.workAreaContainer {
+  background: #ebebeb;
+  border: none;
+  border-radius: 3px;
+}
+.toolAreaContainer {
+  background: #ebebeb;
+  border: none;
+  border-radius: 3px;
+}
+.toolArea {
+  padding: 5px;
+}
+.areaLabel {
+  width: 100%;
+  background: #4444ad;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  height: 25px;
+}
+.activeButton {
+  color: #4444ad;
+  background-size: contain;
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: initial;
+  box-sizing: initial;
+  cursor: pointer;
+}
+.activeButton:hover {
+  color: #0d0592;
+  background-size: contain;
+}
+.activeButton:active {
+  font-weight: bolder;
+  background-size: contain;
+}
+.secondaryTextButton {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.pressedButton,
+.pressedButton:active,
+.pressedButton:hover {
+  color: #1bb71f;
+  background-size: contain;
+}
+.pressedButton:hover {
+  color: #1bb71f;
+  background-size: contain;
+}
+.pressedButton:active {
+  color: #1bb71f;
+}
+.disabledButton,
+.disabledButton:hover,
+.disabledButton:active {
+  color: #939597;
+  font-weight: normal;
+  cursor: default;
+}
+.fontAweSomeStacked {
+  position: relative;
+}
+.fontAweSomeStacked .fontAweSomeStack {
+  position: absolute;
+  text-align: center;
+}
+.fontAweSomeStacked .fontAweSomeUnderStar {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.fontAweSomeStacked .fontAweSomeStackedStar {
+  left: 22px;
+  top: 6px;
+  font-size: 13px;
+}
+.fontAweSomeStacked .fontAweSomeStackedStar:before {
+  background: rgba(255, 255, 255, 0.4);
+}
+.fontAweSomeButton {
+  padding: 4px;
+  margin: 2px;
+  margin-bottom: 5px;
+  font-size: 23px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.fontAweSomeButtonSmall {
+  padding: 2px;
+  margin: 2px;
+  margin-bottom: 2px;
+  font-size: 13px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.fontAweSomeButtonLarge {
+  padding: 6px;
+  margin: 2px;
+  margin-bottom: 5px;
+  font-size: 29px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.textButton {
+  position: relative;
+  top: -0.15em;
+  margin-left: 2px;
+  margin-right: 8px;
+  font-size: 18px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  display: inline-block;
+}
+.textButton:active {
+  font-weight: 100;
+}
+.notActiveTextButton {
+  cursor: default;
+}
+.textButtonPlainSize {
+  font-size: 15px;
+}
+.golabDroppable {
+  border: 2px dotted #1bb71f !important;
+}
+.dropObjectOutSideDropArea {
+  opacity: 0.35;
+}
+.toolbar {
+  background: #ebebeb;
+  border-top: 5px solid #ffffff;
+}
+.toolbar,
+.toolbarPart {
+  list-style-type: none;
+  padding-left: 0px;
+  padding-top: 6px;
+  padding-right: 0px;
+  padding-bottom: 1px;
+  margin: 0px;
+  position: relative;
+  vertical-align: middle;
+}
+.toolbar li,
+.toolbarPart li {
+  display: inline;
+  color: #4444ad;
+  font-size: 20px;
+}
+.toolbar li:hover,
+.toolbarPart li:hover {
+  color: #0d0592;
+}
+.toolbar li:active,
+.toolbarPart li:active {
+  font-weight: bolder;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.toolbar li.status:hover,
+.toolbarPart li.status:hover {
+  color: #4444ad;
+}
+.toolbar li.status:active,
+.toolbarPart li.status:active {
+  font-weight: normal;
+}
+.verticalToolbar {
+  border-top: none;
+  display: table;
+  padding-left: 6px;
+  padding-top: 0px;
+  padding-right: 6px;
+  padding-bottom: 1px;
+}
+.verticalToolbar li {
+  display: list-item;
+}
+table.verticalToolbarTable {
+  border-spacing: 0px;
+  padding: 0px;
+  width: 100%;
+}
+table.verticalToolbarTable td {
+  vertical-align: top;
+  background: #ebebeb;
+  padding: 0px;
+}
+table.verticalToolbarTable td.verticalToolbarCell {
+  background: #ebebeb;
+  border-right: 5px solid #ffffff;
+  width: 1%;
+  min-width: 3em;
+}
+ul.toolbarPart {
+  display: inline;
+  padding-left: 0px;
+}
+.toolBarBeginSpace {
+  margin: 0.4em;
+}
+.toolBarSpace {
+  margin: 1em;
+}
+.evenColumnBackground {
+  background-color: #fcfcff;
+}
+.oddColumnBackground {
+  background-color: #f3f3ff;
+}
+.deselectedBorder {
+  border: 5px solid #ffffff;
+}
+.selectedBorder {
+  border: 5px solid #74f257;
+}
+.selectableListItem {
+  margin-bottom: 5px;
+}
+.lastSelectableListItem {
+  margin-bottom: 0px;
+}
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.textSelectable {
+  -moz-user-select: -moz-text;
+  -khtml-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  -o-user-select: text;
+  user-select: text;
+}
+/* this works on iOS, not on android */
+.preventLongPress {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+/*
+@tableOddColor: #eeeeff;
+@tableEvenColor: #ddeeff;
+*/
+.ta-editor {
+  min-height: 300px;
+  height: auto;
+  overflow: auto;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 20px 0;
+}
+.btn-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.edt_configuration_label {
+  font-weight: bold;
+  /*    border-bottom: 1px dotted black; */
+
+}
+/*------------------------------------------------------------
+ *  For the configuration (edt_conf_ ...)
+ *------------------------------------------------------------*/
+.edt_conf_tab {
+  background-color: #ddddee;
+  border-top: 1px solid #4444ad;
+  border-left: 1px solid #4444ad;
+  border-right: 1px solid #4444ad;
+}
+.edt_disabled {
+  color: grey;
+}
+.edt_stringEditor {
+  border: 2px solid #ffffff;
+}
+.edt_stringEditor input {
+  width: 100%;
+}
+.edt_selectedStringEditor div {
+  border: 2px solid #74f257;
+  width: 90%;
+}
+.edt_unselectedStringEditor div {
+  width: 90%;
+}
+.edt_conf_feedback {
+  color: red;
+}
+.edt_conf_header {
+  color: white;
+  background-color: #4444ad;
+  font-size: 17px;
+  min-width: 150px;
+  font-weight: bold;
+}
+.edt_conf_variable {
+  color: black;
+  background-color: white;
+  vertical-align: middle;
+  font-size: 15px;
+  border: 1px solid black;
+  padding: 2px;
+}
+.edt_conf_variable_selected {
+  color: black;
+  background-color: #ddddee;
+  vertical-align: middle;
+  font-size: 15px;
+  border: 1px solid black;
+  padding: 2px;
+  font-weight: bold;
+}
+.edt_conf_variable_name_empty {
+  border: 1px solid red;
+}
+input[type="radio"] + span {
+  display: inline-block;
+  width: 8em;
+  cursor: pointer;
+  background-color: #f8f8ff;
+  color: black;
+  text-align: center;
+  font-weight: normal;
+  border: 1px solid black;
+}
+input[type="number"] {
+  width: 3em;
+}
+.edt_numerical {
+  width: 5em;
+  text-align: right;
+}
+.edt_text {
+  width: 8em;
+  text-align: left;
+}
+input[type="radio"]:checked + span {
+  display: inline-block;
+  width: 8em;
+  background-color: #ddddee;
+  font-weight: bold;
+}
+#edt_dialog_content {
+  overflow-y: scroll;
+}
+.ui-dialog-titlebar-close {
+  visibility: hidden;
+}
+#edt_configuration > .ui-dialog-titlebar-close {
+  visibility: hidden !important;
+  width: 100%;
+  max-width: 700px;
+}
+.middle {
+  vertical-align: middle;
+}
+.no_white_space {
+  padding: 0px;
+  margin: 0px;
+}
+.top {
+  vertical-align: top;
+}
+.border {
+  border: 1px solid black;
+}
+.full {
+  width: 100%;
+}
+.cell {
+  display: table-cell;
+}
+.row {
+  display: table-row;
+}
+.table {
+  display: table;
+}
+.pct25 {
+  width: 25%;
+}
+.pct75 {
+  width: 75%;
+}
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.edt_input_dependent_finished {
+  width: 10em;
+}
+.edt_input_dependent_passive {
+  width: 10em;
+}
+.edt_input_dependent_active {
+  width: 10em;
+  border: 1px solid red !important;
+}
+.edt_property_value_on {
+  background-color: #74f257;
+  min-height: 30px;
+  display: inline;
+  font-size: 1em;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.edt_property_value_off {
+  background-color: #abaeff;
+  min-height: 30px;
+  display: inline;
+  font-size: 1em;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/*------------------------------------------------------------
+ *  General
+ *------------------------------------------------------------*/
+/*  No text cursor */
+body {
+  cursor: default;
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  font-size: 20px;
+}
+.edt_term {
+  font-weight: bold;
+}
+/*------------------------------------------------------------
+ *  Dialogs
+ *------------------------------------------------------------*/
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+.edt_variable_header {
+  background-color: #4444ad;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  height: 2em;
+}
+.edt_variable_header_empty {
+  background-color: #4444ad;
+  color: white;
+  font-size: 15px;
+  height: 2em;
+  width: 30%;
+}
+.edt_variable_list {
+  border: 0px solid grey;
+  background-color: white;
+  font-size: 15px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 6px 6px;
+}
+.edt_variable_assigned {
+  color: grey;
+  vertical-align: middle;
+  font-size: 15px;
+  border: 1px solid lightgrey;
+  box-shadow: 3px 3px white;
+  padding: 5px;
+}
+.edt_variable_unassigned {
+  color: black;
+  vertical-align: middle;
+  font-size: 15px;
+  border: 1px solid #4444ad;
+  padding: 5px;
+}
+.edt_variable_text {
+  padding-right: 3px;
+  background-color: white;
+  box-shadow: 1px 2px 2px 1px grey;
+}
+.edt_property_assigned {
+  color: black;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid #4444ad;
+  box-shadow: 3px 3px grey;
+  padding: 5px;
+  font-weight: bold;
+}
+.edt_row_index {
+  color: black;
+  vertical-align: middle;
+  font-size: 15px;
+}
+.edt_row_cell {
+  color: black;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 15px;
+  height: 38px;
+}
+/*
+.edt_row_selected {
+    background-color: #ccccee;
+//    border: 1px solid black;
+};
+*/
+.edt_cell_empty {
+  color: white;
+  background-color: white !important;
+}
+.edt_role_list {
+  border-collapse: separate;
+  border-spacing: 12px 3px;
+}
+.edt_variable_list tr:nth-child(odd) {
+  background-color: #f8f8ff;
+}
+.edt_variable_list tr:nth-child(even) {
+  background-color: #f8f8ff;
+}
+.edt_experiment_header {
+  text-align: center;
+  vertical-align: top;
+  font-size: 15px;
+  border: 1px solid lightgrey;
+  padding: 2px;
+}
+.edt_experiment_list {
+  border-collapse: separate;
+  border-spacing: 12px 3px;
+}
+.edt_experiment_list tr:nth-child(odd) {
+  background-color: #ddddee;
+}
+.edt_experiment_list tr:nth-child(even) {
+  background-color: #f8f8ff;
+}
+.edt_drag_here {
+  column-span: all;
+  font-style: italic;
+  text-align: center;
+}
+/*------------------------------------------------------------
+ *  Experimental design table
+ *------------------------------------------------------------*/
+.edt_table_experiment_specification {
+  text-align: center;
+}
+.edt_table_experiment_specification tr:nth-child(odd) {
+  background-color: #dce7fa;
+}
+.edt_table_experiment_specification tr:nth-child(even) {
+  background-color: #b5ddeb;
+}
+.edt_th_variable,
+.edt_th_nth {
+  padding: 2px;
+}
+.edt_conclusion_table {
+  width: 100%;
+  border: 2px solid #1bb71f;
+}
+.edt_tr_experiment_run_fixed {
+  opacity: 0.5;
+  background-color: 'grey';
+}
+/*------------------------------------------------------------
+ *  Overall layout
+ *------------------------------------------------------------*/
+#edt_content_heuristics ul {
+  padding-left: 20px;
+}
+.edt_div_main {
+  padding: 2px;
+}
+.edt_div_sub {
+  border: 0px solid #939597;
+}
+#vbl_form_container,
+#vbl_aquarium_container,
+#vbl_graph_container {
+  background: #ebebeb;
+  border: none;
+  border-radius: 3px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+#vbl_form {
+  padding: 5px;
+}
+#vbl_aquarium {
+  padding: 5px;
+  width: 50%;
+}
+#vbl_graph {
+  padding: 5px;
+  width: 50%;
+}
+/*------------------------------------------------------------
+ *  Buttons
+ *------------------------------------------------------------*/
+#edt_table {
+  width: 100%;
+  /*  height: 700px; */
+
+  padding: 5px;
+  border-collapse: collapse;
+  /*  text-align: center; */
+
+}
+.edt_table_header {
+  background-color: #4444ad;
+  color: white;
+  font-weight: bold;
+  padding: 6px;
+}
+.edt_section_header {
+  background-color: white;
+  color: black;
+  padding: 0px;
+  font-size: 16px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+#edt_header {
+  border: 1px solid black;
+  width: 100%;
+}
+#edt_instruction_space {
+  border: 1px solid black;
+  width: 50%;
+}
+#edt_experiment_space {
+  border: 1px solid black;
+  border-spacing: 3px;
+  /*  width: 67%;
+    height: 67%; */
+
+  padding: 5px;
+}
+#edt_selection_space {
+  border: 1px solid black;
+}
+#edt_experiment_space > td {
+  padding-top: 3px;
+}
+#edt_selection_space > td {
+  padding-top: 3px;
+}
+#edt_instruction_space > td {
+  padding-top: 3px;
+}
+#edt_instruction_space {
+  border: 1px solid black;
+  width: 50%;
+}
+#edt_experimental_setup {
+  background-color: #E8E8E9;
+  color: white;
+}
+#edt_all_fluids {
+  background-color: #E8E8E9;
+  color: white;
+}
+#edt_all_instruments {
+  background-color: #E8E8E9;
+  color: white;
+}
+#edt_all_object_properties {
+  background-color: #15B8CE;
+  color: white;
+}
+#edt_all_object_measures {
+  background-color: #FAA61B;
+  color: white;
+}

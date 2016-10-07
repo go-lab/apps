@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Entry Box</title>
+
+    <link rel="stylesheet" type="text/css" href="../../commons/css/golabStart.css"/>
+    <script type="text/javascript" src="../../commons/js/errorHandler.js"></script>
+    <script type="text/javascript" src="../../commons/js/jsChecker.js"></script>
+    <script type="text/javascript" src="../../libs/js/headJS/head.js"></script>
+    <script type="text/javascript" src="../../commons/js/resourceLoader.js"></script>
+    <script type="text/javascript" src="../../commons/js/commonsModules.js"></script>
+
+    <script type="text/javascript" src="js/module.js"></script>
+  </head>
+
+  <body ng-controller="controller_entry"
+        style="overflow-y: hidden">
+    <div class="pleaseWaitIcon" golabCloak></div>
+    <div id="all" hidden>
+      <div>
+<!--
+        &nbsp;
+        <i ng-hide="state.context == 'ils'"
+           class="fa fa-gear activeButton"
+           ng-click="configuration_edit()">
+        </i>
+-->
+        &nbsp;
+        <i ng-hide="state.context == 'ils'"
+           class="fa fa-graduation-cap activeButton"
+           ng-click="student_responses_show()">
+        </i>
+      </div>
+
+      <div class="container-fluid entry-full">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <textarea id="entry_box"
+                      class="entry-full entry-text-input entry-font"
+                      msd-elastic
+                      ng-blur="input_blur()"
+                      ng-keyup="checkHeight()"
+                      ng-model="model.text"
+                      rows="3"
+                      placeholder="{{configuration.placeholder}}">
+            </textarea>
+          </div>
+
+          <div ng-show="configuration.save_button.length > 0"
+               class="form-group">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-9">
+              <button type="button" class="btn btn-info"
+                      ng-click="input_save()">
+                {{configuration.save_button}}
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div hidden
+           id="entry_configuration"
+           class="container-fluid entry-full"
+           style="height: 50px; max-height: 500px; overflow-y: auto; overflow-x: hidden;
+                  background-color: white">
+
+        <form class="form-horizontal">
+          <div class="form-group">
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label entry-has-popover"
+                   data-toggle="popover"
+                   data-placement="bottom"
+                   data-content="Name of the resource.  Make sure
+                   that if you have multiple Entry Boxes in an ILS, the
+                   resource name has a unique name.">
+              Resource name</label>
+            <div class="col-sm-9">
+              <input type="text"
+                     class="form-control entry-full"
+                     ng-model="configuration.resource_name"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label entry-has-popover"
+                   data-toggle="popover"
+                   data-placement="top"
+                   data-content="Hint to students what they have to enter.">
+              Hint</label>
+            <div class="col-sm-9">
+              <input type="text"
+                     class="form-control entry-full"
+                     ng-model="configuration.placeholder"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Preview</label>
+            <div class="col-sm-9">
+              <textarea class="entry-resize entry-text-input form-control entry-full"
+                        rows="3"
+                        placeholder="{{configuration.placeholder}}">
+              </textarea>
+            </div>
+          </div>
+        </form>
+
+        <div class="dialogButtonRow">
+          <i class="fa fa-times fa-fw activeButton fontAweSomeButton dialogButton"
+             ng-click="configuration_close()">
+          </i>
+        </div>
+      </div>
+
+      <div hidden
+           id="entry_student_responses">
+        <div class="container-fluid entry-full"    
+             style="height: 400px; overflow-y: auto; overflow-x: hidden;
+                    background-color: white">
+          <table class="table">
+            <tr><th><b>{{'student' | g4i18n}}</b></th>
+              <th><b>{{'entry' | g4i18n}}</b></th></tr>
+            <tr ng-repeat="response in student_responses"
+                ng-show="response.text.length > 0">
+              <td>{{response.student}}</td>
+              <td>{{response.text}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="dialogButtonRow">
+          <i class="fa fa-times fa-fw activeButton fontAweSomeButton dialogButton"
+             ng-click="student_responses_close()">
+          </i>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+      var entry = window.ut.tools.entry;
+      var conf = {};
+
+      entry.startEntry(conf);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,254 @@
+/*  $Id$	-*- mode: css -*-
+ *  
+ *  File	chempy.less
+ *  Part of	Go-Lab Chemical Equation Entry
+ *  Author	Anjo Anjewierden, a.a.anjewierden@utwente.nl
+ *  Purpose	Cascading style sheet
+ *  Works with	Less, CSS
+ *  
+ *  Notice	Copyright (c) 2015  University of Twente
+ *  
+ *  History	10/02/15  (Created)
+ *  		30/03/15  (Last modified)
+ */ 
+
+@charset "utf-8";
+
+@import "../../commons/css/golabColors";
+@import "../../commons/css/golabStyle";
+@import "../../commons/css/utils";
+
+@chempyEnterColor: #B8F5F4;
+@chempyCorrectColor: #99FF66;
+@chempyWrongColor: #F5B8C3;
+@chempyTriesColor: #F6F63B;
+
+.longrightarrow:before {
+    font-size: 150%;
+    content: '\2192';
+};
+
+.equilibriumarrow:before {
+    font-size: 100%;
+    content: '\21CC';
+};
+
+.chempy_input_field {
+    background-color: @chempyEnterColor;
+};
+
+.chempy_input_wrong {
+    background-color: @chempyWrongColor;
+};
+
+.chempy_input_correct {
+    background-color: @chempyCorrectColor;
+};
+
+.chempy_input_tries {
+    background-color: @chempyTriesColor;
+};
+
+body {
+    cursor: pointer;
+//    font-size: 17px;
+    color: black;
+//    font-family: @reflectFontFamily;
+};
+
+.left {
+    text-align: left;
+};
+
+.right {
+    text-align: right;
+};
+
+.center {
+    text-align: center;
+};
+
+.time_spent_legend {
+    width: 10%;
+    border-right: 1px solid black;
+    height: 20px;
+}
+
+.time_spent_student {
+    height: 20px;
+    border-top: 0.5em solid white;
+    border-bottom: 0.1em solid white;
+    background-color: blue;
+};
+
+.time_spent_norm {
+    height: 20px;
+    border-top: 0.1em solid white;
+    border-bottom: 0.5em solid white;
+    background-color: orange;
+};
+
+.time_spent_student_legend {
+    height: 20px;
+    background-color: blue;
+};
+
+.time_spent_norm_legend {
+    height: 20px;
+    background-color: orange;
+};
+
+.full {
+    width: 100%;
+};
+
+.half {
+    width: 50%;
+};
+
+.cell {
+    display: table-cell;
+};
+
+.padding {
+    padding: 0.5em;
+}
+
+.bold {
+    font-weight: bold;
+};
+
+.header {
+    padding: 0.5em;
+    font-weight: bold;
+    background-color: lightblue;
+};
+
+.pct3 {
+    width: 3%;
+};
+
+.pct4 {
+    width: 4%;
+};
+
+.pct5 {
+    width: 5%;
+};
+
+.pct6 {
+    width: 6%;
+};
+
+.pct10 {
+    width: 10%;
+};
+
+.pct13 {
+    width: 13%;
+};
+
+.pct14 {
+    width: 14%;
+};
+
+.pct15 {
+    width: 15%;
+};
+
+.pct20 {
+    width: 20%;
+};
+
+.pct25 {
+    width: 25%;
+};
+
+.pct30 {
+    width: 30%;
+};
+
+.pct40 {
+    width: 40%;
+};
+
+.pct50 {
+    width: 50%;
+};
+
+.pct60 {
+    width: 60%;
+};
+
+.pct70 {
+    width: 70%;
+};
+
+.pct80 {
+    width: 80%;
+};
+
+.pct90 {
+    width: 90%;
+};
+
+.cell {
+    display: table-cell;
+};
+
+.cell70 {
+    display: table-cell;
+    width: 70%;
+};
+
+.row {
+    display: table-row;
+};
+
+.column {
+    display: table-column;
+};
+
+.top {
+    vertical-align: top;
+};
+
+.middle {
+    vertical-align: middle;
+};
+
+.table {
+    display: table;
+};
+
+.collapse {
+    border-collapse: collapse;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+.borderrb {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.gborderrb {
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
+.bordertlr {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.borderb {
+    border-bottom: 1px solid black;
+}
+
+.gborderb {
+    border-bottom: 1px solid lightgrey;
+}

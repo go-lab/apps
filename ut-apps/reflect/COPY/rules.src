@@ -1,0 +1,79 @@
+/*  $Id$        -*- mode: javascript -*-
+ *  
+ *  File        rules.src
+ *  Part of     Go-Lab Reflection Tool
+ *  Author      Anjo Anjewierden, a.a.anjewierden@utwente.nl
+ *  Purpose     Database of questions
+ *  Works with  ECMAScript 5.1
+ *  
+ *  Notice      Copyright (c) 2014  University of Twente
+ *  
+ *  History     27/10/14  (Created)
+ *		27/10/14  (Last modified)
+ */ 
+
+/*------------------------------------------------------------
+ *  Directives
+ *------------------------------------------------------------*/
+
+#include "../../libs/h/js.h"
+
+"use strict";
+
+/**
+ *  Create a small database with rule-based questions for the reflection tool.
+ *  This should probably be a JSON file configured by the app composer at some
+ *  time in the future.
+ */
+ 
+(function() {
+    var ut = this.ut = this.ut || {};
+    var tools = ut.tools = ut.tools || {};
+    var reflect = tools.reflect = tools.reflect || {};
+
+    var rules = reflect.rules = {};
+    var msg = reflect.messages;
+
+    rules.time_spent = [
+        { id: "general_time_spent",
+          condition: true,
+          priority: 1,
+          text: msg.question_general_time_spent
+        }
+/*
+        { id: "little_orientation",
+          condition: {
+              phase: "orientation",
+              comparison: "<",
+              threshold: 0.5
+          },
+          priority: 2,
+          text: {
+              en: "You spent very little time in the <b>orientation</b> phase.  Perhaps you did not watch the video?  Was this a good idea?" + disclaimer
+          }
+        },
+        { id: "much_orientation",
+          condition: {
+              phase: "orientation",
+              comparison: ">",
+              threshold: 0.5
+          },
+          priority: 2,
+          text: {
+              en: "You spent a lot of time in the <b>orientation</b> phase.  Please explain why." + disclaimer
+          }
+        },
+        { id: "normal_orientation",
+          condition: {
+              phase: "orientation",
+              comparison: "=",
+              threshold: 0.8
+          },
+          priority: 2,
+          text: {
+              en: "You spent as much time in the <b>orientation</b> phase as expected by your teacher!  Are you normal?" + disclaimer
+          }
+        }
+*/
+    ];
+}).call(this);

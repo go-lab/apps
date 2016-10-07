@@ -1,0 +1,6 @@
+<messagebundle mails="a.a.anjewierden@utwente.nl">
+  <msg name="quest_tool">Questionnaire tool</msg>
+  <msg name="quest">Questionnaire</msg>
+  <msg name="specify_questions">Specify questions for this questionnaire</msg>
+  <msg name="student_responses">Student responses in this ILS</msg>
+</messagebundle>

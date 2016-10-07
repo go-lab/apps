@@ -1,0 +1,80 @@
+/*  $Id$        -*- mode: javascript -*-
+ *  
+ *  File        model.src
+ *  Part of     Go-Lab Reflection Tool
+ *  Author      Anjo Anjewierden, a.a.anjewierden@utwente.nl
+ *  Purpose     Representation of the model
+ *  Works with  ECMAScript 5.1
+ *  
+ *  Notice      Copyright (c) 2014  University of Twente
+ *  
+ *  History     28/11/14  (Created)
+ *		28/11/14  (Last modified)
+ */ 
+
+/*------------------------------------------------------------
+ *  Directives
+ *------------------------------------------------------------*/
+
+#include "../../libs/h/js.h"
+
+"use strict";
+
+(function() {
+    var ut = this.ut = this.ut || {};
+    var tools = ut.tools = ut.tools || {};
+    var reflect = tools.reflect = tools.reflect || {};
+
+    var Model = reflect.Model = function(spec) {
+        this.type = spec.type;
+        this.data = spec.data;
+        this.answers = spec.answers || {};
+
+        reflect.create_resource(this);
+    };
+
+    Model.prototype.percentages = function(array) {
+        forall(i, array, element) {
+            forall(j, this.data, entry) {
+                if (entry.phase === element.phase)
+                    entry.percentage_student = element.percentage;
+            }
+        }
+    };
+
+    /**
+     *  Fill the norm slots of the data.  Array is of the form:
+     *  [ { phase: PHASE, percentage: PCT } ...]
+     */
+    Model.prototype.norms = function(array) {
+        forall(i, array, norm) {
+            forall(j, this.data, entry) {
+//                printf(i + ' ' + j + ' ' + norm.phase + ' ' + entry.phase);
+                if (entry.phase === norm.phase)
+                    entry.percentage_norm = norm.percentage;
+            }
+        }
+    };
+
+    /**
+     *  Fill the student slots of the data.  Array is of the form:
+     *  { PHASE: seconds, ... }
+     */
+    Model.prototype.agent_update = function(spec) {
+        var sum = 0;
+
+        for (var phase in spec) {
+            sum += spec[phase];
+        }
+
+        for (phase in spec) {
+            var pct = (sum > 0 ? spec[phase] / sum * 100 : 0);
+
+            forall(i, this.data, entry) {
+                if (entry.phase === phase) {
+                    entry.percentage_student = pct;
+                }
+            };
+        }
+    };
+}).call(this);

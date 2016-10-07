@@ -1,0 +1,9 @@
+<messagebundle mails="a.a.anjewierden@utwente.nl">
+  <msg name="entry_tool">Entry tool</msg>
+  <msg name="placeholder">Type here</msg>
+  <msg name="resource_name">Entry Box</msg>
+  <msg name="configure_this_entry">Entry Box configuration</msg>
+  <msg name="student_entries">List student entries for this ILS</msg>
+  <msg name="student">Student</msg>
+  <msg name="entry">Entry</msg>
+</messagebundle>

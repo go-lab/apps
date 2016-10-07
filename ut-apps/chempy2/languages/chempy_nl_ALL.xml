@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<messagebundle mails="pablo.orduna@deusto.es">
+  <msg name="language">nl</msg>
+  <msg name="chempy">Chempy</msg>
+</messagebundle>

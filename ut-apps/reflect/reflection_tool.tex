@@ -1,0 +1,21 @@
+
+Two reflection tools have been implemented based on the LA infrastructure.
+The time spent reflection tool presents the student with an overview of the
+time spent percentages in the inquiry phases of an ILS (see Figure xxx1).
+This tool is intended to be included in an ILS by the teacher (most often in
+the Discussion phase).  The teacher can configure the tool by setting norm
+percentages (shown as black bars in the figure).  Students can then reflect on
+their personal time spent (blue bars) by answering reflection questions
+configured by teachers.  The second reflection tool shows a time-line with the
+ILS phases and when the student visited the phases (see Figure xxx2).  This
+tool helps students reflect on the order in which they used the phases and for
+how long.  Again, the teacher can define questions to prompt students to
+initiate the reflection process.
+
+Both (client-based) reflection tools query a reflection agent running on the
+LA server.  This agent monitors incoming actions and collects the time spent
+and phase transition actions for all students in all ILSs.  The two reflection
+tools query the agent for the aggregated data for a particular student in an
+ILS by providing the studentId and ilsId as parameters.  The agent sends the
+aggregated data to the tool which creates the chart visualisation shown to the
+student.

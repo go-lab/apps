@@ -1,0 +1,47 @@
+/*  $Id$        -*- mode: javascript -*-
+ *  
+ *  File        questions.src
+ *  Part of     Go-Lab Reflection Tool
+ *  Author      Anjo Anjewierden, a.a.anjewierden@utwente.nl
+ *  Purpose     Database of questions
+ *  Works with  ECMAScript 5.1
+ *  
+ *  Notice      Copyright (c) 2014  University of Twente
+ *  
+ *  History     27/10/14  (Created)
+ *		27/10/14  (Last modified)
+ */ 
+
+/*------------------------------------------------------------
+ *  Directives
+ *------------------------------------------------------------*/
+
+#include "../../libs/h/js.h"
+
+"use strict";
+
+/**
+ *  Create a small database with questions for the reflection tool.  This
+ *  should probably a JSON file configured by the app composer at some time in
+ *  the future.
+ */
+ 
+(function() {
+    var ut = this.ut = this.ut || {};
+    var tools = ut.tools = ut.tools || {};
+    var reflect = tools.reflect = tools.reflect || {};
+
+    var questions = reflect.questions = {
+        time_spent: [];
+    };
+
+    questions.time_spent = [
+        { condition: true,
+          priority: 1,
+          id: "general_time_spent",
+          text: {
+              en: "Did you spend relatively more time than could be expected in one of more of the phases?  If so, please consider why this was the case (e.g., a phase particularly difficult or a phase engaged your attention).  Explain why you think your time in the inquiry phases differed from the suggested norm time.  If your time was the same then explain if you think all inquiry projects follow this general distribution."
+          },
+        }
+    ];
+}).call(this);

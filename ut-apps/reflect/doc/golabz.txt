@@ -1,0 +1,39 @@
+Chempy
+
+(New tool)
+
+App type: OpenSocial gadget
+App creator: Anjo Anjewierden
+Category: Go-Lab inquiry apps
+License: Creative Commons Attribution-NonCommercial (CC BY-NC)
+Source code: http://go-lab.gw.utwente.nl/production/chempy/build/chempy.xml
+Stand-alone: http://go-lab.gw.utwente.nl/production/chempy/build/chempy.html
+Keywords: chemistry, chemical formula's, chemical notation
+
+Chempy is a tool specifically designed to enter and check chemical formula
+using the standard notation of using subscripts for coefficients and
+superscripts for charges.  Teachers configure Chempy by giving the formula
+(e.g., Na+ + Cl- -> NaCl) that students have to enter.  Inside an ILS Chempy
+checks whether the student has entered the correct formula.  Students can
+enter coefficients and charges using the _ and ^ keys which Chempy will display
+as sub- and superscripts respectively.
+
+Reflection Tool
+
+Replace the old relection tool by this information.
+
+Link for Graasp:
+
+http://go-lab.gw.utwente.nl/production/reflect/build/reflect1.xml
+
+Stand-alone (not very meaningful):
+
+http://go-lab.gw.utwente.nl/production/reflect/build/reflect1.html
+
+Description.
+
+The Reflection Tool gives feedback to students about their use of an Inquiry
+learning Space (ILS).  The tool displays the percentage of time a student has
+spent in the various inquiry phases compared to a percentage norm set by the
+teacher (see image).  Students are prompted to reflect on their ILS use by a
+number of questions teachers can enter during configuration.

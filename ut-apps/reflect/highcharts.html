@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Highcharts</title>
+
+    <script src="http://code.highcharts.com/adapters/standalone-framework.js"></script>
+    <script src="http://code.highcharts.com/highcharts.src.js"></script>
+    <script src="http://code.highcharts.com/highcharts-more.js"></script>
+    <script src="http://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="http://blacklabel.github.io/custom_events/customEvents.js"></script>
+
+    <script src="./highcharts.js"></script>
+
+  </head>
+
+  <body>
+    <h2>Highcharts test</h2>
+    <div id="container"></div>
+
+    <script>
+    setTimeout(function() {
+        console.log('calling high_start');
+        window.high_start();
+    }, 2000);
+    </script>
+  </body>
+</html>

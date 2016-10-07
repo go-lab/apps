@@ -1,0 +1,49 @@
+<messagebundle>
+   <msg name="add_experiment_row">Προσθήκη πειραματικής γραμμής</msg>
+   <msg name="and">και</msg>
+   <msg name="available">Επιλογή</msg>
+   <msg name="cancel">Ακύρωση</msg>
+   <msg name="confirm">Επιβεβαίωση</msg>
+   <msg name="continue">Συνέχεια</msg>
+   <msg name="delete">Διαγραφή</msg>
+   <msg name="enter_number">Αριθμός</msg>
+   <msg name="enter_text">τιμής</msg>
+   <msg name="enter_value">Tιμής</msg>
+   <msg name="experiment">Πείραμα</msg>
+   <msg name="experiment_data">Δεδομένα πειράματος</msg>
+   <msg name="experiment_design">Σχεδιασμός Πειράματος</msg>
+   <msg name="instruction_add_trial">Πατήστε <i class="fa fa-plus"></i> για να προσθέσετε μια πειραματική δοκιμή στον σχεδιασμό σας.  Σχεδιάστε τουλάχιστον τρεις πειραματικές δοκιμές.</msg>
+   <msg name="instruction_continue_to_lab">Αν έχετε ολοκληρώσει το σχεδιασμό σας, μπορείτε να επιλέξετε και να πραγματοποιήσετε πειράματα στο εργαστήριο. Διαφορετικά, προσθέστε και άλλες πειραματικές δοκιμές.</msg>
+   <msg name="instruction_drag_variables">Επιλέξτε και σύρετε μία ιδιότητα στο "Μεταβάλλω/Αλλάζω", όλες τις άλλες στο "Κρατώ σταθερό", και επιλέξτε και σύρετε τουλάχιστον μία μεταβλητή που θέλετε να μετρήσετε στο "Μετρώ/Παρατηρώ".</msg>
+   <msg name="instruction_enter_results">Μπορείτε να εισάγετε τα αποτελέσματα για κάθε πειραματική δοκιμή ξεχωριστά. Μόλις ολοκληρώσετε μια πειραματική δοκιμή εισάγοντας και το αποτέλεσμα που βρήκατε, όλα τα στοιχεία αποθηκεύονται αυτόματα σε έναν πίνακα <i class="fa fa-table"></i> όπου μπορείτε να δείτε όλες τις ολοκληρωμένες πειραματικές δοκιμές και να τις ταξινομήσετε κατά αύξουσα ή φθίνουσα τιμή ανά μεταβλητή.</msg>
+   <msg name="instruction_enter_values">Εισάγετε τιμές <i class="fa fa-edit"></i> για όλες τις ιδιότητες στις πειραματικές δομικές που προσθέσατε.</msg>
+   <msg name="instruction_finished"></msg>
+   <msg name="keep_constant">Κρατώ σταθερό</msg>
+   <msg name="lab">Εργαστήριο</msg>
+   <msg name="language">el</msg>
+   <msg name="measure">Μετρώ</msg>
+   <msg name="measures">Μετρήσεις</msg>
+   <msg name="ok">OK</msg>
+   <msg name="properties">Ιδιότητες</msg>
+   <msg name="really_clear_design">Δεν έχουν ολοκληρωθεί όλα τα πειράματα. Είσαι σίγουρος/η ότι θέλεις να δημιουργήσεις έναν νέο σχεδιασμό πειράματος;</msg>
+   <msg name="remark">Παρατήρηση</msg>
+   <msg name="specify_value">Καθορισμός τιμής για</msg>
+   <msg name="title_experiments_dialog">Ολοκληρωμένες πειραματικές δοκιμές</msg>
+   <msg name="tooltip_completed_variable">Η τιμή είναι μέρος ενός ολοκληρωμένου πειράματος</msg>
+   <msg name="tooltip_delete_experiment_trial">Διαγραφή πειραματικής δοκιμής</msg>
+   <msg name="tooltip_drop_control">Τοποθέτησε εδώ τις ιδιότητες που θέλεις να κρατήσεις σταθερές</msg>
+   <msg name="tooltip_drop_dependent">Τοποθέτησε εδώ τις μετρήσεις που θα κάνεις</msg>
+   <msg name="tooltip_drop_independent">Τοποθέτησε εδώ τις ιδιότητες που θέλεις να μεταβάλεις/αλλάξεις</msg>
+   <msg name="tooltip_edit_configuration">Edit the configuration</msg>
+   <msg name="tooltip_edit_variable">Πάτησε εδώ για να καθορίσεις την τιμή αυτής της μεταβλητής</msg>
+   <msg name="tooltip_help">Βοήθεια</msg>
+   <msg name="tooltip_hide_available_variables">Απόκρυψη ιδιοτήτων και μετρήσεων</msg>
+   <msg name="tooltip_measures_list">Σύρε τις μετρήσεις που θα κάνεις στο "Μετρώ/Παρατηρώ"</msg>
+   <msg name="tooltip_new_design">Διάγραψε τον υπάρχοντα σχεδιασμό και ξεκίνησε έναν καινούριο. Τα πειράματα που έχεις ήδη εκτελέσει θα μπορείς να τα βλέπεις συγκεντρωμένα στον πίνακα ολοκληρωμένων πειραματικών δοκιμών.</msg>
+   <msg name="tooltip_properties_list">Σύρε τις ιδιότητες στο "Μεταβάλλω/Αλλάζω" ή "Κρατώ σταθερό"</msg>
+   <msg name="tooltip_show_about">Σχετικά με αυτό το εργαλείο</msg>
+   <msg name="tooltip_show_available_variables">Προβολή ιδιοτήτων και μετρήσεων.</msg>
+   <msg name="tooltip_view_experiments">Προβολή των ολοκληρωμένων πειραματικών δοκιμών</msg>
+   <msg name="vary">Μεταβάλλω</msg>
+   <msg name="warning">Προσοχή</msg>
+</messagebundle>

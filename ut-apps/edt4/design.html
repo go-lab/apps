@@ -1,0 +1,879 @@
+<div style="background-color: white;">
+
+  <div class="edt_div_main">
+    <table class="full">
+      <tr class="border full">
+        <td>
+          <span>
+            <span ng-switch="model.mode">
+              <span ng-switch-when="plan">
+                <i ng-click="hide_available_variables()"
+                   title="{{'tooltip_hide_available_variables' | translate}}"
+                   class="fa fa-angle-double-left fontAweSomeButton activeButton">
+                </i>
+              </span>
+              <span ng-switch-default>
+                <i ng-click="show_available_variables()"
+                   title="{{'tooltip_show_available_variables' | translate}}"
+                   class="fa fa-angle-double-right fontAweSomeButton activeButton">
+                </i>
+              </span>
+            </span>
+
+            <i class="fa fa-eraser fontAweSomeButton activeButton"
+               ng-click="new_design()"
+               title="{{'tooltip_new_design' | translate}}">
+            </i>
+            <i class="fa fa-table fontAweSomeButton"
+               ng-class="{ passiveButton: !experiments.rows.length, activeButton: experiments.rows.length }"
+               ng-click="view_experiments()"
+               title="{{'tooltip_view_experiments' | translate}} ({{experiments.rows.length}} {{'available'|translate}})">
+            </i>
+            <i ng-show="configuration.show_help"
+               class="fa fa-question fontAweSomeButton activeButton"
+               ng-click="show_help()"
+               title="{{'tooltip_help' | translate}}">
+            </i>
+<!--
+            <i ng-show="configuration.show_about"
+               class="fa fa-info fontAweSomeButton activeButton"
+               ng-click="show_about()"
+               title="{{'tooltip_show_about' | translate}}">
+            </i>
+-->
+            <i ng-show="configuration.show_configuration"
+               class="fa fa-gear fontAweSomeButton activeButton"
+               ng-click="edit_configuration()"
+               title="{{'tooltip_edit_configuration' | translate}}">
+            </i>
+            <span ng-show="configuration.show_instructions && model.mode != 'plan'">
+              <p ng-bind-html="instruction"></p>
+            </span>
+          </span>
+        </td>
+        <td ng-show="model.mode == 'plan'">
+          <span ng-show="configuration.show_instructions"
+                style="display: inline-block; padding-left: 120px;
+                       padding-right: 50px">
+            <p ng-bind-html="instruction"></p>
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td ng-show="model.mode == 'plan'"
+            style="min-width: 200px"
+            class="top">
+
+          <!-- Properties list -->
+          <table class="edt_variable_list">
+            <tr>
+              <td class="edt_table_header"
+                  title="{{'tooltip_properties_list' | translate}}">{{'properties' | translate}}</td>
+            </tr>
+            <tr ng-repeat="v in model.executable.properties">
+              <td ng-show="design.variable_assigned(v.name)"
+                  class="edt_variable_assigned">
+                  {{v.name}}
+              </td>
+              <td ng-show="!design.variable_assigned(v.name)"
+                  class="edt_variable_unassigned">
+                <span
+                   draggable
+                   class="edt_variable_text"
+                   title="{{'tooltip_properties_list' | translate}}"
+                   helper="clone" objectType="variable" objectId="{{v.name}}">
+                  {{v.name}}
+                </span>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Measures list -->
+          <table class="edt_variable_list" style="width: 100%">
+            <tr>
+              <td class="edt_table_header"
+                  title="{{'tooltip_measures_list' | translate}}">
+                {{'measures' | translate}}</td>
+            </tr>
+            <tr ng-repeat="m in model.executable.measures">
+              <td ng-show="design.variable_assigned(m.name)"
+                  class="edt_variable_assigned">
+                {{m.name}}
+              </td>
+              <td ng-show="!design.variable_assigned(m.name)"
+                  class="edt_variable_unassigned">
+                <span
+                   draggable
+                   class="edt_variable_text"
+                   title="{{'tooltip_measures_list' | translate}}"
+                   helper="clone" objectType="measure" objectId="{{m.name}}">
+                  {{m.name}}
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+
+        <!-- Experiment design table (single table version) -->
+        <td class="top full" >
+          <table class="edt_role_list full">
+            <tr class="full">
+              <td class="edt_cell_empty" style="width: 3%">&nbsp;</td>
+              <th ng-repeat="col in design.layout_variable_headers()"
+                  colspan="{{col.colspan}}"
+                  ng-class="{edt_variable_header: design.layout_columns_available(), edt_variable_header_empty: !design.layout_columns_available()}"
+                  title="{{'tooltip_drop_' + col.role | translate}}"
+                  droppable targetType="{{col.role}}">
+                {{col.header}}
+              </th>
+              <td class="edt_cell_empty" style="width: 3%">&nbsp;</td>
+            </tr>
+
+            <!-- Columns with the variable names -->
+            <tr class="full">
+              <th class="center">N</th>
+              <td ng-repeat="col in design.layout_variable_columns()"
+                  class="edt_property_assigned"
+                  droppable targetType="{{col.drop_role}}"
+                  style="width: {{col.width}}%">
+                <div ng-switch="col.role">
+                  <span ng-switch-when="dependent"
+                        draggable 
+                        helper="clone" objectType="measure" objectId="{{col.variable}}">
+                    <span ng-show="col.role == 'none'">&nbsp;</span>
+                    <span ng-show="col.role != 'none'">{{col.variable}}</span>
+                  </span>
+                  <span ng-switch-when="system">
+                    <span ng-show="col.role == 'none'">&nbsp;</span>
+                    <span ng-show="col.role != 'none'"
+                          title="{{'tooltip_system_variable' | translate}}">{{col.variable}}</span>
+                  </span>
+                  <span ng-switch-default
+                        draggable 
+                        helper="clone" objectType="variable" objectId="{{col.variable}}">
+                    <span ng-show="col.role == 'none'">&nbsp;</span>
+                    <span ng-show="col.role != 'none'">{{col.variable}}</span>
+                  </span>
+                </div>
+              </td>
+              <td class="edt_cell_empty" style="width: 3%">&nbsp;</td>
+            </tr>
+
+            <!-- Rows with values -->
+            <tr ng-repeat="row in design.layout_rows()">
+              <td class="center edt_row_index">{{row.nth}}</td>
+                <span ng-show="design.runnable && row.runnable && row.selected"
+                      ng-click="run_experiment(row)">
+                  <i class="fa fa-check-square-o fontAweSomeButton activeButton"></i>
+                </span>
+                <span ng-show="design.runnable && row.runnable && !row.selected"
+                      ng-click="run_experiment(row)">
+                  <i class="fa fa-square-o fontAweSomeButton activeButton"></i>
+                </span>
+              </td>
+              
+              <td ng-repeat="cell in row.cells"
+                  droppable targetType="{{cell.drop_role}}"
+                  class="edt_row_cell">
+                <span ng-switch="cell.role">
+                  <span ng-switch-when="none">&nbsp;</span>
+                  <span ng-switch-when="independent">
+                    <span ng-show="!row.editable"
+                          title="{{'tooltip_completed_variable' | translate}}"
+                          ng-bind-html="cell | formatVariableValue">
+                    </span>
+                    <span ng-show="row.editable && (cell.input == 'slider' || cell.input == 'categorical')"
+                          ng-click="specify_property_value(cell, row)"
+                          title="{{'tooltip_edit_variable' | translate}}">
+                      <i class="fa fa-edit fontAweSomeButton activeButton"></i>
+                      <span ng-bind-html="cell | formatVariableValue"></span>
+                    </span>
+                    <span ng-show="row.editable && cell.input == 'numerical'">
+                      <input placeholder="{{'enter_number' | g4i18n}}"
+                             class="edt_numerical"
+                             ng-keypress="keypress_variable_value($event, cell, row)"
+                             ng-blur="blur_variable_value(cell, row)"
+                             ng-model="cell.value">
+                      <span ng-bind-html="cell | formatVariableUnit"></span>
+                    </span>
+                    <span ng-show="row.editable && cell.input == 'text'">
+                      <input placeholder="{{'enter_text' | g4i18n}}"
+                             class="edt_text"
+                             ng-keypress="keypress_variable_value($event, cell, row)"
+                             ng-blur="blur_variable_value(cell, row)"
+                             ng-model="cell.value">
+                    </span>
+                  </span>
+
+                  <span ng-switch-when="control">
+                    <span ng-show="!row.editable"
+                          title="{{'tooltip_completed_variable' | translate}}"
+                          ng-bind-html="cell | formatVariableValue">
+                    </span>
+                    <span ng-show="row.editable && (cell.input == 'slider' || cell.input == 'categorical')"
+                          ng-click="specify_property_value(cell, row)"
+                          title="{{'tooltip_edit_variable' | translate}}">
+                      <i class="fa fa-edit fontAweSomeButton activeButton"></i>
+                      <span ng-bind-html="cell | formatVariableValue"></span>
+                    </span>
+                    <span ng-show="row.editable && cell.input == 'numerical'">
+                      <input placeholder="{{'enter_number' | g4i18n}}"
+                             class="edt_numerical"
+                             ng-keypress="keypress_variable_value($event, cell, row)"
+                             ng-blur="blur_variable_value(cell, row)"
+                             ng-model="cell.value">
+                      <span ng-bind-html="cell | formatVariableUnit"></span>
+                    </span>
+                    <span ng-show="row.editable && cell.input == 'text'">
+                      <input placeholder="{{'enter_text' | g4i18n}}"
+                             class="edt_text"
+                             ng-keypress="keypress_variable_value($event, cell, row)"
+                             ng-blur="blur_variable_value(cell, row)"
+                             ng-model="cell.value">
+                    </span>
+                  </span>
+
+                  <span ng-switch-when="system">
+                    <span title="{{'tooltip_completed_variable' | translate}}"
+                          ng-bind-html="cell | formatVariableValue">
+                    </span>
+                  </span>
+
+                  <span ng-switch-when="dependent"> 
+                    <span>
+                      <span ng-show="cell.input == 'slider' || cell.input == 'categorical'">
+                        <span ng-show="row.runnable"
+                              ng-click="specify_property_value(cell, row)"
+                              title="{{'tooltip_edit_variable' | translate}}">
+                          <i class="fa fa-edit fontAweSomeButton activeButton"></i>
+                          <span ng-bind-html="cell | formatVariableValue"></span>
+                        </span>
+                        <span ng-show="!row.runnable"
+                              title="{{'tooltip_edit_variable' | translate}}">
+                          <span ng-bind-html="cell | formatVariableValue"></span>
+                        </span>
+                      </span>
+
+                      <span ng-show="cell.input == 'numerical'">
+                        <span ng-show="row.runnable && row.completed">
+                          <input placeholder="{{'enter_number' | g4i18n}}"
+                                 ng-model="cell.value"
+                                 ng-keypress="keypress_variable_value($event, cell, row)"
+                                 ng-blur="blur_variable_value(cell,row)"
+                                 class="edt_input_dependent_finished edt_numerical"/>
+                          <span ng-bind-html="cell | formatVariableUnit"></span>
+                        </span>
+                        <span ng-show="row.runnable && !row.completed">
+                          <input placeholder="{{'enter_number' | g4i18n}}"
+                                 ng-model="cell.value"
+                                 ng-keypress="keypress_variable_value($event, cell, row)"
+                                 ng-blur="blur_variable_value(cell,row)"
+                                 class="edt_input_dependent_active edt_numerical"/>
+                          <span ng-bind-html="cell | formatVariableUnit"></span>
+                        </span>
+                        <span ng-show="!row.runnable">
+                          <input disabled="true"
+                                 class="edt_input_dependent_passive edt_numerical"/>
+                          <span ng-bind-html="cell | formatVariableUnit"></span>
+                        </span>
+                      </span>
+
+                      <span ng-show="cell.input == 'text'">
+                        <input ng-show="row.runnable && row.completed"
+                               placeholder="{{'enter_text' | g4i18n}}"
+                               ng-model="cell.value"
+                               ng-keypress="keypress_variable_value($event, cell, row)"
+                               ng-blur="blur_variable_value(cell,row)"
+                               ng-keyup="key_up($event,cell,row,cell.variable)"
+                               class="edt_input_dependent_finished edt_text"/>
+                        <input ng-show="row.runnable && !row.completed"
+                               placeholder="{{'enter_text' | g4i18n}}"
+                               ng-model="cell.value"
+                               ng-keypress="keypress_variable_value($event, cell, row)"
+                               ng-blur="blur_variable_value(cell,row)"
+                               class="edt_input_dependent_active edt_text"/>
+                        <input ng-show="!row.runnable"
+                               disabled="true"
+                               class="edt_input_dependent_passive edt_text"/>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </td>
+              <td ng-click="delete_row(row)"
+                  title="{{ 'tooltip_delete_experiment_trial' | translate}}">
+                <i class="fa fa-minus activeButton"></i>
+              </td>
+            </tr>
+
+            <!-- Add row button -->
+            <tr class="full">
+              <td>
+                <i class="fa fa-plus fontAweSomeButton activeButton"
+                   ng-click="add_row()"
+                   title="{{'add_experiment_row' | g4i18n}}"
+                   ng-show="configuration.max_experiments > design.rows.length">
+                </i>
+              </td>
+              <td class="edt_cell_empty">&nbsp;</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Popup table with experiments --------------------------->
+
+    <div id="edt_experiments_table" hidden>
+      <table class="edt_table_experiment_specification full">
+        <tr class="full">
+          <th ng-show="configuration.experiments_sortable"
+              class="edt_th_variable" style="width: 10%"
+              ng-click="sort_experiments_by_nth()">
+            <i class="fa fa-sort"></i> N</th>
+          <th ng-show="!configuration.experiments_sortable"
+              class="edt_th_variable" style="width: 10%">N</th>
+          <th ng-show="col.in_use && configuration.experiments_sortable"
+              ng-repeat="col in experiments.columns"
+              class="edt_th_variable"
+              style="width: {{col.width}}%"
+              ng-click="sort_experiments(col)">
+            <i class="fa fa-sort"></i>
+            {{col.variable}}
+          </th>
+          <th ng-show="col.in_use && !configuration.experiments_sortable"
+              ng-repeat="col in experiments.columns"
+              class="edt_th_variable"
+              style="width: {{col.width}}%">
+            {{col.variable}}
+          </th>
+        </tr>
+        <tr ng-repeat="row in experiments.rows">
+          <td class="edt_th_experiment_nth">{{row.nth}}</td>
+          <td ng-repeat="cell in row.cells"
+              ng-show="cell.in_use"
+              class="edt_th_variable">
+            <span ng-bind-html="cell | formatVariableValue">
+            </span>
+          </td>
+          <td ng-click="delete_result(row)"
+              title="{{ 'tooltip_delete_experiment_trial' | translate}}">
+            <i class="fa fa-minus activeButton"></i>
+          </td>
+        </tr>
+      </table>
+      <div class="dialogButtonRow">
+        <i class="fa fa-times fa-fw activeButton fontAweSomeButton dialogButton"
+           ng-click="close_dialog('edt_experiments_table')">
+        </i>
+      </div>
+    </div>
+
+    <!-- CONFIGURATION -->
+    <div id="edt_configuration"
+         style="background-color: #EEE;"
+         hidden>
+      <table class="full" style="background-color: #EEE">
+        <tr class="full">
+          <td class="center"
+              ng-class="{edt_conf_tab: configuring == 'domain', empty: true}"
+              ng-click="set_configuring('domain')"
+              style="width: 33%">
+            <i class="fa" ng-class="{'fa-chevron-down': configuring == 'domain',
+                                    'fa-chevron-right': true}"></i> <b>Domain</b>
+          </td>
+          <td class="center"
+              ng-class="{edt_conf_tab: configuring == 'options', empty: true}"
+              ng-click="set_configuring('options')" style="width: 33%">
+            <i class="fa" ng-class="{'fa-chevron-down': configuring == 'options',
+                                    'fa-chevron-right': true}"></i> <b>Configuration</b>
+          </td>
+          <td class="center"
+              ng-class="{edt_conf_tab: configuring == 'help', empty: true}"
+              ng-click="set_configuring('help')" style="width: 33%">
+            <i class="fa" ng-class="{'fa-chevron-down': configuring == 'help',
+                                    'fa-chevron-right': true}"></i> <b>Help</b>
+          </td>
+        </tr>
+      </table>
+
+      <div class="full" style="border: 5px solid #EEE">
+
+        <div ng-show="configuring == 'help'" style="background-color: white; padding: 5px">
+          <div text-angular ng-model="configuration.help_text"
+               class="ta-edtior btn-group"
+               ta-text-editor-class="border-around" ta-html-editor-class="border-around">
+          </div>
+        </div>
+
+        <table class="full" ng-show="configuring == 'options'"
+               style="background-color: white">
+          <tr>
+            <td colspan="10"><hr></td>
+          </tr>
+          <tr>
+            <th class="left">Option</th>
+            <th class="left">Specification</th>
+          </tr>
+          <tr>
+            <td colspan="10"><hr></td>
+          </tr>
+          <tr>
+            <th class="left"
+                title="Range for the number of experimental trials a student can specify. If the minimum value is for example 3, then the student has to define at least 3 trials before it becomes possible to enter the measures from running the trials in a lab.">
+              Number of experimental trials:</th>
+            <td>
+              <label>
+                <input type="number"
+                       ng-model="configuration.required_experiments">Min
+              </label>
+              <label>
+                <input type="number"
+                       ng-model="configuration.max_experiments">Max
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th class="left"
+                title="Range giving the number of properties the student has to drag to 'Vary'.">
+              Number of properties to Vary:</th>
+            <td>
+              <label>
+                <input type="number"
+                       ng-model="configuration.independent.minimum">Min
+              </label>
+              <label>
+                <input type="number"
+                       ng-model="configuration.independent.maximum">Max
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th class="left"
+                title="Range giving the number of properties the student has to drag to 'Keep constant'.  The default is 1 for the minimum, and no maximum.">
+              Number of properties to Keep constant:</th>
+            <td>
+              <label>
+                <input type="number"
+                       ng-model="configuration.control.minimum">Min
+              </label>
+              <label>
+                <input type="number"
+                       ng-model="configuration.control.maximum">Max
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th class="left"
+                title="Select 'Use all' when all properties must be either 'Vary' or 'Keep constant'.">
+              Total number of properties to be specified:</th>
+            <td>
+              <label>
+                <input type="checkbox"
+                       ng-model="configuration.variable.use_all">Use all
+              </label>
+              <label ng-show="configuration.variable.use_all != true">
+                <input type="number"
+                       ng-model="configuration.variable.minimum">Min
+              </label>
+              <label ng-show="configuration.variable.use_all != true">
+                <input type="number"
+                       ng-model="configuration.variable.maximum">Max
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th class="left"
+                title="Minimum number of measures selected by the student.">
+              Number of measures specified:</th>
+            <td>
+              <label>
+                <input type="number"
+                       ng-model="configuration.dependent.minimum">Min
+              </label>
+              <label>
+                <input type="number"
+                       ng-model="configuration.dependent.maximum">Max
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th class="left"
+                title="When set instructions are shown at the top left.  These instructions guide the student in using the EDT.">Instructions on how to proceed:</th>
+            <td>
+              <label>
+                <input type="checkbox"
+                       ng-model="configuration.show_instructions">Show
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th class="left"
+                title="When set the elements in the experiments table can be
+                sorted by the student.">Experiments table</th>
+            <td>
+              <label>
+                <input type="checkbox"
+                       ng-model="configuration.experiments_sortable">Sortable
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th class="left"
+                title="The experiment designs and the measures are saved under this name, and can be loaded under this name in the Data Viewer.  Another name should only be used for languages other than English.">
+              Name for loading results in other tools:</th>
+            <td>
+              <label>
+                <input type="text"
+                       ng-model="configuration.resource_name">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="10"><hr></td>
+          </tr>
+          <tr>
+            <td colspan="10">Check the tooltip under each option for additional information.</td>
+          </tr>
+        </table>
+
+        <table class="full" ng-show="configuring == 'domain'"
+               style="background-color: white">
+          <tr class="full">
+            <td class="top pct25">
+
+              <!-- Properties list -->
+              <table>
+                <tr ng-click="add_specification_variable('property')"
+                    title="Click to add a property">
+                  <td style="min-width: 20px">&nbsp;</td>
+                  <td style="min-width: 20px">&nbsp;</td>
+                  <td class="edt_conf_header">Properties</td>
+                  <td style="min-width: 20px"><i class="fa fa-plus activeButton"></i></td>
+                </tr>
+                <tr ng-repeat="p in model.specification.properties">
+                  <td style="min-width: 20px">
+                    <i ng-show="p.name == specify_variable.name && !$first"
+                       ng-click="up_specification_variable(p)"
+                       title="Click to move property up"
+                       class="fa fa-arrow-up activeButton">
+                    </i>
+                  </td>
+                  <td style="min-width: 20px">
+                    <i ng-show="p.name == specify_variable.name && !$last"
+                       ng-click="down_specification_variable(p)"
+                       title="Click to move property down"
+                       class="fa fa-arrow-down activeButton">
+                    </i>
+                  </td>
+                  <td ng-class="{edt_conf_variable_selected: specify_variable.name == p.name, edt_conf_variable: true}"
+                      ng-click="edit_specification_variable(p)">
+                    {{p.name}}
+                  </td>
+                  <td style="min-width: 20px">
+                    <i ng-show="p.name == specify_variable.name"
+                       ng-click="delete_specification_variable(p)"
+                       title="Click to delete this property"
+                       class="fa fa-minus activeButton">
+                    </i>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Measures list -->
+              <table>
+                <tr ng-click="add_specification_variable('measure')"
+                    title="Click to add a measure">
+                  <td style="min-width: 20px"></td>
+                  <td style="min-width: 20px"></td>
+                  <td class="edt_conf_header">Measures</td>
+                  <td style="min-width: 20px"><i class="fa fa-plus activeButton"></i></td>
+                </tr>
+                <tr ng-repeat="m in model.specification.measures">
+                  <td style="min-width: 20px">
+                    <i ng-show="m.name == specify_variable.name && !$first"
+                       ng-click="up_specification_variable(m)"
+                       title="Click to move measure up"
+                       class="fa fa-arrow-up activeButton">
+                    </i>
+                  </td>
+                  <td style="min-width: 20px">
+                    <i ng-show="m.name == specify_variable.name && !$last"
+                       ng-click="down_specification_variable(m)"
+                       title="Click to move measure down"
+                       class="fa fa-arrow-down activeButton">
+                    </i>
+                  </td>
+                  <td class="edt_conf_variable"
+                      ng-click="edit_specification_variable(m)">
+                    {{m.name}}
+                  </td>
+                  <td style="min-width: 20px">
+                    <i ng-show="m.name == specify_variable.name"
+                       ng-click="delete_specification_variable(m)"
+                       title="Click to delete this measure"
+                       class="fa fa-minus activeButton">
+                    </i>
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+            <td class="top pct75">
+              <div style="min-height: 400px">
+                <table ng-show="specify_variable"
+                       class="top"
+                       >
+                  <tr>
+                    <td><b>Name</b></td>
+                    <td><b>Example</b></td>
+                  </tr>
+                  <tr class="middle">
+                    <td>
+                      <input type="text" size="25"
+                             ng-class="{edt_conf_variable_name_empty: !specify_variable.name}"
+                             placeholder="Enter name"
+                             ng-model="specify_variable.name"/>
+                    </td>
+                    <td>
+                      <span ng-bind-html="specify_variable | exampleVariableValue"></span>
+                    </td>
+                  </tr>
+                  <tr ng-show="specify_variable.name">
+                    <td colspan="2">
+                      <label title="Sliders are suitable when the minimum and maximum values are known, and the values do not have to be very precise.">
+                        <input type="radio"
+                               style="display: none;"
+                               ng-model="specify_variable.input"
+                               value="slider"><span>Slider</span>
+                      </label>
+
+                      <label title="Numerical is suitable when the student must have full control over the precise value to be entered.">
+                        <input type="radio"
+                               style="display: none"
+                               ng-model="specify_variable.input"
+                               value="numerical"><span>Numerical</span>
+                      </label>
+
+                      <label title="Use categorical if the student has to select a value from a (short) list of predefined values">
+                        <input type="radio" 
+                               style="display: none"
+                               ng-model="specify_variable.input"
+                               value="categorical"><span>Categorical</span>
+                      </label>
+
+                      <label title="Student can enter an aribitrary value">
+                        <input type="radio"
+                               style="display: none"
+                               name="input_method"
+                               ng-model="specify_variable.input"
+                               value="text"><span>Text</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr ng-show="specify_variable.name">
+                    <td colspan="2"
+                        ng-show="specify_variable.input == 'slider'">
+                      <table>
+                        <tr>
+                          <td title="Initial value for this variable">
+                            <label class="edt_configuration_label">Initial value</label>
+                          </td>
+                          <td>
+                            <input type="text" size="10"
+                                   ng-blur="blur_specify_variable()"
+                                   ng-model="specify_variable.initial"/>
+                          </td>
+                          <td style="display: inline-block; width: 1.5em; max-width: 1.5em">&nbsp;</td>
+                          <td class="edt_conf_feedback">{{feedback.specification.initial}}</td>
+                        </tr>
+                        <tr>
+                          <td title="Number of digits after decimal point (e.g., 2 = 5.76, 1 = 5.8, 0 = 6)">
+                            <b>Precision</b>
+                          </td>
+                          <td>
+                            <input type="text" size="10"
+                                   ng-blur="blur_specify_variable()"
+                                   ng-model="specify_variable.precision"/>
+                          </td>
+                          <td></td>
+                          <td class="edt_conf_feedback">{{feedback.specification.precision}}</td>
+                        </tr>
+                        <tr>
+                          <td title="Unit (g, cm, m/s, etc.)">
+                            <b>Unit</b>
+                          </td>
+                          <td>
+                            <input type="text" size="10"
+                                   ng-blur="blur_specify_variable()"
+                                   ng-model="specify_variable.unit"/>
+                          </td>
+                          <td></td>
+                          <td class="edt_conf_feedback"
+                              ng-show="feedback.specification.unit">
+                            {{feedback.specification.unit}}
+                          </td>
+                          <td ng-show="!feedback.specification.unit">
+                            <button ng-click="append_unit_special_char('\u00B5')">&micro;</button>
+                            <button ng-click="append_unit_special_char('\u00B0')">&deg;</button>
+                            <button ng-click="append_unit_special_char('\u03A9')">&Omega;</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td title="Concept as it called in the lab">
+                            <b>Lab</b>
+                          </td>
+                          <td>
+                            <input type="text" size="10"
+                                   ng-blur="blur_specify_variable()"
+                                   ng-model="specify_variable.lab"/>
+                          </td>
+                          <td></td>
+                          <td</td>
+                        </tr>
+                        <tr>
+                          <td title="Lowest value student can enter">
+                            <b>Minimum</b>
+                          </td>
+                          <td>
+                            <input type="text" size="10"
+                                   ng-blur="blur_specify_variable()"
+                                   ng-model="specify_variable.minimum"/>
+                          </td>
+                          <td></td>
+                          <td class="edt_conf_feedback">{{feedback.specification.minimum}}</td>
+                        </tr>
+                        <tr>
+                          <td title="Highest value student can enter">
+                            <b>Maximum</b>
+                          </td>
+                          <td>
+                            <input type="text" size="10"
+                                   ng-blur="blur_specify_variable()"
+                                   ng-model="specify_variable.maximum"/>
+                          </td>
+                          <td>*</td>
+                          <td class="edt_conf_feedback">{{feedback.specification.maximum}}</td>
+                        </tr>
+                        <tr>
+                          <td title="Increment, e.g., 25 allows 25, 50, 75, 100 ...">
+                            <b>Increment</b>
+                          </td>
+                          <td>
+                            <input type="text" size="10"
+                                   ng-blur="blur_specify_variable()"
+                                   ng-model="specify_variable.increment"/>
+                          </td>
+                          <td></td>
+                          <td class="edt_conf_feedback">{{feedback.specification.increment}}</td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    <td colspan="2"
+                        ng-show="specify_variable.input == 'numerical'">
+                      <table>
+                        <tr>
+                          <td title="Unit (g, cm, m/s, etc.)">
+                            <b>Unit</b>
+                          </td>
+                          <td>
+                            <input type="text" size="10"
+                                   id="edt_conf_unit_input"
+                                   ng-blur="blur_specify_variable()"
+                                   ng-model="specify_variable.unit"/>
+                          </td>
+                          <td></td>
+                          <td class="edt_conf_feedback"
+                              ng-show="feedback.specification.unit">
+                            {{feedback.specification.unit}}
+                          </td>
+                          <td ng-show="!feedback.specification.unit">
+                            <button ng-click="append_unit_special_char('\u00B5')">&micro;</button>
+                            <button ng-click="append_unit_special_char('\u03A9')">&Omega;</button>
+                            <button ng-click="append_unit_special_char('\u2103')">&deg;C</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><b>Precision</b></td>
+                          <td>
+                            <input type="text" size="10"
+                                   ng-model="specify_variable.precision"/>
+                          </td>
+                          <td></td>
+                          <td class="edt_conf_feedback">{{feedback.specification.precision}}</td>
+                        </tr>
+                        <tr>
+                          <td title="Concept as it called in the lab">
+                            <b>Lab</b>
+                          </td>
+                          <td>
+                            <input type="text" size="10"
+                                   ng-blur="blur_specify_variable()"
+                                   ng-model="specify_variable.lab"/>
+                          </td>
+                          <td></td>
+                          <td</td>
+                        </tr>
+                        <tr>
+                          <td><b>Minimum</b></td>
+                          <td>
+                            <input type="text" size="10"
+                                   ng-model="specify_variable.minimum"/>
+                          </td>
+                          <td></td>
+                          <td class="edt_conf_feedback">{{feedback.specification.minimum}}</td>
+                        </tr>
+                        <tr>
+                          <td><b>Maximum</b></td>
+                          <td>
+                            <input type="text" size="10"
+                                   ng-model="specify_variable.maximum"/>
+                          </td>
+                          <td></td>
+                          <td class="edt_conf_feedback">{{feedback.specification.maximum}}</td>
+                        </tr>
+                        <tr>
+                          <td><b>Formula</b></td>
+                          <td>
+                            <input type="text" size="10"
+                                   ng-model="specify_variable.formula"/>
+                          </td>
+                          <td></td>
+                          <td class="edt_conf_feedback">{{feedback.specification.formula}}</td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    <td colspan="2"
+                        ng-show="specify_variable.input == 'categorical'">
+                      <string_list_editor array="specify_variable.values"
+                                          label="Values">
+                      </string_list_editor>
+                      <p class="edt_conf_feedback">{{feedback.specification.values}}</p>
+                      <p>Enter the values the student can select from.  Use
+                        <i class="fa fa-plus"></i> to add a value, <i class="fa fa-minus"></i> to delete a value and the arrows to change
+                        the order.</p>
+                    </td>
+
+                    <td colspan="2"
+                        ng-show="specify_variable.input == 'text'">
+                      <p>(No further specification is necessary.)</p>
+                    </td>
+
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="dialogButtonRow">
+        <i class="fa fa-times fa-fw activeButton fontAweSomeButton dialogButton"
+           ng-click="close_configuration()">
+        </i>
+      </div>
+    </div>	<!-- End of configuration -->
+  </div>
+</div>

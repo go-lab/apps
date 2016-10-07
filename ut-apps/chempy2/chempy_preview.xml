@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+    <ModulePrefs
+        title="Chempy"
+        width="500"
+        height="500"
+        author="Anjo Anjewierden"
+        author_email="a.a.anjewierden@utwente.nl"
+        >
+      <Require feature="osapi" />
+      <Require feature="content-rewrite">
+        <Param name="exclude-url">*</Param>
+      </Require>
+      <Require feature="dynamic-height"/>
+      <Locale messages="languages/chempy_en_ALL.xml"/>
+      <Locale lang="en" messages="languages/chempy_en_ALL.xml"/>
+      <Locale lang="nl" messages="languages/chempy_nl_ALL.xml"/>
+    </ModulePrefs>
+    <Content type="html" href="chempy.html" view="default"></Content>
+</Module>

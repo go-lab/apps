@@ -1,0 +1,8 @@
+edt3_en_ALL.xml
+edt3_el_ALL.xml
+edt3_es_ALL.xml
+edt3_et_ALL.xml
+edt3_nl_ALL.xml
+edt3_pt_ALL.xml
+edt3_ru_ALL.xml
+edt3_de_ALL.xml

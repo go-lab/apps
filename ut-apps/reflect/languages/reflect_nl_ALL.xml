@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<messagebundle mails="pablo.orduna@deusto.es">
+  <msg name="click_to_get_data">Klik om de data op te halen</msg>
+  <msg name="click_to_refresh_data">Klik om de data te verversen</msg>
+  <msg name="conceptualisation">Conceptualisatie</msg>
+  <msg name="conclusion">Conclusie</msg>
+  <msg name="discussion">Discussie</msg>
+  <msg name="enter_your_response">Tik hier je antwoord</msg>
+  <msg name="general_time_spent">Heb je relatief meer tijd gebruikt in een van deze fasen dan verwacht mocht worden? Als dat zo is, maak dan duidelijk waarom (de fase was heel moeilijk of de fase was heel interessant).</msg>
+  <msg name="general_transition">Heb je de fasen in de gegeven volgorde gevolgd (van boven naar beneden in de grafiek hieronder)? Zo niet, kun je uitleggen waarom?</msg>
+  <msg name="inquiry_phase">Onderzoeksfase</msg>
+  <msg name="introduction_time_spent">
+    <![CDATA[Reflecteren omvat het nadenken over wat je hebt gedaan en de keuzes die zijn gemaakt. Kijk naar het overzicht van het tijdsgebruik in de verschillende fases. Een norm percentage is toegevoegd om vergelijkingen eenvoudiger te maken.</p>]]></msg>
+  <msg name="introduction_transition">Reflectie betekent het nadenken over wat je hebt gedaan en de keuzes die je hebt gedaan. Bekijk hoe je door de verschillende fasen in de ILS bent gegaan.</msg>
+  <msg name="investigation">Onderzoek</msg>
+  <msg name="language">nl</msg>
+  <msg name="orientation">Orientatie</msg>
+  <msg name="percentage_time_spent">Percentage van de tijd in een fase</msg>
+  <msg name="please_answer_question">Beantwoord de volgende vraag:</msg>
+  <msg name="suggested">Norm</msg>
+  <msg name="title_reflecting_on_time_spent">Reflecteren over het gebruik van de verschillende fasen</msg>
+  <msg name="title_reflecting_on_transition">Reflecteren op het navigeren in de fasen</msg>
+  <msg name="tooltip_help">Bekijk het hulp scherm</msg>
+  <msg name="transitions">Overgangen</msg>
+  <msg name="transitions_subtitle">(Wanneer en voor hoe lang je in een fase bent geweest)</msg>
+  <msg name="yours">Jij</msg>
+</messagebundle>

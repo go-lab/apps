@@ -1,0 +1,49 @@
+<messagebundle>
+   <msg name="add_experiment_row">Añadir fila de experimento</msg>
+   <msg name="and">You can enter your results per experimental trial. Once you finalized a trial by entering the result you obtained, it will automatically be saved in a table <i class="fa fa-table"></i> where you can view all your conducted experimental trials and sort them ascending or descending per variable.</msg>
+   <msg name="available">disponible</msg>
+   <msg name="cancel">Cancelar</msg>
+   <msg name="confirm">Confirmar</msg>
+   <msg name="continue">Continuar</msg>
+   <msg name="delete">Eliminar</msg>
+   <msg name="enter_number">Número</msg>
+   <msg name="enter_text">Texto</msg>
+   <msg name="enter_value">Valor</msg>
+   <msg name="experiment">Experimento</msg>
+   <msg name="experiment_data">Datos del experimento</msg>
+   <msg name="experiment_design">Diseño del experimento</msg>
+   <msg name="instruction_add_trial">Presiona <i class="fa fa-plus"></i> para añadir una prueba experimental a tu diseño.  Diseña al menos tres pruebas experimentales.</msg>
+   <msg name="instruction_continue_to_lab">Si has completado tu diseño, puedes seleccionar y llevar a cabo los experimentos en el laboratorio. De lo contrario, añade las pruebas experimentales.</msg>
+   <msg name="instruction_drag_variables">Selecciona y arrastra TODAS las propiedades a "Variar" o a "Mantener constante", y selecciona y arrastra al menos una varibale que quieras medir a "Medida"</msg>
+   <msg name="instruction_enter_results">Puedes introducir tus resultados para cada prueba experimental. Una vez finalices una prueba tras introducir los resultados obtenidos, automaticamente se guardará en una tabla <i class="fa fa-table"></i> donde se pueden ver todas sus pruebas experimentales realizadas y ordenarlos ascendente o descendente por variable.</msg>
+   <msg name="instruction_enter_values">Introduce los valores <i class="fa fa-edit"></i> para todas las propiedades en las pruebas experimentales.</msg>
+   <msg name="instruction_finished">You have completed this set of experimental trials.  You can add additional trials, analyse the results with <i class="fa fa-table"></i>, or create a new set of experiments with <i class="fa fa-eraser"></i>.</msg>
+   <msg name="keep_constant">Mantener constante</msg>
+   <msg name="lab">Laboratorio</msg>
+   <msg name="language">en</msg>
+   <msg name="measure">Medida</msg>
+   <msg name="measures">Medidas</msg>
+   <msg name="ok">OK</msg>
+   <msg name="properties">Propiedades</msg>
+   <msg name="really_clear_design">No todos los experimentos han sido completados. Quieres realmente limpiar este diseño y crear uno nuevo??</msg>
+   <msg name="remark">Observación</msg>
+   <msg name="specify_value">Especificar valor para</msg>
+   <msg name="title_experiments_dialog">Pruebas experimentales llevadas a cabo</msg>
+   <msg name="tooltip_completed_variable">El valor es parte de un experimento llevado a cabo</msg>
+   <msg name="tooltip_delete_experiment_trial">Eliminar la prueba experimental</msg>
+   <msg name="tooltip_drop_control">Suelta aquí las propiedades que quieres mantener constante</msg>
+   <msg name="tooltip_drop_dependent">Suelta aquí las medidias</msg>
+   <msg name="tooltip_drop_independent">Suelta aquí las propiedades que quieres variar</msg>
+   <msg name="tooltip_edit_configuration">Edita la configuración</msg>
+   <msg name="tooltip_edit_variable">Haz clic para especificar el valor de esta variable</msg>
+   <msg name="tooltip_help">Ver ayuda</msg>
+   <msg name="tooltip_hide_available_variables">Ocultar propiedades y medidias disponibles</msg>
+   <msg name="tooltip_measures_list">Arrastrar medidas a "Medida"</msg>
+   <msg name="tooltip_new_design">Eliminar el diseño actual e iniciar uno nuevo. Todavía podrás revisar los experimentos que ya llevaste a cabo en la tabla historial.</msg>
+   <msg name="tooltip_properties_list">Arrastrar las propiedades a "Variar" o "Mantener constante"</msg>
+   <msg name="tooltip_show_about">sobre esta herramienta...</msg>
+   <msg name="tooltip_show_available_variables">Mostrar propiedades y medidias disponibles</msg>
+   <msg name="tooltip_view_experiments">Ver las pruebas experimentales llevadas a cabo</msg>
+   <msg name="vary">Variar</msg>
+   <msg name="warning">Advertencia</msg>
+</messagebundle>

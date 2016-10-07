@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+   <ModulePrefs
+           title="Experiment Design Tool version 4"
+           author="Anjo Anjewierden"
+           author_email="a.a.anjewierden@utwente.nl"
+           width="900"
+           height="600"
+           >
+      <Require feature="osapi"/>
+      <Require feature="content-rewrite">
+        <Param name="exclude-url">*</Param>
+      </Require>
+      <Require feature="dynamic-height"/>
+      <Locale messages="languages/edt3_en_ALL.xml"/>
+   </ModulePrefs>
+   <Content type="html" href="edt.html" view="default"></Content>
+</Module>

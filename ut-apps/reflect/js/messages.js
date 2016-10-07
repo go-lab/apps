@@ -1,0 +1,40 @@
+/*  $Id$ -*- mode: javascript; coding: utf-8; -*-
+ *  
+ *  File        messages.src
+ *  Part of     Go-Lab Reflection tool
+ *  Author      Anjo Anjewierden, a.a.anjewierden@utwente.nl
+ *  Purpose     Messages with translations in various languages
+ *  Works with  ECMAScript 5.1
+ *  
+ *  Notice      Copyright (c) 2014, 2015  University of Twente
+ *  
+ *  History     28/11/14  (Created)
+ *		10/02/15  (Last modified)
+ */
+
+/*------------------------------------------------------------
+ *  Directives
+ *------------------------------------------------------------*/
+/*  Use with gcc -E -x c -P -C *.h > *.js 
+ */
+
+"use strict";
+
+(function() {
+    var ut = this.ut = this.ut || {};
+    var tools = ut.tools = ut.tools || {};
+    var reflect = tools.reflect = tools.reflect || {};
+    var msg = reflect.messages = reflect.messages || {};
+
+    msg.introduction_time_spent = {
+        en: '<p>Reflection involves thinking back about what you did and the choices you made.  Please look at the activity time log below to recall how you spent your time in the inquiry phases.  A suggested norm time, provided by the ILS creator, has been added to help you make comparisons.</p>',
+        et: '<p>Reflekteerimine tähendab, et mõtled tagasivaatavalt oma tegevuse ja valikute üle. Palun vaata allolevat tegevuste ajalogi, et tuletada meelde, kuidas Sinu aeg uurimisetappides kulus. Lisatud on ka soovituslik normaeg, et saaksid oma aegu sellega võrrelda.</p>',
+        nl: '<p>Reflecteren omvat het nadenken over wat je hebt gedaan en de keuzes die zijn gemaakt.  Kijk naar het overzicht van het tijdsgebruik in de verschillende fases.  Een norm percentage is toegevoegd om vergelijkingen eenvoudiger te maken.</p>'
+    };
+
+    msg.question_general_time_spent = {
+        en: "Did you spend relatively more time than could be expected in one or more of the phases?  If so, please consider why this was the case (e.g., a phase particularly difficult or a phase engaged your attention).  Explain why you think your time in the inquiry phases differed from the suggested norm time.  If your time was the same then explain if you think all inquiry projects follow this general distribution.",
+        et: "Kas Sul kulus mõnes etapis suhteliselt rohkem aega, kui võis eeldada? Kui jah, siis palun mõtle, miks see nii oli (näiteks kas mõni etapp oli eriti raske või kõitis Sinu tähelepanu). Selgita, miks Sinu arvates erineb Sinul uurimisetappides kulunud aeg soovituslikust normajast. Kui Sinu aeg oli aga sama, siis palun selgita, kas Sinu arvates järgivad kõik uurimisprojektid seesugust üldist ajajaotust.",
+        nl: "Heb je relatief meer tijd gebruikt in een van deze fasen dan verwacht mocht worden?  Als dat zo is, maak dan duidelijk waarom (de fase was heel moeilijk of de fase was heel interessant)."
+    };
+}).call(this);

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"
+        href="../../commons/images/favicon.ico"
+        type="image/vnd.microsoft.icon" />
+
+  <title>Splash</title>
+
+  <link rel="stylesheet"
+        media="screen"
+        href="../../libs/bootstrap/css/bootstrap.min.css">
+  <link href="../../libs/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <script type="text/javascript" src="../../libs/js/jquery-min.js"></script>
+  <script type="text/javascript" src="../../libs/js/jquery-ui.custom.min.js"></script>
+  <script type="text/javascript" src="../../libs/js/jquery.ui.touch-punch.js"></script>
+  <script type="text/javascript" src="../../libs/js/angular/angular.js"></script>
+  <script type="text/javascript" src="../../libs/js/flot/jquery.flot.js"></script>
+
+  <link href="jquery_ui_bootstrap/css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+
+  <link href="splash.css" rel="stylesheet">
+
+  <script type="text/javascript" src="printf.js"></script>
+  <script type="text/javascript" src="cute.js"></script>
+  <script type="text/javascript" src="a3.js"></script>
+  <script type="text/javascript" src="splash.js"></script>
+</head>
+
+<body>
+  <h1>Splas<img src="ladder.png"/></h1>
+  <nav class="navbar" role="navigation">
+    <ul class="nav navbar-nav">
+      <li><a id="nav_splash_define_tank" href="#">Tank</a></li>
+      <li><a id="nav_splash_define_fluid" href="#">Fluids</a></li>
+      <li><a id="nav_splash_define_dropject" href="#">Objects</a></li>
+      <li><a id="nav_splash_run_lab" href="#">Lab</a></li>
+    </ul>
+  </nav>
+
+  <section class="tab_splash"
+           id="tab_splash_define_dropject"
+           hidden="true"
+           ng-app="dropject" ng-controller="dropject_controller">
+    <table style="border: solid black 1px;
+                  border-collapse: separate;
+                  border-spacing: 5px">
+
+  <tr style="border: solid black 1px">
+    <td>
+      <label class="control-label" for="dropject_material">
+        {{dropject.material.label}}
+      </label>
+    </td>
+    <td>
+      <select id="dropject_material"
+              class="form-control"
+              ng-model="dropject.material.value"
+              ng-options="m.name as m.label for m in options.materials">
+      </select>
+    </td>
+    <td>{{dropject.material.value}}</td>
+  </tr>
+
+  <tr style="border: solid black 1px">
+    <td>
+    <label class="control-label" for="dropject_shape">
+      {{dropject.shape.label}}
+    </label>
+    </td>
+    <td>
+      <select id="dropject_shape"
+              class="form-control"
+              ng-model="dropject.shape.value"
+              ng-options="m.name as m.label for m in options.shapes">
+      </select>
+    </td>
+    <td>{{dropject.shape.value}}</td>
+  </tr>
+
+  <tr style="border: solid black 1px">
+    <td>
+      <label class="control-label" for="dropject_volume">
+        {{dropject.volume.label}}
+      </label>
+    </td>
+    <td>
+      <div slider id="dropject_volume" object="dropject" prop="volume"></div>
+    </td>
+    <td>{{dropject.volume.value}}</td>
+  </tr>
+
+  <tr>
+  <td>
+    <label class="control-label" for="dropject_mass">
+      {{dropject.mass.label}}
+    </label>
+  </td>
+  <td>
+    <div slider id="dropject_mass" object="dropject" prop="mass"></div>
+  </td>
+  <td>{{dropject.mass.value}}</td>
+  </tr>
+</table>
+  </section>
+
+  <section class="tab_splash"
+           id="tab_splash_define_tank"
+           ng-app="tank" ng-controller="tank_controller" 
+           hidden="true">
+  <div id="container_splash_define_tank" class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <canvas id="tank_canvas" width="300" height="300">No canvas</canvas>
+      </div>
+      <div class="col-lg-8">
+        <p>Here you can specify the dimensions of the aquarium.</p>
+        <div class="row" style="border: 1px;">
+          <div class="col-lg-1">
+            <input type="checkbox" ng-model="tank.width_fixed"/>
+            <b>{{tank.width.variable}}</b>
+          </div>
+          <div class="col-lg-5">
+            <slider class="ng_slider_md" object="tank" prop="width"></slider>
+          </div>
+          <div class="col-lg-2">{{ tank.width.value }} {{tank.width.unit}}</div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2"><b>{{tank.height.variable}}</b></div>
+          <div class="col-lg-2 text-center">(1-100)</div>
+          <div class="col-lg-6"><slider class="ng_slider_md" object="tank" prop="height"></slider></div>
+          <div class="col-lg-2">{{ tank.height.value }} {{tank.height.unit}}</div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2"><b>{{tank.depth.variable}}</b></div>
+          <div class="col-lg-2 text-center">(1-100)</div>
+          <div class="col-lg-6"><slider class="ng_slider_md" object="tank" prop="depth"></slider></div>
+          <div class="col-lg-2">{{ tank.depth.value }} {{tank.depth.unit}}</div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2"><b>{{tank.volume.variable}}</b></div>
+          <div class="col-lg-8"></div>
+          <div class="col-lg-2">{{ tank.volume.value }} {{tank.volume.unit}}</div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab_splash" id="tab_splash_define_fluid" hidden="true">
+  <p>Fluid not available</p>
+  </section>
+
+  <section class="tab_splash" id="tab_splash_run_lab"
+           ng-app="experiment" ng-controller="experiment_controller">
+    <div class="row-fluid">
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-5">
+          <canvas id="canvas_splash_lab"
+                  width="400"
+                  height="300"
+                  style="border: 1px solid black">No canvas</canvas>
+          <div><b>Experiment</b>
+            <table style="border: solid black 1px;
+                          border-collapse: separate;
+                          border-spacing: 5px">
+
+<!--
+              <tr style="border: solid black 1px">
+                <td>
+                  <label class="control-label" for="experiment_substance">
+                    {{experiment.substance.label}}
+                  </label>
+                </td>
+                <td>
+                  <select id="experiment_substance"
+                          class="form-control"
+                          ng-model="experiment.substance.value"
+                          ng-options="m as m.name for m in options.substances">
+                  </select>
+                </td>
+                <td>{{experiment.substance.value | nullorname}}</td>
+              </tr>
+-->
+              
+<!--
+              <tr style="border: solid black 1px">
+                <td>
+                  <label class="control-label" for="experiment_fluid">
+                    {{experiment.fluid.label}}
+                  </label>
+                </td>
+                <td>
+                  <select id="experiment_fluid"
+                          class="form-control"
+                          ng-model="experiment.fluid.value"
+                          ng-options="m.name as m.label for m in options.fluids">
+                  </select>
+                </td>
+                <td>{{experiment.fluid.value}}</td>
+              </tr>
+-->              
+              <tr style="border: solid black 1px">
+                <td>
+                  <label class="control-label" for="experiment_shape">
+                    {{experiment.shape.label}}
+                  </label>
+                </td>
+                <td>
+                  <select id="experiment_shape"
+                          class="form-control"
+                          ng-model="experiment.shape.value"
+                          ng-options="m as m.name for m in options.shapes">
+                  </select>
+                </td>
+                <td>{{experiment.shape.value | nullorname}}</td>
+              </tr>
+
+<!--          <tr style="border: solid black 1px">
+                <td>
+                  <label class="control-label" for="experiment_length">
+                    {{experiment.length.label}}
+                  </label>
+                </td>
+                <td>
+                  <div slider id="experiment_length" object="experiment" prop="length"></div>
+                </td>
+                <td>{{experiment.length.value}}</td>
+              </tr>
+-->
+              <tr style="border: solid black 1px">
+                <td>
+                  <label class="control-label" for="experiment_volume">
+                    {{experiment.volume.label}}
+                  </label>
+                </td>
+                <td class="ng_slider_lg">
+                  <div slider id="experiment_volume" object="experiment" prop="volume"></div>
+                </td>
+                <td>{{experiment.volume.value * 1000000 | number:0}}</td>
+              </tr>
+              
+              <tr style="border: solid black 1px">
+                <td>
+                  <label class="control-label" for="experiment_mass">
+                    {{experiment.mass.label}}
+                  </label>
+                </td>
+                <td>
+                  <div slider class="ng_slider_lg" id="experiment_mass" object="experiment" prop="mass"></div>
+                </td>
+                <td>{{experiment.mass.value * 1000 | number:0}}</td>
+              </tr>
+
+              <tr style="border: solid black 1px">
+                <td>
+                  <label class="control-label" for="experiment_mass">
+                    {{experiment.density.label}}
+                  </label>
+                </td>
+                <td>
+                </td>
+                <td>{{experiment.density.value | number:0}}</td>
+              </tr>
+
+              <tr>
+                <td span="3">
+                  <button id="experiment_run">Run experiment</button>
+                </td>
+                <td span="3">
+                  <button id="experiment_stop">Stop</button>
+                </td>
+              </tr>
+              
+            </table>
+          </div>
+<!--       <div>
+            <table style="border: solid black 1px;
+                          border-collapse: separate;
+                          border-spacing: 5px">
+
+              <tr>
+                <td>Density</td>
+                <td>{{experiment.density.value}}</td>
+              </tr>
+
+              <tr>
+                <td>Status</td>
+                <td>{{experiment.status}}</td>
+              </tr>
+
+              <tr>
+                <td>Time (increment)</td>
+                <td>{{experiment.dt}} </td>
+              </tr>
+
+              <tr style="border: solid black 1px">
+                <td>Time (elapsed)</td>
+                <td>{{experiment.time | number:2}} secs</td>
+              </tr>
+
+              <tr style="border: solid black 1px">
+                <td>Width</td>
+                <td>{{experiment.width | number:2}}</td>
+              </tr>
+
+            </table>
+          </div>
+-->
+        </div>
+        <div class="col-lg-3">
+          <div><b>Immersed (m)</b></div>
+          <div id="graph_splash_distance" style="width: 250px; height: 200px"></div>
+          <div><b>Velocity (m/s)</b></div>
+          <div id="graph_splash_velocity" style="width: 250px; height: 200px"></div> 
+          <div><b>Acceleration (m/s^2)</b></div>
+          <div id="graph_splash_acceleration" style="width: 250px; height: 200px"></div>
+        </div>
+        <div class="col-lg-3">
+          <div><b>Net force (N; kg * m / s^2)</b></div>
+          <div id="graph_splash_net_force" style="width: 250px; height: 200px"></div>
+          <div><b>Drag force (N; kg * m / s^2)</b></div>
+          <div id="graph_splash_drag_force" style="width: 250px; height: 200px"></div>
+          <div><b>Buoyancy force (N; kg * m / s^2)</b></div>
+          <div id="graph_splash_buoyancy_force" style="width: 250px; height: 200px"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <table halign="right" cellpadding="5" cellspacing="5" id="table">
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="experiment_already_running" hidden>
+    Another experiment is still running.<br> 
+
+    Wait until tbat experiment finishes, or click <b>Stop</b>.
+  </div>
+
+  <script type="text/javascript">
+    angular.bootstrap($("#tab_splash_define_dropject"), ['dropject']);
+    angular.bootstrap($("#tab_splash_run_lab"), ['experiment']);
+    angular.bootstrap($("#tab_splash_define_tank"), ['tank']);
+    splash.start();
+  </script>
+
+  
+</body>
+
+<!--
+
+    function start_splash() {
+      splash.start();
+        var data = force();
+        var options = {
+            xaxis: {
+                min: 0,
+            },
+            series: { 
+                lines: { show: true }
+            }   
+        };
+
+        $.plot("#graph_splash_distance", [data.distance], options);
+    
+    }
+    window.onload = function() { start_splash(); }
+-->
+
+</html>
+
+

@@ -1,0 +1,244 @@
+/*  $Id$        -*- mode: javascript -*-
+ *  
+ *  File        phases.src
+ *  Part of     Go-Lab Reflection tool
+ *  Author      Anjo Anjewierden, a.a.anjewierden@utwente.nl
+ *  Purpose     Returns the structure of an ILS in terms of phases and apps per phase
+ *  Works with  ECMAScript 5.1
+ *  
+ *  Notice      Copyright (c) 2015  University of Twente
+ *  
+ *  History     16/04/15  (Created)
+ *		18/04/15  (Last modified)
+ */ 
+
+(function() {
+    "use strict";
+
+    var ut = this.ut = this.ut || {};
+    var tools = ut.tools = ut.tools || {};
+    var reflect = tools.reflect = tools.reflect || {};
+
+    printf('************ LOADING phases.js');
+
+    reflect.default_phases = function() {
+        var ORIENTATION = 'Orientation';
+        var CONCEPTUALISATION = 'Conceptualisation';
+        var INVESTIGATION = 'Investigation';
+        var CONCLUSION = 'Conclusion';
+        var DISCUSSION = 'Discussion';
+
+        return [
+            ORIENTATION,
+            CONCEPTUALISATION,
+            INVESTIGATION,
+            CONCLUSION,
+            DISCUSSION
+        ];
+    };
+
+    reflect.phases_from_ils_structure = function(ils_structure) {
+        var rval = [];
+
+        for (var p=0; p<ils_structure.phases.length; p++) {
+            var phase = ils_structure.phases[p];
+
+            rval.push(phase.displayName);
+        }
+
+        return rval;
+    };
+
+    if (window.ils) {
+        reflect.get_phase_and_tool_structure = function(callback) {
+            var phases = [];
+            var rval = {};
+            var phases_seen = false;	// True if phases seen in callback
+
+            window.ils.getIls(function(result) {
+                //                printf('ILS ' + JSON.stringify(result,null,4));
+                if (result.error) {
+                    return callback(null, { error: 'ils.getIls failed ',
+                                            detail: result.error
+                                          });
+                }
+
+                rval.id = result.id;
+                rval.url = result.profileUrl;
+                rval.displayName = result.displayName;
+                rval.phases = [];
+
+                window.ils.getItemsBySpaceId(result.id, function(phases) {
+                    //                    printf('PHASES ' + JSON.stringify(phases,null,4));
+                    if (phases.error) {
+                        return callback(null, { error: 'ils.getItemsBySpaceId failed',
+                                                detail: phases.error
+                                              });
+                    }
+
+                    for (var p=0, n=0; p<phases.length; p++) {
+                        var phase = phases[p];
+                        var type = phase.metadata ? phase.metadata.type : 'User defined';
+
+                        //  Ignore these
+                        if (type === 'Vault' || type === 'About')
+                            continue;
+
+                        rval.phases[n] = null;
+                        add_phase(n++, phase);
+                    }
+
+                    phases_seen = true;
+                });
+
+                function add_phase(nth, phase) {
+                    var type = phase.metadata ? phase.metadata.type : 'User defined';
+
+                    window.ils.getAppsBySpaceId(phase.id, function(apps) {
+                        //                        printf('APPS ' + JSON.stringify(apps,null,4));
+                        if (apps.error) {
+                            return callback(null, { error: 'ils.getAppsBySpaceId failed ',
+                                                    detail: apps.error
+                                                  });
+                        }
+
+                        var list = [];
+                        
+                        for (var a=0; a<apps.length; a++) {
+                            var app = apps[a];
+                            
+                            list.push({
+                                id: app.id,
+                                displayName: app.displayName,
+                                url: app.appUrl,
+                                itemType: app.itemType,
+                                appType: app.appType
+                            });
+                        }
+                        
+                        rval.phases[nth] = {
+                            id: phase.id,
+                            type: type,
+                            displayName: phase.displayName,
+                            apps: list
+                        };
+                    });
+                }
+            });
+
+            wait_for_phases(callback);
+
+            function wait_for_phases(callback) {
+                var ready = false;
+
+                //                printf('wait_for_phases ' + phases_seen);
+
+                if (phases_seen) {
+                    ready = true;
+                    for (var p=0; p<rval.phases.length; p++) {
+                        if (rval.phases[p] === null) {
+                            ready = false;
+                            break;
+                        }
+                    }
+                }
+                if (ready)
+                    return callback(rval, null);
+                setTimeout(function() { wait_for_phases(callback); }, 100);
+            }
+        };
+    }
+}).call(this);
+
+/*
+{
+    "id": "552f84caeb0b9cbd2dfcf490",
+    "url": "http://graasp.eu/spaces/552f84caeb0b9cbd2dfcf490",
+    "displayName": "Reflect2",
+    "phases": [
+        {
+            "id": "552f84caeb0b9cbd2dfcf495",
+            "type": "Orientation",
+            "displayName": "Orientation",
+            "apps": [
+                {
+                    "id": "552f8534eb0b9cbd2dfcf529",
+                    "displayName": "Reflect2",
+                    "url": "http://go-lab.gw.utwente.nl/production/reflect/build/reflect.xml",
+                    "itemType": "Application",
+                    "appType": "WidgetGadget"
+                }
+            ]
+        },
+        {
+            "id": "552f84caeb0b9cbd2dfcf49a",
+            "type": "Conceptualisation",
+            "displayName": "Conceptualisation",
+            "apps": [
+                {
+                    "id": "5530dc18155b7d1e025b67f1",
+                    "displayName": "Bond",
+                    "url": "http://go-lab.gw.utwente.nl/production/bond/build/bond.xml",
+                    "itemType": "Application",
+                    "appType": "WidgetGadget"
+                }
+            ]
+        },
+        {
+            "id": "552f84caeb0b9cbd2dfcf49f",
+            "type": "Investigation",
+            "displayName": "Investigation",
+            "apps": [
+                {
+                    "id": "552f8d10eb0b9cbd2dfe2fb7",
+                    "displayName": "Archimedes Principle",
+                    "url": "http://gateway.golabz.eu/os/pub/archimedes/w_default.xml",
+                    "itemType": "Application",
+                    "appType": "WidgetGadget"
+                },
+                {
+                    "id": "552f8d1beb0b9cbd2dfe441b",
+                    "displayName": "Calendar App",
+                    "url": "http://shindig2.epfl.ch/gadget/prod/calendar/gadget.xml",
+                    "itemType": "Application",
+                    "appType": "WidgetGadget"
+                }
+            ]
+        },
+        {
+            "id": "552f84caeb0b9cbd2dfcf4a4",
+            "type": "Conclusion",
+            "displayName": "Conclusion",
+            "apps": [
+                {
+                    "id": "552f8d2beb0b9cbd2dfe49c6",
+                    "displayName": "Concept Mapper",
+                    "url": "http://go-lab.gw.utwente.nl/production/conceptmapper/build/conceptmapper.xml",
+                    "itemType": "Application",
+                    "appType": "WidgetGadget"
+                }
+            ]
+        },
+        {
+            "id": "552f84caeb0b9cbd2dfcf4a9",
+            "type": "Discussion",
+            "displayName": "Discussion",
+            "apps": [
+                {
+                    "id": "552f8d43eb0b9cbd2dfe5b0b",
+                    "displayName": "Hypothesis Tool",
+                    "url": "http://go-lab.gw.utwente.nl/production/hypothesis/build/hypothesis.xml",
+                    "itemType": "Application",
+                    "appType": "WidgetGadget"
+                }
+            ]
+        },
+        {
+            "id": "552faab6eb0b9cbd2dffcaa7",
+            "type": "User defined",
+            "displayName": "Hello world",
+            "apps": []
+        }
+    ]
+}
+*/
